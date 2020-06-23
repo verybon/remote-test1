@@ -1,4 +1,4 @@
-추가내용
+git study and test
 
 git init
 
@@ -12,5 +12,7 @@ git commit -m "commit text"
 git remote / git remote -v
 
 git remote add prac1 https://github.com/verybon/remote-test1.git
+
+
 
 
