@@ -1,0 +1,55 @@
+.section-01 {
+    position: relative;
+    width: 100%;
+    margin-top: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.char-ani-box {
+    margin: 0 50px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.char-ani-box .speech-box {
+    left: 80px;
+    top: -160px;
+    z-index: 1;
+}
+.char-ani-box .speech-box-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.char-ani-box .speech-box .arrow {
+    left: 50px;
+    top: 142px;
+}
+
+.ani-04 .speech-box {
+    left: -190px;
+    top: -160px;
+}
+.ani-04 .speech-box .arrow {
+    left: 170px;
+    top: 142px;
+}
+
+.section-02 {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ani-08 .speech-box {
+    left: -190px;
+    top: -160px;
+}
+.ani-08 .speech-box .arrow {
+    left: 170px;
+    top: 142px;
+}

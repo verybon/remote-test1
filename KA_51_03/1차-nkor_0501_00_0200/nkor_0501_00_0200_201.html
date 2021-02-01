@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title>교과서 활동</title>
+    <link rel="stylesheet" href="../common/css/sanitize.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/content.css" />
+
+    <style>
+        .popup-full .bullet-box.empty-circle::after{
+            top: 20px;
+        }
+        .popup-full th,
+        .popup-full td{font-size: 34px;}
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="main normal" >
+            <div class="header">
+                <h1 class="title-02" aria-label="교과서 활동"></h1>
+            </div>
+
+            <div class="content page-01">
+                <div class="bullet-box direction">
+                    <div class="text">
+                        책을 읽을 때 생각할 점은 무엇인가요?
+                    </div>
+                </div>
+
+                <div class="inner-content align-cc">
+                    <button type="button" class="activity-button" aria-label="활동하기"></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="teacher-question bullet-circle">
+            책을 읽을 때 생각할 점은 무엇인지 살펴봅시다.
+        </div>
+
+        <div class="popup-full" data-button=".activity-button">
+            <div class="full-content">
+                <div class="bullet-box empty-circle color-01">책을 읽을 때 생각할 점</div>
+                <div class="table-box color-04">
+                    <table class="table">
+                        <!-- <caption></caption> -->
+                        <colgroup>
+                            <col style="width: auto;" />
+                            <col width="70%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">장면을 떠올리며 <br>읽기</th>
+                                <td>
+                                    <div>
+                                        이야기나 시의 장면을 머릿속에 자세하게 그리며 읽어요.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상상하며 읽기</th>
+                                <td>
+                                    <div>
+                                        자세하게 드러나지 않은 부분을 상상하며 읽어요.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">인상 깊은 부분을 <br>찾으며 읽기</th>
+                                <td>
+                                    <div>
+                                        재미있는 표현이나 기억에 남는 <span class="click-induced word button-mini-01">글귀</span>를 생각하며 읽어요.
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">다른 작품과 <br>연결 지으며 읽기</th>
+                                <td>
+                                    <div>
+                                        다른 작품을 떠올려 <span class="click-induced word button-mini-02">견주어</span> 보며 읽어요.
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">자신의 삶과 <br>연결 지으며 읽기</th>
+                                <td>
+                                    <div>
+                                        작품에 나온 세계를 자신의 삶과 관련지으며 읽어요.
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+            <div class="button-close"></div>
+
+            <div class="popup-mini word mini-01" data-button=".button-mini-01" style="top: 380px;left: 820px;width: 300px;">
+                <div class="box-top">
+                    <div class="popup-title">어휘 쏙쏙</div>
+                    <div class="button-close"></div>
+                </div>
+                <div class="box-content">
+                    <div class="word">글귀</div>
+                    <div class="explain-word">
+                        <div>글의 구나 절.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-mini word mini-02" data-button=".button-mini-02" style="top: 520px;left: 220px;">
+                <div class="box-top">
+                    <div class="popup-title">어휘 쏙쏙</div>
+                    <div class="button-close"></div>
+                </div>
+                <div class="box-content">
+                    <div class="word">견주어</div>
+                    <div class="explain-word">
+                        <div>둘 이상의 사물을 질이나 양 따위에서 어떠한 차이가 있는지 알기위하여 서로 대.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../common/js/libs/anime.min.js"></script>
+    <script src="../common/js/libs/underscore-min.js"></script>
+    <script src="../amt/js/amt.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="../common/js/content.js"></script>
+</body>
+
+</html>

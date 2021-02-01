@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+        <title></title>
+        <link rel="stylesheet" href="../common/css/sanitize.css" />
+        <link rel="stylesheet" href="../common/css/common.css" />
+        <link rel="stylesheet" href="../common/css/audioPlayer.css" />
+        <link rel="stylesheet" href="../common/css/content.css" />
+        <style>
+            .single-choice .mark{display:none;}
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="main jejae quiz" data-content="jejae-quiz">
+                <div class="quiz-box">
+                    <div class="image-box">
+                        <img src="../common/images/jejae_quiz_bg.png" alt="" />
+                    </div>
+                    <div class="header">
+                        <div class="title image-box">
+                            <img src="../common/images/title_jejae_quiz.png" alt="" />
+                        </div>
+                        <div class="character">
+                            <div class="image-box">
+                                <img src="../common/images/jejae_quiz_subtitle.png" alt="" />
+                            </div>
+                            <div class="sub-title">칭찬의 힘</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-tab-box" data-sub-tabs="1,2,3,4,5">
+
+                        <!-- 초성 -->
+                        <div class="sub-content sub-page-01">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        칭찬의 힘을
+                                        <span class="dir-rect ml"><span>ㄱ</span></span>
+                                        <span class="dir-rect"><span>ㅅ</span></span>
+                                        <span class="dir-rect"><span>ㅍ</span></span>
+                                        <span class="dir-rect"><span>ㄱ</span></span>
+                                        하면 안됩니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer-box">
+                                <div class="hidden-box que icon-size-02">
+                                    <div class="text">
+                                        과소평가
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- OX -->
+                        <div class="sub-content sub-page-02">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        누군가를 칭찬할 때는 두루뭉술하게 해야 합니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-choice" data-quiz="singleChoice" data-answer="1" data-visible=".explanatory-02" data-mark="1">
+                                <div class="button button-01"></div><!--o : 0-->
+                                <div class="button button-02"></div><!--x : 1-->
+                            </div>
+                            <div class="explanatory line-one explanatory-02 hide">
+                                <div class="bullet-box">
+                                    누군가를 칭찬할 때는 <span class="emp">칭찬하는 내용이 무엇인지 자세하게 말해야 합니다.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 단답 -->
+                        <div class="sub-content sub-page-03">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        칭찬할 때는 결과보다 무엇을 칭찬해야 하나요?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer-box">
+                                <div class="hidden-box que icon-size-02">
+                                    <div class="text">
+                                        과정
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- OX -->
+                        <div class="sub-content sub-page-04">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        평가하지 말고 설명하는 칭찬을 해야 합니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-choice" data-quiz="singleChoice" data-answer="0" data-visible=".explanatory-02" data-mark="1">
+                                <div class="button button-01"></div><!--o : 0-->
+                                <div class="button button-02"></div><!--x : 1-->
+                            </div>
+                        </div>
+
+                        <!-- 초성 -->
+                        <div class="sub-content sub-page-05">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        칭찬할 때는
+                                        <span class="dir-rect ml"><span>ㄱ</span></span>
+                                        <span class="dir-rect"><span>ㄴ</span></span>
+                                        <span class="dir-rect"><span>ㅅ</span></span>
+                                        을 키워 주는 칭찬을 할 수 있으면 더욱 좋습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer-box">
+                                <div class="hidden-box que icon-size-02">
+                                    <div class="text">
+                                        가능성
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prev-button"></div>
+                        <div class="next-button"></div>
+                    </div>
+                </div>
+
+                <div class="home-box">
+                    <div class="image-box">
+                        <img src="../common/images/jejae_quiz_home_bg.png" alt="" />
+                    </div>
+                    <div class="title-box">
+                        <div class="title">칭찬의 힘</div>
+                        <!-- <div class="writer">작가 이름</div> -->
+                    </div>
+                    <div class="start-button"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../common/js/libs/underscore-min.js"></script>
+        <script src="../common/js/libs/anime.min.js"></script>
+        <script src="../amt/js/amt.js"></script>
+        <script src="../common/js/common.js"></script>
+        <script src="../common/js/quiz.js"></script>
+        <script src="../common/js/content.js"></script>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" href="../common/css/sanitize.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/content.css" />
+
+    <style>
+        .char-bg-ani-box, .char-ani-box{
+            position: relative;
+            display:inline-block
+        }
+        .content-inner{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+            flex-flow: row wrap;
+        }
+        .content-inner .box-base{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32%;
+            height: 240px;
+            margin: 5px;
+        }
+        .char-bg-ani-box{
+            position: absolute;
+            top: auto;
+            left: auto;
+            bottom: 80px;
+        }
+        .char-bg-ani-box.ani-01{
+            left: 60px
+        }
+        .char-bg-ani-box.ani-02{
+            right: 60px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="main normal">
+            <div class="header">
+                <h1 class="title-02" aria-label="교과서 활동"></h1>
+            </div>
+
+            <div class="content">
+                <div class="bullet-box direction">
+                    <div class="text">
+                        상상하며 읽기가 어려울 때는 어떻게 해야 할까요?
+                    </div>
+                </div>
+                <div class="content-inner">
+                    <div class="box-base color-01">
+                        홍길동은 자신이 만든 나라를 보며 어떤 표정을 지었을까?
+                    </div>
+                    <div class="box-base color-04">
+                        홍길동이 만든 나라에 사는 사람들은 어떤 모습일까?
+                    </div>
+                    <div class="box-base color-02">
+                        내가 홍길동 같은 능력이 있다면 가장 먼저 무엇을 할까?
+                    </div>
+                    <div class="box-base color-03">
+                        홍길동이 지금 우리가 사는 곳에 오면 무엇을 보고 가장 놀랄까?
+                    </div>
+                    <div class="box-base color-06">
+                        홍길동은 어릴 때 어떤 친구들과 무엇을 하고 놀았을까?
+                    </div>
+                </div>
+
+                <div class="char-bg-ani-box ani-01"
+                    data-name="bust01"
+                    data-color="color-01" data-tail="tail-01" data-audio="./media/audios/nkor_0501_00_0200_203_1.mp3" data-audio-id="audio01"></div>
+                <div class="char-bg-ani-box ani-02"
+                    data-name="bust03"
+                    data-color="color-01" data-tail="tail-01" data-audio="./media/audios/nkor_0501_00_0200_203_2.mp3" data-audio-id="audio01"></div>
+
+                <!-- <div class="info-box">각 <span class="emp">인물</span>을 클릭하세요.</div> -->
+                <div class="info-box"><span class="emp">인물</span>을 클릭하세요.</div>
+            </div>
+
+        </div>
+
+        <div class="teacher-question bullet-circle">
+            상상하며 시나 이야기를 읽어 봅시다.
+        </div>
+
+    </div>
+
+    <script src="../common/js/libs/underscore-min.js"></script>
+    <script src="../common/js/libs/anime.min.js"></script>
+    <script src="../amt/js/amt.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="../common/js/canvasAnimation.js"></script>
+    <script src="../common/js/canvasAnimationData.js"></script>
+    <script src="../common/js/content.js"></script>
+</body>
+
+</html>

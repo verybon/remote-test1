@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" href="../common/css/sanitize.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/content.css" />
+    <style>
+        .image-box{position: relative;}
+        .button-char{display: block;position: absolute;}
+        .button-char.button-char01{top: 25px;left: 225px;width: 255px;height: 350px;}
+        .button-char.button-char02{top: 170px;left: 460px;width: 390px;height: 280px;}
+        .popup-mini.helper .popup-title::before{display: none;}
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="main normal">
+            <div class="header">
+                <h1 class="title-02" aria-label="교과서 활동"></h1>
+            </div>
+
+            <div class="content">
+                <div class="bullet-box direction">
+                    <div class="text" style="letter-spacing: -0.05em;">
+                        인물의 마음을 상상하며 다양한 방법으로 시를 읽어 보세요.
+                    </div>
+                </div>
+
+                <div class="image-box" style="height: 490px;background: url(./images/nkor_0201_01_0506_207.png) no-repeat 50% 50% / auto 100%;">
+                    <div class="button-char button-char01" aria-label="주고받으며 읽기">
+                    </div>
+                    <div class="button-char button-char02" aria-label="떠오르는 장면을 행동으로 표현하며 읽기">
+                    </div>
+                </div>
+
+                <!-- <div class="info-box">각 <span class="emp">인물</span>을 클릭하세요.</div> -->
+                <div class="info-box"><span class="emp">인물</span>을 클릭하세요.</div>
+
+                <div class="popup-mini helper helper-01" data-button=".button-char01" style="left: 110px;right: auto;width: 400px;">
+                    <div class="box-top">
+                        <div class="popup-title-box">
+                            <span class="popup-title">주고받으며 읽기</span>
+                        </div>
+                        <div class="button-close"></div>
+                    </div>
+                    <div class="box-content">
+                        <div class="bullet-box ti" style="text-align: justify;">
+                            짝과 함께 또는 모둠별로 같이 읽을 부분과 각자 읽을 부분을 정해서 읽습니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-mini helper helper-02" data-button=".button-char02" style="bottom: 370px;width: 400px;">
+                    <div class="box-top">
+                        <div class="popup-title-box">
+                            <span class="popup-title">떠오르는 장면을 행동으로 표현하며 읽기</span>
+                        </div>
+                        <div class="button-close"></div>
+                    </div>
+                    <div class="box-content">
+                        <div class="bullet-box ti" style="text-align: justify;">
+                            시의 장면에 맞게 몸짓으로 표현하며 읽습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="teacher-question num-07">
+            시 속 인물의 마음을 상상하며 여러 가지 방법으로 <br><span class="quot-open">「</span>잠자는 사자<span class="quot-close">」</span>를 소리 내어 읽어 봅시다.
+        </div>
+
+    </div>
+
+    <script src="../common/js/libs/underscore-min.js"></script>
+    <script src="../common/js/libs/anime.min.js"></script>
+    <script src="../amt/js/amt.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="../common/js/canvasAnimation.js"></script>
+    <script src="../common/js/canvasAnimationData.js"></script>
+    <script src="../common/js/content.js"></script>
+</body>
+
+</html>

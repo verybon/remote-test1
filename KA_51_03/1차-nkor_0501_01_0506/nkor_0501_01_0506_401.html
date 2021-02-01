@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+
+    <!-- gate ani -->
+    <link rel="stylesheet" type="text/css" href="../common/css/gateAni/resetAll.css" />
+    <link rel="stylesheet" type="text/css" href="../common/css/gateAni/commonAll.css" />
+
+    <link rel="stylesheet" href="../common/css/sanitize.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/content.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="main confirm-quiz" data-content="confirm-quiz">
+
+            <div class="quiz-box">
+                <div class="header hide">
+                    <div class="title image-box">
+                        <img src="../common/images/title_confirm_quiz.png" alt="">
+                    </div>
+                    <div class="character">
+                        <div class="image-box">
+                            <img src="../common/images/confirm_quiz_char.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-tab-box" data-sub-tabs="문제 1,문제 2">
+
+                    <div class="sub-content sub-page-04">
+                        <div class="direction">
+                            <div class="bullet-box empty-circle color-01">
+                                <div class="text ">상대를 배려하며 조언할 때 중요한 점을 바르게 설명한 사람을 고르시오.</div>
+                            </div>
+                        </div>
+
+                        <div class="single-choice speech" data-quiz="singleChoice" data-answer="2" data-mark="0" data-mark-gap="580;20">
+                            <div class="button color-03">
+                                <div class="face type-08"></div>
+                                <div class="speech-box">
+                                    <div class="arrow"></div>
+                                    <div class="round-box">상대에게 고민을 말하도록 강요합니다.</div>
+                                </div>
+                            </div>
+
+                            <div class="button color-01">
+                                <div class="face type-01"></div>
+                                <div class="speech-box">
+                                    <div class="arrow"></div>
+                                    <div class="round-box">상대가 부담스럽지 않게 일부러 못 들은 척 합니다.</div>
+                                </div>
+                            </div>
+
+                            <div class="button color-04">
+                                <div class="face type-07"></div>
+                                <div class="speech-box">
+                                    <div class="arrow"></div>
+                                    <div class="round-box">상대가 고민을 편안하게 말할 수 있도록 잘 들어줍니다.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-button button-answer">
+                            <div class="text">정답 확인</div>
+                        </div>
+
+                    </div>
+
+                    <div class="sub-content sub-page-01">
+                        <div class="direction">
+                            <div class="bullet-box empty-circle color-01">
+                                <div class="text">조언하는 방법을 읽고 빈칸에 들어갈 표현을 순서대로 바르게 쓴 것을 고르시오.</div>
+                            </div>
+                        </div>
+
+                        <div class="round-bg-box ti">
+                            조언을 할 때에는 상대에게 <span class="empty-rect"><span class="text hide">도움</span></span>이 될 수 있는 내용을 <span class="empty-rect"><span class="text hide">진심</span></span>이 느껴지도록 말합니다.
+
+
+                        </div>
+
+                        <div class="single-choice word" data-quiz="singleChoice" data-answer="1" data-visible=".empty-rect .text">
+                            <div>
+                                <div class="button">
+                                    <div class="bullet-box circle-num num-01 color-01">
+                                        도움, 기쁨
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <div class="bullet-box circle-num num-03 color-01">
+                                        도움, 진심
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="button">
+                                    <div class="bullet-box circle-num num-02 color-01">
+                                        진심, 질문
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <div class="bullet-box circle-num num-04 color-01">
+                                        진심, 비난
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-button button-answer">
+                            <div class="text">정답 확인</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="gate_container checkquiz">
+            <div class="gate_topbox">
+                <div class="gate_title">확인 문제</div>
+                <div class="gate_btn"><span class="start-button">시작</span></div>
+            </div>
+            <div class="gate_ani">
+                <div id="animation_container">
+                    <canvas id="canvas"></canvas>
+                    <div id="dom_overlay_container" class="gate_ani_cover"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- gate ani -->
+    <script src="../common/js/gateAni/createjs-2015.11.26.min.js"></script>
+    <script src="../common/js/gateAni/commonConfirm_Main.js"></script>
+    <script src="../common/js/gateAni/canvasMain.js"></script>
+
+    <script src="../common/js/libs/underscore-min.js"></script>
+    <script src="../common/js/libs/anime.min.js"></script>
+    <script src="../amt/js/amt.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="../common/js/quiz.js"></script>
+    <script src="../common/js/content.js"></script>
+</body>
+
+</html>

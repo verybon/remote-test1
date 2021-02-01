@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+        <title></title>
+        <link rel="stylesheet" href="../common/css/sanitize.css" />
+        <link rel="stylesheet" href="../common/css/common.css" />
+        <link rel="stylesheet" href="../common/css/audioPlayer.css" />
+        <link rel="stylesheet" href="../common/css/content.css" />
+        <style>
+            .single-choice .mark{display:none;}
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="main jejae quiz" data-content="jejae-quiz">
+                <div class="quiz-box">
+                    <div class="image-box">
+                        <img src="../common/images/jejae_quiz_bg.png" alt="" />
+                    </div>
+                    <div class="header">
+                        <div class="title image-box">
+                            <img src="../common/images/title_jejae_quiz.png" alt="" />
+                        </div>
+                        <div class="character">
+                            <div class="image-box">
+                                <img src="../common/images/jejae_quiz_subtitle.png" alt="" />
+                            </div>
+                            <div class="sub-title">우리 반 친절왕</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-tab-box" data-sub-tabs="1,2,3,4,5">
+
+                        <!-- OX -->
+                        <div class="sub-content sub-page-01">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">주민이 아빠는 길을 잃고 헤매는 할아버지를 가시는 곳까지 모셔다 드렸습니다.</div>
+                                </div>
+                            </div>
+                            <div class="single-choice" data-quiz="singleChoice" data-answer="1" data-visible=".explanatory-02" data-mark="1">
+                                <div class="button button-01"></div><!--o : 0-->
+                                <div class="button button-02"></div><!--x : 1-->
+                            </div>
+                            <div class="explanatory line-one explanatory-02 hide">
+                                <div class="bullet-box">
+                                    주민이 아빠는 길을 잃고 헤매는 <span class="emp">할머니</span>를 가시는 곳까지 모셔다 드렸습니다.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 초성 -->
+                        <div class="sub-content sub-page-02">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        주민이 아빠는
+                                        <span class="dir-rect ml"><span>ㅁ</span></span>
+                                        <span class="dir-rect"><span>ㄱ</span></span>
+                                        <span class="dir-rect"><span>ㅅ</span></span>
+                                        은 나쁜 것이라고 하셨습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer-box">
+                                <div class="hidden-box que icon-size-02" data-visible=".explanatory-01">
+                                    <div class="text">무관심</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- OX -->
+                        <div class="sub-content sub-page-03">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">민재는 주민이와 주민이 아빠가 비슷하다고 생각했습니다.</div>
+                                </div>
+                            </div>
+                            <div class="single-choice" data-quiz="singleChoice" data-answer="0" data-visible=".explanatory-02" data-mark="1">
+                                <div class="button button-01"></div><!--o : 0-->
+                                <div class="button button-02"></div><!--x : 1-->
+                            </div>
+                        </div>
+
+                        <!-- 단답 -->
+                        <div class="sub-content sub-page-04">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        주민이는 아빠에게 친절왕이 옮기고 간 무엇이 있다고 했나요?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer-box">
+                                <div class="hidden-box que icon-size-02">
+                                    <div class="text">바이러스</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 초성 -->
+                        <div class="sub-content sub-page-05">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        주민이 아빠는 119 구조대로 부서를 옮기고 나서는
+                                        <span class="dir-rect ml"><span>ㅊ</span></span>
+                                        <span class="dir-rect"><span>ㅈ</span></span>
+                                        <span class="dir-rect"><span>ㅇ</span></span>
+                                        이 되었습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer-box">
+                                <div class="hidden-box que icon-size-02" data-visible=".explanatory-01">
+                                    <div class="text">친절왕</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="prev-button"></div>
+                        <div class="next-button"></div>
+                    </div>
+                </div>
+
+                <div class="home-box">
+                    <div class="image-box">
+                        <img src="../common/images/jejae_quiz_home_bg.png" alt="" />
+                    </div>
+                    <div class="title-box">
+                        <div class="title">우리 반 친절왕</div>
+                        <!-- <div class="writer">작가 이름</div> -->
+                    </div>
+                    <div class="start-button"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../common/js/libs/underscore-min.js"></script>
+        <script src="../common/js/libs/anime.min.js"></script>
+        <script src="../amt/js/amt.js"></script>
+        <script src="../common/js/common.js"></script>
+        <script src="../common/js/quiz.js"></script>
+        <script src="../common/js/content.js"></script>
+    </body>
+</html>

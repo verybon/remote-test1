@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" href="../common/css/sanitize.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/content.css" />
+
+    <style>
+        .box-char .box-base{height:135px; display: flex; align-items: center; text-align: center; justify-content: center; position: relative; padding:0 180px;}
+        .box-char .box-base{margin-top:20px;}
+        .box-char .box-base::after{content:""; position:absolute; display:block; left:40px; bottom:0;}
+        .box-char .box-base.ps-r::after{content:""; position:absolute; display:block; left:auto; right:40px;}
+        .box-char .box-base.char-01::after{width:calc(235px / 2); height:145px; background: url(./common/images/character/char_01_.png) no-repeat 0 0 / cover; }
+        .box-char .box-base.char-02::after{width:calc(235px / 2); height:145px; background: url(./common/images/character/char_02_.png) no-repeat 0 0 / cover; }
+        .box-char .box-base.char-03::after{width:calc(235px / 2); height:145px; background: url(./common/images/character/char_03_.png) no-repeat 0 0 / cover; }
+        .box-char .box-base.char-04::after{width:calc(235px / 2); height:145px; background: url(./common/images/character/char_04_.png) no-repeat 0 0 / cover; }
+        .box-char .box-base.char-05::after{width:calc(235px / 2); height:145px; background: url(./common/images/character/char_05_.png) no-repeat 0 0 / cover; }
+        .box-char .box-base.char-06::after{width:calc(235px / 2); height:145px; background: url(./common/images/character/char_06_.png) no-repeat 0 0 / cover; }
+        .box-char .box-base.char-07::after{width:calc(235px / 2); height:145px; background: url(./common/images/character/char_07_.png) no-repeat 0 0 / cover; }
+        .box-char .box-base.char-08::after{width:calc(235px / 2); height:145px; background: url(./common/images/character/char_08_.png) no-repeat 0 0 / cover; }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="main normal">
+            <div class="header">
+                <h1 class="title-02" aria-label="교과서 활동"></h1>
+            </div>
+
+            <div class="content">
+                <div class="bullet-box direction">
+                    <div class="text">
+                        다시 한번 대화를 주고받아 보고, 대화를 나누어 본 소감을 말해 보세요.
+                    </div>
+                </div>
+                <div class="content-inner">
+                    <div class="box-char">
+                        <div class="box-base bgcolor-06 char-05">
+                            <div class="bg-color-box" style="margin: 0;">
+                                <div class="hidden-box no-bg" style="width: 100%;padding: 0;">
+                                    <div class="text ta-c">
+                                        공감하며 대화하는 것이 어렵다는 것을 알았습니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-base bgcolor-02 char-02 ps-r">
+                            <div class="bg-color-box" style="margin: 0;">
+                                <div class="hidden-box no-bg" style="width: 100%;padding: 0;">
+                                    <div class="text ta-c">
+                                        공감하며 대화하려는 생각을 많이 해야 합니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-base bgcolor-01 char-03">
+                            <div class="bg-color-box" style="margin: 0;">
+                                <div class="hidden-box no-bg" style="width: 100%;padding: 0;">
+                                    <div class="text ta-c">
+                                        공감하며 대화하면 서로 싸울 일이 없을 것 같습니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="teacher-question num-08">
+            대화에서 부족한 점을 고쳐 다시 한번 대화를 주고받아 봅시다.
+        </div>
+
+    </div>
+
+    <script src="../common/js/libs/underscore-min.js"></script>
+    <script src="../common/js/libs/anime.min.js"></script>
+    <script src="../amt/js/amt.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="../common/js/canvasAnimation.js"></script>
+    <script src="../common/js/canvasAnimationData.js"></script>
+    <script src="../common/js/content.js"></script>
+</body>
+
+</html>

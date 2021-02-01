@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title>생각 열기</title>
+    <link rel="stylesheet" href="../common/css/sanitize.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/content.css" />
+    <style>
+        .popup-mini.mini-01{top: 410px;right: 260px;width: auto;}
+        .pic-box {background-color:#fff9e5; border-color:#fff9e5; height:490px ;}
+        .pic-box .click-induced.pic{height: calc(100% - 150px); border-radius:15px; overflow: hidden; margin-bottom: 10px;}
+        .pic-box .text-box{height: 180px; }
+        .pic-box .text{height:100%; padding:10px}
+        .click-induced.pic::after{bottom:20px}
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="main how">
+            <div class="header">
+                <h1 class="title-03" aria-label="생각 열기"></h1>
+            </div>
+
+            <div class="content page-01">
+                <div class="bullet-box direction">
+                    <div class="text">다음 그림 속 사람들의 마음을 상상해 보세요.</div>
+                </div>
+
+                <div class="grid-wrap">
+                    <div class="pic-box pic-box-01 grid-1">
+                        <div class="text">
+                            <div class="click-induced pic button-pic-01">
+                                <div class="image-box"
+                                style="background:url(./images/nkor_0201_01_0506_101_1.png) no-repeat 50% 50% / cover; width:100%; height:100%">
+                                </div>
+                            </div>
+                            <div class="ti">
+                                뻥튀기가 나올 때 옆에서 기다리는 손님의 마음
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-box pic-box-02 grid-1">
+                        <div class="text">
+                            <div class="click-induced pic button-pic-02">
+                                <div class="image-box"
+                                style="background:url(./images/nkor_0201_01_0506_101_2.png) no-repeat 50% 50% / cover; width:100%; height:100%">
+                                </div>
+                            </div>
+                            <div class="ti">
+                                외줄타기를 보고 있는 <span class="click-induced word button-mini-01"
+                                style="margin-right: 5px;">관객</span>의 마음
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-mini word mini-01" data-button=".button-mini-01">
+                    <div class="box-top">
+                        <div class="popup-title">어휘 쏙쏙</div>
+                        <div class="button-close"></div>
+                    </div>
+                    <div class="box-content">
+                        <div class="word">관객</div>
+                        <div class="explain-word">
+                            <div class="text">
+                                운동 경기, 공연, 영화 따위를 보거<br>나 듣는 사람.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="popup-full-pic">
+
+            <div class="popup-pic" data-button=".button-pic-01;.button-pic-02" style="width:1090px">
+                <div class="tab-content-box">
+                    <div class="tab-content content-01">
+                        <div class="image-box"
+                         style="background:url(./images/nkor_0201_01_0506_101_1.png) no-repeat 50% 50% / cover; width:100%; height:calc(100% - 45px); margin-bottom:45px">
+                        </div>
+                    </div>
+
+                    <div class="tab-content content-01">
+                        <div class="image-box"
+                        style="background:url(./images/nkor_0201_01_0506_101_2.png) no-repeat 50% 80% / cover; width:100%; height:calc(100% - 45px); margin-bottom:45px">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="button-box">
+                    <div class="prev-button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="next-button"></div>
+                </div>
+                <div class="button-close"></div>
+            </div>
+
+        </div>
+
+        <div class="teacher-question bullet-circle">
+            다음 그림 속의 사람들은 어떤 마음일지 상상해 봅시다.
+
+        </div>
+
+    </div>
+
+    <script src="../common/js/libs/anime.min.js"></script>
+    <script src="../common/js/libs/underscore-min.js"></script>
+    <script src="../amt/js/amt.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="../common/js/canvasAnimation.js"></script>
+    <script src="../common/js/canvasAnimationData.js"></script>
+    <script src="../common/js/content.js"></script>
+</body>
+
+</html>
