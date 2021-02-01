@@ -1,0 +1,18 @@
+.position-box {
+    height: 314px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-01 .table .hidden-text.hidden-text-01 {
+    width: 80px;
+}
+
+.page-01 .table .hidden-text {
+    width: 120px;
+    padding: 0;
+}
+
+.page-01 .table tr:last-child .hidden-text {
+    width: 150px;
+}

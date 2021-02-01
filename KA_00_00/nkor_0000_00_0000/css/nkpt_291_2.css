@@ -1,0 +1,11 @@
+.style-a{width:100%; position:relative; height:500px; background: url(../images/nkpt_291_1/img_01.jpg) no-repeat center;}
+
+.text-box{position: absolute; max-width:425px; width:auto;}
+
+.text-box.n1{top:50px; left:100px}
+.text-box.n3{top:180px; left:0px; max-width:440px}
+.text-box.n5{top:320px; left:0;}
+.text-box.n2{top:20px; right:60px;}
+.text-box.n4{top:190px; right:160px}
+.text-box.n6{top:360px; right:190px}
+

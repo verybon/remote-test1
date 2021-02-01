@@ -1,0 +1,55 @@
+.pic-box {
+    font-size: 34px;
+    width: 24%;
+    height:auto;
+    border:0;
+}
+
+.pic-box .rect-num::after {
+    z-index: 1;
+    background: #fff;
+    left:10px;
+    top:10px;
+}
+
+
+
+.pic-box .image {
+    /* margin-top: 60px; */
+    width: 100%;
+    height: 298px;
+}
+
+
+
+
+.single-choice .button {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 2px solid #dedede;
+}
+.single-choice {left:30px; width:1110px; height:100px; bottom:100px; top:auto;}
+.single-choice .button:nth-child(1) {
+    left: calc(25% - 170px);
+    top: 0;
+}
+.single-choice .button:nth-child(2) {
+    left: calc(50% - 170px);
+    top: 0;
+}
+.single-choice .button:nth-child(3) {
+    left: calc(75% - 170px);
+    top: 0;
+}
+.single-choice .button:nth-child(4) {
+    left: calc(100% - 170px);
+    top: 0;
+}
+
+.ico-arrow-01{position:absolute; top:30px}
+.ico-arrow-01.n1{ left: calc(25% - 20px);}
+.ico-arrow-01.n2{ left: calc(50% - 20px);}
+.ico-arrow-01.n3{ left: calc(75% - 20px);}

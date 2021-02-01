@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+        <title></title>
+        <link rel="stylesheet" href="../common/css/sanitize.css" />
+        <link rel="stylesheet" href="../common/css/common.css" />
+        <link rel="stylesheet" href="../common/css/audioPlayer.css" />
+        <link rel="stylesheet" href="../common/css/content.css" />
+        <style>
+            .single-choice .mark{display:none;}
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="main jejae quiz" data-content="jejae-quiz">
+                <div class="quiz-box">
+                    <div class="image-box">
+                        <img src="../common/images/jejae_quiz_bg.png" alt="" />
+                    </div>
+                    <div class="header">
+                        <div class="title image-box">
+                            <img src="../common/images/title_jejae_quiz.png" alt="" />
+                        </div>
+                        <div class="character">
+                            <div class="image-box">
+                                <img src="../common/images/jejae_quiz_subtitle.png" alt="" />
+                            </div>
+                            <div class="sub-title">으악, 도깨비다!</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-tab-box" data-sub-tabs="1,2,3">
+
+                        <!-- 초성 -->
+                        <div class="sub-content sub-page-01">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        장승 마을은 
+                                        <span class="dir-rect ml"><span>ㅂ</span></span>
+                                        <span class="dir-rect"><span>ㄹ</span></span>
+                                        만 아는 깊은 산골에 있습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer-box">
+                                <div class="hidden-box que icon-size-02" data-visible=".explanatory-01">
+                                    <div class="text">바람</div>
+                                </div>
+                            </div>
+                            <!-- <div class="explanatory explanatory-01 hide">
+                                <div class="bullet-box">
+                                    해설 텍스트가 두 줄일 때 정렬입니다. 해설 텍스트가 두 줄일 때 정렬입니다. 해설 텍스트가 두 줄일 때 정렬입니다.
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <!-- 단답 -->
+                        <div class="sub-content sub-page-02">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">
+                                        뻐드렁니는 멋쟁이 장승을 무엇이라고 놀렸나요?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer-box">
+                                <div class="hidden-box que icon-size-02">
+                                    <div class="text">잘난 척 왕자</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- OX -->
+                        <div class="sub-content sub-page-03">
+                            <div class="direction">
+                                <div class="bullet-box empty-circle color-01">
+                                    <div class="text">장승 친구들은 낮에도 움직일 수 있습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-choice" data-quiz="singleChoice" data-answer="1" data-visible=".explanatory-02" data-mark="1">
+                                <div class="button button-01"></div><!--o : 0-->
+                                <div class="button button-02"></div><!--x : 1-->
+                            </div>
+                            <div class="explanatory line-one explanatory-02 hide">
+                                <div class="bullet-box">장승 친구들은 <span class="emp">밤에만</span> 움직일 수 있습니다.
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+
+                        <div class="prev-button"></div>
+                        <div class="next-button"></div>
+                    </div>
+                </div>
+
+                <div class="home-box">
+                    <div class="image-box">
+                        <img src="../common/images/jejae_quiz_home_bg.png" alt="" />
+                    </div>
+                    <div class="title-box">
+                        <div class="title">으악, 도깨비다!</div>
+                        <!-- <div class="writer">작가 이름</div> -->
+                    </div>
+                    <div class="start-button"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../common/js/libs/underscore-min.js"></script>
+        <script src="../common/js/libs/anime.min.js"></script>
+        <script src="../amt/js/amt.js"></script>
+        <script src="../common/js/common.js"></script>
+        <script src="../common/js/quiz.js"></script>
+        <script src="../common/js/content.js"></script>
+    </body>
+</html>

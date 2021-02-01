@@ -1,0 +1,9 @@
+.image-box {
+    position: absolute;
+    left: 50%;
+    top: 87px;
+    width: 586px;
+    height: 390px;
+    transform: translate(-50%, 0);
+}
+

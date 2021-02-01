@@ -1,0 +1,43 @@
+.rect-num.color-01::after {
+    background: #ffffff;
+}
+
+.pic-box-01 .image {
+    width: 993px;
+    height: 307px;
+    background: url("../images/nkpt_283/img_01.png") no-repeat;
+    background-size: contain;
+}
+.pic-box-02 .image {
+    width: 993px;
+    height: 307px;
+    background: url("../images/nkpt_283/img_01.png") no-repeat;
+    background-size: contain;
+}
+.pic-box-03 .image {
+    width: 993px;
+    height: 307px;
+    background: url("../images/nkpt_283/img_01.png") no-repeat;
+    background-size: contain;
+}
+.pic-box-04 .image {
+    width: 993px;
+    height: 307px;
+    background: url("../images/nkpt_283/img_01.png") no-repeat;
+    background-size: cover;
+}
+.pic-box-05 .image {
+    width: 993px;
+    height: 257px;
+    background: url("../images/nkpt_283/img_01.png") no-repeat 100%;
+    background-size: cover;
+}
+.pic-box.sole.pic-box-05 .image-box{
+    height: 257px;
+}
+.pic-box.sole.pic-box-05 .text-box{
+    height: 170px;
+}
+.pic-box.sole{background:#fdf3e7}
+.pic-box.sole + .pic-box.sole{margin-left:10px}
+.pic-box.sole .text-box {height:124px}

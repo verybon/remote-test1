@@ -1,0 +1,18 @@
+.num-space{
+    margin-left: 70px;
+    margin-bottom:15px;
+    position: relative;
+}
+
+.rect-num{
+    position: absolute;
+}
+
+.rect-num.num-01{
+    top: 0;
+    left: -48px;
+}
+.rect-num.num-02{
+    top: 0;
+    left: -48px;
+}

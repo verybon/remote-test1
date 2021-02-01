@@ -1,0 +1,65 @@
+.teacher-question .text {
+    letter-spacing: -1px;
+}
+
+/* .page-01 .ani-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-01 .ani-box > div:nth-child(1) {
+    margin-right: 200px;
+}
+.page-01 .char-bg-ani-box {
+    position: relative;
+    left: 0;
+    top: 0;
+} */
+
+
+
+.page-02 .ani-box {
+    position: absolute;
+}
+
+.page-02 .char-bg-ani-box {
+    position: absolute;
+    left: 80px;
+    top: 100px;
+}
+
+.page-02 .input-box {
+    position: absolute;
+    margin: 70px 300px;
+    width: 750px;
+    height: 300px;
+    background-color: #F3F3F3;
+}
+
+textarea[type="text"] {
+    color: #24914D;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px;
+    opacity: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: NotoB;
+    font-size: 35px;
+    text-align: left;
+}
+textarea[type="text"]::placeholder {
+    color: #C7C7C7;
+}
+textarea[type="text"]:-ms-input-placeholder {
+    color: #C7C7C7;
+}
+textarea[type="text"]::-ms-clear {
+    display: none;
+}

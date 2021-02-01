@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" href="../common/css/sanitize.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/content.css" />
+    <link rel="stylesheet" href="../common/css/audioPlayer.css">
+
+    <style>
+        .sub-tab-box > .bg {
+            width: 1003px;
+            height: 465px;
+            background-color: #FFECCF;
+        }
+        .bg > .bg01 {
+            width: 970px;
+            height: 266px;
+            left: 15px;
+            top: 64px;
+            position: absolute;
+            border-radius: 20px;
+            /* background-color: white; */
+        }
+        
+
+        .image_box,.img-poster .cut,img{
+            width: 93%;
+        }
+
+        .scene-button-box .button .rect-num{
+            margin-left: -30px;
+            pointer-events: none;
+        }
+        
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="main" data-main-tabs="낱말 읽기, 모두 읽기 ">
+            <div class="header">
+                <h1 class="title-02" aria-label="교과서 활동"></h1>
+            </div>
+
+            <!-- 낱말 읽기 -->
+            <div class="content page-01">
+                <div class="direction bullet-box">
+                    <div class="text">선생님을 따라 읽어 볼까요?</div>
+                </div>
+
+                <div class="top-line-box">
+                    <div class="sub-tab-box" data-sub-tabs="나, 너, 우리, 친구, 선생님">
+                        <div class="sub-content sub-page-01">
+                            <div class="follow-read">
+                                <div class="image-box" style="min-width:615px; background: url(./images/nkpt_211_1/img_01.png) no-repeat 50% 50% / cover; width:650px; height:400px; ">
+                                </div>
+                                <div class="text-box">나</div>
+                                <div class="audio-box">
+                                    <div class="button-play-audio" data-module="simple-audio" data-src="./media/audios/nkor_0102_01_0006_201_1.mp3" data-audio-id="audio-01"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-content sub-page-01">
+                            <div class="follow-read">
+                                <div class="image-box" style="min-width:615px; background: url(./images/nkpt_211_1/img_01.png) no-repeat 50% 50% / cover; width:650px; height:400px; ">
+                                </div>
+                                <div class="text-box">너</div>
+                                <div class="audio-box">
+                                    <div class="button-play-audio" data-module="simple-audio" data-src="./media/audios/nkor_0102_01_0006_201_1.mp3" data-audio-id="audio-01"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-content sub-page-01">
+                            <div class="follow-read">
+                                <div class="image-box" style="min-width:615px; background: url(./images/nkpt_211_1/img_01.png) no-repeat 50% 50% / cover; width:650px; height:400px; ">
+                                </div>
+                                <div class="text-box">우리</div>
+                                <div class="audio-box">
+                                    <div class="button-play-audio" data-module="simple-audio" data-src="./media/audios/nkor_0102_01_0006_201_1.mp3" data-audio-id="audio-01"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-content sub-page-01">
+                            <div class="follow-read">
+                                <div class="image-box" style="min-width:615px; background: url(./images/nkpt_211_1/img_01.png) no-repeat 50% 50% / cover; width:650px; height:400px; ">
+                                </div>
+                                <div class="text-box">친구</div>
+                                <div class="audio-box">
+                                    <div class="button-play-audio" data-module="simple-audio" data-src="./media/audios/nkor_0102_01_0006_201_1.mp3" data-audio-id="audio-01"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-content sub-page-01">
+                            <div class="follow-read">
+                                <div class="image-box" style="min-width:615px; background: url(./images/nkpt_211_1/img_01.png) no-repeat 50% 50% / cover; width:650px; height:400px; ">
+                                </div>
+                                <div class="text-box">선생님</div>
+                                <div class="audio-box">
+                                    <div class="button-play-audio" data-module="simple-audio" data-src="./media/audios/nkor_0102_01_0006_201_1.mp3" data-audio-id="audio-01"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 모두 읽기 -->
+            <div class="content page-02" data-content="cut-ani">
+                <div class="direction bullet-box">
+                    <div class="text">모두 함께 소리 내어 읽어 보세요.</div>
+                </div>
+
+                <div class="cut-ani-box">
+                    <div class="img-poster">
+                        <img src="./images/nkpt_211_1/img_01.png" >
+                    </div>
+                    <div class="cut">
+                        cut1
+                    </div>
+                    <div class="cut">
+                        cut2
+                    </div>
+                    <div class="cut">
+                        cut3
+                    </div>
+                    <div class="cut">
+                        cut4
+                    </div>
+                    <div class="cut">
+                        cut5
+                    </div>
+
+                    <!--
+                        direction 한 줄 top:-10px
+                        direction 두 줄 top:-40px           
+                    -->
+                    <div class="center-play-button" style="top:-10px"></div>
+                </div>
+
+                <div class="scene-button-box">
+                    <button type="button" class="button">나</button>
+                    <button type="button" class="button">너</button>
+                    <button type="button" class="button">우리</button>
+                    <button type="button" class="button">친구</button>
+                    <button type="button" class="button">선생님</button>
+                </div>
+                <div class="audio-player"></div>
+            </div>
+        </div>
+
+        <div class="teacher-question num-01">
+            선생님을 따라 읽어 봅시다.
+        </div>
+    </div>
+
+    <script src="../common/js/libs/anime.min.js"></script>
+    <script src="../common/js/libs/underscore-min.js"></script>
+    <script src="../amt/js/amt.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="../common/js/playerProgress.js"></script>
+    <script src="../common/js/audioPlayer.js"></script>
+    <script src="../common/js/content.js"></script>
+
+    <script src="./js/nkpt_211_1.js"></script>
+
+</body>
+
+</html>

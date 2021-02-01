@@ -1,0 +1,2895 @@
+/* 폰트 */
+@font-face {
+    font-family: NotoT;
+    src: url("../../fonts/NotoSansCJKkr-Thin.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoDL;
+    src: url("../../fonts/NotoSansCJKkr-DemiLight.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoL;
+    src: url("../../fonts/NotoSansCJKkr-Light.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoR;
+    src: url("../../fonts/NotoSansCJKkr-Regular.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoM;
+    src: url("../../fonts/NotoSansCJKkr-Medium.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoB;
+    src: url("../../fonts/NotoSansCJKkr-Bold.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoBK;
+    src: url("../../fonts/NotoSansCJKkr-Black.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoKRB;
+    src: url("../../fonts/NotoSansKR-Black.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoMR;
+    src: url("../../fonts/NotoSansMonoCJKkr-Regular.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: NotoMB;
+    src: url("../../fonts/NotoSansMonoCJKkr-Bold.woff");
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: YGOT;
+    src: url("../../fonts/ygotjalnanfont.woff");
+    /* font-display: swap; */
+}
+
+ol,ul,li{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.NotoT {
+    font-family: NotoT;
+}
+.NotoDL {
+    font-family: NotoDL;
+}
+.NotoL {
+    font-family: NotoL;
+}
+.NotoR {
+    font-family: NotoR;
+}
+.NotoM {
+    font-family: NotoM;
+}
+.NotoB {
+    font-family: NotoB;
+}
+.NotoBK {
+    font-family: NotoBK;
+}
+.NotoKRB {
+    font-family: NotoKRB;
+}
+.NotoMR {
+    font-family: NotoMR;
+}
+.NotoMB {
+    font-family: NotoMB;
+}
+.YGOT {
+    font-family: YGOT;
+}
+.serif {
+    font-family: serif;
+    font-weight: 600;
+}
+
+.pd-none{padding:0 !important;}
+.pd-none textarea,
+.pd-none .hidden-box{padding:8px 13px !important;}
+/* ============================================================================================================= */
+/* 정렬 */
+.align-tl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.align-tc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.align-tr {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.align-cl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.align-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.align-cr {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.align-bl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.align-bc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.align-br {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* ============================================================================================================= */
+/* 애니메이션 */
+@keyframes effectOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.flowAni {
+	height: 0;
+	overflow: hidden;
+    -webkit-animation: flow 1s ease-out 0.5s forwards;
+    -moz-animation: flow 1s ease-out 0.5s forwards;
+    -o-animation: flow 1s ease-out 0.5s forwards;
+	animation: flow 1s ease-out 0.5s forwards;
+}
+@keyframes flow {
+	0% { height:0px ; }
+	100% { height:375px ; }
+}
+@-webkit-keyframes flow {
+    0% { height:0px ; }
+    100% { height:375px ; }
+}
+@-moz-keyframes flow {
+    0% { height:0px ; }
+    100% { height:375px ; }
+}
+@-o-keyframes flow {
+    0% { height:0px ; }
+    100% { height:375px ; }
+}
+
+/* ============================================================================================================= */
+/* global */
+.hide {
+    visibility: hidden !important;
+}
+.remove {
+    display: none !important;
+}
+
+[class*="button"] {
+    cursor: pointer;
+}
+
+[class*="box"] {
+    cursor: auto;
+}
+
+/* .over { */
+/*     transition: all 0.1s; */
+/* } */
+/* .over.on { */
+/*     transition: none; */
+/* } */
+:hover,
+.trans-bg,
+.over {
+    /* transition: background-image 0.1s ease-in-out; */
+    transition: background-image 0.1s;
+}
+
+.ti {
+    /* text-indent: 0.6em; */
+    text-indent: 0.5em;
+}
+.ti *{text-indent: 0;}
+.ti .ti{text-indent: 0.5em;}
+
+.ta-j {
+    text-align: justify !important;
+}
+.ta-c {
+    text-align: center !important;
+}
+.ta-r{
+    text-align: right !important;
+}
+
+.ta-c .hidden-box .text{width:100%; text-align: center;}
+.ta-r .hidden-box .text{width:100%; text-align: right;}
+
+.ls-0p5 {
+    letter-spacing: -0.5px;
+}
+.ls-1 {
+    letter-spacing: -1px;
+}
+.ls-1p5 {
+    letter-spacing: -1.5px;
+}
+.ls-2 {
+    letter-spacing: -2px;
+}
+
+/* 크롬에서 스케일 리사이즈시 element가 보이지 않는 문제 때문에 추가 */
+/* div { */
+/*     [> -webkit-transform: translateZ(0); <] */
+/*     [> transform: translateZ(0); <] */
+/* } */
+
+/* table tag의 td border가 보이지 않는 문제 발생 -- div로 한정하는 것으로 수정  */
+/* * { */
+/*     -webkit-transform: translateZ(0); */
+/* } */
+
+input[type="text"] {
+    color: #24914D;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px;
+    opacity: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: NotoB;
+    font-size: 38px;
+    text-align: center;
+}
+textarea[type="text"]{
+    font-size: 38px !important;
+}
+textarea::placeholder,
+textarea[type="text"]::placeholder,
+input[type="text"]::placeholder {
+    color: #C7C7C7;
+}
+textarea:-ms-input-placeholder,
+textarea[type="text"]:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder {
+    color: #C7C7C7;
+}
+textarea::-ms-clear,
+textarea[type="text"]::-ms-clear,
+input[type="text"]::-ms-clear {
+    display: none;
+}
+
+textarea {
+    color: #24914D;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px;
+    opacity: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: NotoB;
+    font-size: 35px;
+    text-align: left;
+    resize: none;
+    overflow: hidden;
+}
+
+.input-box {
+    width: 400px;
+    height: 80px;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+}
+table .input-box {
+    position: relative;
+    z-index: 1;
+}
+
+.image-box > img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.empty-rect {
+    display: inline-block;
+    width: 95px;
+    height: 55px;
+    background-color: #fff;
+    border: 2px solid #DBDBDB;
+    border-radius: 5px;
+    vertical-align: top;
+}
+
+.dir-o {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background: url("../images/dir_01.png") no-repeat;
+    background-size: contain;
+}
+.dir-x {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background: url("../images/dir_02.png") no-repeat;
+    background-size: contain;
+}
+.bg-color-box .hidden-box:not([class*="bg-color"]), .hidden-box.no-bg{padding:8px 13px;}
+.bg-color-box {
+    margin: 0 auto 10px auto;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 35px;
+    text-align: justify;
+}
+
+.main.summary .bg-color-box{
+    width:1000px
+}
+.border-color-box {
+    position: relative;
+    margin: 10px auto;
+    padding: 10px 30px;
+    /* width: 1000px; */
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 4px solid #F2F5D8;
+    font-size: 35px;
+    text-align: justify;
+}
+.bg-color-01 {
+    background-color: #FDF2F5;
+}
+.bg-color-02 {
+    background-color: #FDF3E7;
+}
+.bg-color-03 {
+    background-color: #F6EFFB;
+}
+.bg-color-04 {
+    background-color: #F5F7E5;
+}
+.bg-color-05 {
+    background-color: #F7F7F7;
+}
+
+.text-answer {
+    font-family: NotoB;
+    color: #00A0FF;
+}
+
+.ico-arrow-01 {
+    margin: 0 10px;
+    width: 28px;
+    height: 26px;
+    background: url("../images/ico_arrow_01.png") no-repeat;
+    background-size: contain;
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+    text-indent: 0;
+}
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+.line-guide-v {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: red;
+}
+.line-guide-h {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: red;
+}
+
+/* ============================================================================================================= */
+/* bullet box */
+/* 대발문 */
+.bullet-box {
+    text-align: justify;
+}
+.bullet-box.teacher {
+    position: relative;
+    padding-left: 50px;
+}
+.bullet-box.teacher::after {
+    content: "1.";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: NotoB;
+    font-size: 43px;
+    color: #E78C00;
+}
+.bullet-box.teacher .num {
+    font-family: NotoB;
+    font-size: 43px;
+    color: #E78C00;
+}
+
+/* 컨텐츠 지시문 */
+.bullet-box.direction {
+    position: relative;
+    padding-left: 50px;
+    line-height: 1.4;
+}
+.content > .direction.two-line {
+    margin:20px 0 20px 0;
+}
+.bullet-box.direction::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 38px;
+    height: 38px;
+    background: url("../images/bullet_01.png") no-repeat;
+    background-size: contain;
+}
+.main.kor-act .bullet-box.direction::after {
+    background: url("../images/bullet_02.png") no-repeat;
+    background-size: contain;
+}
+.bullet-box.direction .num {
+    font-family: NotoB;
+    color: #E78C00;
+}
+
+/* 사각형 넘버 */
+.que-box .bullet-box.rect-num{
+    position:static;
+    padding-left:0
+}
+.bullet-box.rect-num {
+    position: relative;
+    padding-left: 50px;
+}
+/* 동그라미 넘버 */
+.bullet-box.circle-num {
+    position: relative;
+    padding-left: 35px;
+}
+/* 사각형 예 */
+.bullet-box.rect-ex {
+    position: relative;
+    padding-left: 50px;
+}
+.circle-num.num-01::after,
+.rect-num.num-01::after {
+    content: "1";
+}
+.circle-num.num-02::after,
+.rect-num.num-02::after {
+    content: "2";
+}
+.circle-num.num-03::after,
+.rect-num.num-03::after {
+    content: "3";
+}
+.circle-num.num-04::after,
+.rect-num.num-04::after {
+    content: "4";
+}
+.circle-num.num-05::after,
+.rect-num.num-05::after {
+    content: "5";
+}
+.circle-num.num-06::after,
+.rect-num.num-06::after {
+    content: "6";
+}
+.circle-num.num-07::after,
+.rect-num.num-07::after {
+    content: "7";
+}
+.circle-num.num-08::after,
+.rect-num.num-08::after {
+    content: "8";
+}
+.circle-num.num-09::after,
+.rect-num.num-09::after {
+    content: "9";
+}
+.circle-num.num-10::after,
+.rect-num.num-10::after {
+    content: "10";
+}
+.circle-num.num-11::after,
+.rect-num.num-11::after {
+    content: "11";
+}
+.circle-num.num-12::after,
+.rect-num.num-12::after {
+    content: "12";
+}
+.ox-box::before{content:""; display:block; width:120px; height:90px; border-radius:45px; background-color:#fef9f4; position:absolute; top:10px; left:30px; z-index:0;}
+
+.dir-rect.color-01,
+.rect-ex.color-01::after,
+.circle-kor.color-01::after,
+.rect-kor.color-01::after,
+.circle-num.color-01::after,
+.rect-num.color-01::after {
+    color: #FF9A00;
+    border: 3px solid #FF9A00;
+}
+.dir-rect.color-02,
+.rect-ex.color-02::after,
+.circle-kor.color-02::after,
+.rect-kor.color-02::after,
+.circle-num.color-02::after,
+.rect-num.color-02::after {
+    color: #8F73C2;
+    border: 3px solid #8F73C2;
+}
+.dir-rect.color-03,
+.rect-ex.color-03::after,
+.circle-kor.color-03::after,
+.rect-kor.color-03::after,
+.circle-num.color-03::after,
+.rect-num.color-03::after {
+    color: #7FB624;
+    border: 3px solid #7FB624;
+}
+.dir-rect.color-04,
+.rect-ex.color-04::after,
+.circle-kor.color-04::after,
+.rect-kor.color-04::after,
+.circle-num.color-04::after,
+.rect-num.color-04::after {
+    color: #F06794;
+    border: 3px solid #F06794;
+}
+.dir-rect.color-05,
+.rect-ex.color-05::after,
+.circle-kor.color-05::after,
+.rect-kor.color-05::after,
+.circle-num.color-05::after,
+.rect-num.color-05::after {
+    color: #00A0FF;
+    border: 3px solid #00A0FF;
+}
+
+.circle-kor.kor-01::after,
+.rect-kor.kor-01::after {
+    content: "가";
+}
+.circle-kor.kor-02::after,
+.rect-kor.kor-02::after {
+    content: "나";
+}
+
+.rect-ex.bg-w::after,
+.circle-kor.bg-w::after,
+.rect-kor.bg-w::after,
+.circle-num.bg-w::after,
+.rect-num.bg-w::after {
+    background-color: #fff;
+}
+
+.dir-rect {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    vertical-align: top;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: YGOT;
+    font-size: 20px;
+    text-indent: 0;
+}
+
+.rect-kor {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+}
+.rect-kor::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-family: YGOT;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rect-num::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 38px;
+    height: 38px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-family: YGOT;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-num::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top:7px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000;
+    border-radius: 40px;
+    font-family: YGOT;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rect-ex::after {
+    content: "예";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 38px;
+    height: 38px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-family: YGOT;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bullet-box.circle-num.fill {
+    position: relative;
+    padding-left: 35px;
+}
+.circle-num.fill::after {
+    /* content: ""; */
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background-color: #FE6600;
+    border-radius: 24px;
+    font-family: NotoB;
+    font-size: 18px;
+    line-height: 1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 안이 비어있는 회색 동그라미 */
+.bullet-box.empty-circle {
+    position: relative;
+    padding-left: 25px;
+}
+.bullet-box.empty-circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 26px;
+    width: 13px;
+    height: 13px;
+    border: 4px solid #CCCCCC;
+    border-radius: 13px;
+}
+/* 안이 비어있는 주황색 동그라미 */
+.bullet-box.empty-circle.color-01::after {
+    border: 4px solid #FF6600;
+}
+.kor-act .bullet-box.empty-circle.color-01::after {
+    border: 4px solid #259a49;
+}
+
+
+.bullet-box.icon-example {
+    position: relative;
+    padding-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.bullet-box.icon-example::before {
+    content: "";
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    display: inline-block;
+    width: 45px;
+    height: 32px;
+    background: url("../images/ico_ex.png") no-repeat;
+    background-size: contain;
+}
+
+.emp {
+    color: #FF6600;
+}
+
+.main.kor-act .popup-mini.helper .emp,
+.popup-mini.helper .emp{
+    /* color: #F06794; */
+    color: #FF3175;
+}
+
+/* ============================================================================================================= */
+/* 프레임 레이아웃  */
+body {
+    width: 1170px;
+    height: 768px;
+    font-family: NotoM, NotoB;
+
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    highlight-color: rgba(0, 0, 0, 0);
+
+    overflow: hidden;
+}
+
+#wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1170px;
+    height: 768px;
+    /* padding: 38px 0; */
+    /* visibility: hidden; */
+    /* overflow: hidden; */
+    /* background-color: #F6E7D4; */
+    /* background-color: #000; */
+    background-color: #333;
+    -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+#wrap > .bg-box {
+    position: absolute;
+    left: 0;
+    top: 38px;
+    width: 1170px;
+    height: 692px;
+    overflow: hidden;
+}
+#wrap > .bg-box > .bg {
+    position: relative;
+    top: -38px;
+    width: 1170px;
+    height: 768px;
+    /* background: url("../images/101/img_01.jpg") no-repeat; */
+    /* background-size: contain; */
+}
+
+.guide-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1170px;
+    height: 39px;
+    background-color: #333;
+    z-index: 10;
+    pointer-events: none;
+}
+.guide-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1170px;
+    height: 39px;
+    background-color: #333;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.main {
+    position: absolute;
+    left: 0;
+    top: 38px;
+    width: 1170px;
+    height: 692px;
+    background-color: #f6e7d4;
+    overflow: hidden;
+}
+.main > .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #f6e7d4;
+    z-index: 10;
+}
+.main.kor-act > .header {
+    background-color: #F0F6D4;
+}
+.main > .content {
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: 100%;
+    height: 627px;
+    padding: 0 40px;
+    background-color: #fff;
+    font-size:38px;
+}
+
+.main.intro {
+    background-color: rgba(0, 0, 0, 0);
+}
+.main.intro > .header {
+    z-index: 0;
+}
+.main.intro > .content {
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* 단원 학습 목표 */
+.main.lesson-goal {
+    font-family: NotoB;
+}
+.main.lesson-goal > .header {
+    position: relative;
+    width: 410px;
+    height: 64px;
+    padding: 0 0 2px 0;
+    margin: 0 auto;
+    background-color: #FE6600;
+    border-radius: 0 0 45px 45px;
+}
+.lesson-goal .title-goal {
+    height: 100%;
+    font-family: YGOT;
+    font-size: 37px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+.lesson-goal .title-goal::before {
+    content: "";
+    display: block;
+    width: 39px;
+    height: 41px;
+    margin: 0 15px 0 -5px;
+    background: url("../images/ico_03.png") no-repeat;
+    background-size: contain;
+}
+.lesson-goal .section-title {
+    margin-top: 50px; 
+    width: 100%;
+    font-size: 27px;
+}
+.lesson-goal .section-title > h2 {
+    border-bottom: 2px solid #000;
+    line-height: 1.2;
+    font-size: 27px;
+    margin:0;
+}
+.lesson-goal .section-direction {
+    margin-top: 20px; 
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+}
+.lesson-goal .section-direction > h3{
+    margin: 0; 
+    font-size: 50px;
+    line-height: 70px;
+}
+.lesson-goal .section-direction.one-line {
+    margin-top: 55px; 
+}
+.lesson-goal .section-hashtag {
+    margin-top: 20px; 
+    width: 100%;
+    font-size: 25px;
+    color: #fff;
+}
+.lesson-goal .section-hashtag > div {
+    padding: 3px 12px 6px;
+    margin: 0 5px;
+    background-color: #D5C3AB; 
+    border-radius: 8px;
+}
+.lesson-goal .section-learn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 21px;
+    color: #3C3C3C;
+}
+.lesson-goal .section-learn .inner {
+    position: relative;
+    margin-top: 20px; 
+    width: 1005px;
+    height: 272px;
+    background-color: #F5EEE3;
+    border-radius: 20px 20px 0 0;
+    font-size: 25px;
+}
+.lesson-goal .section-learn .char {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    width: 237px;
+}
+.lesson-goal .section-learn .learn-que {
+    position: absolute;
+    left: 270px;
+    top: 70px;
+    font-family: YGOT;
+    font-size: 37px;
+    color: #000;
+    line-height: 1.2;
+}
+.lesson-goal .section-learn .learn-list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 530px;
+    height: 100%;
+    padding: 30px 0;
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.lesson-goal .section-learn .learn-list > li {
+    margin: 5px 0;
+}
+
+/* 본시 학습 목표 */
+.main.study-goal {
+    width: 100%;
+    height: 100%;
+    background: url("../images/study_goal_bg_01.png") no-repeat;
+    background-size: contain;
+}
+.main.study-goal .section-learn {
+    margin-top: 90px;
+    width: 100%;
+}
+.main.study-goal .box-learn {
+    position: relative;
+    width: 1090px;
+    height: 340px;
+    padding: 57px 0 29px 0;
+    background: url("../images/study_goal_box_01.png") no-repeat;
+    background-size: contain;
+}
+.main.study-goal .box-learn.no-level {
+    padding: 57px 0 0 0;
+}
+.main.kor-act.study-goal .box-learn {
+    background: url("../images/study_goal_box_02.png") no-repeat;
+    background-size: contain;
+}
+.main.study-goal .box-title {
+    position: absolute;
+    left: 335px;
+    top: 0;
+    width: 420px;
+    height: 58px;
+    font-family: YGOT;
+    font-size: 23px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+.main.study-goal .page-01 {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-family: YGOT;
+    font-size: 13px;
+    color: #AE7C65;
+    border-bottom: 2px solid #AE7C65;
+}
+.main.kor-act.study-goal .page-01 {
+    color: #36A839;
+    border-bottom: 2px solid #37A93A;
+}
+.main.study-goal .page-02 {
+    position: absolute;
+    right: 30px;
+    top: 55px;
+    font-family: YGOT;
+    font-size: 13px;
+    color: #A7A7A7;
+    border-bottom: 2px solid #A7A7A7;
+}
+.main.kor-act.study-goal .page-02 {
+    color: #AAC473;
+    border-bottom: 2px solid #ABC574;
+}
+.main.study-goal .text-learn {
+    width: 100%;
+    font-family: NotoBK;
+    font-size: 48px;
+    line-height:65px;
+    color: #000;
+    text-align: center;
+    margin:-10px 0 0;
+}
+/* .main.study-goal .text-learn.two-line {
+    margin-top: 30px;
+}
+.main.study-goal .text-learn.three-line {
+    margin-top: 40px;
+} */
+.main.study-goal .box-level {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: YGOT;
+    font-size: 16px;
+    color: #B4B4B4;
+    margin:0 ;
+}
+.main.study-goal .box-level > li {
+    position: relative;
+    margin: 0 2px;
+    width: 115px;
+    border-bottom: 5px solid #B4B4B4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.study-goal .box-level > li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 5px;
+    display: block;
+    width: 9px;
+    height: 13px;
+    background: url("../images/ico_04.png") no-repeat;
+    background-size: contain;
+}
+.main.study-goal .box-level > li.active {
+    color: #666666;
+    border-bottom: 5px solid #FF6600;
+}
+.main.kor-act .emp {
+    color: #2EA12C;
+}
+
+/* 단원 학습 계획 */
+.main.lesson-plan {
+
+}
+.main.lesson-plan > .header {
+    position: relative;
+    width: 410px;
+    height: 64px;
+    padding: 0 0 2px 0;
+    margin: 0 auto;
+    background-color: #FE6600;
+    border-radius: 0 0 45px 45px;
+}
+.lesson-plan .title-plan {
+    height: 100%;
+    font-family: YGOT;
+    font-size: 37px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+.lesson-plan .title-plan::before {
+    content: "";
+    display: block;
+    width: 39px;
+    height: 41px;
+    margin: 0 15px 0 -5px;
+    background: url("../images/ico_03.png") no-repeat;
+    background-size: contain;
+}
+.main.lesson-plan > .content {
+    position: relative;
+    top: 13px;
+    width: 1090px;
+    height: 615px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 40px 40px 0 0;
+    background-color: #fff;
+}
+.main.lesson-plan .content .direction {
+    padding: 20px 35px 0 ;
+    margin: 0 0 20px 0;
+    font-size: 35px;
+}
+.main.lesson-plan .bullet-box.empty-circle::after {
+    top: 20px;
+}
+.main.lesson-plan .box-plan {
+    position: relative;
+    margin: 0 auto 0 auto;
+    width: 1000px;
+    height: 150px;
+    background-color: #F9F5F0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.main.lesson-plan .box-plan:not(:last-child) {
+    margin: 0 auto 25px auto;
+}
+.main.lesson-plan .box-plan dt {
+    display:flex;
+    width: 190px;
+    height: 100%;
+    background-color: #AE7C65;
+    font-family: YGOT;
+    font-size: 26px;
+    color: #fff;
+    line-height: 1.28;
+}
+.main.lesson-plan .box-plan dd {
+    display:block;
+    width: 808px;
+    height: 100%;
+    background-color: #fff;
+    margin:0;
+}
+.main.lesson-plan .hidden-box {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F9F5F0;
+    border-radius: 0;
+}
+.main.lesson-plan .box-plan .emp {
+    color: #FFE362;
+}
+
+/* 제재 학습 - 시, 이야기 듣기, 노래 */
+.main.song > .header,
+.main.narration > .header {
+    position: relative;
+    width: 930px;
+    height: 105px;
+    margin: 0 auto;
+    border-radius: 0 0 70px 70px;
+    background-color: #FE6600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.song > .header .title,
+.main.narration > .header .title {
+    font-family: YGOT;
+    font-size: 45px;
+    color: #fff;
+}
+.main.song > .content,
+.main.narration > .content {
+    position: relative;
+    top: -38px;
+    width: 1090px;
+    height: calc(100% - 67px);
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 40px 40px 0 0;
+    background-color: #fff;
+}
+
+/* 정리 레이아웃 */
+.main.summary > .header {
+    height: 65px;
+}
+.main.summary > .header .title-box {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    width: 197px;
+    height: 50px;
+    border-radius: 0 0 40px 40px;
+    background-color: #FE6500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.summary > .header .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: YGOT;
+    font-size: 20px;
+    color: #fff;
+}
+.main.summary > .header .title::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    margin-right: 10px;
+    background: url("../images/ico_06.png") no-repeat;
+    background-size: contain;
+}
+.main.summary > .main-tab-box,
+.main.summary > .content {
+    position: relative;
+    left: 40px;
+    top: 65px;
+    width: 1090px;
+    height: 627px;
+    border-radius: 40px 40px 0 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+.main.summary > .content,
+.main.summary > .main-tab-box > .content {
+    padding: 0;
+}
+.main.summary .main-tab-button-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 600px;
+    height: auto;
+    padding-right: 90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.main.summary .main-tab-button {
+    padding: 5px 17px 2px;
+    margin-left: 5px;
+    font-family: YGOT;
+    font-size: 16px;
+    color: #fff;
+    background-color: #B1A493;
+    border-radius: 11px 11px 0 0;
+}
+.main.summary .main-tab-button:hover,
+.main.summary .main-tab-button.on {
+    background-color: #E89606;
+}
+.main.summary .direction {
+    margin: 0 0 10px 0;
+    padding: 20px 35px 0 ;
+    font-size: 35px;
+}
+.main.summary .direction .text {
+    text-align: justify;
+}
+.main.summary .direction .bullet-box.empty-circle::after {
+    top: 22px;
+}
+.main.summary .bullet-box.empty-circle::after {
+    top: 22px;
+}
+.main.summary .sub-title-box {
+    margin-top: 10px;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: YGOT;
+    font-size: 35px;
+    color: #FF6600;
+}
+.main.summary .sub-title-box .text {
+    margin: 0 50px;
+}
+.main.summary .sub-title-box .ico-01 {
+    width: 12px;
+    height: 35px;
+    background: url("../images/jejae_bullet_01.png") no-repeat;
+    background-size: contain;
+}
+.main.summary .sub-title-box .ico-02 {
+    width: 12px;
+    height: 35px;
+    background: url("../images/jejae_bullet_02.png") no-repeat;
+    background-size: contain;
+}
+.main.summary .section-bullet {
+    width: 100%;
+    padding: 0 50px;
+    margin: 0 0 15px 0;
+    font-size: 38px;
+}
+.main.summary .content-inner > .section-bullet,
+.main.summary .inner-padding-content > .section-bullet {
+    padding: 0;
+}
+
+/* 제재 학습 - 정리 총총 */
+.main.jejae > .header {
+    height: 65px;
+}
+.main.jejae > .header .title-box {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    width: 197px;
+    height: 50px;
+    border-radius: 0 0 40px 40px;
+    background-color: #FE6500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae > .header .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: YGOT;
+    font-size: 20px;
+    color: #fff;
+}
+.main.jejae > .header .title::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+    background: url("../images/ico_jejae_01.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae > .main-tab-box,
+.main.jejae > .content {
+    position: relative;
+    left: 40px;
+    top: 65px;
+    width: 1090px;
+    height: 627px;
+    border-radius: 40px 40px 0 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+.main.jejae > .main-tab-box > .content,
+.main.jejae > .content {
+    padding: 0;
+}
+.main.jejae .main-tab-button-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: auto;
+    padding-right: 90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.main.jejae .main-tab-button {
+    padding: 5px 17px 2px;
+    margin-left: 5px;
+    font-family: YGOT;
+    font-size: 16px;
+    color: #fff;
+    background-color: #B1A493;
+    border-radius: 11px 11px 0 0;
+}
+.main.jejae .main-tab-button:hover,
+.main.jejae .main-tab-button.on {
+    background-color: #E89606;
+}
+.main.jejae .sub-title-box {
+    margin-top: 10px;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: YGOT;
+    font-size: 35px;
+    color: #FF6600;
+}
+.main.jejae .sub-title-box .text {
+    margin: 0 50px;
+}
+.main.jejae .sub-title-box .ico-01 {
+    width: 12px;
+    height: 35px;
+    background: url("../images/jejae_bullet_01.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae .sub-title-box .ico-02 {
+    width: 12px;
+    height: 35px;
+    background: url("../images/jejae_bullet_02.png") no-repeat;
+    background-size: contain;
+}
+
+/* 제재 학습 - 낱말 퐁당 */
+.main.jejae.word > .header {
+    height: 57px;
+}
+.main.jejae.word > .header .title::before {
+    width: 26px;
+    height: 26px;
+    background: url("../images/ico_jejae_02.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.word > .content {
+    position: relative;
+    left: 0;
+    top: 58px;
+    width: 100%;
+    height: 634px;
+    padding: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    /* border: 1px solid red; */
+}
+.main.jejae.word .word-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 277px;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main.jejae.word .explain-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 893px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 40px 0 0 0;
+    overflow: hidden;
+}
+.main.jejae.word .word-button {
+    width: 190px;
+    height: 50px;
+    border: 5px solid #F0CFA6;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: NotoM;
+    font-size: 28px;
+    color: #D0AC7F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.word .word-button.over,
+.main.jejae.word .word-button.on {
+    background-color: #EFCFA6;
+    font-family: NotoB;
+    font-size: 28px;
+    color: #5F422C;
+}
+.main.jejae.word .word-button:not(:last-child) {
+    margin-bottom: 10px;
+}
+.main.jejae.word .explain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 38px;
+}
+.main.jejae.word .word {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-left: 40px;
+    background-color: rgba(246,231,212,.3);
+    font-family: NotoB;
+    font-size: 38px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main.jejae.word .meaning {
+    position: relative;
+    width: 100%;
+    height: 290px;
+    padding: 70px 30px 0 30px;
+    border-bottom: 3px dashed #F6E7D4;
+}
+.main.jejae.word .example {
+    position: relative;
+    width: 100%;
+    height: 244px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main.jejae.word .meaning > .icon {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 110px;
+    height: 37px;
+    background-color: #FEA200;
+    border-radius: 50px;
+    font-family: YGOT;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.word .meaning > .icon::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    background: url("../images/ico_01.png");
+    background-size: contain;
+}
+.main.jejae.word .meaning .text {
+    text-align: justify;
+}
+.main.jejae.word .example > .icon {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 110px;
+    height: 37px;
+    background-color: #FF6600;
+    border-radius: 50px;
+    font-family: YGOT;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.word .example > .icon::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    margin-right: 12px;
+    background: url("../images/ico_02.png");
+    background-size: contain;
+}
+.main.jejae.word .example .emp {
+    color: #FE6600;
+}
+
+/* 제재 학습 - 쫑 퀴즈 */
+.main.jejae.quiz .home-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.main.jejae.quiz .home-box .title-box {
+    position: absolute;
+    left: 270px;
+    top: 530px;
+    width: 630px;
+    height: 78px;
+    font-family: YGOT;
+    font-size: 35px;
+    color: #5E3E18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.quiz .title-box .writer {
+    font-size: 20px;
+    height: 30px;
+    margin: 5px 0 0 20px;
+    border-bottom: 2px solid #856948;
+}
+.main.jejae.quiz .start-button {
+    position: absolute;
+    left: 480px;
+    top: 270px;
+    width: 213px;
+    height: 50px;
+    background: url("../images/quiz_start_button.png") no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.quiz .start-button.over {
+    background: url("../images/quiz_start_button_over.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.quiz .start-button::before {
+    content: "시작";
+    display: block;
+    font-family: YGOT;
+    font-size: 22px;
+}
+.main.jejae.quiz .quiz-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F6E7D4;
+}
+.main.jejae.quiz .quiz-box .image-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.main.jejae.quiz .quiz-box .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.main.jejae.quiz .quiz-box .header .title {
+    position: relative;
+    margin: 13px 0 16px 54px;
+    width: 236px;
+}
+.main.jejae.quiz .quiz-box .character {
+    position: absolute;
+    left: 270px;
+    top: 88px;
+    width: 260px;
+}
+.main.jejae.quiz .character .image-box {
+    width: 77px;
+}
+.main.jejae.quiz .character .sub-title {
+    position: absolute;
+    left: 43px;
+    top: -32px;
+    padding: 5px 12px;
+    background-color: #E7C49A;
+    border-radius: 15px;
+    font-family: YGOT;
+    font-size: 15px;
+    color: #5E3E18;
+}
+.main.jejae.quiz .quiz-tab-box {
+    position: absolute;
+    left: 40px;
+    top: 128px;
+    width: 1090px;
+    height: 564px;
+}
+.main.jejae.quiz .sub-tab-button-box {
+    position: absolute;
+    right: 0;
+    top: -70px;
+    width: 100%;
+    height: auto;
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* border: 1px solid red; */
+}
+.main.jejae.quiz .sub-tab-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: 5px;
+    font-family: YGOT;
+    font-size: 18px;
+    color: #AE7C65;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.quiz .sub-tab-button:hover, 
+.main.jejae.quiz .sub-tab-button.on {
+    background-color: #AE7C65;
+    color: #fff;
+}
+.main.jejae.quiz .quiz-tab-box .sub-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+}
+.main.jejae.quiz .direction {
+    padding: 20px 35px 0 ;
+}
+.main.jejae.quiz .direction .text {
+    text-align: justify;
+}
+.main.jejae.quiz .bullet-box.empty-circle::after {
+    top: 21px;
+}
+.main.jejae.quiz .answer-box {
+    position: absolute;
+    left: 187px;
+    top: 162px;
+    width: 715px;
+    height: 270px;
+    background-color: #fff;
+    border: 8px solid #F6E7D4;
+    border-radius: 25px;
+}
+.main.jejae.quiz .answer-box .hidden-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.quiz .answer-box .hidden-box .text {
+    font-size: 90px;
+}
+.main.jejae.quiz .dir-rect {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border: 4px solid #B37A62;
+    border-radius: 8px;
+    vertical-align: top;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NotoB;
+    font-size: 35px;
+    color: #AE7C65;
+    margin-top:5px;
+}
+.main.jejae.quiz .dir-rect.ml {
+    margin-left: 10px;
+}
+.main.jejae.quiz .dir-rect.mr {
+    margin-right: 10px;
+}
+.main.jejae.quiz .dir-rect>span {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+}
+.main.jejae.quiz .explanatory {
+    position: absolute;
+    left: 0;
+    top: 450px;
+    width: 100%;
+    height: 100px;
+    padding: 0 100px;
+}
+.main.jejae.quiz .explanatory.line-one {
+    position: absolute;
+    left: 0;
+    top: 450px;
+    width: 100%;
+    height: 100px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.quiz .explanatory .bullet-box {
+    position: relative;
+    padding-left: 90px;
+}
+.main.jejae.quiz .explanatory .bullet-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 75px;
+    height: 32px;
+    background: url("../images/ico_explain.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.quiz .explanatory .emp {
+    color: #CC3300;
+}
+.main.jejae.quiz .prev-button {
+    position: absolute;
+    left: -1px;
+    top: 220px;
+    width: 82px;
+    height: 127px;
+    background: url("../images/jejae_side_button.png") no-repeat;
+    background-size: contain;
+    transform: scaleX(-1);
+}
+.main.jejae.quiz .prev-button.over {
+    background: url("../images/jejae_side_button_over.png") no-repeat;
+    background-size: contain;
+    transform: scaleX(-1);
+}
+.main.jejae.quiz .next-button {
+    position: absolute;
+    right: -1px;
+    top: 220px;
+    width: 82px;
+    height: 127px;
+    background: url("../images/jejae_side_button.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.quiz .next-button.over {
+    background: url("../images/jejae_side_button_over.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.quiz .prev-button.disable {
+    opacity: .5;
+    pointer-events: none;
+}
+.main.jejae.quiz .next-button.disable {
+    opacity: .5;
+    pointer-events: none;
+}
+
+/* 제재 학습 - 1분 줄거리 */
+.main.jejae.minute-plot > .header {
+    height: 57px;
+    background-color: rgba(0,0,0,0);
+}
+.main.jejae.minute-plot > .header .title {
+    position: relative;
+    left: -5px;
+}
+.main.jejae.minute-plot.story > .header .title {
+    position: relative;
+    left: 0;
+}
+.main.jejae.minute-plot > .header .title::before {
+    width: 45px;
+    height: 25px;
+    background: url("../images/ico_jejae_03.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.minute-plot.story > .header .title::before {
+    width: 29px;
+    height: 26px;
+    margin-right: 5px;
+    background: url("../images/ico_jejae_04.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.minute-plot > .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: 1;
+    pointer-events: none;
+}
+.main.jejae.minute-plot .scene-button-box {
+    pointer-events: auto;
+}
+.main.jejae.minute-plot .scene-button-box .button {
+    font-size: 18px;
+}
+.main.jejae.minute-plot .video-title-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.minute-plot .button-center-play {
+    position: relative;
+    margin-top: -48px;
+    width: 660px;
+    height: 238px;
+    padding: 110px 0 0 70px;
+    font-family: YGOT;
+    font-size: 58px;
+    color: #5E3E18;
+    background: url("../images/video_play_title_bg_01.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.minute-plot.story .button-center-play {
+    position: relative;
+    width: 520px;
+    height: 238px;
+    padding: 110px 0 0 60px;
+    font-family: YGOT;
+    font-size: 58px;
+    color: #5E3E18;
+    background: url("../images/video_play_title_bg_02.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.minute-plot .button-center-play:hover{
+    background-image:url("../images/video_play_title_bg_01_over.png");
+}
+/* 함께 보기 동영상 플레이어 */
+.main.jejae.together > .header {
+    height: 57px;
+    background-color: rgba(0,0,0,0);
+}
+.main.jejae.together > .header .title {
+    position: relative;
+    left:-2px;
+}
+.main.jejae.together > .header .title-box{
+    padding-left:40px
+}
+.main.jejae.together > .header .title-box::before{
+    content:"";
+    display:inline-block;
+    width: 132px;
+    height: 120px;
+    background: url(../images/link_jejae_button_06.png) no-repeat;
+    background-size: 256px 256px;
+    transform: scale(0.3);
+    position:absolute;
+    left:-16px;
+    top:-36px;
+
+}
+.main.jejae.together > .header .title::before {
+    display: none;
+}
+.main.jejae.together > .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: 1;
+    pointer-events: none;
+}
+.main.jejae.together .scene-button-box {
+    pointer-events: auto;
+}
+.main.jejae.together .scene-button-box .button {
+    font-size: 18px;
+}
+.main.jejae.together .video-title-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.jejae.together .button-center-play {
+    position: relative;
+    margin-top:-48px;
+    width: 520px;
+    height: 238px;
+    padding: 110px 0 0 90px;
+    font-family: YGOT;
+    font-size: 58px;
+    color: #5E3E18;
+    background: url("../images/video_play_title_bg_02.png") no-repeat;
+    background-size: contain;
+}
+.main.jejae.together .button-center-play:hover{
+    background-image: url("../images/video_play_title_bg_02_over.png");
+}
+
+/* 확인 문제 */
+/* .main.confirm-quiz .home-box { */
+/*     position: absolute; */
+/*     left: 0; */
+/*     top: 0; */
+/*     width: 100%; */
+/*     height: 100%; */
+/* } */
+/* .main.confirm-quiz .start-button { */
+/*     position: absolute; */
+/*     left: 480px; */
+/*     top: 340px; */
+/*     width: 213px; */
+/*     height: 50px; */
+/*     background: url("../images/quiz_start_button.png") no-repeat; */
+/*     background-size: contain; */
+/*     display: flex; */
+/*     justify-content: center; */
+/*     align-items: center; */
+/* } */
+/* .main.confirm-quiz .start-button.over { */
+/*     background: url("../images/quiz_start_button_over.png") no-repeat; */
+/*     background-size: contain; */
+/* } */
+/* .main.confirm-quiz .start-button::before { */
+/*     content: "시작"; */
+/*     display: block; */
+/*     font-family: YGOT; */
+/*     font-size: 22px; */
+/* } */
+.main.confirm-quiz .quiz-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F6E7D4;
+}
+.main.confirm-quiz .quiz-box .image-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.main.confirm-quiz .quiz-box .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+.main.confirm-quiz .quiz-box .header .title {
+    position: relative;
+    margin: 3px 0 16px 54px;
+    width: 244px;
+}
+.main.confirm-quiz .quiz-box .character {
+    position: absolute;
+    left: 270px;
+    top: 60px;
+    width: 260px;
+}
+.main.confirm-quiz .character .image-box {
+    width: 69px;
+}
+.main.confirm-quiz .quiz-tab-box {
+    position: absolute;
+    left: 40px;
+    top: 97px;
+    width: 1090px;
+    height: 595px;
+    background-color: #fff;
+    border-radius: 40px 40px 0 0;
+}
+.main.confirm-quiz .sub-tab-button-box {
+    position: absolute;
+    right: 0;
+    top: -55px;
+    width: 500px;
+    height: auto;
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.main.confirm-quiz .sub-tab-button {
+    width: 70px;
+    height: 32px;
+    padding: 1px 4px 0 5px;
+    margin-left: 5px;
+    font-family: YGOT;
+    font-size: 15px;
+    color: #AE7C65;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main.confirm-quiz .sub-tab-button:hover, 
+.main.confirm-quiz .sub-tab-button.on {
+    background-color: #AE7C65;
+    color: #fff;
+}
+.main.confirm-quiz .quiz-tab-box .sub-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+.main.confirm-quiz .direction {
+    padding: 20px 35px 0;
+    margin-bottom: 10px;
+    font-size:35px;
+}
+.main.confirm-quiz .direction .text {
+    text-align: justify;
+}
+.main.confirm-quiz .bullet-box.empty-circle::after {
+    top: 20px;
+}
+.main.confirm-quiz .bullet-box.circle-num {
+    padding-left: 55px;
+}
+.main.confirm-quiz .round-bg-box {
+    position: relative;
+    /* padding: 25px 20px; */
+    padding: 15px 20px;
+    margin: 0 auto 20px auto;
+    /* width: 998px; */
+    width: 1000px;
+    background-color: #FDF3E7;
+    border-radius: 10px;
+    font-size: 38px;
+    text-align: justify;
+    line-height: 1.7;
+}
+.main.confirm-quiz .round-bg-box .empty-rect {
+    position: relative;
+    top: 2px;
+    text-indent: 0;
+    font-family: NotoB;
+    color: #00B7FF;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: unset;
+}
+.main.confirm-quiz .ox-box {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    padding:0 40px 0 105px;
+}
+.main.confirm-quiz .ox-box .que-box {
+    position: relative;
+    max-width: 748px;
+    min-width: 748px;
+    min-height: 110px;
+    padding:0 25px;
+    background-color: #fdf3e7;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 32px;
+    line-height:1.3;
+}
+.main.confirm-quiz .ox-box .rect-num::after {
+    top: 36px;
+    left:-43px
+}
+
+.face {
+    width: 115px;
+    height: 115px;
+}
+.face.type-01 {
+    background: url("../images/character/char_01.png") no-repeat;
+    background-size: contain;
+}
+.face.type-02 {
+    background: url("../images/character/char_02.png") no-repeat;
+    background-size: contain;
+}
+.face.type-03 {
+    background: url("../images/character/char_03.png") no-repeat;
+    background-size: contain;
+}
+.face.type-04 {
+    background: url("../images/character/char_04.png") no-repeat;
+    background-size: contain;
+}
+.face.type-05 {
+    background: url("../images/character/char_05.png") no-repeat;
+    background-size: contain;
+}
+.face.type-06 {
+    background: url("../images/character/char_06.png") no-repeat;
+    background-size: contain;
+}
+.face.type-07 {
+    background: url("../images/character/char_07.png") no-repeat;
+    background-size: contain;
+}
+.face.type-08 {
+    background: url("../images/character/char_08.png") no-repeat;
+    background-size: contain;
+}
+
+.confirm-quiz .sub-content-box {
+    position: relative;
+    width: 100%;
+    margin: 50px auto 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.confirm-quiz .sub-content-box .left-box {
+    position: relative;
+}
+.confirm-quiz .sub-content-box .right-box {
+    position: relative;
+}
+.confirm-quiz .round-text-box {
+    position: relative;
+    width: 250px;
+    height: 70px;
+    background-color: #F1F9FC;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:32px
+}
+.confirm-quiz .right-box .round-text-box {
+    background-color: #FCF1F1;
+}
+.confirm-quiz .round-text-box.two-line {
+    width: 310px;
+    height: 130px;
+}
+.confirm-quiz .round-text-box:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.main.confirm-quiz .chat-box {
+    position: relative;
+    padding: 0 70px;
+    margin: 0 auto 30px auto;
+    width: 100%;
+    height: 215px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.main.confirm-quiz .chat-box .chat-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main.confirm-quiz .chat-box .chat {
+    position: relative;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: auto;
+}
+.main.confirm-quiz .chat-box .speech-box {
+    position: relative;
+    width: 805px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+.main.confirm-quiz .chat-box .chat-wrap.left .speech-box .arrow {
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 39px;
+    height: 26px;
+}
+.main.confirm-quiz .chat-box .chat-wrap.right .speech-box .arrow {
+    position: absolute;
+    left: auto;
+    right: -25px;
+    top: 50%;
+    width: 39px;
+    height: 26px;
+    transform: translateY(-50%) scaleX(-1);
+}
+.main.confirm-quiz .chat-box .speech-box .round-box {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    background-color: #fff;
+    font-size: 32px;
+    text-align: justify;
+    display: block;
+    padding: 10px 20px;
+}
+.main.confirm-quiz .chat-box .empty-rect {
+    position: relative;
+    top: -2px;
+    padding: 0 5px;
+    width: auto;
+    height: auto;
+    text-indent: 0;
+    font-family: NotoB;
+    color: #00B7FF;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+/* ============================================================================================================= */
+/* content안에 direction밑에 영역 */
+.bottom-content {
+    position: relative;
+    width: 100%;
+    /* 102px은 direction 크기 */
+    height: calc(100% - 102px); 
+}
+
+/* content안에 content와 같은 사이즈의 영역 */
+.inner-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+/* content안에 direction바로 밑에 좌우 패딩을 가진 영역  */
+.inner-padding-content {
+    position: relative;
+    width: 100%;
+    height: auto; 
+    padding: 0 50px;
+}
+.main.summary .inner-padding-content {
+    position: relative;
+    width: 100%;
+    height: auto; 
+    padding: 0 72px;
+}
+
+/* content안에 direction바로 밑에 좌우 마진을 가진 영역  */
+.content-inner {
+    position: relative;
+    /* width: 990px; */
+    width: 1000px;
+    height: auto; 
+    margin: 0 auto;
+}
+.main.summary .content-inner {
+    position: relative;
+    width: 1000px;
+    height: auto; 
+    margin: 0 auto;
+}
+
+/* ============================================================================================================= */
+/* 메인 탭 */
+.main-tab-box {
+    /* position: relative; */
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: 100%;
+    height: 627px;
+}
+.main-tab-box > .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    background-color: #fff;
+}
+.main-tab-button-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* border: 1px solid red; */
+}
+.main-tab-button {
+    padding: 5px 15px 2px;
+    margin-left: 5px;
+    font-family: YGOT;
+    font-size: 18px;
+    color: #fff;
+    background-color: #F3D9B8;
+    border-radius: 9px 9px 0 0;
+}
+.main-tab-button:hover,
+.main-tab-button.on {
+    background-color: #AE7C65;
+}
+.main.kor-act .main-tab-button {
+    background-color: #D7DEB9;
+}
+.main.kor-act .main-tab-button:hover,
+.main.kor-act .main-tab-button.on {
+    background-color: #39A35A;
+}
+
+/* ============================================================================================================= */
+/* 서브 탭 */
+.sub-tab-box {
+    position: relative;
+    margin: 30px auto 0 auto;
+    width: 1000px;
+    height: 505px;
+}
+.sub-tab-box.que-ans {
+    height: 425px;
+}
+.sub-tab-box > .bg {
+    width: 100%;
+    height: 100%;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+}
+.sub-tab-box .sub-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.sub-tab-button-box {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    width: 100%;
+    height: auto;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* border: 1px solid red; */
+}
+.sub-tab-button {
+    padding: 5px 13px 2px;
+    margin-left: 5px;
+    font-family: YGOT;
+    font-size: 15px;
+    color: #fff;
+    background-color: #E7E7E7;
+    border-radius: 9px 9px 0 0;
+}
+.sub-tab-button:hover,
+.sub-tab-button.on {
+    background-color: #999999;
+}
+.sub-tab-box .icon-que {
+    position: absolute;
+    left: -7px;
+    top: 15px;
+    width: 65px;
+    height: 32px;
+    background: url("../images/ico_que.png") no-repeat;
+    background-size: contain;
+}
+.sub-tab-box .icon-ans {
+    position: absolute;
+    left: -7px;
+    top: 170px;
+    width: 65px;
+    height: 32px;
+    background: url("../images/ico_ans.png") no-repeat;
+    background-size: contain;
+}
+
+/* ============================================================================================================= */
+/* 퀴즈 */
+/* single choice */
+.main.confirm-quiz .single-choice {
+    position: relative;
+    margin: 20px 60px 0;
+    /* display: inline-flex;
+    flex-direction: column; */
+}
+.main.confirm-quiz .single-choice.word {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+.main.confirm-quiz .ox-box .single-choice {
+    position: relative;
+    left: -3px;
+    top: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main.confirm-quiz .single-choice.speech {
+    position: relative;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+.single-choice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 35px;
+}
+.single-choice .button {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.single-choice.word {
+    position: relative;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    padding: 0 150px;
+    justify-content: space-between;
+    align-items: center;
+}
+.single-choice.word > div {
+    /* 정답 볼드 텍스트시 div박스가 움직이지 않을 크기로 */
+    width: 265px;
+}
+
+.single-choice.speech .button.over .round-box {
+    background-color: #FFFED3;
+}
+.single-choice.speech .button.correct .round-box {
+    background-color: #FFFC6B;
+}
+.single-choice.speech .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.single-choice.speech .speech-box {
+    position: relative;
+    width: 770px;
+    height: 112px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.single-choice.speech .speech-box .round-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #fff;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.single-choice.speech .speech-box .arrow {
+    position: absolute;
+    left: -25px;
+    top: 38px;
+    width: 39px;
+    height: 26px;
+}
+.single-choice.speech .button.color-01 .round-box {
+    border: 5px solid #FFC4C9;
+}
+.single-choice.speech .button.color-02 .round-box {
+    border: 5px solid #FFD89F;
+}
+.single-choice.speech .button.color-03 .round-box {
+    border: 5px solid #CABFE0;
+}
+.single-choice.speech .button.color-04 .round-box {
+    border: 5px solid #D7DEA3;
+}
+.single-choice.speech .button.color-01 .arrow {
+    background: url("../images/speech_arrow_01_01.png") no-repeat;
+    background-size: contain;
+}
+.single-choice.speech .button.color-02 .arrow {
+    background: url("../images/speech_arrow_02_01.png") no-repeat;
+    background-size: contain;
+}
+.single-choice.speech .button.color-03 .arrow {
+    background: url("../images/speech_arrow_03_01.png") no-repeat;
+    background-size: contain;
+}
+.single-choice.speech .button.color-04 .arrow {
+    background: url("../images/speech_arrow_04_01.png") no-repeat;
+    background-size: contain;
+}
+.single-choice.speech .face {
+    margin-right: 40px;
+}
+
+.main.confirm-quiz .ox-box .single-choice > div:nth-child(1) {
+    width: 93px;
+    height: 93px;
+    background: url("../images/quiz/button_o.png") no-repeat;
+    background-size: contain;
+    margin: 0 10px 0 0;
+}
+.main.confirm-quiz .ox-box .single-choice > div:nth-child(2) {
+    width: 93px;
+    height: 93px;
+    background: url("../images/quiz/button_x.png") no-repeat;
+    background-size: contain;
+    margin: 0;
+}
+.main.confirm-quiz .ox-box .single-choice > div:nth-child(1).over {
+    background: url("../images/quiz/button_o_over.png") no-repeat;
+    background-size: contain;
+}
+.main.confirm-quiz .ox-box .single-choice > div:nth-child(2).over {
+    background: url("../images/quiz/button_x_over.png") no-repeat;
+    background-size: contain;
+}
+.main.confirm-quiz .ox-box .single-choice > div:nth-child(1).correct {
+    background: url("../images/quiz/button_o_on.png") no-repeat;
+    background-size: contain;
+}
+.main.confirm-quiz .ox-box .single-choice > div:nth-child(2).correct {
+    background: url("../images/quiz/button_x_on.png") no-repeat;
+    background-size: contain;
+}
+.main.confirm-quiz .ox-box .que-box,
+.main.confirm-quiz .ox-box .single-choice{z-index:1;}
+.main.confirm-quiz .ox-box::after{content:""; display:block; position:absolute; top:0; right:35px; background:#f7f7f7; width:212px; height:100%; border-radius:10px;}
+
+.single-choice .button {
+    position: relative;
+}
+.single-choice .button.correct {
+    font-family: NotoB;
+    color: #00B7FF;
+}
+.single-choice .button.over .circle-num.color-01::after {
+    color: #fff;
+    background-color: #FF9200;
+    border: 3px solid #FFB654;
+}
+/* .single-choice .button.correct::after { */
+/*     content: ""; */
+/*     display: block; */
+/*     position: absolute; */
+/*     left: -19px; */
+/*     top: -11px; */
+/*     width: 78px; */
+/*     height: 77px; */
+/*     background: url("../images/quiz/mark_01.png") no-repeat; */
+/*     background-size: contain; */
+/*     transform: scale(0); */
+/* } */
+/* .single-choice .button.incorrect::after { */
+/*     content: ""; */
+/*     display: block; */
+/*     position: absolute; */
+/*     left: -19px; */
+/*     top: -11px; */
+/*     width: 78px; */
+/*     height: 77px; */
+/*     background: url("../images/quiz/mark_02.png") no-repeat; */
+/*     background-size: contain; */
+/*     transform: scale(0); */
+/* } */
+/* .single-choice .button.ani::after { */
+/*     animation-name: oxAni; */
+/*     animation-duration: 0.6s; */
+/*     animation-direction: normal; */
+/* } */
+/* .single-choice .button.correct.ani::after { */
+/*     animation-fill-mode: forwards; */
+/* } */
+/* .single-choice .button.incorrect.ani::after { */
+/*     animation-fill-mode: none; */
+/* } */
+
+.single-choice .mark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 78px !important;
+    height: 77px;
+    pointer-events: none;
+}
+.single-choice .mark.correct {
+    background: url("../images/quiz/mark_01.png") no-repeat;
+    background-size: contain;
+    transform: scale(0);
+}
+.single-choice .mark.correct.ani {
+    animation-name: oxAni;
+    animation-duration: 0.6s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.single-choice .mark.incorrect {
+    background: url("../images/quiz/mark_02.png") no-repeat;
+    background-size: contain;
+    transform: scale(0);
+}
+.single-choice .mark.incorrect.ani {
+    animation-name: oxAni;
+    animation-duration: 0.6s;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+@keyframes oxAni {
+    0% {
+        transform: scale(0.5);
+    }
+    30%, 100% {
+        transform: scale(1);
+    }
+}
+.main.jejae.quiz .single-choice .button-01 {
+    position: absolute;
+    left: 225px;
+    top: 130px;
+    width: 624px;
+    height: 575px;
+    background: url("../images/quiz/jejae_o.png") no-repeat;
+    background-size: 1024px 2048px;
+    background-position: 0 0;
+    transform: scale(.5) translate(-50%, -50%);
+}
+.main.jejae.quiz .single-choice .button-01.correct,
+.main.jejae.quiz .single-choice .button-01.over {
+    background: url("../images/quiz/jejae_o.png") no-repeat;
+    background-position: 0 -577px;
+}
+.main.jejae.quiz .single-choice .button-02 {
+    position: absolute;
+    left: 580px;
+    top: 152px;
+    width: 614px;
+    height: 528px;
+    background: url("../images/quiz/jejae_x.png") no-repeat;
+    background-size: 1024px 2048px;
+    background-position: 0 0;
+    transform: scale(.5) translate(-50%, -50%);
+}
+.main.jejae.quiz .single-choice .button-02.correct,
+.main.jejae.quiz .single-choice .button-02.over {
+    background: url("../images/quiz/jejae_x.png") no-repeat;
+    background-position: 0 -530px;
+}
+
+/* line drawing */
+.line-drawing {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.line-drawing .start-point,
+.line-drawing .end-point {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* border: 1px solid red */
+}
+.line-drawing .start-point > div {
+    width: 18px;
+    height: 18px;
+    background: url("../images/quiz/line_start.png") no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+.line-drawing .end-point > div {
+    width: 18px;
+    height: 18px;
+    background: url("../images/quiz/line_end.png") no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+.s-point-01,
+.s-point-02,
+.s-point-03,
+.s-point-04,
+.e-point-01,
+.e-point-02,
+.e-point-03,
+.e-point-04 {
+	position: absolute;
+}
