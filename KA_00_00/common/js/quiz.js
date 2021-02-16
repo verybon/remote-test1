@@ -27,7 +27,8 @@ var singleChoice = function (spec) {
         box = spec.box;
         quizBox = spec.quizBox;
         // marks = amt.getAll(".mark", box);
-        marks = _.toArray(amt.getAll(".mark", box));
+        console.log(spec);
+        marks = _.toArray(amt.getAll(".mark", quizBox));
         answer = parseInt(quizBox.dataset.answer);
         useMark = parseInt(quizBox.dataset.mark)
 
@@ -88,6 +89,7 @@ var singleChoice = function (spec) {
         var index = _.indexOf(buttons, target);
         if (index > -1 && !target.classList.contains("correct")) {
             audioManager.play("click");
+            console.log(target, index)
             checkAnswer(index);
         }
     }
@@ -221,7 +223,7 @@ var multipleChoice = function (spec) {
     function init() {
         box = spec.box;
         quizBox = spec.quizBox;
-        marks = _.toArray(amt.getAll(".mark", box));
+        marks = _.toArray(amt.getAll(".mark", quizBox));
         answer = quizBox.dataset.answer.split(";");
         useMark = parseInt(quizBox.dataset.mark)
 
@@ -422,7 +424,8 @@ var lineDrawing = function (spec) {
     var scale = 1;
 
     var answers;
-
+    var visibleTarget;
+    var visibleTargetTag = false;
     var enable = true;
 
     exporter.name = spec.moduleName;
@@ -433,7 +436,12 @@ var lineDrawing = function (spec) {
         box = spec.box;
         quizBox = spec.quizBox;
         answers = quizBox.dataset.answer.split(";");
-
+        if (!!quizBox.dataset.visible) {
+            visibleTarget = quizBox.dataset.visible;
+            visibleTargetTag = document.querySelector(visibleTarget);
+            
+        }
+        
         scale = globalScale;
 
         svgBox = doc.createElement('div');
@@ -592,6 +600,9 @@ var lineDrawing = function (spec) {
             }
         }
         if (count === answers.length) {
+            if (!!visibleTargetTag) {
+                visibleTargetTag.classList.add('on');
+            }  
             amt.sendMessage(document, "QUIZ_EVENT", {
                 message: "CORRECT",
                 quiz: exporter
@@ -664,6 +675,9 @@ var lineDrawing = function (spec) {
 
     function reset() {
         enable = true;
+        if (!!visibleTargetTag) {
+            visibleTargetTag.classList.remove('on');
+        }
         for (var i = 0; i < lines.length; ++i) {
             if (lines[i] !== undefined) {
                 var line = lines[i];

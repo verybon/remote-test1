@@ -115,8 +115,8 @@
      * 디바이스의 터치 이벤트 지원 유뮤에 따라 이벤트 맵핑
      */
     
-    
-    amt.mouseTouchEvent = false //amt.isTouchSupported()  
+    amt.mouseTouchEvent = amt.isTouchSupported()  
+    //amt.mouseTouchEvent = false    
         ? {
             down: "touchstart",
             move: "touchmove",

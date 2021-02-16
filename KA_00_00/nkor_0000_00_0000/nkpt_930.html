@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+        <title></title>
+        <link rel="stylesheet" href="../common/css/sanitize.css" />
+        <link rel="stylesheet" href="../common/css/common.css" />
+        <link rel="stylesheet" href="../common/css/content.css" />
+
+        <style>
+            .image-box{position:relative;background:url(./images/nkor_0101_01_0910_201.png) 0 0 no-repeat;background-size:100% auto;width:998px;height:460px;margin:30px auto;}
+            .text .hidden-box{position:absolute;top:0;left:0;width:107px;height:107px;}
+            .text .hidden-box img{position:absolute;top:0;left:0;width:107px;height:107px;opacity: 0; transition: opacity 0.3s;}
+            .text .hidden-box.show-icon .icon{visibility: visible !important;}
+            .text .hidden-box.on img{opacity: 1; transition: opacity 0.3s;}
+            .text .hidden-box.on .icon{opacity: 0; transition: opacity 0.3s;}
+            .text-01{position:relative;top:196px;left:20px;}
+            .text-02{position:relative;top:220px;left:760px;}
+
+            .text-01 .hidden-box-01{left:1px;}
+            .text-01 .hidden-box-02{left:108px;}
+            .text-01 .hidden-box-03{left:216px;}
+
+            .text-02 .hidden-box-01{left:4px;}
+            .text-02 .hidden-box-02{left:111px;}
+            .text-02 .hidden-box-02 .icon{position:relative;left:-55px;}
+
+   
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="main normal">
+                <div class="header">
+                    <h1 class="title-02" aria-label="교과서 활동"></h1>
+                </div>
+
+                <div class="content page-01">
+                    <div class="bullet-box direction">
+                        <div class="text">낱말을 소리 내어 읽고 글씨를 따라 써 보세요. </div>
+                    </div>
+                    <div class="info-box"><span class="emp">낱말 상자</span>를 클릭하세요.</div>
+                    <div class="image-box">
+                        <div class="word-box">
+                            <div class="word-box-item">
+                                <div class="hidden-box" data-group="0">
+                                    <div class="text">선</div>
+                                </div>
+                            </div>
+                            <div class="word-box-item ">
+                                <div class="hidden-box show-icon" data-group="0">
+                                    <div class="text">생</div>
+                                </div>
+                            </div>
+                            <div class="word-box-item">
+                                <div class="hidden-box" data-group="0">
+                                    <div class="text">님</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="word-box type-writing">
+                            <div class="word-box-item">
+                            </div>
+                            <div class="word-box-item ">
+                            </div>
+                            <div class="word-box-item">
+                            </div>
+                            <div class="word-box-inp">
+                                <input type="text" placeholder="쓰기" maxlength="3">
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+            <div class="teacher-question num-01">
+                낱말을 소리 내어 읽고 글씨를 따라 써 봅시다. 
+            </div>
+        </div>
+
+        <script src="../common/js/libs/underscore-min.js"></script>
+        <script src="../common/js/libs/anime.min.js"></script>
+        <script src="../amt/js/amt.js"></script>
+        <script src="../common/js/common.js"></script>
+        <script src="../common/js/canvasAnimation.js"></script>
+        <script src="../common/js/canvasAnimationData.js"></script>
+        <script src="../common/js/content.js"></script>
+    </body>
+</html>

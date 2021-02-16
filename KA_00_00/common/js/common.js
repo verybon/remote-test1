@@ -125,7 +125,6 @@ var audioManager = (function () {
         if (audio) {
             external.stop(id);
             audio.play();
-
             if (data.callbacks) {
                 if (data.callbacks.ended) {
                     audio.addEventListener("ended", data.callbacks.ended);
@@ -1763,9 +1762,9 @@ var createPraiseAnimation = function (spec) {
 
     function play() {
         aniModule.playAni();
-        if (type === 0) {
+        if (type === 0 || type === 1) {
             audioManager.play("praise_boy");
-        } else if (type === 1) {
+        } else if (type === 2 || type === 3) {
             audioManager.play("praise_girl");
         }
     }

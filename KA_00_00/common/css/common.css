@@ -1,5 +1,9 @@
 /* 폰트 */
 @font-face {
+    font-family: 'Nanum Myeongjo';
+    src: url("../../fonts/NanumMyeongjoBold.woff");
+}
+@font-face {
     font-family: NotoT;
     src: url("../../fonts/NotoSansCJKkr-Thin.woff");
     /* font-display: swap; */
@@ -95,7 +99,7 @@ ol,ul,li{
     font-family: YGOT;
 }
 .serif {
-    font-family: serif;
+    font-family: 'Nanum Myeongjo', serif;
     font-weight: 600;
 }
 
@@ -317,6 +321,7 @@ textarea {
 table .input-box {
     position: relative;
     z-index: 1;
+    background-color: transparent;
 }
 
 .image-box > img {
@@ -394,8 +399,8 @@ table .input-box {
 }
 
 .text-answer {
-    font-family: NotoB;
-    color: #00A0FF;
+    font-family: NotoB !important;
+    color: #00A0FF !important;
 }
 
 .ico-arrow-01 {
@@ -418,8 +423,8 @@ table .input-box {
     bottom: 3px;
     display: inline-block;
     width: 100%;
-    height: 2px;
-    background-color: #000;
+    height: 0;
+    border-bottom:2px solid #000;
 }
 
 .line-guide-v {
@@ -563,6 +568,15 @@ table .input-box {
 }
 .ox-box::before{content:""; display:block; width:120px; height:90px; border-radius:45px; background-color:#fef9f4; position:absolute; top:10px; left:30px; z-index:0;}
 
+.dir-rect.color-00,
+.rect-ex.color-00::after,
+.circle-kor.color-00::after,
+.rect-kor.color-00::after,
+.circle-num.color-00::after,
+.rect-num.color-00::after {
+    color: #bfbfbf;
+    border: 3px solid #bfbfbf;
+}
 .dir-rect.color-01,
 .rect-ex.color-01::after,
 .circle-kor.color-01::after,
@@ -743,11 +757,14 @@ table .input-box {
     display: block;
     position: absolute;
     left: 0;
-    top: 26px;
+    top: 22px;
     width: 13px;
     height: 13px;
     border: 4px solid #CCCCCC;
     border-radius: 13px;
+}
+.teacher-question .bullet-box.empty-circle::after {
+    top:27px;
 }
 /* 안이 비어있는 주황색 동그라미 */
 .bullet-box.empty-circle.color-01::after {
@@ -1647,7 +1664,9 @@ body {
 .main.jejae.word .example .emp {
     color: #FE6600;
 }
-
+.main.jejae.word .example .text{
+    text-align: justify;
+}
 /* 제재 학습 - 쫑 퀴즈 */
 .main.jejae.quiz .home-box {
     position: absolute;
@@ -2566,7 +2585,7 @@ body {
 .sub-tab-box .icon-ans {
     position: absolute;
     left: -7px;
-    top: 170px;
+    top: 200px;
     width: 65px;
     height: 32px;
     background: url("../images/ico_ans.png") no-repeat;
