@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,26 +13,29 @@
 	<meta property="og:description" content="회원권 전문 매매 회원권뱅크"/>
 	<title>회원권뱅크</title>
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
-	<link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" /><!-- Favicon -->
-	<link rel="stylesheet" href="/assets/css/ui-common.css" />
-	<link rel="stylesheet" href="/assets/css/ui-wide.css" />
-	<script src='/assets/js/jquery-3.5.1.min.js'></script>
+	<link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" /><!-- Favicon -->
+	<link rel="stylesheet" href="./assets/css/ui-common.css" />
+	<link rel="stylesheet" href="./assets/css/ui-wide.css" />
+	<script src='./assets/js/jquery-3.5.1.min.js'></script>
 </head>
 <body data-page="main">
 <div id="skipnavigation">
 	<a href="#content">본문 바로가기</a>
+	<a href="#nav">주메뉴 바로가기</a>
 </div>
 <div class="page">
 	<div class="header">
 		<header>
 			<div class="banner">
-				<p>비교불가! 회원권전문매매 회원권뱅크</p>
-				<p>회원권 문의 02.467.0909</p>
+				<div class="sect">
+					<p>비교불가! 회원권전문매매 회원권뱅크</p>
+					<p>회원권 문의 02.467.0909</p>
+				</div>
 			</div>
 			<div class="sect sect-between">
 				<h1 class="logo">
 					<a href="/">
-						<img src="/assets/images/common/logo.jpg" alt="회원권뱅크" />
+						<img src="./assets/images/common/logo.jpg" alt="회원권뱅크" />
 					</a>
 				</h1>
 				<div class="search">
@@ -49,7 +51,7 @@
 				<nav id="nav" class="nav-list">
 					<ul>
 						<li class="nav-item nav-item01"><a href="">전체매물</a></li>
-						<li class="nav-item nav-item02"><a href="">골프</a></li>
+						<li class="nav-item nav-item02"><a href="" class="on">골프</a></li>
 						<li class="nav-item nav-item03"><a href="">콘도</a></li>
 						<li class="nav-item nav-item04"><a href="">휘트니스</a></li>
 						<li class="nav-item nav-item05"><a href="">전용관</a></li>
@@ -234,11 +236,11 @@
 					<li class="on"><a href="#recommend-tab1">골프회원권</a></li>
 					<li><a href="#recommend-tab2">콘도회원권</a></li>
 				</ul>
-				<div id="recommend-tab1" class="tab-content itemWrap">
+				<div id="recommendTab" class="tab-content itemWrap">
 					<div class="item">
 						<a class="item-link">
-							<span class="item-pic">
-								<img src="/assets/images/main/ex-pic.jpg" alt="">
+							<span class="item-pic" style="background-image: url(./assets/images/main/ex-pic.jpg);">
+								<!-- <img src="./assets/images/main/ex-pic.jpg" alt=""> -->
 							</span>
 							<strong class="item-name">강남300 강남300 강남300 - 무기명(5억)</strong>
 							<span class="item-price">희망금액
@@ -252,8 +254,8 @@
 					</div>
 					<div class="item">
 						<a class="item-link">
-							<span class="item-pic">
-								<img src="/assets/images/main/ex-pic.jpg" alt="">
+							<span class="item-pic" style="background-image: url(./assets/images/main/ex-pic.jpg);">
+								<!-- <img src="./assets/images/main/ex-pic.jpg" alt=""> -->
 							</span>
 							<strong class="item-name">강남300 - 무기명(5억)</strong>
 							<span class="item-price">희망금액
@@ -267,8 +269,8 @@
 					</div>
 					<div class="item">
 						<a class="item-link">
-							<span class="item-pic">
-								<img src="/assets/images/main/ex-pic.jpg" alt="">
+							<span class="item-pic" style="background-image: url(./assets/images/main/ex-pic.jpg);">
+								<!-- <img src="./assets/images/main/ex-pic.jpg" alt=""> -->
 							</span>
 							<strong class="item-name">강남300 - 무기명(5억)</strong>
 							<span class="item-price">희망금액
@@ -282,8 +284,8 @@
 					</div>
 					<div class="item">
 						<a class="item-link">
-							<span class="item-pic">
-								<img src="/assets/images/main/ex-pic.jpg" alt="">
+							<span class="item-pic" style="background-image: url(./assets/images/main/ex-pic.jpg);">
+								<!-- <img src="./assets/images/main/ex-pic.jpg" alt=""> -->
 							</span>
 							<strong class="item-name">강남300 - 무기명(5억)</strong>
 							<span class="item-price">희망금액
@@ -295,6 +297,16 @@
 							<button type="button" class="btn-purchase">구매신청</button>
 						</div>
 					</div>
+				</div>
+				<div class="pagination">
+					<button type="button" class="pagination-btn-prev"><span class="blind">이전</span></button>
+					<span class="pagination-num-current">
+						1
+					</span>
+					<span class="pagination-num-total">
+						8
+					</span>
+					<button type="button" class="pagination-btn-next"><span class="blind">다음</span></button>
 				</div>
 				<a href="" class="sect-more"><strong>골프회원권</strong> 더보기</a>
 			</div>
@@ -307,11 +319,11 @@
 					<li class="on"><a href="#quickSale-tab1">골프회원권</a></li>
 					<li><a href="#quickSale-tab2">콘도회원권</a></li>
 				</ul>
-				<div id="quickSale-tab1" class="tab-content itemWrap">
+				<div id="quickSaleTab" class="tab-content itemWrap">
 					<div class="item">
 						<a class="item-link">
-							<span class="item-pic">
-								<img src="/assets/images/main/ex-pic.jpg" alt="">
+							<span class="item-pic" style="background-image: url(./assets/images/main/ex-pic.jpg);">
+								<!-- <img src="./assets/images/main/ex-pic.jpg" alt=""> -->
 							</span>
 							<strong class="item-name">대명패밀리하프 멤버(무기명)</strong>
 							<span class="item-price">희망금액
@@ -325,8 +337,8 @@
 					</div>
 					<div class="item">
 						<a class="item-link">
-							<span class="item-pic">
-								<img src="/assets/images/main/ex-pic.jpg" alt="">
+							<span class="item-pic" style="background-image: url(./assets/images/main/ex-pic.jpg);">
+								<!-- <img src="./assets/images/main/ex-pic.jpg" alt=""> -->
 							</span>
 							<strong class="item-name">대명패밀리하프 멤버(무기명)</strong>
 							<span class="item-price">희망금액
@@ -340,8 +352,8 @@
 					</div>
 					<div class="item">
 						<a class="item-link">
-							<span class="item-pic">
-								<img src="/assets/images/main/ex-pic.jpg" alt="">
+							<span class="item-pic" style="background-image: url(./assets/images/main/ex-pic.jpg);">
+								<!-- <img src="./assets/images/main/ex-pic.jpg" alt=""> -->
 							</span>
 							<strong class="item-name">대명패밀리하프 멤버(무기명)</strong>
 							<span class="item-price">희망금액
@@ -355,8 +367,8 @@
 					</div>
 					<div class="item">
 						<a class="item-link">
-							<span class="item-pic">
-								<img src="/assets/images/main/ex-pic.jpg" alt="">
+							<span class="item-pic" style="background-image: url(./assets/images/main/ex-pic.jpg);">
+								<!-- <img src="./assets/images/main/ex-pic.jpg" alt=""> -->
 							</span>
 							<strong class="item-name">대명패밀리하프 멤버(무기명)</strong>
 							<span class="item-price">희망금액
@@ -369,6 +381,16 @@
 						</div>
 					</div>
 				</div>
+				<div class="pagination">
+					<button type="button" class="pagination-btn-prev"><span class="blind">이전</span></button>
+					<span class="pagination-num-current">
+						1
+					</span>
+					<span class="pagination-num-total">
+						8
+					</span>
+					<button type="button" class="pagination-btn-next"><span class="blind">다음</span></button>
+				</div>
 				<a href="" class="sect-more"><strong>급 골프회원권</strong> 더보기</a>
 			</div>
 		</div>
@@ -379,151 +401,151 @@
 				<ul class="membership-list">
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">대명리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">한화리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">용평리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">켄싱턴리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">리솜리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">곤지암리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">금호리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">골드패밀리</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">남해힐튼리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">동강시스타</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">디오션</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">레이크힐스</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">롯데리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">무주리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">베어스타운</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">엘리시안</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">웰리힐리파크</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">스타힐리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">알펜시아</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">휘닉스파크</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">영랑호리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">오크밸리/오크힐스</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">이에스리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">일성콘도리조트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">기타리조트</span>
 						</a>
 					</li>
@@ -538,109 +560,109 @@
 				<ul class="membership-list">
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">반포메리어트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">반트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">반얀트리</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">신라</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">스위스그랜드</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">그랜드 엠배서더</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">W 워커힐</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">웨스턴 조선</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">롯데호텔</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">코엑스인터</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">임피리얼팰리스</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">더 플라자</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">그랜드인터</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">노보텔 강남</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">리베라</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">하얏트</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">스포타임</span>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<span class="item-pic"><img src="/assets/images/main/logo-condo01.png" alt=""></span>
+							<span class="item-pic"><img src="./assets/images/main/logo-condo01.png" alt=""></span>
 							<span class="item-name">힐튼</span>
 						</a>
 					</li>
@@ -649,16 +671,168 @@
 			</div>
 		</div>
 
+		<div class="trading layer-full">
+			<h2 class="trading-title">회원권 매매 신청</h2>
+			<div class="trading-form">
+				<div class="column">
+					<h3 class="column-title">
+						회원권 구분
+					</h3>
+					<div class="column-content">
+						<label>
+							<input type="radio" name="trading1" id="trading1_1" />
+							<span>골프</span>
+						</label>
+						<label>
+							<input type="radio" name="trading1" id="trading1_2" />
+							<span>콘도</span>
+						</label>
+						<label>
+							<input type="radio" name="trading1" id="trading1_3" />
+							<span>휘트니스</span>
+						</label>
+						<label>
+							<input type="radio" name="trading1" id="trading1_4" />
+							<span>분양</span>
+						</label>
+					</div>
+				</div>
+				<div class="column">
+					<h3 class="column-title">
+						회원권명
+					</h3>
+					<div class="column-content">
+						<input type="text"  name="trading2" id="trading2"  placeholder="회원권명을 입력해주세요!" />
+					</div>
+				</div>
+				<div class="column">
+					<h3 class="column-title">
+						거래구분
+					</h3>
+					<div class="column-content">
+						<label>
+							<input type="radio" name="trading3" id="trading3_1" />
+							<span>팔기</span>
+						</label>
+						<label>
+							<input type="radio" name="trading3" id="trading3_2" />
+							<span>사기</span>
+						</label>
+					</div>
+				</div>
+				<div class="column">
+					<h3 class="column-title">
+						형태구분
+					</h3>
+					<div class="column-content">
+						<label>
+							<input type="radio" name="trading4" id="trading4_1" />
+							<span>개인</span>
+						</label>
+						<label>
+							<input type="radio" name="trading4" id="trading4_2" />
+							<span>법인</span>
+						</label>
+					</div>
+				</div>
+				<div class="column">
+					<h3 class="column-title">
+						희망가격
+					</h3>
+					<div class="column-content">
+						<input type="text"  name="trading5" id="trading5_1" placeholder="희망 금액을 입력해주세요!" title="희망가격" />
+						<span class="input-tail">만원</span>
+					</div>
+				</div>
+				<div class="column">
+					<h3 class="column-title">
+						신청자명
+					</h3>
+					<div class="column-content">
+						<input type="text"  name="trading6" id="trading6" placeholder="본인 성명을 입력해주세요!" title="신청자명" />
+					</div>
+				</div>
+				<div class="column">
+					<h3 class="column-title">
+						연락처
+					</h3>
+					<div class="column-content">
+						<input type="text" name="trading7" id="trading7_1" placeholder="" title="연락처 앞자리" />
+						<span class="input-tail">-</span>
+						<input type="text" name="trading7" id="trading7_2" placeholder=""  title="연락처 중간자리" />
+						<span class="input-tail">-</span>
+						<input type="text" name="trading7" id="trading7_3" placeholder="" title="연락처 마지막자리" />
+					</div>
+				</div>
+				<div class="column">
+					<div class="column-content">
+						<label>
+							<input type="checkbox" name="trading8" id="trading8" />
+							<span>개인정보취급방침 동의함</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="trading-btn wrap-btn">
+				<button type="button" class="btn-base size-l">매매신청하기</button>
+			</div>
+			<button type="button"  class="layer-btn-close"><span class="blind">닫기</span></button>
+		</div>
+
+		<div class="quickbanner">
+			<div class="recent">
+				<h3 class="recent-title">
+					최근검색
+					<span class="recent-num">3</span>
+				</h3>
+				<div class="recent-list">
+					<a href="">
+						<span class="item-area">[경상권]</span>
+						<span class="item-name">대명스위트 엠버(가평)</span>
+						<span class="item-price ft-color-primary">2,970만원</span>
+					</a>
+					<a href="">
+						<span class="item-area">[경상권]</span>
+						<span class="item-name">대명스위트 엠버(가평)</span>
+						<span class="item-price ft-color-primary">2,970만원</span>
+					</a>
+					<a href="">
+						<span class="item-area">[경상권]</span>
+						<span class="item-name">대명스위트 엠버(가평)</span>
+						<span class="item-price ft-color-primary">2,970만원</span>
+					</a>
+				</div>
+				<div class="recent-control pagination">
+					<button type="button" class="pagination-btn-prev"><span class="blind">이전</span></button>
+					<span class="pagination-num-current">1</span>
+					<span class="pagination-num-total">1</span>
+					<button type="button" class="pagination-btn-next"><span class="blind">다음</span></button>
+				</div>
+			</div>
+			<div class="messenger">
+				<a href="">
+					<img src="" alt="" />
+					<span>카카오톡 <br> 상담하기</span>
+				</a>
+				<a href="">
+					<img src="" alt="" />
+					<span>네이버 <br>톡톡하기</span>
+				</a>
+			</div>
+		</div>
+
+		<a href="#skipnavigation" class="btn-top">TOP</a>
+
 	</main>
 	<footer class="footer">
 		<div class="sect sect-wide sect-partner">
 			<div class="partner">
 				<ul>
-					<li><img src="/assets/images/common/logo-partner01.png" alt="한국거래소협회 우수거래소 선정업체"></li>
-					<li><img src="/assets/images/common/logo-partner01.png" alt="KGMMA"></li>
-					<li><img src="/assets/images/common/logo-partner01.png" alt="KGBA"></li>
-					<li><img src="/assets/images/common/logo-partner01.png" alt="한국레저산업연구소"></li>
-					<li><img src="/assets/images/common/logo-partner01.png" alt="반얀트리"></li>
+					<li><img src="./assets/images/common/logo-partner01.png" alt="한국거래소협회 우수거래소 선정업체"></li>
+					<li><img src="./assets/images/common/logo-partner01.png" alt="KGMMA"></li>
+					<li><img src="./assets/images/common/logo-partner01.png" alt="KGBA"></li>
+					<li><img src="./assets/images/common/logo-partner01.png" alt="한국레저산업연구소"></li>
+					<li><img src="./assets/images/common/logo-partner01.png" alt="반얀트리"></li>
 				</ul>
 			</div>
 		</div>
