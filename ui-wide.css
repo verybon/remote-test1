@@ -53,11 +53,16 @@
 		height: 1.2rem;
 		background: #000;
 	}
-	.ui-pic .sect-more:before{
-		transform: rotate(90deg);
-	}
 	.ui-pic .sect-more strong{
 		display: none;
+	}
+	.sect-more:hover:before,
+	.ui-pic .sect-more:hover:before{
+		transform: rotate(180deg);
+	}
+	.sect-more:hover:after,
+	.ui-pic .sect-more:hover:after{
+		transform: rotate(-90deg);
 	}
 	.ui-pic .itemWrap{
 		flex-wrap: nowrap;
@@ -131,16 +136,13 @@
 	}
 
 	/* header __ nav */
-	.header .nav-list li:nth-child(1),
-	.header .nav-list li:nth-child(4) ~ li{
-		display: block;
-	}
 	.header .navAll-btn{
 		display: none;
 	}
 
 	/* footer */
 	.footer{
+		margin-top: 6rem;
 		padding-bottom: 5rem;
 	}
 	.footer .sect-partner{
@@ -270,14 +272,40 @@
 	}
 	.quickLink-title{
 		height: 12.2rem;
-		padding: 1.4rem 0;
+		padding: 1.2rem 0;
 		font-size: 2.4rem;
 	}
 	.quickLink-title a{
+		display: inline-block;
+		position: relative;
+		padding-right: 1rem;
 		font-size: 1.4rem;
+	}
+	.quickLink-title a:before,
+	.quickLink-title a:after{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: .2rem;
+
+	}
+	.quickLink-title a:before{
+		left: calc(100%);
+		width: 4rem;
+		height: 1.3rem;
+		border-bottom: 1px solid #fff;
+	}
+	.quickLink-title a:after{
+		left: calc(100% + 4rem);
+		width: 1rem;
+		height: 1px;
+		background: #fff;
+		transform: rotate(-140deg) translateY(1px);
+		transform-origin: 0% 100%;
 	}
 	.quickLink > a{
 		height: 12.2rem;
+		margin: 0 0 .6rem;
 	}
 
 	/* consult */
@@ -424,6 +452,7 @@
 		position: relative;
 		padding: 1rem 0 1.8rem;
 		border-bottom: 1px solid #ccc;
+		font-size: 1.3rem;
 	}
 	.quickbanner .recent-num{
 		display: flex;
@@ -462,8 +491,12 @@
 	.quickbanner .messenger a{
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		padding: .8rem;
+		justify-content: space-around;
+		padding: .8rem .4rem;
+	}
+	.quickbanner .messenger-logo{
+		width: 2.8rem;
+		height: 2.8rem;
 	}
 	.btn-top{
 		display: flex;
@@ -476,11 +509,25 @@
 		z-index: 100;
 		width: 4rem;
 		height: 4rem;
-		margin-left: 52rem;
+		margin-left: 54.5rem;
 		border-radius: .5rem;
 		background: #2d2d2d;
 		color: #fff;
+		opacity: .92;
 	}
-
+	.btn-top a{
+		font-size: 1.2rem;
+		color: #fff;
+	}
+	.btn-top a:before{
+		content: "";
+		display: block;
+		width: .8rem;
+		height: .8rem;
+		margin: .2rem auto 0;
+		border-top: 1px solid #fff;
+		border-left: 1px solid #fff;
+		transform: rotate(45deg);
+	}
 
 }
