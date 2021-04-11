@@ -136,6 +136,9 @@
 	}
 
 	/* header __ nav */
+	.header .nav-main-list{
+		display: none;
+	}
 	.header .navAll-btn{
 		display: none;
 	}
