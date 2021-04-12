@@ -28,6 +28,9 @@ a:hover{color: #333;text-decoration: underline;}
 .ui-pic .tab-content .item-link:hover .item-name{
 	text-decoration: underline;
 }
+body.on-layer{
+	overflow: hidden;
+}
 .blind{
 	position: absolute;
 	top: 0;
@@ -471,14 +474,14 @@ input[type="text"]{
 	width: calc(100% - 4.5rem);
 	height: 3.5rem;
 	padding: 0 1.3rem;
-	border: 2px solid #ff2339;
-	border-radius: .4rem;
+	border: 3px solid #ff2339;
+	border-radius: .6rem;
 }
 .header .search-btn{
 	flex: 1;
 	width: 3.5rem;
 	height: 3.5rem;
-	margin-left: 1rem;
+	margin-left: .6rem;
 	border-radius: .5rem;
 	background: #ff2339 url(../images/common/btn-search.png) no-repeat 50% 50% / contain;
 }
@@ -510,6 +513,7 @@ input[type="text"]{
 	overflow: hidden;
 	padding: 1rem .8rem 1.8rem;
 	text-decoration: none;
+	transition: color .3s ease;
 }
 .header .gnb a:after{
 	content: "";
@@ -522,6 +526,11 @@ input[type="text"]{
 	background: #ff2339;
 	opacity: 0;
 	transition: all .3s ease;
+}
+.header .gnb a:focus,
+.header .gnb a:hover,
+.header .gnb li.on a{
+	color: #ff2339;
 }
 .header .gnb a:focus:after,
 .header .gnb a:hover:after,
@@ -707,6 +716,9 @@ input[type="text"]{
 }
 .header .nav-depth3 li:not(:last-child) a{
 	border-bottom: 1px solid #d0d0d0;
+}
+.header .nav-depth3 > li a:hover{
+	background: #f3f3f3;
 }
 
 /* footer */
