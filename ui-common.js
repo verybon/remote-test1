@@ -55,7 +55,7 @@
 	});
 
 	/* nav - close */
-	$( ".nav-btn-close" ).on( "click", function(e){
+	$( ".nav-btn-close, .nav-bg" ).on( "click", function(e){
 		$( ".nav" ).removeClass( "on" );
 	});
 
@@ -97,7 +97,9 @@
 	});
 
 	$( ".nav-wrap" ).on("mouseleave", function(){
-		$( ".nav" ).removeClass( "on" );
+		if( !fn_check_mo() ){
+			$( ".nav" ).removeClass( "on" );
+		}
 	});
 
 })();
