@@ -1281,7 +1281,7 @@ a.trading-fixed-btn-tel,
 	display: none;
 }
 .list-search-direct input[type="text"]{
-	max-width: 50rem;
+	/* max-width: 50rem; */
 	width: 100%;
 	border: 0 none;
 	border-radius: .6rem;
