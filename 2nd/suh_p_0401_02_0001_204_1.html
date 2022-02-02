@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css">
+	<link rel="stylesheet" href="../../../__common__/css/custom_last.css">
+</head>
+
+<body>
+  <div class="prev-img">
+		<img src="../common/contents/images/character/boy_1_sprite.png" alt="스프라이트">
+	</div>
+<div id="wrap" class="goalContents">
+	<header>
+		<h1><ins class="icon light"></ins>단원 학습 목표</h1>
+	</header>
+	<main>
+		<div class="contentsBox">
+			<!-- <div class="study_guide"><em>인물</em>을 <em>클릭</em>하세요.</div> -->
+			<div id="aniBox"></div>
+		</div>
+	</main>
+</div>
+
+<div id="loadingContainer">
+  	<div class="loadingIconAnimation"></div>
+</div>
+
+<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+<script type="text/javascript" src="./js/contents.js"></script>
+<!-- include Sprite Animation js: add by saltgamer -->
+<script type="text/javascript" src="../common/contents/js/sprite.js"></script>
+<script type="text/javascript">
+
+  window.addEventListener('load', function () {
+
+    $prite.add({
+      target: $ts.getEl('#aniBox'),
+      spriteId: 'sprite1',
+      spriteList: [
+        {
+          name: 'boy_1',
+          speech:'left',
+          top: 100,
+          left: 230,
+          width: 340,
+          height: 421,
+          thumbNail: '../common/contents/images/character/boy_1.png',
+          spriteSheet: '../common/contents/images/character/boy_1_sprite.png',
+          sound: './media/audios/suh_p_0401_02_0001_204_1_1.mp3',
+          textBubble: {
+            text: '각의 크기를 <br>배울 것 같아요.',
+            class: 'balloon bottom green',
+            top: 70,
+            left: 170,
+            width: 450,
+            textAlign: 'center',
+            wordBreak: 'keep-all'
+          },
+          sheetWidth: 102000,
+          sheetHeight: 421,
+          //endSheet: 0,
+          delay: 40
+
+        },
+        {
+          name: 'girl_1',
+          speech:'right',
+          top: 100,
+          left: 540,
+          width: 340,
+          height: 421,
+          thumbNail: '../common/contents/images/character/girl_1.png',
+          spriteSheet: '../common/contents/images/character/girl_1_sprite.png',
+          sound: './media/audios/suh_p_0401_02_0001_204_1_2.mp3',
+          textBubble: {
+            text: '각의 크기를 이용해서<br>불편한 것을 편리하게<br>바꾸는 것을 만들 것 같아요.',
+            class: 'balloon bottom orange',
+            top: 50,
+            left: 490,
+            width: 440,
+            textAlign: 'center',
+            wordBreak: 'keep-all'
+          },
+          sheetWidth: 102000,
+          sheetHeight: 421,
+          //endSheet: 0,
+          delay: 40
+
+        }
+
+      ]
+    });
+
+
+  }, false);
+
+</script>
+
+</body>
+</html>
