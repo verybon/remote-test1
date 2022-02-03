@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css">
+	<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css">
+
+	<style>
+		/* 팝업에 버튼 */
+		.popup_pages .buttonContainer{bottom:20px; right:40px; z-index:2;}
+		.moveButtonContainer{width:94%;}
+
+		.page_1 .it-img{display:flex; flex-wrap:wrap; position:relative; width:100%; height:340px; margin:0 auto; background:url(./images/mm_41_2_04_03_01/img_01.png) no-repeat 50% 50% / 1150px auto;}
+		.page_1 .it-img ._txt{width:25%;}
+
+		.page_2 .study_guide{right:0;}
+		.page_2 .it-start-wrap{position:relative; z-index:1; min-height:180px; margin-top:40px;}
+		.page_2 .dragObj{position:absolute; top:0;}
+		.page_2 .dragObj_1{left:0;}
+		.page_2 .dragObj_2{left:125px;}
+		.page_2 .dragObj_3{left:250px;}
+		.page_2 .dragObj_4{left:375px;}
+		.page_2 .dragObj_5{left:500px;}
+		.page_2 .dragObj_6{left:615px;}
+		.page_2 .dragObj_7{left:750px;}
+		.page_2 .dragObj_8{left:875px;}
+		.page_2 .dropArea{width:100%; min-width:300px; min-height:150px;}
+		.page_2 .dropArea_1{min-width:375px;}
+		.page_2 .dropArea_2{min-width:250px;}
+		.page_2 .dropArea_3{min-width:375px;}
+		.page_2 .it-end-wrap{}
+		.page_2 .it-start-wrap .dragObj.dragObjComplete{opacity:.25;}
+		.page_2 .it-end-wrap .dragObj.dragObjComplete{position:static; top:0; left:0;}
+		.page_2 .it-end-wrap .textContainer li{font-size:35px; transform: translateX(-25px);}
+	</style>
+</head>
+
+<body>
+
+<div id="wrap" class="math">
+	<header>
+		<div class="title">물건에 있는 여러 가지 각을 분류해 봅시다.</div>
+	</header>
+	<main>
+		<div class="basicSlider contentsBox" data-slide-container="main">
+			<ul class="basicSlider_tabs" data-tabs="">
+				<li data-hover="">물음 1</li>
+				<li data-hover="">물음 2</li>
+				<li data-hover="">물음 3</li>
+			</ul>
+			<ul class="basicSlider_slides" data-slides="">
+				<li class="page_1" data-quiz="toggle">
+					<h2><ins class="dot"></ins><span>
+						각을 어떤 기준으로 분류할 수 있는지 이야기해 보세요.
+					</span></h2>
+					<section>
+						<div class="it-img mt_10">
+							<div class="_txt x1">가</div>
+							<div class="_txt x2">나</div>
+							<div class="_txt x3">다</div>
+							<div class="_txt x4">라</div>
+							<div class="_txt x5">마</div>
+							<div class="_txt x6">바</div>
+							<div class="_txt x7">사</div>
+							<div class="_txt x8">아</div>
+						</div>
+						<div class="toggle mt_20" data-toggle-obj="1">
+							<div class="answer" data-toggle-target="1">
+								<ul class="contentsList">
+									<li>
+										<ins class="bullet exam">예</ins>
+										<div>
+											직각, 직각보다 작은 각, 직각보다 큰 각으로 분류할 수 있습니다.
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="buttonContainer">
+							<button class="dapCheckBtn" data-answer-btn=""></button>
+						</div>
+					</section>
+				</li>
+				<li class="page_2" data-quiz="dragDrop" data-option="answer" data-quiz-name="dragDrop" data-total-complete-count="8">
+					<h2><ins class="dot"></ins><span>
+						직각보다 작은 각과 직각보다 큰 각으로 분류해 보세요.
+					</span></h2>
+					<section>
+						<div class="study_guide">
+							<em>물건들</em>을 아래 표에 알맞게 <em>드래그</em>해 주세요.
+						</div>
+						<div class="dragDropContainer">
+							<div class="it-start-wrap dragObjUL">
+								<div class="js-dragObj dragObj dragObj_1" data-name="drag-obj" data-drag-obj-answer="1">
+									<span>가</span>
+									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0001.png" alt="" width="110"></div>
+								</div>
+								<div class="js-dragObj dragObj dragObj_2" data-name="drag-obj" data-drag-obj-answer="3">
+									<span>나</span>
+									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0002.png" alt="" width="110"></div>
+								</div>
+								<div class="js-dragObj dragObj dragObj_3" data-name="drag-obj" data-drag-obj-answer="3">
+									<span>다</span>
+									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0003.png" alt="" width="110"></div>
+								</div>
+								<div class="js-dragObj dragObj dragObj_4" data-name="drag-obj" data-drag-obj-answer="3">
+									<span>라</span>
+									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0004.png" alt="" width="110"></div>
+								</div>
+								<div class="js-dragObj dragObj dragObj_5" data-name="drag-obj" data-drag-obj-answer="2">
+									<span>마</span>
+									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0005.png" alt="" width="110"></div>
+								</div>
+								<div class="js-dragObj dragObj dragObj_6" data-name="drag-obj" data-drag-obj-answer="1">
+									<span>바</span>
+									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0006.png" alt="" width="110"></div>
+								</div>
+								<div class="js-dragObj dragObj dragObj_7" data-name="drag-obj" data-drag-obj-answer="1">
+									<span>사</span>
+									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0007.png" alt="" width="110"></div>
+								</div>
+								<div class="js-dragObj dragObj dragObj_8" data-name="drag-obj" data-drag-obj-answer="2">
+									<span>아</span>
+									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0008.png" alt="" width="110"></div>
+								</div>
+							</div>
+							<div class="it-end-wrap tableContainer brown">
+								<table>
+									<tbody>
+										<tr>
+											<th>직각보다 작은 각</th>
+											<th>직각</th>
+											<th>직각보다 큰 각</th>
+										</tr>
+										<tr>
+											<td>
+												<div class="it-target js-dropArea dropArea dropArea_1 flexListContainer center around" data-drop-area-answer="1"></div>
+											</td>
+											<td>
+												<div class="it-target js-dropArea dropArea dropArea_2 flexListContainer center around" data-drop-area-answer="2"></div>
+											</td>
+											<td>
+												<div class="it-target js-dropArea dropArea dropArea_3 flexListContainer center around" data-drop-area-answer="3"></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="buttonContainer">
+							<button class="dapCheckBtn" data-answer-btn=""></button>
+						</div>
+					</section>
+				</li>
+				<li class="page_3" data-quiz="toggle">
+					<h2><ins class="dot"></ins><span>
+						분류한 각을 무엇이라고 부르면 좋을지 이야기해 보세요.
+					</span></h2>
+					<section>
+						<div class="tableContainer brown">
+							<table>
+								<tbody>
+									<tr>
+										<th>직각보다 작은 각</th>
+										<th>직각</th>
+										<th>직각보다 큰 각</th>
+									</tr>
+									<tr>
+										<td>
+											<div class="flexListContainer center around">
+												<div>
+													<span>가</span>
+													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0001.png" alt="" width="110"></div>
+												</div>
+												<div>
+													<span>바</span>
+													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0006.png" alt="" width="110"></div>
+												</div>
+												<div>
+													<span>사</span>
+													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0007.png" alt="" width="110"></div>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="flexListContainer center around">
+												<div>
+													<span>마</span>
+													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0005.png" alt="" width="110"></div>
+												</div>
+												<div>
+													<span>아</span>
+													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0008.png" alt="" width="110"></div>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="flexListContainer center around">
+												<div>
+													<span>나</span>
+													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0002.png" alt="" width="110"></div>
+												</div>
+												<div>
+													<span>다</span>
+													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0003.png" alt="" width="110"></div>
+												</div>
+												<div>
+													<span>라</span>
+													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0004.png" alt="" width="110"></div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="toggle mt_20" data-toggle-obj="3">
+							<div class="answer" data-toggle-target="3">
+								<ul class="contentsList">
+									<li>
+										<ins class="bullet exam">예</ins>
+										<div>
+											직각보다 작은 각은 좁은 각, 직각보다 큰 각은 넓은 각으로 부르면 좋을 것 같습니다.
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="buttonContainer">
+							<button class="dapCheckBtn" data-answer-btn=""></button>
+						</div>
+					</section>
+				</li>
+
+			</ul>
+		</div>
+	</main>
+
+</div>
+<div id="loadingContainer">
+	<div class="loadingIconAnimation"></div>
+</div>
+
+<script type="text/javascript" src="../common/libs/js/jquery.js"></script>
+<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+<script type="text/javascript" src="../common/contents/js/sprite.js"></script>
+<script type="text/javascript" src="./js/contents.js"></script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+	}, false);
+</script>
+
+</body>
+</html>
