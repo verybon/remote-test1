@@ -13,19 +13,23 @@
         body, pre{
             font-family: '맑은 고딕', 'malgun gothic', sans-serif;
         }
+        body{
+            background: #888;
+        }
         .list{
-            max-width: 70%;
+            max-width: 75%;
             margin: 0 auto;
             padding: 20px 20px 10px;
         }
         .list > a{
             display: inline-block;
-            margin: 2px;
+            margin: 4px 1px;
             padding: 5px 8px;
             border: 2px solid #00f;
+            background: #00f;
             font-size: 1.1rem;
             font-weight: 700;
-            color: #00f;
+            color: #fff;
             text-decoration: none;
             letter-spacing: -2px;
         }
@@ -73,25 +77,27 @@
             overflow-x: auto;
             overflow-y: auto;
             height: 140px;
-            margin: 5px 4px 5px;
+            margin: 12px 4px 5px;
             padding: 10px 15px;
             border-radius: 10px;
             border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            background: #eee;
+            box-shadow: 0 0 10px rgba(0,0,0,0.8), inset 5px 5px 10px rgba(0,0,0,0.3);
             box-sizing: border-box;
         }
         .sample ._title{
             position: absolute;
-            top: 0px;
+            bottom: 2px;
             right: 2px;
-            min-width: 100%;
-            padding: 0 8px 0 20px;
+            min-width: 90px;
+            padding: 0 6px;
             border-radius: 10px;
-            background: #00a;
-            font-size: .93rem;
-            color: #fff;
+            border:1px solid #00f;
+            background: rgba(255,255,255,.8);
+            font-size: .75rem;
+            color: #00f;
             letter-spacing: -1px;
-            text-align: left;
+            text-align: right;
             -ms-user-select: none;
             -moz-user-select: -moz-none;
             -khtml-user-select: none;
@@ -101,7 +107,7 @@
         }
         pre{
             margin: 20px 0 0;
-            font-size: 0.93em;
+            font-size: 0.7em;
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.1;
             letter-spacing: -1px;
@@ -123,7 +129,6 @@
 </head>
 <body>
 
-
 <div class="list">
     <a href="#PRE091">우주선</a>
     <a href="#PRE092">떡볶이</a>
@@ -139,6 +144,7 @@
     <a href="#PRE014">블릿</a>
     <a href="#PRE015">쓰기/읽기</a>
     <a href="#PRE016">Exam</a>
+    <a href="#PRE017">OX</a>
     <a href="#PRE031">아이프레임</a>
     <a href="#PRE032">캔버스</a>
     <a href="#PRE033">SVG</a>
@@ -149,7 +155,10 @@
     <a href="#PRE201">[css]영샹</a>
     <a href="#PRE202">[css]셀프</a>
     <a href="#PRE203">[css]화면중앙</a>
+    <a href="#PRE301">[js]그려보세요</a>
+    <a href="#PRE301">[js]그려보세요2</a>
 </div>
+
 
 <div class="sample">
 <div id="PRE091">
@@ -165,6 +174,7 @@
 </pre>
 </div>
 
+
 <div id="PRE092">
     <h2 class="_title">떡볶이</h2>
     <pre>
@@ -176,6 +186,7 @@
 </pre>
 </div>
 
+
 <div id="PRE001">
     <h2 class="_title">느낌표/꾸러미</h2>
     <pre>
@@ -186,6 +197,7 @@
 &lt;div class="supply_guide inline"&gt;꾸러미 3&lt;/div&gt;
 </pre>
 </div>
+
 
 <div id="PRE002">
     <h2 class="_title">바깥 탭</h2>
@@ -200,6 +212,7 @@
 &lt;/span&gt;&lt;/h2&gt;
 </pre>
 </div>
+
 
 <div id="PRE003">
     <h2 class="_title">안쪽 탭</h2>
@@ -227,6 +240,7 @@
 </pre>
 </div>
 
+
 <div id="PRE004">
     <h2 class="_title">테이블</h2>
     <pre>
@@ -237,6 +251,7 @@
 </pre>
 </div>
 
+
 <div id="PRE005">
     <h2 class="_title">타이틀</h2>
     <pre>
@@ -246,6 +261,7 @@
 </pre>
 </div>
 
+
 <div id="PRE006">
     <h2 class="_title">중앙 인트로</h2>
     <pre>
@@ -254,6 +270,7 @@ mainContents center
 data-appear-dir="t2b"
 </pre>
 </div>
+
 
 <div id="PRE011">
     <h2 class="_title">말풍선</h2>
@@ -270,6 +287,7 @@ data-appear-dir="t2b"
 </pre>
 </div>
 
+
 <div id="PRE012">
     <h2 class="_title">캐릭터</h2>
     <pre>
@@ -282,6 +300,7 @@ data-appear-dir="t2b"
 </pre>
 </div>
 
+
 <div id="PRE013">
     <h2 class="_title">토글</h2>
     <pre>
@@ -292,6 +311,7 @@ data-appear-dir="t2b"
 &lt;/div&gt;
 </pre>
 </div>
+
 
 <div id="PRE014">
     <h2 class="_title">블릿</h2>
@@ -305,6 +325,7 @@ data-appear-dir="t2b"
 &lt;span class="blankBox"&gt;&lt;/span&gt;
 </pre>
 </div>
+
 
 <div id="PRE015">
     <h2 class="_title">쓰기/읽기</h2>
@@ -322,6 +343,7 @@ data-appear-dir="t2b"
 </pre>
 </div>
 
+
 <div id="PRE016">
     <h2 class="_title">Exam</h2>
     <pre>
@@ -333,6 +355,22 @@ data-appear-dir="t2b"
 &lt;/ul&gt;
 </pre>
 </div>
+
+
+<div id="PRE017">
+    <h2 class="_title">OX</h2>
+    <pre>
+data-quiz="ox" data-option="hide, answerSound"
+
+&lt;div class="grayBox n1" data-ox-obj="1"&gt;
+    &lt;div class="icon icon_x" data-ox-target="1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="grayBox n2" data-ox-obj="2" data-answer=""&gt;
+	&lt;div class="icon icon_o" data-ox-target="2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
 
 <div id="PRE031">
     <h2 class="_title">아이프레임</h2>
@@ -346,6 +384,7 @@ $(".page_2 iframe").contents().find(".app-angle-tool").removeClass('open');
 document.querySelector(".page_2 iframe").contentWindow.document.querySelector(".app-angle-tool").classList.remove('open');
 </pre>
 </div>
+
 
 <div id="PRE032">
     <h2 class="_title">캔버스</h2>
@@ -362,6 +401,7 @@ if(window.hasOwnProperty("initPage")) window.initPage();
 suh_p_0401_02_0002_203_1.html
 </pre>
 </div>
+
 
 <div id="PRE033">
     <h2 class="_title">SVG</h2>
@@ -404,6 +444,7 @@ suh_p_0401_02_0002_203_1.html
 </pre>
 </div>
 
+
 <div id="PRE051">
     <h2 class="_title">하단 쌍둥이</h2>
     <pre>
@@ -415,6 +456,7 @@ suh_p_0401_02_0002_203_1.html
 </pre>
 </div>
 
+
 <div id="PRE052">
     <h2 class="_title">하단 답체크</h2>
     <pre>
@@ -424,6 +466,7 @@ suh_p_0401_02_0002_203_1.html
 &lt;/div&gt;
 </pre>
 </div>
+
 
 <div id="PRE053">
     <h2 class="_title">팝업</h2>
@@ -448,6 +491,7 @@ data-slide-container="popup"
 </pre>
 </div>
 
+
 <div id="PRE200">
     <h2 class="_title">기본css</h2>
     <pre>
@@ -468,12 +512,14 @@ data-slide-container="popup"
 </pre>
 </div>
 
+
 <div id="PRE202">
     <h2 class="_title">[CSS] 셀프</h2>
     <pre>
 #wrap header .title-selfi{position:relative; padding-left:85px;} #wrap header .title-selfi:before{top:-5px; left:0; width:76px; height:58px; background-position:0 0; background-size:auto 100%; background-repeat:no-repeat; background-image:url(./images/act_quiz_icon.svg);} #wrap header .title-selfi-num{position:absolute; top:12px; left:6px; width:70px; font-weight:400; font-size:24px; font-family: YGJAL; color:#fff; text-align:center;}
 </pre>
 </div>
+
 
 <div id="PRE203">
     <h2 class="_title">[CSS] 화면중앙</h2>
@@ -482,6 +528,7 @@ data-slide-container="popup"
 .vMid > div{width:100%;}
 </pre>
 </div>
+
 
 <div id="PRE301">
     <h2 class="_title">[js] 그려보세요 리셋</h2>
@@ -498,12 +545,26 @@ _dapChkBtn.forEach(function(obj, index){
 </pre>
 </div>
 
+
+<div id="PRE302">
+    <h2 class="_title">[js] 그려보세요 리셋</h2>
+    <pre>
+document.querySelector(".dapCheckBtn").addEventListener("click", function(){
+    document.querySelector("iframe").contentWindow.document.querySelector(".app-angle-tool").classList.remove('open');
+});
+</pre>
+</div>
+
+
 <div id="PRE301">
     <h2 class="_title">텍스트</h2>
     <pre>
 °
 </pre>
 </div>
+
+
+
 
 </div><!-- //sample -->
 .popup_pages .vMid{height:490px;}
