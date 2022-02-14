@@ -13,7 +13,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 <link rel="stylesheet" type="text/css" href="../common/contents/css/math_suhi.css">
 <link rel="stylesheet" type="text/css" href="../../../__common__/css/custom.css">
 <style type="text/css">
-	.popup_pages>li.whole h2.pop-tit {background-color:transparent !important; align-self:flex-start; padding:20px;}
+	.popup_pages>li.whole h2.pop-tit{background-color:transparent !important; align-self:flex-start; padding:20px;}
 	.popup_pages .buttonContainer{right:40px; bottom:20px;}
 	.popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
 	.popup_contents .icon_o_title{vertical-align:-2px;}
@@ -21,66 +21,73 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 	.vMid > div{width:100%;}
 	.zoomBtn:after,
 	.popBtn.zoom{border-color:#ff8636; background-color:#f60;}
-	.page-iframe{position:absolute; z-index:1; top:0; overflow:hidden; width:100%; height:490px; border:0; background:transparent;}
+	.page-iframe{position:fixed; z-index:1; top:160px; left:55px; overflow:hidden; width:1060px; height:510px; border:0; background:transparent;}
 	.toggle.z2{z-index:2;}
+	.popup_pages>li.whole.on{z-index:10000;}
 
 	/* 개별 */
-	.page_0 .--img{position:relative; min-width:100%; height:360px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_1.png) no-repeat 50% 100% / contain;}
-	.page_0 .--img .balloon.sky{top:-20px; left:350px;}
-	.page_0 .--img .balloon.green{top:-20px; left:800px;}
+	.page_0 .--img{position:relative; min-width:100%; height:360px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_1.png) no-repeat 50% 100% / contain;}
+	.page_0 .--img .balloon.sky{top:-70px; left:330px;}
+	.page_0 .--img .balloon.green{top:-70px; left:840px;}
 	.page_0 .--text{position:absolute;}
-	.page_0 .--text.x1{bottom:-30px;left:80px;}
-	.page_0 .--text.x2{bottom:-30px;left:380px;}
-	.page_0 .--text.x3{bottom:-30px;left:600px;}
-	.page_0 .--text.x4{bottom:-30px;left:900px;}
+	.page_0 .--text.x1{bottom:-70px;left:60px;}
+	.page_0 .--text.x2{bottom:-70px;left:320px;}
+	.page_0 .--text.x3{bottom:-70px;left:600px;}
+	.page_0 .--text.x4{bottom:-70px;left:860px;}
 
 	.flexListContainer.--ox{min-width:100%; height:320px;}
 	.flexListContainer.--ox li{position:relative; min-width:50%; height:100%;}
 	.flexListContainer.--ox .grayBox{width:100%; height:100%; cursor:pointer;}
 	.flexListContainer.--ox .icon{position:absolute; top:50%; left:50%; width:90px; height:90px; margin:-45px 0 0 -45px;}
-	.page_1 .flexListContainer.--ox{background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_2.png) no-repeat 50% 50% / 800px auto;}
-	.pop_page_12 .flexListContainer.--ox{background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_3.png) no-repeat 50% 50% / 800px auto;}
+	.page_1 .flexListContainer.--ox{background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_2.png) no-repeat 50% 50% / 1000px auto;}
+	.pop_page_12 .flexListContainer.--ox{background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_3.png) no-repeat 30px 50% / 1020px auto;}
 
-	.page_2 .--img{position:relative; width:100%; height:400px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_4.png) no-repeat 50% 50% / 800px auto;}
+	.page_2 .--img{position:relative; width:100%; height:380px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_4.png) no-repeat 50% 20px / 1000px auto;}
 	.page_2 .--text{position:absolute;}
 	.page_2 .--text.x1{bottom:0; left:200px;}
 	.page_2 .--text.x2{bottom:0; left:700px;}
-	.pop_page_22 .--img{position:relative; width:100%; height:400px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_5.png) no-repeat 50% 50% / 800px auto;}
+	.pop_page_22 .--img{position:relative; width:100%; height:400px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_5.png) no-repeat 50% 20px / 1020px auto;}
 	.pop_page_22 .--text{position:absolute;}
-	.pop_page_22 .--text.x1{bottom:0; left:200px;}
-	.pop_page_22 .--text.x2{bottom:0; left:700px;}
+	.pop_page_22 .--text.x1{bottom:0; left:240px;}
+	.pop_page_22 .--text.x2{bottom:0; left:750px;}
 
-	.page_3 .--img{position:relative; width:100%; height:440px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_6.png) no-repeat 50% 50% / contain;}
+	.page_3 .--img{position:relative; width:100%; height:420px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_6.png) no-repeat 50% 50% / contain;}
 	.page_3 .--text{position:absolute; z-index:1;}
-	.page_3 .--text.x1{top:120px; left:280px;}
-	.page_3 .--text.x2{top:120px; left:720px;}
-	.page_3 .--text.x3{top:290px; left:260px;}
-	.page_3 .--text.x4{top:310px; left:720px;}
-	.pop_page_32 .--img{position:relative; width:100%; height:440px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_7.png) no-repeat 50% 50% / contain;}
+	.page_3 .--text.x1{top:100px; left:260px;}
+	.page_3 .--text.x2{top:100px; left:660px;}
+	.page_3 .--text.x3{top:300px; left:230px;}
+	.page_3 .--text.x4{top:310px; left:640px;}
+	.pop_page_32 .page-iframe{top:130px; left:70px; height:560px;}
+	.pop_page_32 .--img{position:relative; width:100%; height:420px; margin-top:30px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_7.png) no-repeat 50% 50% / contain;}
 	.pop_page_32 .--text{position:absolute; z-index:1;}
-	.pop_page_32 .--text.x1{top:120px; left:280px;}
-	.pop_page_32 .--text.x2{top:120px; left:720px;}
-	.pop_page_32 .--text.x3{top:290px; left:260px;}
-	.pop_page_32 .--text.x4{top:310px; left:720px;}
+	.pop_page_32 .--text.x1{top:100px; left:280px;}
+	.pop_page_32 .--text.x2{top:110px; left:690px;}
+	.pop_page_32 .--text.x3{top:310px; left:260px;}
+	.pop_page_32 .--text.x4{top:310px; left:680px;}
 
-	.page_4 .--img{position:relative; width:100%; height:440px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_8.png) no-repeat 50% 50% / contain;}
-	.page_4 .--text{position:absolute; }
-	.page_4 .--text.x1{top:120px; left:300px;}
-	.page_4 .--text.x2{top:260px; left:240px;}
-	.page_4 .--text.x3{top:290px; left:760px;}
-	.pop_page_42 .--img{position:relative; width:100%; height:440px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_9.png) no-repeat 50% 50% / contain;}
-	.pop_page_42 .--text{position:absolute; }
-	.pop_page_42 .--text.x1{top:120px; left:300px;}
-	.pop_page_42 .--text.x2{top:260px; left:240px;}
-	.pop_page_42 .--text.x3{top:290px; left:760px;}
+	.page_4 .--img{position:relative; width:100%; height:400px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_8.png) no-repeat 50% 50% / 800px auto;}
+	.page_4 .--text{position:absolute; z-index:1;}
+	.page_4 .--text.x1{top:140px; left:260px;}
+	.page_4 .--text.x2{top:220px; left:160px;}
+	.page_4 .--text.x3{top:240px; left:690px;}
+	.pop_page_42 .page-iframe{top:130px; left:70px; height:560px;}
+	.pop_page_42 .--img{position:relative; width:100%; height:440px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_9.png) no-repeat 80px 50% / 860px auto;}
+	.pop_page_42 .--text{position:absolute; z-index:1;}
+	.pop_page_42 .--text.x1{top:50px; left:390px;}
+	.pop_page_42 .--text.x2{top:230px; left:240px;}
+	.pop_page_42 .--text.x3{top:260px; left:730px;}
 
+	.page_5 .page-iframe{top:210px; height:460px;}
 	.page_5 .flexListContainer > div{position:relative; width:100%; min-height:390px;}
-	.page_5 .flexListContainer > div:nth-child(1){margin-right:10px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_10.png) no-repeat 50% 50% / auto 250px;}
-	.page_5 .flexListContainer > div:nth-child(2){margin-left:10px; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_11.png) no-repeat 50% 50% / auto 250px;}
+	.page_5 .flexListContainer > div:nth-child(1){margin-right:10px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_10.png) no-repeat 50% 90% / auto 320px;}
+	.page_5 .flexListContainer > div:nth-child(2){margin-left:10px; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_11.png) no-repeat 50% 90% / auto 320px;}
 	.page_5 .flexListContainer .colorBox{position:absolute; top:0px; left:0px; width:100%; text-align:center;}
-	.page_5 .flexListContainer .--text{position:absolute; bottom:30px; right:40px;}
+	.page_5 .flexListContainer .--text{position:absolute; bottom:30px; right:40px; z-index:1;}
+	.pop_page_52 .page-iframe{top:180px; left:70px; height:510px;}
 	.pop_page_52 .colorBox{display:inline-block;}
-	.pop_page_52 .--img{width:100%; min-height:280px; margin:10px auto; background:url(./imaegs/suhi_p_0401_02_0003/suhi_p_0401_02_0003_11.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .--img{position:relative; width:100%; min-height:280px; margin:10px auto; background:url(./images/suhi_p_0401_02_0003/suhi_p_0401_02_0003_12.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .--text{position:absolute; top:160px; left:630px; z-index:1;}
+	.pop_page_52 .toggle.x2{position:relative; z-index:1;}
 </style>
 </head>
 
@@ -206,7 +213,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<h2><ins class="number">3</ins><span>
 					각도기를 이용하여 각도를 재어 보세요.
 				</span></h2>
-				<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 				<section>
 					<div class="--img">
 						<div class="--text x1">
@@ -254,7 +261,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<h2><ins class="number star">4</ins><span>
 					각도기를 이용하여 도형의 각도를 재어 보세요.
 				</span></h2>
-				<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 				<section>
 					<div class="--img">
 						<div class="--text x1">
@@ -296,7 +303,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<h2><ins class="number star">5</ins><span>
 					각도기를 이용하여 각도를 재어 보고, 각도를 이용하여 상황에 알맞은 설명을 해 봅시다.
 				</span></h2>
-				<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 				<section>
 					<div class="flexListContainer">
 						<div>
@@ -351,7 +358,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<ins class="special type3"></ins>
 				<span></span>
 			</h2>
-			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+			<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 			<div class="popup_contents" data-quiz="toggle">
 				<ul class="contentsList">
 					<li>
@@ -364,9 +371,16 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 										주차하기 편리한 각도
 									</div>
 									<div class="--img">
+										<div class="--text">
+											<div class="toggle" data-toggle-obj="5201">
+												<div class="answer" data-toggle-target="5201">
+													60
+												</div>
+											</div>°
+										</div>
 									</div>
-									<div class="toggle" data-toggle-obj="51">
-										<div class="answer" data-toggle-target="51">
+									<div class="toggle x2" data-toggle-obj="5202">
+										<div class="answer" data-toggle-target="5202">
 											<ul class="contentsList">
 												<li>
 													<ins class="bullet exam">예</ins>
@@ -400,7 +414,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<ins class="special type3"></ins>
 				<span></span>
 			</h2>
-			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+			<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 			<div class="popup_contents" data-quiz="toggle">
 				<ul class="contentsList">
 					<li>
@@ -453,7 +467,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<ins class="special type3"></ins>
 				<span></span>
 			</h2>
-			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+			<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 			<div class="popup_contents" data-quiz="toggle">
 				<ul class="contentsList">
 					<li>

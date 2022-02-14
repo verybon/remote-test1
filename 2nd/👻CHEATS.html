@@ -155,6 +155,7 @@
     <a href="#PRE201">[css]영샹</a>
     <a href="#PRE202">[css]셀프</a>
     <a href="#PRE203">[css]화면중앙</a>
+    <a href="#PRE203">[css]수익기본</a>
     <a href="#PRE301">[js]그려보세요</a>
     <a href="#PRE301">[js]그려보세요2</a>
 </div>
@@ -377,8 +378,12 @@ data-quiz="ox" data-option="hide, answerSound"
     <pre>
 &lt;iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"&gt;&lt;/iframe&gt;
 
-.page-iframe{position:absolute; z-index:1; top:0; overflow:hidden; width:100%; height:490px; border:0; background:transparent;}
+.page-iframe{position:fixed; z-index:1; top:160px; left:55px; overflow:hidden; width:1060px; height:510px; border:0; background:transparent;}
 .toggle.z2{z-index:2;}
+.popup_pages>li.whole.on{z-index:10000;}
+
+.page_2 .page-iframe{top:210px; height:460px}
+.pop_page_22 .page-iframe{top:180px; left:70px; height:510px;}
 
 $(".page_2 iframe").contents().find(".app-angle-tool").removeClass('open');
 document.querySelector(".page_2 iframe").contentWindow.document.querySelector(".app-angle-tool").classList.remove('open');
@@ -526,6 +531,26 @@ data-slide-container="popup"
     <pre>
 .vMid{display:flex; align-items:center; justify-content:center; height:420px;}
 .vMid > div{width:100%;}
+</pre>
+</div>
+
+
+<div id="PRE204">
+    <h2 class="_title">[CSS] 수익 기본</h2>
+    <pre>
+.popup_pages>li.whole h2.pop-tit {background-color:transparent !important; align-self:flex-start; padding:20px;}
+.popup_pages .buttonContainer{right:40px; bottom:20px;}
+.popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
+.popup_contents .icon_o_title{vertical-align:-2px;}
+.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
+.vMid > div{width:100%;}
+.zoomBtn:after,
+.popBtn.zoom{border-color:#ff8636; background-color:#f60;}
+.page-iframe{position:fixed; z-index:1; top:160px; left:55px; overflow:hidden; width:1060px; height:510px; border:0; background:transparent;}
+.toggle.z2{z-index:2;}
+.popup_pages>li.whole.on{z-index:10000;}
+.popup_pages .icon_bogi.--title{height:36px; margin:6px 0 0 0; border-radius:10px; vertical-align:top;}
+.popup_pages .icon_bogi.--title:after{font-size:21px; line-height:37px;}
 </pre>
 </div>
 
