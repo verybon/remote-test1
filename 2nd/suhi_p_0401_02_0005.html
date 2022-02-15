@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css">
+<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css">
+<link rel="stylesheet" type="text/css" href="../common/contents/css/math_suhi.css">
+<link rel="stylesheet" type="text/css" href="../../../__common__/css/custom.css">
+<style type="text/css">
+	.popup_pages>li.whole h2.pop-tit {background-color:transparent !important; align-self:flex-start; padding:20px;}
+	.popup_pages .buttonContainer{right:40px; bottom:20px;}
+	.popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
+	.popup_contents .icon_o_title{vertical-align:-2px;}
+	.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
+	.vMid > div{width:100%;}
+	.popup_contents .vMid{height:500px;}
+	.zoomBtn:after,
+	.popBtn.zoom{border-color:#ff8636; background-color:#f60;}
+	.page-iframe{position:fixed; z-index:1; top:160px; left:55px; overflow:hidden; width:1060px; height:510px; border:0; background:transparent;}
+	.toggle.z2{z-index:2;}
+	.popup_pages>li.whole.on{z-index:10000;}
+	.popup_pages .icon_bogi.--title{height:36px; margin:6px 0 0 0; border-radius:10px; vertical-align:top;}
+	.popup_pages .icon_bogi.--title:after{font-size:21px; line-height:37px;}
+
+
+	/* 개별 */
+	.page_0 .--img{position:relative; min-width:100%; height:340px; background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_1.png) no-repeat 0% 50% / 800px auto;}
+	.page_0 .--img .balloon{top:0px; right:0px;}
+	.page_0 .--img .characterImg{top:160px; left:840px;}
+	.page_0 .--text{position:absolute;}
+	.page_0 .--text.x1{top:150px; left:10px;}
+	.page_0 .--text.x2{top:150px; left:340px;}
+	.page_0 .--text.x3{top:150px; left:620px;}
+
+	.page_1 .--question{display:inline-block;}
+	.page_1 .--question li{display:inline-block; margin:30px 40px;}
+	.page_1 .toggle{min-width:100px;}
+
+	.pop_page_12 .--question{display:inline-block;}
+	.pop_page_12 .--question li{display:inline-block; margin:30px 40px;}
+	.pop_page_12 .toggle{min-width:100px;}
+
+	.page_2 .--img{width:100%; height:320px; background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_2.png) no-repeat 50% 50% / 800px auto;}
+	.pop_page_22 .--img{width:100%; height:320px; background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_3.png) no-repeat 50% 50% / 800px auto;}
+
+	.page_3 h2 .icon_tri_title,
+	.--poptitle .icon_tri_title{width:40px; height:40px; vertical-align:-4px;}
+	.page_3 .flexListContainer{min-width:100%; height:320px; background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_4.png) no-repeat 50% 50% / 800px auto;}
+	.page_3 .flexListContainer li{flex:1; position:relative; height:100%;}
+	.page_3 .flexListContainer .grayBox{width:100%; height:100%; cursor:pointer;}
+	.page_3 .flexListContainer .icon{position:absolute; top:50%; left:50%; width:90px; height:90px; margin:-45px 0 0 -45px;}
+
+	.pop_page_32 .flexListContainer{min-width:100%; height:320px; background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_5.png) no-repeat 50% 50% / 800px auto;}
+	.pop_page_32 .flexListContainer li{flex:1; position:relative; height:100%;}
+	.pop_page_32 .flexListContainer .grayBox{width:100%; height:100%; cursor:pointer;}
+	.pop_page_32 .flexListContainer .icon{position:absolute; top:50%; left:50%; width:90px; height:90px; margin:-45px 0 0 -45px;}
+
+	/* .flexListContainer.--order li{flex:1; position:relative; min-height:320px;}
+	.flexListContainer.--order li > p{position:absolute; top:0; left:0;}
+	.flexListContainer.--order li > .--img{height:100%; padding:0 15px;}
+	.flexListContainer.--order li > .--img img{display:block; width:100%; margin:0 auto;}
+
+	.page_3 .flexListContainer.--order li:nth-child(1) > .--img img{width:150px; margin-top:70px;}
+	.page_3 .flexListContainer.--order li:nth-child(2) > .--img img{width:210px;}
+	.page_3 .flexListContainer.--order li:nth-child(3) > .--img img{width:270px; margin-top:90px;}
+	.pop_page_32 .flexListContainer.--order li:nth-child(1) > .--img img{width:210px; margin-top:80px;}
+	.pop_page_32 .flexListContainer.--order li:nth-child(2) > .--img img{width:190px;}
+	.pop_page_32 .flexListContainer.--order li:nth-child(3) > .--img img{width:320px; margin-top:90px;} */
+
+	.page_4 .page-iframe{top:210px; height:460px;}
+	.page_4 .flexListContainer{margin-top:60px;}
+	.page_4 .flexListContainer .colorBox{position:absolute; top:-30px; left:-5px;}
+	.page_4 .flexListContainer > div{flex:1; position:relative; padding-top:40px; padding-bottom:40px;}
+	.page_4 .flexListContainer > div:nth-child(1){margin-right:30px;}
+	.page_4 .flexListContainer > div .--img{width:100%; height:270px;}
+	.page_4 .flexListContainer > div:nth-child(1) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_6.png) no-repeat 50% 100% / 240px auto;}
+	.page_4 .flexListContainer > div:nth-child(2) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_8.png) no-repeat 50% 100% / 350px auto;}
+	.page_4 .flexListContainer > div .--answer{position:absolute; top:40px; left:0; width:100%; height:240px;}
+	.page_4 .flexListContainer > div:nth-child(1) .--answer{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_7.png) no-repeat 50% 100% / 240px auto;}
+	.page_4 .flexListContainer > div:nth-child(2) .--answer{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_9.png) no-repeat 50% 100% / 350px auto;}
+	.page_4 .flexListContainer > div .bullet.exam{position:absolute; top:10px; left:20px;}
+
+	.pop_page_42 .page-iframe{top:180px; left:70px; height:510px;}
+	.pop_page_42 .flexListContainer{margin-top:70px;}
+	.pop_page_42 .flexListContainer .colorBox{position:absolute; top:-30px; left:-5px;}
+	.pop_page_42 .flexListContainer > div{flex:1; position:relative; padding-top:40px; padding-bottom:40px;}
+	.pop_page_42 .flexListContainer > div:nth-child(1){margin-right:30px;}
+	.pop_page_42 .flexListContainer > div .--img{width:100%; height:320px;}
+	.pop_page_42 .flexListContainer > div:nth-child(1) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_10.png) no-repeat 50% 100% / 240px auto;}
+	.pop_page_42 .flexListContainer > div:nth-child(2) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_12.png) no-repeat 50% 100% / 350px auto;}
+	.pop_page_42 .flexListContainer > div .--answer{position:absolute; top:40px; left:0; width:100%; height:240px;}
+	.pop_page_42 .flexListContainer > div:nth-child(1) .--answer{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_11.png) no-repeat 50% 100% / 240px auto;}
+	.pop_page_42 .flexListContainer > div:nth-child(2) .--answer{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_13.png) no-repeat 50% 100% / 350px auto;}
+	.pop_page_42 .flexListContainer > div .bullet.exam{position:absolute; top:10px; left:20px;}
+
+	.page_5 .page-iframe{top:210px; height:460px;}
+	.page_5 .flexListContainer{margin-top:60px;}
+	.page_5 .flexListContainer li{flex:1;}
+	.page_5 .flexListContainer .colorBox{display:inline-block;}
+	.page_5 .flexListContainer li .--img{position:relative; width:100%; height:190px; margin:10px auto 20px;}
+	.page_5 .flexListContainer li .--niddle{position:absolute; top:0; left:0; width:100%; height:100%; opacity:0;}
+	.page_5 .flexListContainer li .--niddle.on{opacity:1;}
+	.page_5 .flexListContainer li:nth-child(1) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_14.png) no-repeat 50% 50% / contain;}
+	.page_5 .flexListContainer li:nth-child(1) .--niddle{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_15.png) no-repeat 50% 50% / contain;}
+	.page_5 .flexListContainer li:nth-child(2) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_16.png) no-repeat 50% 50% / contain;}
+	.page_5 .flexListContainer li:nth-child(2) .--niddle{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_17.png) no-repeat 50% 50% / contain;}
+	.page_5 .flexListContainer li:nth-child(3) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_18.png) no-repeat 50% 50% / contain;}
+	.page_5 .flexListContainer li:nth-child(3) .--niddle{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_19.png) no-repeat 50% 50% / contain;}
+	.page_5 .toggle{z-index:1;}
+
+	.pop_page_52 .page-iframe{top:180px; left:70px; height:510px;}
+	.pop_page_52 .flexListContainer{margin-top:60px;}
+	.pop_page_52 .flexListContainer li{flex:1;}
+	.pop_page_52 .flexListContainer .colorBox{display:inline-block;}
+	.pop_page_52 .flexListContainer li .--img{position:relative; width:100%; height:240px; margin:10px auto 20px;}
+	.pop_page_52 .flexListContainer li .--niddle{position:absolute; top:0; left:0; width:100%; height:100%; opacity:0;}
+	.pop_page_52 .flexListContainer li .--niddle.on{opacity:1;}
+	.pop_page_52 .flexListContainer li:nth-child(1) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_14.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .flexListContainer li:nth-child(1) .--niddle{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_20.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .flexListContainer li:nth-child(2) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_16.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .flexListContainer li:nth-child(2) .--niddle{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_21.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .flexListContainer li:nth-child(3) .--img{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_18.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .flexListContainer li:nth-child(3) .--niddle{background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_22.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .toggle{z-index:1;}
+
+	.pop_page_61 .--wrap{min-height:135px; padding:20px 0; background:url(./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_24.png) no-repeat 100% 50% / auto 135px;}
+</style>
+</head>
+
+<body>
+<div id="wrap" class="math suhi">
+<div id="bgContainer"></div>
+
+<header>
+	<h1><ins class="suhi_title"></ins>
+	<span class="subInfo">
+		<span class="sub-text">직각보다 작은 각과 직각보다 큰 각을 알아볼까요</span>
+		<span class="sub-page">30~31쪽</span>
+	</span>
+	</h1>
+</header>
+<main>
+	<div class="basicSlider contentsBox" data-slide-container="main">
+		<ul class="basicSlider_tabs" data-tabs="">
+			<li data-hover="">개념 정리</li>
+			<li data-hover="">1</li>
+			<li data-hover="">2</li>
+			<li data-hover="">3</li>
+			<li data-hover="">4</li>
+			<li data-hover="">5</li>
+			<li data-hover="">6</li>
+		</ul>
+		<ul class="basicSlider_slides" data-slides="">
+
+			<li class="page_0">
+				<h2><ins class="special type2"></ins><span>
+				</span></h2>
+				<section class="full">
+					<div class="vMid">
+						<div>
+							<div class="--img">
+								<div class="--text x1">
+									예각
+								</div>
+								<div class="--text x2">
+									직각
+								</div>
+								<div class="--text x3">
+									둔각
+								</div>
+								<div class="balloon bottom ctTail textAlignC deeppink">
+									각의 크기에 따라<br>이름이 달라져.
+								</div>
+								<div class="characterImg girl_1-wrap circle deeppink">
+									<div class="charSpriteImg girl_1"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_1" data-quiz="toggle">
+				<h2><ins class="number">1</ins><span>
+					예각과 둔각을 찾아 써 보세요.
+				</span></h2>
+				<section>
+					<div class="vMid">
+						<div>
+							<div class="textAlignC">
+								<ul class="colorBox sky --question">
+									<li>90°</li>
+									<li>130°</li>
+									<li>70°</li>
+								</ul>
+							</div>
+							<ul class="flexListContainer jcenter center mt_40">
+								<li class="flexListContainer mr_60">
+									<div class="colorBox check sky">예각</div>
+									<div>
+										<div class="toggle" data-toggle-obj="11">
+											<div class="answer" data-toggle-target="11">70</div>
+										</div>°
+									</div>
+								</li>
+								<li class="flexListContainer">
+									<div class="colorBox check sky">둔각</div>
+									<div>
+										<div class="toggle" data-toggle-obj="12">
+											<div class="answer" data-toggle-target="12">130</div>
+										</div>°
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="11" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn" data-popup-btn="12" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_2" data-quiz="toggle">
+				<h2><ins class="number">2</ins><span>
+					각을 보고 예각과 둔각 중 어느 것인지 <ins class="blankBox"></ins> 안에 써넣으세요.
+				</span></h2>
+				<section>
+					<div class="--img"></div>
+					<ul class="flexListContainer around mt_10">
+						<li>
+							<div class="toggle" data-toggle-obj="21">
+								<div class="answer" data-toggle-target="21">예각</div>
+							</div>
+						</li>
+						<li>
+							<div class="toggle" data-toggle-obj="22">
+								<div class="answer" data-toggle-target="22">둔각</div>
+							</div>
+						</li>
+						<li>
+							<div class="toggle" data-toggle-obj="23">
+								<div class="answer" data-toggle-target="23">예각</div>
+							</div>
+						</li>
+					</ul>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="21" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn" data-popup-btn="22" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_3" data-quiz="ox" data-option="hide, answerSound">
+				<h2><ins class="number">3</ins><span>
+					표시된 각이 예각이면 <span class="icon_o_title"></span>표, 둔각이면 <span class="icon_tri_title"></span>표를 하세요.
+				</span></h2>
+				<section>
+					<ul class="flexListContainer">
+						<li>
+							<div class="grayBox x1" data-ox-obj="31" data-answer="">
+								<div class="icon icon_tri" data-ox-target="31"></div>
+							</div>
+						</li>
+						<li>
+							<div class="grayBox x2" data-ox-obj="32" data-answer="">
+								<div class="icon icon_o" data-ox-target="32"></div>
+							</div>
+						</li>
+						<li>
+							<div class="grayBox x3" data-ox-obj="33" data-answer="">
+								<div class="icon icon_tri" data-ox-target="33"></div>
+							</div>
+						</li>
+					</ul>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="31" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn" data-popup-btn="32" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_4" data-quiz="toggle">
+				<h2><ins class="number">4</ins><span>
+					주어진 선분을 이용하여 예각과 둔각을 그려 보세요.
+				</span></h2>
+				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
+				<section>
+					<div class="flexListContainer">
+						<div class="lineBox sky it-box">
+							<div class="colorBox sky">예각</div>
+							<div class="--img"></div>
+							<div class="answer --answer" data-toggle-obj="41" data-toggle-target="41">
+								<ins class="bullet exam">예</ins>
+							</div>
+						</div>
+						<div class="lineBox sky it-box">
+							<div class="colorBox sky">둔각</div>
+							<div class="--img"></div>
+							<div class="answer --answer" data-toggle-obj="42" data-toggle-target="42">
+								<ins class="bullet exam">예</ins>
+							</div>
+						</div>
+					</div>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="41" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn" data-popup-btn="42" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_5" data-quiz="toggle">
+				<h2><ins class="number star">5</ins><span class="ls0_5">
+					시각에 맞게 시곗바늘을 그리고, 시계의 두 바늘이 이루는 작은 쪽의 각이 예각, 직각, 둔각 중 어느 것인지 <ins class="blankBox"></ins> 안에 써넣으세요.
+				</span></h2>
+				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
+				<section>
+					<ul class="flexListContainer around textAlignC">
+						<li>
+							<div class="colorBox sky">9시</div>
+							<div class="--img">
+								<div class="--niddle" data-toggle-target="51"></div>
+							</div>
+							<div class="toggle" data-toggle-obj="51">
+								<div class="answer" data-toggle-target="51">
+									직각
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="colorBox sky">2시 30분</div>
+							<div class="--img">
+								<div class="--niddle" data-toggle-target="52"></div>
+							</div>
+							<div class="toggle" data-toggle-obj="52">
+								<div class="answer" data-toggle-target="52">
+									둔각
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="colorBox sky">4시 30분</div>
+							<div class="--img">
+								<div class="--niddle" data-toggle-target="53"></div>
+							</div>
+							<div class="toggle" data-toggle-obj="53">
+								<div class="answer" data-toggle-target="53">
+									예각
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="51" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn" data-popup-btn="52" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_6" data-quiz="toggle">
+				<h2><ins class="number star">6</ins><span>
+					그림에서 찾을 수 있는 예각은 모두 몇 개인지 구해 보세요.
+				</span></h2>
+				<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+				<section>
+					<div class="textAlignC">
+						<img src="./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_23.png" alt="" width="600">
+					</div>
+					<div class="textAlignC">
+						<div class="toggle" data-toggle-obj="61">
+							<div class="answer" data-toggle-target="61">
+								5
+							</div>
+						</div>개
+					</div>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="61" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn" data-popup-btn="62" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+		</ul>
+	</div>
+</main>
+
+<!--
+	* 팝업
+ -->
+<section class="popup_container" data-popup-container="">
+	<ul class="popup_pages basicSlider_slides">
+		<li class="whole pop_page_62" data-popup-page="62">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot deepGreen"></ins>
+						<div>
+							<p class="mb_10">그림에서 찾을 수 있는 둔각은 모두 몇 개인지 구해 보세요.</p>
+							<div>
+								<div class="textAlignC">
+									<img src="./images/suhi_p_0401_02_0005/suhi_p_0401_02_0005_24.png" alt="" width="600">
+								</div>
+								<div class="textAlignC">
+									<div class="toggle" data-toggle-obj="6201">
+										<div class="answer" data-toggle-target="6201">
+											4
+										</div>
+									</div>개
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-2)수학익힘쌍둥이_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_61" data-popup-page="61">
+			<div class="popup_contents">
+				<ul class="--wrap">
+					<li>각이 1개로 이루어진 예각: 4개</li>
+					<li>각이 2개로 이루어진 예각: 1개</li>
+					<li><ins class="icon_arrow"></ins> 찾을 수 있는 예각은 4+1=5(개)입니다.</li>
+				</ul>
+			</div>
+		</li>
+
+		<li class="whole pop_page_52" data-popup-page="52">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot deepGreen"></ins>
+						<div>
+							<p class="mb_10">시각에 맞게 시곗바늘을 그리고, 시계의 두 바늘이 이루는 작은 쪽의 각이 예각, 직각, 둔각 중 어느 것인지 <ins class="blankBox"></ins> 안에 써넣으세요.</p>
+							<div>
+								<ul class="flexListContainer around textAlignC">
+									<li>
+										<div class="colorBox sky">9시</div>
+										<div class="--img">
+											<div class="--niddle" data-toggle-target="5201"></div>
+										</div>
+										<div class="toggle" data-toggle-obj="5201">
+											<div class="answer" data-toggle-target="5201">
+												둔각
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="colorBox sky">2시 30분</div>
+										<div class="--img">
+											<div class="--niddle" data-toggle-target="5202"></div>
+										</div>
+										<div class="toggle" data-toggle-obj="5202">
+											<div class="answer" data-toggle-target="5202">
+												예각
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="colorBox sky">4시 30분</div>
+										<div class="--img">
+											<div class="--niddle" data-toggle-target="5203"></div>
+										</div>
+										<div class="toggle" data-toggle-obj="5203">
+											<div class="answer" data-toggle-target="5203">
+												직각
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-2)수학익힘쌍둥이_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_51" data-popup-page="51">
+			<div class="popup_contents">
+				<ul class="dotList deepGreen">
+					<li class="ls0">9시: 두 바늘이 이루는 작은 쪽의 각이 90°이므로 직각입니다.</li>
+					<li class="ls0">2시 30분: 두 바늘이 이루는 작은 쪽의 각이 직각보다 크고 180°보다 작으므로 둔각입니다.</li>
+					<li class="ls0">4시 30분: 두 바늘이 이루는 작은 쪽의 각이 0°보다 크고 90°보다 작으므로 예각입니다.</li>
+				</ul>
+			</div>
+		</li>
+
+		<li class="whole pop_page_42" data-popup-page="42">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot deepGreen"></ins>
+						<div>
+							<p class="mb_10">주어진 선분을 이용하여 예각과 둔각을 그려 보세요.</p>
+							<div>
+								<div class="flexListContainer">
+									<div class="lineBox sky it-box">
+										<div class="colorBox sky">예각</div>
+										<div class="--img"></div>
+										<div class="answer --answer" data-toggle-obj="4201" data-toggle-target="4201">
+											<ins class="bullet exam">예</ins>
+										</div>
+									</div>
+									<div class="lineBox sky it-box">
+										<div class="colorBox sky">둔각</div>
+										<div class="--img"></div>
+										<div class="answer --answer" data-toggle-obj="4202" data-toggle-target="4202">
+											<ins class="bullet exam">예</ins>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-2)수학익힘쌍둥이_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_41" data-popup-page="41">
+			<div class="popup_contents">
+				<ul class="dotList deepGreen">
+					<li class="ls0">예각은 각도가 0°보다 크고 90°보다 작은 각을 그립니다.</li>
+					<li class="ls0">직각은 각도가 90°보다 크고 180°보다 작은 각을 그립니다.</li>
+				</ul>
+			</div>
+		</li>
+
+		<li class="whole pop_page_32" data-popup-page="32">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="ox" data-option="hide, answerSound">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot deepGreen"></ins>
+						<div>
+							<p class="mb_10 --poptitle">표시된 각이 예각이면 <span class="icon_o_title"></span>표, 둔각이면 <span class="icon_tri_title"></span>표를 하세요.</p>
+							<div>
+								<ul class="flexListContainer">
+									<li>
+										<div class="grayBox x1" data-ox-obj="3201" data-answer="">
+											<div class="icon icon_o" data-ox-target="3201"></div>
+										</div>
+									</li>
+									<li>
+										<div class="grayBox x2" data-ox-obj="3202" data-answer="">
+											<div class="icon icon_tri" data-ox-target="3202"></div>
+										</div>
+									</li>
+									<li>
+										<div class="grayBox x3" data-ox-obj="3203" data-answer="">
+											<div class="icon icon_o" data-ox-target="3203"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-2)수학익힘쌍둥이_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_31" data-popup-page="31">
+			<div class="popup_contents">
+				<ul class="dotList deepGreen">
+					<li class="ls1">옷걸이에 표시된 각은 각도가 직각보다 크도 180°보다 작으므로 둔각입니다.</li>
+					<li class="ls1">트라이앵글에서 표시된 각은 각도가 0°보다 크고 90°보다 작으므로 예각입니다.</li>
+					<li class="ls0">노트북에서 표시된 각은 각도가 직각보다 크고 180°보다 작으므로 둔각입니다.</li>
+				</ul>
+			</div>
+		</li>
+
+		<li class="whole pop_page_22" data-popup-page="22">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot deepGreen"></ins>
+						<div>
+							<p class="mb_10">각을 보고 예각과 둔각 중 어느 것인지 <ins class="blankBox"></ins> 안에 써넣으세요.</p>
+							<div>
+								<div class="--img">
+								</div>
+								<ul class="flexListContainer around mt_10">
+									<li>
+										<div class="toggle" data-toggle-obj="2201">
+											<div class="answer" data-toggle-target="2201">둔각</div>
+										</div>
+									</li>
+									<li>
+										<div class="toggle" data-toggle-obj="2202">
+											<div class="answer" data-toggle-target="2202">둔각</div>
+										</div>
+									</li>
+									<li>
+										<div class="toggle" data-toggle-obj="2203">
+											<div class="answer" data-toggle-target="2203">예각</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-2)수학익힘쌍둥이_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_21" data-popup-page="21">
+			<div class="popup_contents">
+				<p class="ls0">직각과 비교하여 직각보다 작은 각은 예각, 직각보다 큰 각은 둔각으로 구분합니다.</p>
+			</div>
+		</li>
+
+		<li class="whole pop_page_12" data-popup-page="12">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot deepGreen"></ins>
+						<div>
+							<p class="mb_10">예각과 둔각을 찾아 써 보세요.</p>
+							<div>
+								<div class="vMid">
+									<div>
+										<div class="textAlignC">
+											<ul class="colorBox green --question">
+												<li>65°</li>
+												<li>90°</li>
+												<li>105°</li>
+											</ul>
+										</div>
+										<ul class="flexListContainer jcenter center mt_40">
+											<li class="flexListContainer mr_60">
+												<div class="colorBox check sky">예각</div>
+												<div>
+													<div class="toggle" data-toggle-obj="1201">
+														<div class="answer" data-toggle-target="1201">65</div>
+													</div>°
+												</div>
+											</li>
+											<li class="flexListContainer">
+												<div class="colorBox check sky">둔각</div>
+												<div>
+													<div class="toggle" data-toggle-obj="1202">
+														<div class="answer" data-toggle-target="1202">105</div>
+													</div>°
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-2)수학익힘쌍둥이_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_11" data-popup-page="11">
+			<div class="popup_contents">
+				<p class="ls0">90°는 직각, 130°는 90°보다 크고 180°보다 작으므로 둔각, 70°는 0°보다 크고 90°보다 작으므로 예각입니다.</p>
+			</div>
+		</li>
+	</ul>
+</section>
+
+</div>
+<div id="loadingContainer">
+<div class="loadingIconAnimation"></div>
+</div>
+<script type="text/javascript" src="../common/libs/js/jquery.js"></script>
+<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+<script type="text/javascript" src="../common/contents/js/sprite.js"></script>
+<script type="text/javascript" src="./js/contents.js"></script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+	}, false);
+</script>
+
+</body>
+
+</html>
