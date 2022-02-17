@@ -17,28 +17,44 @@
             background: #888;
         }
         .list{
-            max-width: 75%;
-            margin: 0 auto;
-            padding: 20px 20px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: stretch;
+            flex-wrap: wrap;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            padding: 10px 20px 20px;
+            background: rgba(0,0,0,.75);
+            text-align: center;
+            box-sizing: border-box;
         }
         .list > a{
             display: inline-block;
-            margin: 4px 1px;
-            padding: 5px 8px;
-            border: 2px solid #00f;
+            margin: 3px 0 1px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            border: 1px solid #00f;
             background: #00f;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
             color: #fff;
             text-decoration: none;
-            letter-spacing: -2px;
+            letter-spacing: -1.5px;
+            word-spacing: 1px;
+            box-shadow: inset 0 -4px 8px rgba(0,0,0,.5);
+        }
+        .list > a:nth-child(even){
+            background: #07f;
         }
         .sample{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             overflow: hidden;
-            padding: 10px 50px 500px 20px;
+            padding: 30px 50px 500px 20px;
             scrollbar-3dLight-Color: #eaeaea;
             scrollbar-arrow-color: #dadada;
             scrollbar-base-color: #eaeaea;
@@ -74,10 +90,12 @@
         .sample > div{
             position: relative;
             width: calc(50% - 10px);
+            margin: 12px 4px 5px;
+        }
+        .sample ._box{
             overflow-x: auto;
             overflow-y: auto;
             height: 140px;
-            margin: 12px 4px 5px;
             padding: 10px 15px;
             border-radius: 10px;
             border: 1px solid #ddd;
@@ -87,12 +105,12 @@
         }
         .sample ._title{
             position: absolute;
-            bottom: 2px;
-            right: 2px;
+            bottom: -1px;
+            right: -1px;
             min-width: 90px;
             padding: 0 6px;
-            border-radius: 10px;
-            border:1px solid #00f;
+            border-radius: 12px 0 0 0;
+            border:1px solid #fff;
             background: rgba(255,255,255,.8);
             font-size: .75rem;
             color: #00f;
@@ -103,27 +121,30 @@
             -khtml-user-select: none;
             -webkit-user-select: none;
             user-select: none;
+            box-shadow: 0 0 10px rgba(0,0,0,.3);
             box-sizing: border-box;
         }
         pre{
             margin: 20px 0 0;
-            font-size: 0.7em;
+            font-size: 0.75em;
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.1;
             letter-spacing: -1px;
         }
-        .top{
+        .list > a.top{
             display: flex;
             align-items: center;
             justify-content: center;
-            position: fixed;
-            bottom: 5px;
-            right: 5px;
-            width: 36px;
-            height: 36px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,.15);
-            color: #aaa;
+            position: absolute;
+            bottom: 4px;
+            right: 20px;
+            width: 10px;
+            height: 20px;
+            border: 0;
+            background: transparent;
+            line-height: 24px;
+            color: #999;
+            box-shadow: inset 0 0 10px rgba(0,0,0,.15);
         }
     </style>
 </head>
@@ -157,14 +178,18 @@
     <a href="#PRE203">[css]화면중앙</a>
     <a href="#PRE203">[css]수익기본</a>
     <a href="#PRE301">[js]그려보세요</a>
-    <a href="#PRE301">[js]그려보세요2</a>
+    <a href="#PRE302">[js]그려보세요2</a>
+    <a href="#PRE801">[템]이너칼크</a>
+    <a href="#PRE999">텍스트</a>
+    <a href="#" onclick="location.reload();" class="top">△</a>
 </div>
 
 
 <div class="sample">
 <div id="PRE091">
     <h2 class="_title">우주선</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;div class="title title-selfi"&gt;
     &lt;ins class="title-selfi-num"&gt;2&lt;/ins&gt;
 &lt;/div&gt;
@@ -174,11 +199,13 @@
 #wrap header .title-selfi-num{position:absolute; top:14px; left:13px; width:30px; font-weight:400; font-size:18px; font-family: YGJAL; color:#fff; text-align:center;}
 </pre>
 </div>
+</div>
 
 
 <div id="PRE092">
     <h2 class="_title">떡볶이</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;h2&gt;&lt;ins class="dot"&gt;&lt;/ins&gt;&lt;ins class="icon_preCheck"&gt;2 2&lt;/ins&gt;&lt;span&gt;
     100이 10개인 수
 &lt;/span&gt;&lt;/h2&gt;
@@ -186,11 +213,13 @@
 .icon_preCheck{display:flex; align-items:center; justify-content:center; top:1px; left:0; width:80px; height:48px; margin:0 6px 0 0; padding:0 0 0 4px; background:url(./images/preCheck_icon.svg) 0 center / auto 100% no-repeat; font-size:25px; color:#fff; letter-spacing:6px; box-sizing:border-box;}
 </pre>
 </div>
+</div>
 
 
 <div id="PRE001">
     <h2 class="_title">느낌표/꾸러미</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;div class="study_guide"&gt;
     &lt;em&gt;10000&lt;/em&gt;을 &lt;em&gt;클릭&lt;/em&gt;하세요.
 &lt;/div&gt;
@@ -198,11 +227,13 @@
 &lt;div class="supply_guide inline"&gt;꾸러미 3&lt;/div&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE002">
     <h2 class="_title">바깥 탭</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;ul class="basicSlider_tabs" data-tabs=""&gt;
     &lt;li data-hover=""&gt;물음 1&lt;/li&gt;
     &lt;li data-hover=""&gt;물음 2&lt;/li&gt;
@@ -213,11 +244,13 @@
 &lt;/span&gt;&lt;/h2&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE003">
     <h2 class="_title">안쪽 탭</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;div class="basicSlider contentsBox" data-slide-container="main"&gt;
     &lt;ul class="basicSlider_slides" data-slides=""&gt;
     &lt;li class="page_1" data-slide-container=""&gt;
@@ -240,43 +273,51 @@
 &lt;/div&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE004">
     <h2 class="_title">테이블</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;div class="tableContainer brown"&gt;
     &lt;table&gt;
     &lt;/table&gt;
 &lt;/div&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE005">
     <h2 class="_title">타이틀</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;h2&gt;&lt;ins class="dot"&gt;&lt;/ins&gt;&lt;span&gt;
     타이틀이용
 &lt;/span&gt;&lt;/h2&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE006">
     <h2 class="_title">중앙 인트로</h2>
-    <pre>
+<div class="_box">
+<pre>
 introContents todayIntro
 mainContents center
 data-appear-dir="t2b"
 </pre>
 </div>
+</div>
 
 
 <div id="PRE011">
     <h2 class="_title">말풍선</h2>
-    <pre>
-&lt;div class="balloon right ctTail textAlignC sky"&gt;말풍선&lt;/div&gt;
+<div class="_box">
+<pre>
+&lt;div class="balloon bottom ctTail textAlignC sky"&gt;말풍선&lt;/div&gt;
 &lt;div class="flex-wrap"&gt;
     &lt;div class="balloon right sky ctTail"&gt;
         &lt;span&gt;천조까지는 &lt;br&gt;16자리나 돼.&lt;/span&gt;
@@ -287,11 +328,13 @@ data-appear-dir="t2b"
 &lt;/div&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE012">
     <h2 class="_title">캐릭터</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;div class="characterImg boy_1-wrap circle sky" style="left:auto; right:0;"&gt;
     &lt;div class="charSpriteImg boy_1"&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -300,11 +343,13 @@ data-appear-dir="t2b"
 &lt;/div&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE013">
     <h2 class="_title">토글</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;div class="toggle" data-toggle-obj="1"&gt;
     &lt;div class="answer" data-toggle-target="1"&gt;
         토글
@@ -312,11 +357,13 @@ data-appear-dir="t2b"
 &lt;/div&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE014">
     <h2 class="_title">블릿</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;ins class="bullet circleDot"&gt;&lt;/ins&gt;
 
 &lt;div class="bullet number orange"&gt;1&lt;/div&gt;
@@ -326,11 +373,13 @@ data-appear-dir="t2b"
 &lt;span class="blankBox"&gt;&lt;/span&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE015">
     <h2 class="_title">쓰기/읽기</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;ul class="flexListContainer"&gt;
     &lt;li&gt;
         &lt;div class="colorBox check deepOrange"&gt;쓰기&lt;/div&gt;
@@ -343,11 +392,13 @@ data-appear-dir="t2b"
 &lt;/ul&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE016">
     <h2 class="_title">Exam</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;ul class="contentsList"&gt;
     &lt;li&gt;
         &lt;ins class="bullet exam"&gt;예&lt;/ins&gt;
@@ -356,11 +407,13 @@ data-appear-dir="t2b"
 &lt;/ul&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE017">
     <h2 class="_title">OX</h2>
-    <pre>
+<div class="_box">
+<pre>
 data-quiz="ox" data-option="hide, answerSound"
 
 &lt;div class="grayBox n1" data-ox-obj="1"&gt;
@@ -371,29 +424,61 @@ data-quiz="ox" data-option="hide, answerSound"
 &lt;/div&gt;
 </pre>
 </div>
+</div>
 
+
+<div id="PRE018">
+    <h2 class="_title">부등호</h2>
+<div class="_box">
+<pre>
+//팝업인 경우
+.--popTitle img[src*="equalIcon"]{height:11px; margin:-7px 0 0 0; vertical-align:middle;}
+.--popTitle img[src*="inequalIcon"]{height:30px; margin:-7px 0 0 0; vertical-align:middle;}
+
+
+수의 크기를 비교하여 &lt;span class="toggleBlank circle"&gt;&lt;/span&gt; 안에
+&lt;img src="../common/contents/images/math/inequalIcon_2.png"&gt;, &lt;img
+src="../common/contents/images/math/equalIcon.png"&gt;, &lt;img
+src="../common/contents/images/math/inequalIcon.png"&gt;를 알맞게 써넣으시오.
+
+&lt;div class="flexListContainer jcenter"&gt;
+    &lt;div style="width: 300px; text-align: right;"&gt;26735&lt;/div&gt;
+    &lt;div class="toggle circle" data-toggle-obj="41" style="margin: -4px 20px;"&gt;
+        &lt;div class="answer" data-toggle-target="41"&gt;&lt;img
+            src="../common/contents/images/math/inequalIcon_blue.png"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;div style="width: 300px;"&gt;468921&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
 
 <div id="PRE031">
     <h2 class="_title">아이프레임</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"&gt;&lt;/iframe&gt;
 
-.page-iframe{position:fixed; z-index:1; top:160px; left:55px; overflow:hidden; width:1060px; height:510px; border:0; background:transparent;}
+
+.page-iframe{position:fixed; z-index:1; top:210px; left:55px; overflow:hidden; width:1060px; height:460px; border:0; background:transparent;}
+.popup_pages .page-iframe{top:180px; left:70px; height:510px;}
+.page-iframe .popup_contents .toggle,
+.page-iframe + section .toggle{z-index:1;}
 .toggle.z2{z-index:2;}
 .popup_pages>li.whole.on{z-index:10000;}
 
-.page_2 .page-iframe{top:210px; height:460px}
-.pop_page_22 .page-iframe{top:180px; left:70px; height:510px;}
 
 $(".page_2 iframe").contents().find(".app-angle-tool").removeClass('open');
 document.querySelector(".page_2 iframe").contentWindow.document.querySelector(".app-angle-tool").classList.remove('open');
 </pre>
 </div>
+</div>
 
 
 <div id="PRE032">
     <h2 class="_title">캔버스</h2>
-    <pre>
+<div class="_box">
+<pre>
 if(window.hasOwnProperty("initPage")) window.initPage();
 
 &lt;script src="./js/mm_41_2_01_05_01.js"&gt;&lt;/script&gt;
@@ -406,11 +491,13 @@ if(window.hasOwnProperty("initPage")) window.initPage();
 suh_p_0401_02_0002_203_1.html
 </pre>
 </div>
+</div>
 
 
 <div id="PRE033">
     <h2 class="_title">SVG</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;svg width="360" height="180"&gt;
     &lt;polyline points="16,44 16,65 202,65 202,44" fill="transparent" stroke="#ff0000" stroke-width="2"&gt;&lt;/polyline&gt;
     &lt;path d="M202 44 L196 54 L208 54 Z" fill="#ff0000" stroke="transparent" stroke-width="0"&gt;&lt;/path&gt;
@@ -448,11 +535,13 @@ suh_p_0401_02_0002_203_1.html
 &lt;path d="M150 0 L75 200 L225 200 Z" /&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE051">
     <h2 class="_title">하단 쌍둥이</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;div class="buttonContainer left"&gt;
     &lt;button class="characterBtn" data-popup-btn="1" data-hover=""&gt;
         &lt;span&gt;더 알아보기&lt;/span&gt;
@@ -460,22 +549,26 @@ suh_p_0401_02_0002_203_1.html
 &lt;/div&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE052">
     <h2 class="_title">하단 답체크</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;div class="buttonContainer"&gt;
     &lt;button class="solveCheckBtn" data-popup-btn="1" data-hover=""&gt;&lt;/button&gt;
     &lt;button class="dapCheckBtn" data-answer-btn=""&gt;&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE053">
     <h2 class="_title">팝업</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;section class="popup_container" data-popup-container=""&gt;
     &lt;ul class="popup_pages"&gt;
     &lt;li class="solve pop_page_1" data-popup-page="1"&gt;
@@ -495,49 +588,59 @@ suh_p_0401_02_0002_203_1.html
 data-slide-container="popup"
 </pre>
 </div>
+</div>
 
 
 <div id="PRE200">
     <h2 class="_title">기본css</h2>
-    <pre>
+<div class="_box">
+<pre>
 &lt;link rel="stylesheet" type="text/css" href="../common/libs/css/master.css" /&gt;
 &lt;link rel="stylesheet" type="text/css" href="../common/contents/css/math.css"&gt;
 &lt;link rel="stylesheet" type="text/css" href="../../../default/css/custom.css"&gt;
 &lt;link rel="stylesheet" href="../../../__common__/css/custom_last.css"&gt;
 </pre>
 </div>
+</div>
 
 
 <div id="PRE201">
     <h2 class="_title">[CSS] 영상</h2>
-    <pre>
+<div class="_box">
+<pre>
 .aniContainer .video{overflow:hidden;}
 .mediaContainer.video video{position:relative; top:50% !important; left:50%; width:1232px; height:876px; transform:translate(-50%,-50%);}
 .mediaContainer.video.started video{max-width:none; background:#eedac2;}
 </pre>
 </div>
+</div>
 
 
 <div id="PRE202">
     <h2 class="_title">[CSS] 셀프</h2>
-    <pre>
+<div class="_box">
+<pre>
 #wrap header .title-selfi{position:relative; padding-left:85px;} #wrap header .title-selfi:before{top:-5px; left:0; width:76px; height:58px; background-position:0 0; background-size:auto 100%; background-repeat:no-repeat; background-image:url(./images/act_quiz_icon.svg);} #wrap header .title-selfi-num{position:absolute; top:12px; left:6px; width:70px; font-weight:400; font-size:24px; font-family: YGJAL; color:#fff; text-align:center;}
 </pre>
+</div>
 </div>
 
 
 <div id="PRE203">
     <h2 class="_title">[CSS] 화면중앙</h2>
-    <pre>
+<div class="_box">
+<pre>
 .vMid{display:flex; align-items:center; justify-content:center; height:420px;}
 .vMid > div{width:100%;}
 </pre>
+</div>
 </div>
 
 
 <div id="PRE204">
     <h2 class="_title">[CSS] 수익 기본</h2>
-    <pre>
+<div class="_box">
+<pre>
 .popup_pages>li.whole h2.pop-tit {background-color:transparent !important; align-self:flex-start; padding:20px;}
 .popup_pages .buttonContainer{right:40px; bottom:20px;}
 .popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
@@ -553,39 +656,86 @@ data-slide-container="popup"
 .popup_pages .icon_bogi.--title:after{font-size:21px; line-height:37px;}
 </pre>
 </div>
+</div>
 
 
 <div id="PRE301">
     <h2 class="_title">[js] 그려보세요 리셋</h2>
-    <pre>
+<div class="_box">
+<pre>
 const _dapChkBtn = document.querySelectorAll(".dapCheckBtn");
 _dapChkBtn.forEach(function(obj, index){
     obj.addEventListener( "click", function(e) {
         let _closestTg = obj.closest(".on");
         if( _closestTg.querySelector(".page-iframe") ){
-            _closestTg.querySelector(".page-iframe").contentWindow.document.querySelector(".app-angle-tool").classList.remove('open');
+            _closestTg.querySelector(".page-iframe").contentWindow.document.querySelector(".app--tool").classList.remove('open');
         }
     });
 });
 </pre>
 </div>
+</div>
 
 
 <div id="PRE302">
     <h2 class="_title">[js] 그려보세요 리셋</h2>
-    <pre>
+<div class="_box">
+<pre>
 document.querySelector(".dapCheckBtn").addEventListener("click", function(){
-    document.querySelector("iframe").contentWindow.document.querySelector(".app-angle-tool").classList.remove('open');
+    document.querySelector("iframe").contentWindow.document.querySelector(".app--tool").classList.remove('open');
 });
 </pre>
 </div>
+</div>
 
 
-<div id="PRE301">
-    <h2 class="_title">텍스트</h2>
-    <pre>
-°
+
+<div id="PRE801">
+    <h2 class="_title">[템] 이너칼크</h2>
+<div class="_box">
+<pre>
+.--innerCalc{text-align:center;}
+.--innerCalc > div{display:inline-block;}
+.--innerCalc .--q{margin-bottom:15px; text-align:left;}
+.--innerCalc .--a{text-align:center;}
+
+&lt;div class="--innerCalc mt_40"&gt;
+    &lt;div&gt;
+        &lt;div class="--q"&gt;
+            ㉠+㉡+㉢
+        &lt;/div&gt;
+        &lt;div class="--a"&gt;
+            = &lt;div class="toggle" data-toggle-obj="11"&gt;
+                &lt;div class="answer" data-toggle-target="11"&gt;90&lt;/div&gt;
+            &lt;/div&gt;° + &lt;div class="toggle" data-toggle-obj="12"&gt;
+                &lt;div class="answer" data-toggle-target="12"&gt;60&lt;/div&gt;
+            &lt;/div&gt;° + &lt;div class="toggle" data-toggle-obj="13"&gt;
+                &lt;div class="answer" data-toggle-target="13"&gt;30&lt;/div&gt;
+            &lt;/div&gt;° = &lt;div class="toggle" data-toggle-obj="14"&gt;
+                &lt;div class="answer" data-toggle-target="14"&gt;180&lt;/div&gt;
+            &lt;/div&gt;°
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 </pre>
+</div>
+</div>
+
+
+<div id="PRE999">
+    <h2 class="_title">텍스트</h2>
+<div class="_box">
+<pre>
+°
+－
+㉠
+㉡
+㉢
+㉣
+#e94d40
+#00a0ff
+</pre>
+</div>
 </div>
 
 
@@ -605,6 +755,6 @@ https://cdata2.tsherpa.co.kr/tsherpa/MultiMedia/Flash/2020/curri/index.html?flas
 
 
 
-<a href="#" onclick="location.reload();" class="top">△</a>
+
 </body>
 </html>
