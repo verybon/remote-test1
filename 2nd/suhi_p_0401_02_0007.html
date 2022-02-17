@@ -15,14 +15,17 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 <style type="text/css">
 	.popup_pages>li.whole h2.pop-tit {background-color:transparent !important; align-self:flex-start; padding:20px;}
 	.popup_pages .buttonContainer{right:40px; bottom:20px;}
-	.popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
+	.popup_contents .blankBox{width:40px; height:40px; margin-top:4px;}
 	.popup_contents .icon_o_title{vertical-align:-2px;}
 	.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
 	.vMid > div{width:100%;}
 	.popup_contents .vMid{height:500px;}
 	.zoomBtn:after,
 	.popBtn.zoom{border-color:#ff8636; background-color:#f60;}
-	.page-iframe{position:fixed; z-index:1; top:160px; left:55px; overflow:hidden; width:1060px; height:510px; border:0; background:transparent;}
+	.page-iframe{position:fixed; z-index:1; top:210px; left:55px; overflow:hidden; width:1060px; height:460px; border:0; background:transparent;}
+	.popup_pages .page-iframe{top:180px; left:70px; height:510px;}
+	.page-iframe + .popup_contents .toggle,
+	.page-iframe + section .toggle{z-index:1;}
 	.toggle.z2{z-index:2;}
 	.popup_pages>li.whole.on{z-index:10000;}
 	.popup_pages .icon_bogi.--title{height:36px; margin:6px 0 0 0; border-radius:10px; vertical-align:top;}
@@ -32,109 +35,102 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 	/* 개별 */
 	.page_0 .--img{position:relative; min-width:100%; height:380px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_1.png) no-repeat 50% 50% / contain;}
 	.page_0 .--text{position:absolute;}
-	.page_0 .--text.x1{top:300px; left:150px;}
+	.page_0 .--text.x1{top:300px; left:175px;}
 	.page_0 .--text.x2{top:300px; left:650px;}
 
 	.page_1 .--img{position:relative; width:400px; height:320px;}
 	.page_1 .--img.x1{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_2.png) no-repeat 50% 50% / contain;}
-	.page_1 .--img.x2{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_3.png) no-repeat 50% 50% / contain;}
+	.page_1 .--img.x2{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_3.png) no-repeat 50% 50% / 290px auto;}
 	.page_1 .--text{position:absolute;}
-	.page_1 .--text.x1{top:200px; left:160px;}
-	.page_1 .--text.x2{top:200px; left:160px;}
+	.page_1 .--text.x1{top:190px; left:160px;}
+	.page_1 .--text.x2{top:190px; left:160px;}
 	.page_1 .toggle{min-width:100px;}
 
 	.pop_page_12 .--img{position:relative; width:400px; height:320px;}
-	.pop_page_12 .--img.x1{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_2.png) no-repeat 50% 50% / contain;}
-	.pop_page_12 .--img.x2{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_3.png) no-repeat 50% 50% / contain;}
+	.pop_page_12 .--img.x1{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_4.png) no-repeat 50% 50% / contain;}
+	.pop_page_12 .--img.x2{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_5.png) no-repeat 50% 50% / 290px auto;}
 	.pop_page_12 .--text{position:absolute;}
 	.pop_page_12 .--text.x1{top:200px; left:160px;}
 	.pop_page_12 .--text.x2{top:200px; left:160px;}
 	.pop_page_12 .toggle{min-width:100px;}
 
-	.page_2 .--img{width:100%; height:320px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_2.png) no-repeat 50% 50% / 800px auto;}
-	.pop_page_22 .--img{width:100%; height:320px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_3.png) no-repeat 50% 50% / 800px auto;}
+	.page_2 .flexListContainer{flex-wrap:wrap;}
+	.page_2 .flexListContainer li{width:50%; text-align:center;}
+	.page_2 .flexListContainer li:nth-child(2) ~ li{margin-top:60px;}
+	.page_2 .flexListContainer .toggle{min-width:100px;}
 
-	.page_3 h2 .icon_tri_title,
-	.--poptitle .icon_tri_title{width:40px; height:40px; vertical-align:-4px;}
-	.page_3 .flexListContainer{min-width:100%; height:320px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_4.png) no-repeat 50% 50% / 800px auto;}
-	.page_3 .flexListContainer li{flex:1; position:relative; height:100%;}
-	.page_3 .flexListContainer .grayBox{width:100%; height:100%; cursor:pointer;}
-	.page_3 .flexListContainer .icon{position:absolute; top:50%; left:50%; width:90px; height:90px; margin:-45px 0 0 -45px;}
+	.pop_page_22 .flexListContainer{flex-wrap:wrap;}
+	.pop_page_22 .flexListContainer li{width:50%; text-align:center;}
+	.pop_page_22 .flexListContainer li:nth-child(2) ~ li{margin-top:60px;}
+	.pop_page_22 .flexListContainer .toggle{min-width:100px;}
 
-	.pop_page_32 .flexListContainer{min-width:100%; height:320px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_5.png) no-repeat 50% 50% / 800px auto;}
-	.pop_page_32 .flexListContainer li{flex:1; position:relative; height:100%;}
-	.pop_page_32 .flexListContainer .grayBox{width:100%; height:100%; cursor:pointer;}
-	.pop_page_32 .flexListContainer .icon{position:absolute; top:50%; left:50%; width:90px; height:90px; margin:-45px 0 0 -45px;}
+	.page_3 .page-iframe{top:210px; height:460px;}
+	.page_3 .vMid{height:380px;}
+	.page_3 .--img{position:relative; width:400px; height:260px;}
+	.page_3 .--img.x1{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_6.png) no-repeat 50% 50% / contain;}
+	.page_3 .--img.x2{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_7.png) no-repeat 50% 50% / 290px auto;}
+	.page_3 .--text{position:absolute;}
+	.page_3 .--text.x1{top:190px; left:160px;}
+	.page_3 .--text.x2{top:190px; left:160px;}
+	.page_3 .toggle{min-width:100px;}
 
-	/* .flexListContainer.--order li{flex:1; position:relative; min-height:320px;}
-	.flexListContainer.--order li > p{position:absolute; top:0; left:0;}
-	.flexListContainer.--order li > .--img{height:100%; padding:0 15px;}
-	.flexListContainer.--order li > .--img img{display:block; width:100%; margin:0 auto;}
-
-	.page_3 .flexListContainer.--order li:nth-child(1) > .--img img{width:150px; margin-top:70px;}
-	.page_3 .flexListContainer.--order li:nth-child(2) > .--img img{width:210px;}
-	.page_3 .flexListContainer.--order li:nth-child(3) > .--img img{width:270px; margin-top:90px;}
-	.pop_page_32 .flexListContainer.--order li:nth-child(1) > .--img img{width:210px; margin-top:80px;}
-	.pop_page_32 .flexListContainer.--order li:nth-child(2) > .--img img{width:190px;}
-	.pop_page_32 .flexListContainer.--order li:nth-child(3) > .--img img{width:320px; margin-top:90px;} */
+	.pop_page_32 .page-iframe{top:180px; left:70px; height:510px;}
+	.pop_page_32 .vMid{height:450px;}
+	.pop_page_32 .--img{position:relative; width:400px; height:320px;}
+	.pop_page_32 .--img.x1{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_8.png) no-repeat 50% 50% / contain;}
+	.pop_page_32 .--img.x2{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_9.png) no-repeat 50% 50% / 290px auto;}
+	.pop_page_32 .--text{position:absolute;}
+	.pop_page_32 .--text.x1{top:190px; left:160px;}
+	.pop_page_32 .--text.x2{top:190px; left:160px;}
+	.pop_page_32 .toggle{min-width:100px;}
 
 	.page_4 .page-iframe{top:210px; height:460px;}
-	.page_4 .flexListContainer{margin-top:60px;}
-	.page_4 .flexListContainer .colorBox{position:absolute; top:-30px; left:-5px;}
-	.page_4 .flexListContainer > div{flex:1; position:relative; padding-top:40px; padding-bottom:40px;}
-	.page_4 .flexListContainer > div:nth-child(1){margin-right:30px;}
-	.page_4 .flexListContainer > div .--img{width:100%; height:270px;}
-	.page_4 .flexListContainer > div:nth-child(1) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_6.png) no-repeat 50% 100% / 240px auto;}
-	.page_4 .flexListContainer > div:nth-child(2) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_8.png) no-repeat 50% 100% / 350px auto;}
-	.page_4 .flexListContainer > div .--answer{position:absolute; top:40px; left:0; width:100%; height:240px;}
-	.page_4 .flexListContainer > div:nth-child(1) .--answer{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_7.png) no-repeat 50% 100% / 240px auto;}
-	.page_4 .flexListContainer > div:nth-child(2) .--answer{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_9.png) no-repeat 50% 100% / 350px auto;}
-	.page_4 .flexListContainer > div .bullet.exam{position:absolute; top:10px; left:20px;}
+	.page_4 .--img{position:relative; width:1000px; height:400px; margin:0 auto; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_10.png) no-repeat 50% 50% / 800px 100%;}
+	.page_4 .--answerImg{position:absolute; width:100%; height:100%; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_11.png) no-repeat 50% 50% / 800px 100%;}
+	.page_4 .--text{position:absolute; z-index:1; letter-spacing:-1px;}
+	.page_4 .--text.x1{top:50px; left:160px;}
+	.page_4 .--text.x2{top:60px; left:380px;}
+	.page_4 .--text.x3{top:30px; left:590px;}
+	.page_4 .--text.x4{top:210px; left:190px;}
+	.page_4 .--text.x5{top:220px; left:510px;}
+	.page_4 .--text.x6{top:180px; left:680px;}
+
+	.pop_page_41 li:not(:first-child){margin-top:10px;}
+	.pop_page_41 .--q{display:inline-block; min-width:246px;}
+
 
 	.pop_page_42 .page-iframe{top:180px; left:70px; height:510px;}
-	.pop_page_42 .flexListContainer{margin-top:70px;}
-	.pop_page_42 .flexListContainer .colorBox{position:absolute; top:-30px; left:-5px;}
-	.pop_page_42 .flexListContainer > div{flex:1; position:relative; padding-top:40px; padding-bottom:40px;}
-	.pop_page_42 .flexListContainer > div:nth-child(1){margin-right:30px;}
-	.pop_page_42 .flexListContainer > div .--img{width:100%; height:320px;}
-	.pop_page_42 .flexListContainer > div:nth-child(1) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_10.png) no-repeat 50% 100% / 240px auto;}
-	.pop_page_42 .flexListContainer > div:nth-child(2) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_12.png) no-repeat 50% 100% / 350px auto;}
-	.pop_page_42 .flexListContainer > div .--answer{position:absolute; top:40px; left:0; width:100%; height:240px;}
-	.pop_page_42 .flexListContainer > div:nth-child(1) .--answer{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_11.png) no-repeat 50% 100% / 240px auto;}
-	.pop_page_42 .flexListContainer > div:nth-child(2) .--answer{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_13.png) no-repeat 50% 100% / 350px auto;}
-	.pop_page_42 .flexListContainer > div .bullet.exam{position:absolute; top:10px; left:20px;}
+	.pop_page_42 .--img{position:relative; width:1000px; height:450px; margin:0 auto; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_12.png) no-repeat 50% 50% / 900px 100%;}
+	.pop_page_42 .--answerImg{position:absolute; width:100%; height:100%; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_13.png) no-repeat 50% 50% / 900px 100%;}
+	.pop_page_42 .--text{position:absolute; z-index:1; letter-spacing:-1px;}
+	.pop_page_42 .--text.x1{top:60px; left:130px;}
+	.pop_page_42 .--text.x2{top:70px; left:380px;}
+	.pop_page_42 .--text.x3{top:40px; left:610px;}
+	.pop_page_42 .--text.x4{top:250px; left:160px;}
+	.pop_page_42 .--text.x5{top:250px; left:510px;}
+	.pop_page_42 .--text.x6{top:210px; left:720px;}
 
-	.page_5 .page-iframe{top:210px; height:460px;}
-	.page_5 .flexListContainer{margin-top:60px;}
-	.page_5 .flexListContainer li{flex:1;}
-	.page_5 .flexListContainer .colorBox{display:inline-block;}
-	.page_5 .flexListContainer li .--img{position:relative; width:100%; height:190px; margin:10px auto 20px;}
-	.page_5 .flexListContainer li .--niddle{position:absolute; top:0; left:0; width:100%; height:100%; opacity:0;}
-	.page_5 .flexListContainer li .--niddle.on{opacity:1;}
-	.page_5 .flexListContainer li:nth-child(1) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_14.png) no-repeat 50% 50% / contain;}
-	.page_5 .flexListContainer li:nth-child(1) .--niddle{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_15.png) no-repeat 50% 50% / contain;}
-	.page_5 .flexListContainer li:nth-child(2) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_16.png) no-repeat 50% 50% / contain;}
-	.page_5 .flexListContainer li:nth-child(2) .--niddle{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_17.png) no-repeat 50% 50% / contain;}
-	.page_5 .flexListContainer li:nth-child(3) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_18.png) no-repeat 50% 50% / contain;}
-	.page_5 .flexListContainer li:nth-child(3) .--niddle{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_19.png) no-repeat 50% 50% / contain;}
-	.page_5 .toggle{z-index:1;}
+	.page_5 .--img{position:relative; width:100%; height:320px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_14.png) no-repeat 50% 50% / contain;}
+	.page_5 .--text{position:absolute;}
+	.page_5 .--text.x1{top:170px; left:450px;}
+	.page_5 .--text.x2{top:240px; left:380px;}
 
-	.pop_page_52 .page-iframe{top:180px; left:70px; height:510px;}
-	.pop_page_52 .flexListContainer{margin-top:60px;}
-	.pop_page_52 .flexListContainer li{flex:1;}
-	.pop_page_52 .flexListContainer .colorBox{display:inline-block;}
-	.pop_page_52 .flexListContainer li .--img{position:relative; width:100%; height:240px; margin:10px auto 20px;}
-	.pop_page_52 .flexListContainer li .--niddle{position:absolute; top:0; left:0; width:100%; height:100%; opacity:0;}
-	.pop_page_52 .flexListContainer li .--niddle.on{opacity:1;}
-	.pop_page_52 .flexListContainer li:nth-child(1) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_14.png) no-repeat 50% 50% / contain;}
-	.pop_page_52 .flexListContainer li:nth-child(1) .--niddle{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_20.png) no-repeat 50% 50% / contain;}
-	.pop_page_52 .flexListContainer li:nth-child(2) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_16.png) no-repeat 50% 50% / contain;}
-	.pop_page_52 .flexListContainer li:nth-child(2) .--niddle{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_21.png) no-repeat 50% 50% / contain;}
-	.pop_page_52 .flexListContainer li:nth-child(3) .--img{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_18.png) no-repeat 50% 50% / contain;}
-	.pop_page_52 .flexListContainer li:nth-child(3) .--niddle{background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_22.png) no-repeat 50% 50% / contain;}
-	.pop_page_52 .toggle{z-index:1;}
+	.pop_page_52 .--img{position:relative; width:100%; height:320px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_15.png) no-repeat 50% 50% / contain;}
+	.pop_page_52 .--text{position:absolute;}
+	.pop_page_52 .--text.x1{top:180px; left:550px;}
+	.pop_page_52 .--text.x2{top:250px; left:610px;}
 
-	.pop_page_61 .--wrap{min-height:135px; padding:20px 0; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_24.png) no-repeat 100% 50% / auto 135px;}
+	.page_6 .page-iframe{top:210px; height:460px;}
+	.page_6 .--img{position:relative; width:100%; height:320px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_16.png) no-repeat 50% 50% / contain;}
+	.page_6 .--answerImg{position:absolute; width:100%; height:100%; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_17.png) no-repeat 50% 50% / contain;}
+	.page_6 .balloon{top:30px; left:100px;}
+	.page_6 .toggle{z-index:1;}
+
+	.pop_page_62 .page-iframe{top:180px; left:70px; height:510px;}
+	.pop_page_62 .--img{position:relative; width:100%; height:320px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_18.png) no-repeat 50% 50% / contain;}
+	.pop_page_62 .--answerImg{position:absolute; width:100%; height:100%; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_19.png) no-repeat 50% 50% / contain;}
+	.pop_page_62 .balloon{top:30px; left:120px;}
+	.pop_page_62 .toggle{z-index:1;}
 </style>
 </head>
 
@@ -174,7 +170,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 									<span class="redT">20</span>°+<span class="blueT">20</span>°=<span class="greenT">20</span>°
 								</div>
 								<div class="--text x2">
-									<span class="greenT">130</span>°-<span class="blueT">60</span>°=<span class="redT">70</span>°
+									<span class="greenT">130</span>°－<span class="blueT">60</span>°=<span class="redT">70</span>°
 								</div>
 							</div>
 						</div>
@@ -195,11 +191,11 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 										<div class="--text x1">120°</div>
 									</div>
 									<ul class="flexListContainer jcenter center mt_20">
-										<li class="flexListContainer">
+										<li class="flexListContainer center">
 											<div class="colorBox check skyBlue">합</div>
 											<div>
 												<div class="toggle" data-toggle-obj="11">
-													<div class="answer" data-toggle-target="11">70</div>
+													<div class="answer" data-toggle-target="11">170</div>
 												</div>°
 											</div>
 										</li>
@@ -210,11 +206,11 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 										<div class="--text x2">50°</div>
 									</div>
 									<ul class="flexListContainer jcenter center mt_20">
-										<li class="flexListContainer">
+										<li class="flexListContainer center">
 											<div class="colorBox check skyBlue">차</div>
 											<div>
 												<div class="toggle" data-toggle-obj="12">
-													<div class="answer" data-toggle-target="12">130</div>
+													<div class="answer" data-toggle-target="12">70</div>
 												</div>°
 											</div>
 										</li>
@@ -237,27 +233,35 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
 			<li class="page_2" data-quiz="toggle">
 				<h2><ins class="number">2</ins><span>
-					각을 보고 예각과 둔각 중 어느 것인지 <ins class="blankBox"></ins> 안에 써넣으세요.
+					각도의 합과 차를 구해 보세요.
 				</span></h2>
 				<section>
-					<div class="--img"></div>
-					<ul class="flexListContainer around mt_10">
-						<li>
-							<div class="toggle" data-toggle-obj="21">
-								<div class="answer" data-toggle-target="21">예각</div>
-							</div>
-						</li>
-						<li>
-							<div class="toggle" data-toggle-obj="22">
-								<div class="answer" data-toggle-target="22">둔각</div>
-							</div>
-						</li>
-						<li>
-							<div class="toggle" data-toggle-obj="23">
-								<div class="answer" data-toggle-target="23">예각</div>
-							</div>
-						</li>
-					</ul>
+					<div class="vMid">
+						<div>
+							<ul class="flexListContainer around">
+								<li>
+									80° + 50° = <div class="toggle" data-toggle-obj="21">
+										<div class="answer" data-toggle-target="21">130</div>
+									</div>°
+								</li>
+								<li>
+									75° + 100° = <div class="toggle" data-toggle-obj="22">
+										<div class="answer" data-toggle-target="22">175</div>
+									</div>°
+								</li>
+								<li>
+									100°－80° = <div class="toggle" data-toggle-obj="23">
+										<div class="answer" data-toggle-target="23">20</div>
+									</div>°
+								</li>
+								<li>
+									110°－45° = <div class="toggle" data-toggle-obj="24">
+										<div class="answer" data-toggle-target="24">65</div>
+									</div>°
+								</li>
+							</ul>
+						</div>
+					</div>
 					<div class="buttonContainer">
 						<button class="solveCheckBtn" data-popup-btn="21" data-hover=""></button>
 						<button class="dapCheckBtn" data-answer-btn=""></button>
@@ -270,28 +274,48 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				</section>
 			</li>
 
-			<li class="page_3" data-quiz="ox" data-option="hide, answerSound">
+			<li class="page_3" data-quiz="toggle">
 				<h2><ins class="number">3</ins><span>
-					표시된 각이 예각이면 <span class="icon_o_title"></span>표, 둔각이면 <span class="icon_tri_title"></span>표를 하세요.
+					각도기를 이용하여 각도를 재어 보고, 두 각도의 합과 차를 구해 보세요.
 				</span></h2>
+				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 				<section>
-					<ul class="flexListContainer">
-						<li>
-							<div class="grayBox x1" data-ox-obj="31" data-answer="">
-								<div class="icon icon_tri" data-ox-target="31"></div>
+					<div class="vMid">
+						<div>
+							<div class="flexListContainer around">
+								<div>
+									<div class="--img x1">
+										<div class="--text x1"></div>
+									</div>
+									<ul class="flexListContainer jcenter center mt_20">
+										<li class="flexListContainer center">
+											<div class="colorBox check skyBlue">합</div>
+											<div>
+												<div class="toggle" data-toggle-obj="31">
+													<div class="answer" data-toggle-target="31">170</div>
+												</div>°
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<div class="--img x2">
+										<div class="--text x2"></div>
+									</div>
+									<ul class="flexListContainer jcenter center mt_20">
+										<li class="flexListContainer center">
+											<div class="colorBox check skyBlue">차</div>
+											<div>
+												<div class="toggle" data-toggle-obj="32">
+													<div class="answer" data-toggle-target="32">90</div>
+												</div>°
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
-						</li>
-						<li>
-							<div class="grayBox x2" data-ox-obj="32" data-answer="">
-								<div class="icon icon_o" data-ox-target="32"></div>
-							</div>
-						</li>
-						<li>
-							<div class="grayBox x3" data-ox-obj="33" data-answer="">
-								<div class="icon icon_tri" data-ox-target="33"></div>
-							</div>
-						</li>
-					</ul>
+						</div>
+					</div>
 					<div class="buttonContainer">
 						<button class="solveCheckBtn" data-popup-btn="31" data-hover=""></button>
 						<button class="dapCheckBtn" data-answer-btn=""></button>
@@ -306,25 +330,18 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
 			<li class="page_4" data-quiz="toggle">
 				<h2><ins class="number">4</ins><span>
-					주어진 선분을 이용하여 예각과 둔각을 그려 보세요.
+					계산한 값이 예각이면 빨간색, 직각이면 노란색, 둔각이면 파란색으로 색칠해 보세요.
 				</span></h2>
-				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
+				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-drawing-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 				<section>
-					<div class="flexListContainer">
-						<div class="lineBox sky it-box">
-							<div class="colorBox sky">예각</div>
-							<div class="--img"></div>
-							<div class="answer --answer" data-toggle-obj="41" data-toggle-target="41">
-								<ins class="bullet exam">예</ins>
-							</div>
-						</div>
-						<div class="lineBox sky it-box">
-							<div class="colorBox sky">둔각</div>
-							<div class="--img"></div>
-							<div class="answer --answer" data-toggle-obj="42" data-toggle-target="42">
-								<ins class="bullet exam">예</ins>
-							</div>
-						</div>
+					<div class="--img textAlignC">
+						<div class="--text x1">120° + 30°<div class="answer" data-toggle-obj="41" data-toggle-target="41">=150°</div></div>
+						<div class="--text x2">145°－55°<div class="answer" data-toggle-obj="41" data-toggle-target="41">=90°</div></div>
+						<div class="--text x3">30° + 45°<div class="answer" data-toggle-obj="41" data-toggle-target="41">=75°</div></div>
+						<div class="--text x4">90°－45°<div class="answer" data-toggle-obj="41" data-toggle-target="41">=45°</div></div>
+						<div class="--text x5">30° + 60°<div class="answer" data-toggle-obj="41" data-toggle-target="41">=90°</div></div>
+						<div class="--text x6">150°－55°<div class="answer" data-toggle-obj="41" data-toggle-target="41">=95°</div></div>
+						<div class="--answerImg answer" data-toggle-obj="41" data-toggle-target="41"></div>
 					</div>
 					<div class="buttonContainer">
 						<button class="solveCheckBtn" data-popup-btn="41" data-hover=""></button>
@@ -339,46 +356,22 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 			</li>
 
 			<li class="page_5" data-quiz="toggle">
-				<h2><ins class="number star">5</ins><span class="ls0_5">
-					시각에 맞게 시곗바늘을 그리고, 시계의 두 바늘이 이루는 작은 쪽의 각이 예각, 직각, 둔각 중 어느 것인지 <ins class="blankBox"></ins> 안에 써넣으세요.
+				<h2><ins class="number star">5</ins><span>
+					㉠의 각도는 몇 도인지 구해 보세요.
 				</span></h2>
-				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
+				<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
 				<section>
-					<ul class="flexListContainer around textAlignC">
-						<li>
-							<div class="colorBox sky">9시</div>
-							<div class="--img">
-								<div class="--niddle" data-toggle-target="51"></div>
+					<div class="--img">
+						<div class="--text x1">㉠</div>
+						<div class="--text x2">60°</div>
+					</div>
+					<div class="textAlignC mt_40">
+						<div class="toggle" data-toggle-obj="51">
+							<div class="answer" data-toggle-target="51">
+								30
 							</div>
-							<div class="toggle" data-toggle-obj="51">
-								<div class="answer" data-toggle-target="51">
-									직각
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="colorBox sky">2시 30분</div>
-							<div class="--img">
-								<div class="--niddle" data-toggle-target="52"></div>
-							</div>
-							<div class="toggle" data-toggle-obj="52">
-								<div class="answer" data-toggle-target="52">
-									둔각
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="colorBox sky">4시 30분</div>
-							<div class="--img">
-								<div class="--niddle" data-toggle-target="53"></div>
-							</div>
-							<div class="toggle" data-toggle-obj="53">
-								<div class="answer" data-toggle-target="53">
-									예각
-								</div>
-							</div>
-						</li>
-					</ul>
+						</div>°
+					</div>
 					<div class="buttonContainer">
 						<button class="solveCheckBtn" data-popup-btn="51" data-hover=""></button>
 						<button class="dapCheckBtn" data-answer-btn=""></button>
@@ -392,20 +385,21 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 			</li>
 
 			<li class="page_6" data-quiz="toggle">
-				<h2><ins class="number star">6</ins><span>
-					그림에서 찾을 수 있는 예각은 모두 몇 개인지 구해 보세요.
+				<h2><ins class="number star">6</ins><span class="ls1">
+					무대 조명을 지금보다 20°만큼 높게 바꾸려고 합니다. 바꾸고 난 후 조명의 각도는 몇 도가 되는지 구해 보세요.
 				</span></h2>
-				<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+				<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 				<section>
-					<div class="textAlignC">
-						<img src="./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_23.png" alt="" width="600">
+					<div class="--img">
+						<div class="balloon right ctTail textAlignC purple">지금 무대<br>조명은 몇 도인지<br>재어 볼까?</div>
+						<div class="--answerImg answer" data-toggle-target="61"></div>
 					</div>
-					<div class="textAlignC">
+					<div class="textAlignC mt_40">
 						<div class="toggle" data-toggle-obj="61">
 							<div class="answer" data-toggle-target="61">
-								5
+								30
 							</div>
-						</div>개
+						</div>°
 					</div>
 					<div class="buttonContainer">
 						<button class="solveCheckBtn" data-popup-btn="61" data-hover=""></button>
@@ -433,23 +427,24 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<ins class="special type3"></ins>
 				<span></span>
 			</h2>
-			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+			<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 			<div class="popup_contents" data-quiz="toggle">
 				<ul class="contentsList">
 					<li>
 						<ins class="bullet circleDot deepGreen"></ins>
 						<div>
-							<p class="mb_10">그림에서 찾을 수 있는 둔각은 모두 몇 개인지 구해 보세요.</p>
+							<p class="mb_10">무대 조명을 지금보다 20°만큼 높게 바꾸려고 합니다. 바꾸고 난 후 조명의 각도는 몇 도가 되는지 구해 보세요.</p>
 							<div>
-								<div class="textAlignC">
-									<img src="./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_24.png" alt="" width="600">
+								<div class="--img">
+									<div class="balloon right ctTail textAlignC purple">지금 무대<br>조명은 몇 도인지<br>재어 볼까?</div>
+									<div class="--answerImg answer" data-toggle-target="6201"></div>
 								</div>
-								<div class="textAlignC">
-									<div class="toggle" data-toggle-obj="1">
-										<div class="answer" data-toggle-target="1">
-											4
+								<div class="textAlignC mt_40">
+									<div class="toggle" data-toggle-obj="6201">
+										<div class="answer" data-toggle-target="6201">
+											80
 										</div>
-									</div>개
+									</div>°
 								</div>
 							</div>
 						</div>
@@ -464,11 +459,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
 		<li class="solve pop_page_61" data-popup-page="61">
 			<div class="popup_contents">
-				<ul class="--wrap">
-					<li>각이 1개로 이루어진 예각: 4개</li>
-					<li>각이 2개로 이루어진 예각: 1개</li>
-					<li><ins class="icon_arrow"></ins> 찾을 수 있는 예각은 4+1=5(개)입니다.</li>
-				</ul>
+				<p class="ls0_5">지금 무대 조명의 각도는 60°입니다. 따라서 지금보다 35° 낮게 바꾸면 조명의 각도는 60°－35°=25°가 됩니다.</p>
 			</div>
 		</li>
 
@@ -477,49 +468,24 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<ins class="special type3"></ins>
 				<span></span>
 			</h2>
-			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
 			<div class="popup_contents" data-quiz="toggle">
 				<ul class="contentsList">
 					<li>
 						<ins class="bullet circleDot deepGreen"></ins>
 						<div>
-							<p class="mb_10">시각에 맞게 시곗바늘을 그리고, 시계의 두 바늘이 이루는 작은 쪽의 각이 예각, 직각, 둔각 중 어느 것인지 <ins class="blankBox"></ins> 안에 써넣으세요.</p>
+							<p class="mb_10">㉠의 각도는 몇 도인지 구해 보세요.</p>
 							<div>
-								<ul class="flexListContainer around textAlignC">
-									<li>
-										<div class="colorBox sky">9시</div>
-										<div class="--img">
-											<div class="--niddle" data-toggle-target="5201"></div>
+								<div class="--img mt_40">
+									<div class="--text x1">㉠</div>
+									<div class="--text x2">50°</div>
+								</div>
+								<div class="textAlignC mt_40">
+									<div class="toggle" data-toggle-obj="5201">
+										<div class="answer" data-toggle-target="5201">
+											40
 										</div>
-										<div class="toggle" data-toggle-obj="5201">
-											<div class="answer" data-toggle-target="5201">
-												둔각
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="colorBox sky">2시 30분</div>
-										<div class="--img">
-											<div class="--niddle" data-toggle-target="5202"></div>
-										</div>
-										<div class="toggle" data-toggle-obj="5202">
-											<div class="answer" data-toggle-target="5202">
-												예각
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="colorBox sky">4시 30분</div>
-										<div class="--img">
-											<div class="--niddle" data-toggle-target="5203"></div>
-										</div>
-										<div class="toggle" data-toggle-obj="5203">
-											<div class="answer" data-toggle-target="5203">
-												직각
-											</div>
-										</div>
-									</li>
-								</ul>
+									</div>°
+								</div>
 							</div>
 						</div>
 					</li>
@@ -533,10 +499,9 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
 		<li class="solve pop_page_51" data-popup-page="51">
 			<div class="popup_contents">
-				<ul class="dotList deepGreen">
-					<li class="ls0">9시: 두 바늘이 이루는 작은 쪽의 각이 90°이므로 직각입니다.</li>
-					<li class="ls0">2시 30분: 두 바늘이 이루는 작은 쪽의 각이 직각보다 크고 180°보다 작으므로 둔각입니다.</li>
-					<li class="ls0">4시 30분: 두 바늘이 이루는 작은 쪽의 각이 0°보다 크고 90°보다 작으므로 예각입니다.</li>
+				<ul>
+					<li class="ls0">직선이 이루는 각의 90°의 2배만큼이므로 180°입니다.</li>
+					<li class="ls0"><ins class="icon_arrow mr_10"></ins>㉠=180°－60°－90°=30°</li>
 				</ul>
 			</div>
 		</li>
@@ -546,29 +511,22 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<ins class="special type3"></ins>
 				<span></span>
 			</h2>
-			<!-- <iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe> -->
+			<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-drawing-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
 			<div class="popup_contents" data-quiz="toggle">
 				<ul class="contentsList">
 					<li>
 						<ins class="bullet circleDot deepGreen"></ins>
 						<div>
-							<p class="mb_10">주어진 선분을 이용하여 예각과 둔각을 그려 보세요.</p>
+							<p class="mb_10">계산한 값이 예각이면 빨간색, 직각이면 노란색, 둔각이면 파란색으로 색칠해 보세요.</p>
 							<div>
-								<div class="flexListContainer">
-									<div class="lineBox sky it-box">
-										<div class="colorBox sky">예각</div>
-										<div class="--img"></div>
-										<div class="answer --answer" data-toggle-obj="4201" data-toggle-target="4201">
-											<ins class="bullet exam">예</ins>
-										</div>
-									</div>
-									<div class="lineBox sky it-box">
-										<div class="colorBox sky">둔각</div>
-										<div class="--img"></div>
-										<div class="answer --answer" data-toggle-obj="4202" data-toggle-target="4202">
-											<ins class="bullet exam">예</ins>
-										</div>
-									</div>
+								<div class="--img textAlignC">
+									<div class="--text x1">110° + 40°<div class="answer" data-toggle-obj="4201" data-toggle-target="4201">=150°</div></div>
+									<div class="--text x2">135°－45°<div class="answer" data-toggle-obj="4201" data-toggle-target="4201">=90°</div></div>
+									<div class="--text x3">80° + 35°<div class="answer" data-toggle-obj="4201" data-toggle-target="4201">=115°</div></div>
+									<div class="--text x4">95°－30°<div class="answer" data-toggle-obj="4201" data-toggle-target="4201">=65°</div></div>
+									<div class="--text x5">120° + 40°<div class="answer" data-toggle-obj="4201" data-toggle-target="4201">=80°</div></div>
+									<div class="--text x6">30°－60°<div class="answer" data-toggle-obj="4201" data-toggle-target="4201">=90°</div></div>
+									<div class="--answerImg answer" data-toggle-obj="4201" data-toggle-target="4201"></div>
 								</div>
 							</div>
 						</div>
@@ -583,9 +541,13 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
 		<li class="solve pop_page_41" data-popup-page="41">
 			<div class="popup_contents">
-				<ul class="dotList deepGreen">
-					<li class="ls0">예각은 각도가 0°보다 크고 90°보다 작은 각을 그립니다.</li>
-					<li class="ls0">직각은 각도가 90°보다 크고 180°보다 작은 각을 그립니다.</li>
+				<ul>
+					<li class="ls0"><span class="--q">120°+30°=150° </span><ins class="icon_arrow ml_10 mr_10"></ins> 파란색</li>
+					<li class="ls0"><span class="--q">145°－55°=90° </span><ins class="icon_arrow ml_10 mr_10"></ins> 노란색</li>
+					<li class="ls0"><span class="--q">30°+45°=75° </span><ins class="icon_arrow ml_10 mr_10"></ins> 빨간색</li>
+					<li class="ls0"><span class="--q">90°－45°=45° </span><ins class="icon_arrow ml_10 mr_10"></ins> 빨간색</li>
+					<li class="ls0"><span class="--q">30°+60°=90° </span><ins class="icon_arrow ml_10 mr_10"></ins> 노란색</li>
+					<li class="ls0"><span class="--q">150°－55°=95° </span><ins class="icon_arrow ml_10 mr_10"></ins> 파란색</li>
 				</ul>
 			</div>
 		</li>
@@ -595,30 +557,50 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 				<ins class="special type3"></ins>
 				<span></span>
 			</h2>
-			<div class="popup_contents" data-quiz="ox" data-option="hide, answerSound">
+			<iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"></iframe>
+			<div class="popup_contents" data-quiz="toggle">
 				<ul class="contentsList">
 					<li>
 						<ins class="bullet circleDot deepGreen"></ins>
 						<div>
-							<p class="mb_10 --poptitle">표시된 각이 예각이면 <span class="icon_o_title"></span>표, 둔각이면 <span class="icon_tri_title"></span>표를 하세요.</p>
+							<p class="mb_10">각도기를 이용하여 각도를 재어 보고, 두 각도의 합과 차를 구해 보시오.</p>
 							<div>
-								<ul class="flexListContainer">
-									<li>
-										<div class="grayBox x1" data-ox-obj="3201" data-answer="">
-											<div class="icon icon_o" data-ox-target="3201"></div>
+								<div class="vMid">
+									<div>
+										<div class="flexListContainer around">
+											<div>
+												<div class="--img x1">
+													<div class="--text x1"></div>
+												</div>
+												<ul class="flexListContainer jcenter center mt_20">
+													<li class="flexListContainer center">
+														<div class="colorBox check skyBlue">합</div>
+														<div>
+															<div class="toggle" data-toggle-obj="3201">
+																<div class="answer" data-toggle-target="3201">180</div>
+															</div>°
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div>
+												<div class="--img x2">
+													<div class="--text x2"></div>
+												</div>
+												<ul class="flexListContainer jcenter center mt_20">
+													<li class="flexListContainer center">
+														<div class="colorBox check skyBlue">차</div>
+														<div>
+															<div class="toggle" data-toggle-obj="3202">
+																<div class="answer" data-toggle-target="3202">70</div>
+															</div>°
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</li>
-									<li>
-										<div class="grayBox x2" data-ox-obj="3202" data-answer="">
-											<div class="icon icon_tri" data-ox-target="3202"></div>
-										</div>
-									</li>
-									<li>
-										<div class="grayBox x3" data-ox-obj="3203" data-answer="">
-											<div class="icon icon_o" data-ox-target="3203"></div>
-										</div>
-									</li>
-								</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -632,11 +614,9 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
 		<li class="solve pop_page_31" data-popup-page="31">
 			<div class="popup_contents">
-				<ul class="dotList deepGreen">
-					<li class="ls1">옷걸이에 표시된 각은 각도가 직각보다 크도 180°보다 작으므로 둔각입니다.</li>
-					<li class="ls1">트라이앵글에서 표시된 각은 각도가 0°보다 크고 90°보다 작으므로 예각입니다.</li>
-					<li class="ls0">노트북에서 표시된 각은 각도가 직각보다 크고 180°보다 작으므로 둔각입니다.</li>
-				</ul>
+				<p>왼쪽의 각도는 130°, 오른쪽의 각도는 40°입니다.</p>
+				<p><ins class="icon_arrow mr_10"></ins>합 : 130°+40°=170°</p>
+				<p><ins class="icon_arrow mr_10" style="opacity:0;"></ins>차 : 130°－40°=90°</p>
 			</div>
 		</li>
 
@@ -650,27 +630,34 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 					<li>
 						<ins class="bullet circleDot deepGreen"></ins>
 						<div>
-							<p class="mb_10">각을 보고 예각과 둔각 중 어느 것인지 <ins class="blankBox"></ins> 안에 써넣으세요.</p>
+							<p class="mb_10">각도의 합과 차를 구해 보세요.</p>
 							<div>
-								<div class="--img">
+								<div class="vMid">
+									<div>
+										<ul class="flexListContainer around">
+											<li>
+												70° + 40° = <div class="toggle" data-toggle-obj="2201">
+													<div class="answer" data-toggle-target="2201">110</div>
+												</div>°
+											</li>
+											<li>
+												65° + 90° = <div class="toggle" data-toggle-obj="2202">
+													<div class="answer" data-toggle-target="2202">155</div>
+												</div>°
+											</li>
+											<li>
+												110°－70° = <div class="toggle" data-toggle-obj="2203">
+													<div class="answer" data-toggle-target="2203">40</div>
+												</div>°
+											</li>
+											<li>
+												130°－55° = <div class="toggle" data-toggle-obj="2204">
+													<div class="answer" data-toggle-target="2204">75</div>
+												</div>°
+											</li>
+										</ul>
+									</div>
 								</div>
-								<ul class="flexListContainer around mt_10">
-									<li>
-										<div class="toggle" data-toggle-obj="2201">
-											<div class="answer" data-toggle-target="2201">둔각</div>
-										</div>
-									</li>
-									<li>
-										<div class="toggle" data-toggle-obj="2202">
-											<div class="answer" data-toggle-target="2202">둔각</div>
-										</div>
-									</li>
-									<li>
-										<div class="toggle" data-toggle-obj="2203">
-											<div class="answer" data-toggle-target="2203">예각</div>
-										</div>
-									</li>
-								</ul>
 							</div>
 						</div>
 					</li>
@@ -684,7 +671,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
 		<li class="solve pop_page_21" data-popup-page="21">
 			<div class="popup_contents">
-				<p class="ls0">직각과 비교하여 직각보다 작은 각은 예각, 직각보다 큰 각은 둔각으로 구분합니다.</p>
+				<p class="ls0">자연수의 덧셈, 뺄셈과 같은 방법으로 계산합니다.</p>
 			</div>
 		</li>
 
@@ -698,7 +685,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 					<li>
 						<ins class="bullet circleDot deepGreen"></ins>
 						<div>
-							<p class="mb_10">예각과 둔각을 찾아 써 보세요.</p>
+							<p class="mb_10">두 각도의 합과 차를 구해 보세요.</p>
 							<div>
 								<div class="vMid">
 									<div>
@@ -708,7 +695,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 													<div class="--text x1">110°</div>
 												</div>
 												<ul class="flexListContainer jcenter center mt_20">
-													<li class="flexListContainer">
+													<li class="flexListContainer center">
 														<div class="colorBox check skyBlue">합</div>
 														<div>
 															<div class="toggle" data-toggle-obj="1201">
@@ -723,7 +710,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 													<div class="--text x1">40°</div>
 												</div>
 												<ul class="flexListContainer jcenter center mt_20">
-													<li class="flexListContainer">
+													<li class="flexListContainer center">
 														<div class="colorBox check skyBlue">차</div>
 														<div>
 															<div class="toggle" data-toggle-obj="1202">
@@ -775,6 +762,15 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 <script type="text/javascript" src="./js/contents.js"></script>
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function () {
+		const _dapChkBtn = document.querySelectorAll(".dapCheckBtn");
+		_dapChkBtn.forEach(function(obj, index){
+			obj.addEventListener( "click", function(e) {
+				let _closestTg = obj.closest(".on");
+				if( _closestTg.querySelector(".page-iframe") ){
+					_closestTg.querySelector(".page-iframe").contentWindow.document.querySelector(".app--tool").classList.remove('open');
+				}
+			});
+		});
 	}, false);
 </script>
 
