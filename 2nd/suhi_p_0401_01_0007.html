@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css">
+<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css">
+<link rel="stylesheet" type="text/css" href="../common/contents/css/math_suhi.css">
+<link rel="stylesheet" type="text/css" href="../../../__common__/css/custom.css">
+<style type="text/css">
+	.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
+	.vMid > div{width:100%;}
+	.popup_pages .vMid{height:490px;}
+	.popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
+
+
+	.popup_pages>li.whole h2.pop-tit{background-color:transparent !important; align-self:flex-start; padding:20px; }
+	.popup_pages .buttonContainer{right:40px; bottom:20px;}
+
+
+	/* 숫자자리 table */
+	.tableContainer.it-colorful:not(.brown) table tr:first-of-type td{border-top:2px solid #fff;}
+	.tableContainer.it-colorful:not(.brown) table tr:not(:last-of-type) th{border-bottom:2px solid #fff;}
+	.tableContainer.it-colorful:not(.brown) table tr td:first-child{border-left:2px solid #fff;}
+	.tableContainer.it-colorful:not(.brown) table tr td{border-right:2px solid #fff; border-bottom:2px solid #fff;}
+	.tableContainer.it-colorful .it-pink{background:#ffece2;}
+	.tableContainer.it-colorful .it-deeppink{background:#f7c1c9;}
+	.tableContainer.it-colorful .it-beige{background:#f6e7d4;}
+	.tableContainer.it-colorful .it-yellow{background:#f6f1d4;}
+	.tableContainer.it-colorful .it-green{background:#cee492;}
+	.tableContainer.it-colorful .it-lightgreen{background:#f3fcd0;}
+	.tableContainer.it-colorful .it-sky{background:#d4f3f6;}
+	.tableContainer.it-colorful .it-orange{background:#fccd89;}
+	.tableContainer.it-colorful .it-lightorange{background:#fff2d1;}
+	.tableContainer.it-colorful .it-purple{background:#cabfe0;}
+	.tableContainer.it-colorful .it-lightpurple{background:#ece5ff;}
+	.tableContainer.it-colorful .it-deepPurple{background:#b099df;}
+	.tableContainer.it-colorful .it-brown{background:#c7a08c;}
+	.tableContainer.it-colorful .it-deepOrange{background:#ff924f;}
+	.tableContainer.it-colorful .it-skyBlue{background:#5ca2e7;}
+	.tableContainer.it-colorful .it-white{background:#fff;}
+
+
+	/* 개별 */
+	.page_0 .it-img{position:relative; width:980px; height:320px; margin:0 auto; background:url(./images/suhi_p_0401_01_0007_1.png) no-repeat 50% 50% / contain;}
+	.page_0 .it-txt-1{position:absolute; top:160px; left:40px; transform:skew(0, -20deg);}
+	.page_0 .it-txt-2{position:absolute; top:160px; left:250px; transform:skew(0, -20deg);}
+	.page_0 .it-txt-3{position:absolute; top:160px; left:450px; transform:skew(0, -20deg);}
+	.page_0 .it-txt-4{position:absolute; top:160px; left:650px; transform:skew(0, -20deg);}
+	.page_0 .it-txt-5{position:absolute; top:160px; left:850px; transform:skew(0, -20deg);}
+
+	/* 기존 줄줄이네모박스 수정 */
+	.nemoBoxJool{position:relative; text-align:center; width:100%; margin:0 auto;}
+	.nemoBoxJool ul{display:flex; align-items:center; justify-content:space-between; position:relative; width:100%;}
+	.nemoBoxJool ul + ul{margin-top:20px;}
+	.nemoBoxJool ul + ul:before{right:0; width:calc(100% + 30px);}
+	.nemoBoxJool ul li{display:inline-block; position:relative;}
+	.nemoBoxJool li:before{content:""; display:block; position:absolute; top:50%; width:60px; margin-top:-2px; border-top:5px solid #fff;}
+	.nemoBoxJool li + li:before,
+	.nemoBoxJool ul + ul li:before{right:100%; margin-right:-5px;}
+	.nemoBoxJool ul li > div{display:block; position:relative; min-width:175px; height:70px; padding:0 5px; line-height:70px; background-color:#fff; border:5px solid #c1e8ec; border-radius:10px; z-index:1;}
+	.nemoBoxJool.it-pink li > div,
+	.nemoBoxJool.it-pink li:before{border-color:#ffece2;}
+	.nemoBoxJool.it-deeppink li > div,
+	.nemoBoxJool.it-deeppink li:before{border-color:#f7c1c9;}
+	.nemoBoxJool.it-beige li > div,
+	.nemoBoxJool.it-beige li:before{border-color:#efcfa6;}
+	.nemoBoxJool.it-yellow li > div,
+	.nemoBoxJool.it-yellow li:before{border-color:#f4e8bd;}
+	.nemoBoxJool.it-sky li > div,
+	.nemoBoxJool.it-sky li:before{border-color:#c1e8ec;}
+	.nemoBoxJool.it-orange li > div,
+	.nemoBoxJool.it-orange li:before{border-color:#fccd89;}
+	.nemoBoxJool.it-purple li > div,
+	.nemoBoxJool.it-purple li:before{border-color:#cabfe0;}
+	.nemoBoxJool.it-brown li > div,
+	.nemoBoxJool.it-brown li:before{border-color:#ae7c65;}
+	.nemoBoxJool.it-green li > div,
+	.nemoBoxJool.it-green li:before{border-color:#cee492;}
+	.nemoBoxJool.it-center ul{justify-content:center;}
+	.nemoBoxJool.it-center li{margin:0 15px;}
+	.nemoBoxJool.it-center li > div{padding:0 20px;}
+
+	.page_1 ul.nemoBoxJool li:nth-child(2n+1)>div,
+	.pop_page_11 ul.nemoBoxJool li:nth-child(2n+1)>div{width:178px}
+
+	.bullet.number.it-green{display:inline-block; width:35px; height:35px; border-radius:10px; border:2px solid #6dbc4b; background-color:#fff; font-size:22px; color:#6dbc4b; line-height:1.5em; text-align:center; letter-spacing:0; vertical-align:3px;}
+	.pop_page_42 .vMid{height:450px;}
+
+	.page_5 .bullet.number,
+	.pop_page_52 .bullet.number{display:inline-block; width:40px; height:40px; margin-right:0; line-height:1.8em; vertical-align:6px;}
+	.page_5 .horizonWrap{position: relative;height: 200px;width: 100%;display: block;}
+	.page_5 .horizonContainer{width: 900px;position: absolute;left: 50%;top: 0;transform: translateX(-50%);}
+	.page_5 .horizonContainer .lineContainer{left: 0;}
+	.page_5 .horizonContainer .textContainer{left: -15px;}
+	.page_5 .answer_list{text-align:center;}
+	.page_5 .answer_list .it-1{position:absolute; top:80px; left:45px;}
+	.page_5 .answer_list .it-2{position:absolute; top:80px; left:588px;}
+	.page_5 .answer_list .it-3{position:absolute; top:80px; left:905px;}
+	.page_5 .horizonContainer {height: 170px;margin: 30px 0 0 0;}
+	.page_5 .verticalContainer {width: calc(100% - 36px);margin: 0 auto;}
+
+	.pop_page_52 .horizonWrap{position: relative;height: 200px;width: 100%;display: block;}
+	.pop_page_52 .horizonContainer{width: 900px;position: absolute;left: 50%;top: 0;transform: translateX(-50%);}
+	.pop_page_52 .horizonContainer .lineContainer{left: -8px;}
+	.pop_page_52 .horizonContainer .textContainer{left: -15px;}
+	.pop_page_52 .horizonContainer {height: 170px;margin: 30px 0 0 0;}
+	.pop_page_52 .verticalContainer {width: calc(100% - 36px);margin: 0 auto;}
+	.pop_page_52 .answer_list{text-align:center;}
+	.pop_page_52 .answer_list .it-1{position:absolute; top:80px; left:45px;}
+	.pop_page_52 .answer_list .it-2{position:absolute; top:80px; left:674px;}
+	.pop_page_52 .answer_list .it-3{position:absolute; top:80px; left:905px;}
+
+	.page_6 .it-img{width:100%; height:320px; background:url(./images/suhi_p_0401_01_0007_3.png) no-repeat 50% 50% / contain;}
+</style>
+</head>
+
+<body>
+<div id="wrap" class="math suhi">
+<div id="bgContainer"></div>
+
+<header>
+	<h1><ins class="suhi_title"></ins>
+	<span class="subInfo">
+		<span class="sub-text">뛰어 세기를 해 볼까요</span>
+		<span class="sub-page">18~19쪽</span>
+	</span>
+	</h1>
+</header>
+<main>
+	<div class="basicSlider contentsBox" data-slide-container="main">
+		<ul class="basicSlider_tabs" data-tabs="">
+			<li data-hover="">개념 정리</li>
+			<li data-hover="">1</li>
+			<li data-hover="">2</li>
+			<li data-hover="">3</li>
+			<li data-hover="">4</li>
+			<li data-hover="">5</li>
+			<li data-hover="">6</li>
+		</ul>
+		<ul class="basicSlider_slides" data-slides="">
+
+			<li class="page_0">
+				<h2><ins class="special type2"></ins><span>
+					<!-- 개념 정리 -->
+				</span></h2>
+				<section>
+					<div class="it-img">
+						<div class="it-txt-1"><span class="redT">4</span>00만</div>
+						<div class="it-txt-2"><span class="redT">5</span>00만</div>
+						<div class="it-txt-3"><span class="redT">6</span>00만</div>
+						<div class="it-txt-4"><span class="redT">7</span>00만</div>
+						<div class="it-txt-5"><span class="redT">8</span>00만</div>
+					</div>
+					<div class="textAlignC mt_20">
+						<span class="redT">백만</span>의 자리 수가 1씩 커지므로 <span class="redT">100만</span>씩 뛰어 세었습니다.
+					</div>
+				</section>
+			</li>
+
+			<li class="page_1" data-quiz="toggle">
+				<h2><ins class="number">1</ins><span class="ls1">
+					뛰어 세기를 한 것입니다. <span class="blankBox"></span> 안에 알맞은 수나 말을 써넣으세요.
+				</span></h2>
+				<section class="full">
+					<div class="vMid">
+						<div>
+							<div class="textAlignC">
+								<div class="nemoBoxJool it-green">
+									<ul>
+										<li>
+											<div>6350000</div>
+										</li>
+										<li>
+											<div>6450000</div>
+										</li>
+										<li>
+											<div>6550000</div>
+										</li>
+										<li>
+											<div>6650000</div>
+										</li>
+										<li>
+											<div>6750000</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="flexListContainer start mt_40">
+								<div class="icon_arrow mr_20 mt_15"></div>
+								<div class="ls1">
+									<div class="toggle" data-toggle-obj="11">
+										<div class="answer" data-toggle-target="11">십만</div>
+									</div>의 자리 수가 1씩 커지므로 <div class="toggle" data-toggle-obj="12">
+										<div class="answer" data-toggle-target="12">100000</div>
+									</div>씩 뛰어 세었습니다.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="buttonContainer">
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn it-green" data-popup-btn="11" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_2" data-quiz="toggle">
+				<h2><ins class="number">2</ins><span>
+					주어진 수만큼 뛰어 세어 빈칸에 알맞은 수를 써넣으세요.
+				</span></h2>
+				<section class="full">
+					<div class="vMid">
+						<div>
+							<ul class="contentsList">
+								<li>
+									<ins class="bullet circleDot"></ins>
+									<div>
+										<p class="mb_10">10만씩 뛰어 세기</p>
+										<div class="textAlignC mt_10">
+											<div class="nemoBoxJool it-green">
+												<ul>
+													<li>
+														<div>329780</div>
+													</li>
+													<li>
+														<div>429780</div>
+													</li>
+													<li>
+														<div>529780</div>
+													</li>
+													<li>
+														<div>
+															<div class="toggle noBg" data-toggle-obj="21">
+																<div class="answer" data-toggle-target="21">
+																	629780
+																</div>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div>
+															<div class="toggle noBg" data-toggle-obj="22">
+																<div class="answer" data-toggle-target="22">
+																	729780
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<ins class="bullet circleDot"></ins>
+									<div>
+										<p class="mb_10">1000억씩 뛰어 세기</p>
+										<div class="textAlignC mt_10">
+											<div class="nemoBoxJool it-green ls1_5">
+												<ul>
+													<li>
+														<div>2조 8653억</div>
+													</li>
+													<li>
+														<div>
+															<div class="toggle noBg" data-toggle-obj="23">
+																<div class="answer" data-toggle-target="23">
+																	2조 9653억
+																</div>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div>
+															<div class="toggle noBg" data-toggle-obj="24">
+																<div class="answer" data-toggle-target="24">
+																	3조 653억
+																</div>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div>3조 1653억</div>
+													</li>
+													<li>
+														<div>
+															<div class="toggle noBg" data-toggle-obj="25">
+																<div class="answer" data-toggle-target="25">
+																	3조 2653억
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="21" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn it-green" data-popup-btn="22" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_3" data-quiz="toggle">
+				<h2><ins class="number">3</ins><span>
+					뛰어 세기를 하여 빈칸에 알맞은 수를 써넣으세요.
+				</span></h2>
+				<section class="full">
+					<ul class="contentsListX">
+						<li>
+							<div>
+								<div class="vMid">
+									<div>
+										<div class="textAlignC">
+											<div class="nemoBoxJool it-green it-center">
+												<ul>
+													<li>
+														<div>42870300</div>
+													</li>
+													<li>
+														<div>52870300</div>
+													</li>
+													<li>
+														<div>
+															<div class="toggle noBg" data-toggle-obj="21">
+																<div class="answer" data-toggle-target="21">
+																	62870300
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+												<ul>
+													<li>
+														<div>
+															<div class="toggle noBg" data-toggle-obj="22">
+																<div class="answer" data-toggle-target="22">
+																	72870300
+																</div>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div>82870300</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="31" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn it-green" data-popup-btn="32" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_4" data-quiz="toggle">
+				<h2><ins class="number">4</ins><span>
+					어떤 수 <span class="redT">★</span>에서 1000만씩 3번 뛰어 세었더니 1억 6500만이 되었습니다. <span class="redT">★</span>에 알맞은 수를 구해 보세요.
+				</span></h2>
+				<section class="full">
+					<div class="vMid">
+						<div>
+							<ul class="contentsListX">
+								<li>
+									<div>
+										<div class="textAlignC">
+											<div class="nemoBoxJool it-green it-center">
+												<ul>
+													<li>
+														<div class="redT">★</div>
+													</li>
+													<li>
+														<div></div>
+													</li>
+													<li>
+														<div></div>
+													</li>
+													<li>
+														<div>1억 6500만</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="textAlignC mt_40">
+								<div class="toggle" data-toggle-obj="4">
+									<div class="answer" data-toggle-target="4">
+										1억 3500만
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="41" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn it-green" data-popup-btn="42" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_5" data-quiz="toggle">
+				<h2><ins class="number star">5</ins><span>
+					그림에서 <ins class="bullet number">ㄱ</ins>이 나타내는 수를 구해 보세요.
+				</span></h2>
+				<section class="full">
+					<div class="horizonWrap mt_40">
+						<div class="horizonContainer horizonContainer_1"></div>
+						<ul class="answer_list">
+							<li class="it-1"><span class="icon_arrow top big"></span><br>852억</li>
+							<li class="it-2"><span class="icon_arrow top big"></span><br><ins class="bullet number it-green">ㄱ</ins></li>
+							<li class="it-3"><span class="icon_arrow top big"></span><br>952억</li>
+						</ul>
+					</div>
+					<div class="textAlignC mt_40">
+						<div class="toggle" data-toggle-obj="5">
+							<div class="answer" data-toggle-target="5">
+								912억
+							</div>
+						</div>
+					</div>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="51" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn it-green" data-popup-btn="52" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_6" data-quiz="toggle">
+				<h2><ins class="number star">6</ins><span class="ls0_5">
+					수민이네 가족은 동물 보호 기관에 매달 3만 원씩 기부하려고 합니다. 24만 원을 기부하려면 몇 개월이 걸리는지 구해 보세요.
+				</span></h2>
+				<section class="full">
+					<div class="it-img">
+					</div>
+					<div class="textAlignC mt_20">
+						<div class="toggle" data-toggle-obj="6">
+							<div class="answer" data-toggle-target="6">
+								8
+							</div>
+						</div>개월
+					</div>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="61" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn it-green" data-popup-btn="62" data-hover="">
+							<span>쌍둥이 문제</span>
+						</button>
+					</div>
+				</section>
+			</li>
+
+		</ul>
+	</div>
+</main>
+
+
+
+<section class="popup_container" data-popup-container="">
+	<ul class="popup_pages basicSlider_slides">
+
+		<li class="whole pop_page_11" data-popup-page="11">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot"></ins>
+						<div>
+							<p class="mb_10">뛰어 세기를 한 것입니다. <span class="blankBox"></span> 안에 알맞은 수나 말을 써넣으세요.</p>
+							<!-- popup article -->
+							<div class="vMid">
+								<div>
+									<div class="textAlignC">
+										<div class="nemoBoxJool it-brown">
+											<ul>
+												<li>
+													<div>2340000</div>
+												</li>
+												<li>
+													<div>3340000</div>
+												</li>
+												<li>
+													<div>4340000</div>
+												</li>
+												<li>
+													<div>5340000</div>
+												</li>
+												<li>
+													<div>6340000</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="flexListContainer start mt_40">
+										<div class="icon_arrow mr_20 mt_15"></div>
+										<div>
+											<div class="toggle" data-toggle-obj="111">
+												<div class="answer" data-toggle-target="111">백만</div>
+											</div>의 자리 수가 1씩 커지므로 <div class="toggle" data-toggle-obj="112">
+												<div class="answer" data-toggle-target="112">1000000</div>
+											</div>씩 뛰어 세었습니다.
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //popup article -->
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-1)수학익힘쌍둥이_07차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_21" data-popup-page="21">
+			<div class="popup_contents">
+				10만씩 뛰어 세면 십만의 자리 수가 1씩 커지고,<br>
+				1000억씩 뛰어 세면 천억의 자리 수가 1씩 커집니다.
+			</div>
+		</li>
+
+		<li class="whole pop_page_22" data-popup-page="22">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot"></ins>
+						<div>
+							<p class="mb_10">주어진 수만큼 뛰어 세어 빈칸에 알맞은 수를 써넣으세요.</p>
+							<div class="vMid">
+								<div>
+									<ul class="dotList deepGreen">
+										<li>
+											<div style="width:100%;">
+												<p class="mb_10">10만씩 뛰어 세기</p>
+												<div class="nemoBoxJool it-brown">
+													<ul>
+														<li>
+															<div>438650</div>
+														</li>
+														<li>
+															<div>538650</div>
+														</li>
+														<li>
+															<div>638650</div>
+														</li>
+														<li>
+															<div>
+																<div class="toggle noBg" data-toggle-obj="221">
+																	<div class="answer" data-toggle-target="221">
+																		738650
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div>
+																<div class="toggle noBg" data-toggle-obj="222">
+																	<div class="answer" data-toggle-target="222">
+																		838650
+																	</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div style="width:100%;">
+												<p class="mb_10">100억씩 뛰어 세기</p>
+												<div class="nemoBoxJool it-brown ls1_5">
+													<ul>
+														<li>
+															<div>1조 7754억</div>
+														</li>
+														<li>
+															<div>
+																<div class="toggle noBg" data-toggle-obj="223">
+																	<div class="answer" data-toggle-target="223">
+																		1조 7854억
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div>
+																<div class="toggle noBg" data-toggle-obj="224">
+																	<div class="answer" data-toggle-target="224">
+																		1조 7954억
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div>1조 8054억</div>
+														</li>
+														<li>
+															<div>
+																<div class="toggle noBg" data-toggle-obj="225">
+																	<div class="answer" data-toggle-target="225">
+																		1조 8154억
+																	</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-1)수학익힘쌍둥이_07차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_31" data-popup-page="31">
+			<div class="popup_contents">
+				천만의 자리 수가 1씩 커지므로 1000만씩 뛰어 세기 합니다.
+			</div>
+		</li>
+
+		<li class="whole pop_page_32" data-popup-page="32">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot"></ins>
+						<div>
+							<p class="mb_10">뛰어 세기를 하여 빈칸에 알맞은 수를 써넣으세요.</p>
+							<div class="vMid">
+								<div>
+									<div class="nemoBoxJool it-brown">
+										<ul>
+											<li>
+												<div>53270000</div>
+											</li>
+											<li>
+												<div>63270000</div>
+											</li>
+											<li>
+												<div>
+													<div class="toggle noBg" data-toggle-obj="321">
+														<div class="answer" data-toggle-target="321">
+															73270000
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div>
+													<div class="toggle noBg" data-toggle-obj="322">
+														<div class="answer" data-toggle-target="322">
+															83270000
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div>93270000</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-1)수학익힘쌍둥이_07차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_41" data-popup-page="41">
+			<div class="popup_contents">
+				1억 6500만에서 1000만씩 작아지도록 3번 뛰어 세면<br>
+				1억 6500만–1억 5500만–1억 4500만–1억 3500만입니다.<br>
+				따라서 <span class="redT">★</span>에 알맞은 수는 1억 3500만입니다.
+			</div>
+		</li>
+
+		<li class="whole pop_page_42" data-popup-page="42">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot"></ins>
+						<div>
+							<p class="mb_10">어떤 수 <span class="redT">★</span>에서 100억씩 3번 뛰어 세었더니 8700억이 되었습니다. <span class="redT">★</span>에 알맞은 수를 구해 보세요.</p>
+							<div class="vMid">
+								<div>
+									<div class="nemoBoxJool it-brown it-center">
+										<ul>
+											<li>
+												<div><span class="redT">★</span></div>
+											</li>
+											<li>
+												<div></div>
+											</li>
+											<li>
+												<div></div>
+											</li>
+											<li>
+												<div>8700억</div>
+											</li>
+										</ul>
+									</div>
+									<div class="textAlignC mt_40">
+										<div class="toggle" data-toggle-obj="421">
+											<div class="answer" data-toggle-target="421">
+												8400억
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-1)수학익힘쌍둥이_07차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<!-- <button class="solveCheckBtn" data-popup-btn="43" data-hover=""></button> -->
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_43" data-popup-page="43">
+			<div class="popup_contents">
+				8700억에서 100억씩 작아지도록 3번 뛰어 세면<br>
+				8700억-8600억-8500억–8400억입니다.<br>
+				따라서 <span class="redT">★</span> 에 알맞은 수는 8400억입니다.
+			</div>
+		</li>
+
+		<li class="solve pop_page_51" data-popup-page="51">
+			<div class="popup_contents">
+				852억에서 10번 뛰어 세어 100억만큼 더 커져 952억이 되었으므로, <strong>10억</strong>씩 뛰어 세기 한 것입니다. 따라서 <span class="bullet number it-green">ㄱ</span>은 852억에서 <strong>10억씩 6번</strong> 뛰어 세기 한 것이므로 912억입니다.
+			</div>
+		</li>
+
+		<li class="whole pop_page_52" data-popup-page="52">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot"></ins>
+						<div>
+							<p class="mb_10">그림에서 <ins class="bullet number it-green">ㄱ</ins>이 나타내는 수를 구해 보세요.</p>
+							<div class="horizonWrap mt_40">
+								<div class="horizonContainer horizonContainer_2"></div>
+								<ul class="answer_list">
+									<li class="it-1"><span class="icon_arrow top big"></span><br>630조</li>
+									<li class="it-2"><span class="icon_arrow top big"></span><br><ins class="bullet number it-green">ㄱ</ins></li>
+									<li class="it-3"><span class="icon_arrow top big"></span><br>640조</li>
+								</ul>
+							</div>
+							<div class="textAlignC mt_40">
+								<div class="toggle" data-toggle-obj="4">
+									<div class="answer" data-toggle-target="4">
+										637조
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-1)수학익힘쌍둥이_07차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<!-- <button class="solveCheckBtn" data-popup-btn="53" data-hover=""></button> -->
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_53" data-popup-page="53">
+			<div class="popup_contents">
+				630조에서 10번 뛰어 세어 10조만큼 더 커져 640조가 되었으므로, <strong>1조</strong>씩 뛰어 세기 한 것입니다. 따라서 <span class="bullet number it-green">ㄱ</span>은 630조에서 <strong>1조씩 7번</strong> 뛰어 세기 한 것이므로 637조입니다.
+			</div>
+		</li>
+
+		<li class="solve pop_page_61" data-popup-page="61">
+			<div class="popup_contents">
+				0–3만–6만–9만–12만–15만–18만–21만–24만이므로 3만씩 8번 뛰어 세기 한 것입니다.<br>
+				따라서 24만원을 기부하려면 8개월이 걸립니다.
+			</div>
+		</li>
+
+		<li class="whole pop_page_62" data-popup-page="62">
+			<h2 class="pop-tit">
+				<ins class="special type3"></ins>
+				<span></span>
+			</h2>
+			<div class="popup_contents" data-quiz="toggle">
+				<ul class="contentsList">
+					<li>
+						<ins class="bullet circleDot"></ins>
+						<div>
+							<p class="mb_10">
+								수민이네 가족은 동물 보호 기관에 매달 4만 원씩 기부하려고 합니다. 32만 원을 기부하려면 몇 개월이 걸리는지 구해 보세요.
+							</p>
+							<div class="textAlignC mt_40">
+								<div class="toggle" data-toggle-obj="4">
+									<div class="answer" data-toggle-target="4">
+										8
+									</div>
+								</div>개월
+							</div>
+
+						</div>
+					</li>
+				</ul>
+				<a href="./data/(4-1-1)수학익힘쌍둥이_07차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+				<div class="buttonContainer">
+					<!-- <button class="solveCheckBtn" data-popup-btn="63" data-hover=""></button> -->
+					<button class="dapCheckBtn" data-answer-btn=""></button>
+				</div>
+			</div>
+		</li>
+
+		<li class="solve pop_page_63" data-popup-page="63">
+			<div class="popup_contents">
+				0 - 4만 - 8만 - 12만 - 16만 - 20만 - 24만 - 28만 - 32만이므로 4만씩 8번 뛰어 세기 한 것입니다.<br>
+				따라서 32만원을 기부하려면 8개월이 걸립니다.
+			</div>
+		</li>
+
+
+	</ul>
+</section>
+
+</div>
+<div id="loadingContainer">
+<div class="loadingIconAnimation"></div>
+</div>
+<script type="text/javascript" src="../common/libs/js/jquery.js"></script>
+<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+<script type="text/javascript" src="../common/contents/js/sprite.js"></script>
+<script type="text/javascript" src="./js/contents.js"></script>
+<script type="text/javascript" src="../common/contents/js/math_makeHorizonLine.js"></script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+
+		window.$horizonMaker({
+          container: $ts.getEl('.horizonContainer_1')[0],
+          lineSpace: 86,
+          inputTextArray: ['','','','','','','','','','','']
+        });
+
+		window.$horizonMaker({
+          container: $ts.getEl('.horizonContainer_2')[0],
+          lineSpace: 86,
+          inputTextArray: ['','','','','','','','','','','']
+        });
+
+	}, false);
+</script>
+
+</body>
+
+</html>
