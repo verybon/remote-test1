@@ -13,28 +13,38 @@
 		.popup_pages .buttonContainer{bottom:20px; right:40px; z-index:2;}
 		.moveButtonContainer{width:94%;}
 
-		.page_1 .it-img{display:flex; flex-wrap:wrap; position:relative; width:100%; height:340px; margin:0 auto; background:url(./images/mm_41_2_04_03_01/img_01.png) no-repeat 50% 50% / 1150px auto;}
+		.page_1 .it-img{display:flex; flex-wrap:wrap; position:relative; width:100%; height:340px; margin:0 auto; background:url(./images/mm_41_2_04_03_01/img_01.png) no-repeat 50% -60px / 1150px auto;}
 		.page_1 .it-img ._txt{width:25%;}
 
 		.page_2 .study_guide{right:0;}
 		.page_2 .it-start-wrap{position:relative; z-index:1; min-height:180px; margin-top:40px;}
-		.page_2 .dragObj{position:absolute; top:0;}
-		.page_2 .dragObj_1{left:0;}
-		.page_2 .dragObj_2{left:125px;}
-		.page_2 .dragObj_3{left:250px;}
-		.page_2 .dragObj_4{left:375px;}
-		.page_2 .dragObj_5{left:500px;}
-		.page_2 .dragObj_6{left:615px;}
-		.page_2 .dragObj_7{left:750px;}
-		.page_2 .dragObj_8{left:875px;}
+		.page_2 .dragObj{position:absolute; top:20px; width:110px; height:110px; text-align:left;}
+		.page_2 .dragObj > span{display:inline-block; transform:translateY(-10px);}
+		.page_2 .dragObj_1{left:0; background:url(./images/mm_41_2_04_03_02/drag_item_1_0001.png) no-repeat 50% 100% / contain;}
+		.page_2 .dragObj_2{left:125px; background:url(./images/mm_41_2_04_03_02/drag_item_1_0002.png) no-repeat 100% 100% / auto 80%;}
+		.page_2 .dragObj_3{left:250px; background:url(./images/mm_41_2_04_03_02/drag_item_1_0003.png) no-repeat 100% 100% / contain;}
+		.page_2 .dragObj_4{left:375px; background:url(./images/mm_41_2_04_03_02/drag_item_1_0004.png) no-repeat 100% 100% / contain;}
+		.page_2 .dragObj_5{left:500px; background:url(./images/mm_41_2_04_03_02/drag_item_1_0005.png) no-repeat 100% 100% / auto 70%;}
+		.page_2 .dragObj_6{left:615px; background:url(./images/mm_41_2_04_03_02/drag_item_1_0006.png) no-repeat 50% 100% / contain;}
+		.page_2 .dragObj_7{left:750px; background:url(./images/mm_41_2_04_03_02/drag_item_1_0007.png) no-repeat 50% 100% / contain;}
+		.page_2 .dragObj_8{left:875px; background:url(./images/mm_41_2_04_03_02/drag_item_1_0008.png) no-repeat 50% 100% / contain;}
 		.page_2 .dropArea{width:100%; min-width:300px; min-height:150px;}
 		.page_2 .dropArea_1{min-width:375px;}
 		.page_2 .dropArea_2{min-width:250px;}
 		.page_2 .dropArea_3{min-width:375px;}
-		.page_2 .it-end-wrap{}
+
 		.page_2 .it-start-wrap .dragObj.dragObjComplete{opacity:.25;}
 		.page_2 .it-end-wrap .dragObj.dragObjComplete{position:static; top:0; left:0;}
 		.page_2 .it-end-wrap .textContainer li{font-size:35px; transform: translateX(-25px);}
+		.page_3 .it-list{width:110px; height:110px; margin:10px auto; text-align:left;}
+		.page_3 .it-list.x1{background:url(./images/mm_41_2_04_03_02/drag_item_1_0001.png) no-repeat 50% 100% / contain;}
+		.page_3 .it-list.x2{background:url(./images/mm_41_2_04_03_02/drag_item_1_0002.png) no-repeat 100% 100% / auto 80%;}
+		.page_3 .it-list.x3{background:url(./images/mm_41_2_04_03_02/drag_item_1_0003.png) no-repeat 100% 100% / contain;}
+		.page_3 .it-list.x4{background:url(./images/mm_41_2_04_03_02/drag_item_1_0004.png) no-repeat 100% 100% / contain;}
+		.page_3 .it-list.x5{background:url(./images/mm_41_2_04_03_02/drag_item_1_0005.png) no-repeat 100% 100% / auto 70%;}
+		.page_3 .it-list.x6{background:url(./images/mm_41_2_04_03_02/drag_item_1_0006.png) no-repeat 50% 100% / contain;}
+		.page_3 .it-list.x7{background:url(./images/mm_41_2_04_03_02/drag_item_1_0007.png) no-repeat 50% 100% / contain;}
+		.page_3 .it-list.x8{background:url(./images/mm_41_2_04_03_02/drag_item_1_0008.png) no-repeat 50% 100% / contain;}
 	</style>
 </head>
 
@@ -96,35 +106,27 @@
 							<div class="it-start-wrap dragObjUL">
 								<div class="js-dragObj dragObj dragObj_1" data-name="drag-obj" data-drag-obj-answer="1">
 									<span>가</span>
-									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0001.png" alt="" width="110"></div>
 								</div>
 								<div class="js-dragObj dragObj dragObj_2" data-name="drag-obj" data-drag-obj-answer="3">
 									<span>나</span>
-									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0002.png" alt="" width="110"></div>
 								</div>
 								<div class="js-dragObj dragObj dragObj_3" data-name="drag-obj" data-drag-obj-answer="3">
 									<span>다</span>
-									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0003.png" alt="" width="110"></div>
 								</div>
 								<div class="js-dragObj dragObj dragObj_4" data-name="drag-obj" data-drag-obj-answer="3">
 									<span>라</span>
-									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0004.png" alt="" width="110"></div>
 								</div>
 								<div class="js-dragObj dragObj dragObj_5" data-name="drag-obj" data-drag-obj-answer="2">
 									<span>마</span>
-									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0005.png" alt="" width="110"></div>
 								</div>
 								<div class="js-dragObj dragObj dragObj_6" data-name="drag-obj" data-drag-obj-answer="1">
 									<span>바</span>
-									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0006.png" alt="" width="110"></div>
 								</div>
 								<div class="js-dragObj dragObj dragObj_7" data-name="drag-obj" data-drag-obj-answer="1">
 									<span>사</span>
-									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0007.png" alt="" width="110"></div>
 								</div>
 								<div class="js-dragObj dragObj dragObj_8" data-name="drag-obj" data-drag-obj-answer="2">
 									<span>아</span>
-									<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0008.png" alt="" width="110"></div>
 								</div>
 							</div>
 							<div class="it-end-wrap tableContainer brown">
@@ -171,45 +173,37 @@
 									<tr>
 										<td>
 											<div class="flexListContainer center around">
-												<div>
+												<div class="it-list x1">
 													<span>가</span>
-													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0001.png" alt="" width="110"></div>
 												</div>
-												<div>
+												<div class="it-list x2">
 													<span>바</span>
-													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0006.png" alt="" width="110"></div>
 												</div>
-												<div>
+												<div class="it-list x3">
 													<span>사</span>
-													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0007.png" alt="" width="110"></div>
 												</div>
 											</div>
 										</td>
 										<td>
 											<div class="flexListContainer center around">
-												<div>
+												<div class="it-list x4">
 													<span>마</span>
-													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0005.png" alt="" width="110"></div>
 												</div>
-												<div>
+												<div class="it-list x5">
 													<span>아</span>
-													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0008.png" alt="" width="110"></div>
 												</div>
 											</div>
 										</td>
 										<td>
 											<div class="flexListContainer center around">
-												<div>
+												<div class="it-list x6">
 													<span>나</span>
-													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0002.png" alt="" width="110"></div>
 												</div>
-												<div>
+												<div class="it-list x7">
 													<span>다</span>
-													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0003.png" alt="" width="110"></div>
 												</div>
-												<div>
+												<div class="it-list x8">
 													<span>라</span>
-													<div><img src="./images/mm_41_2_04_03_02/drag_item_1_0004.png" alt="" width="110"></div>
 												</div>
 											</div>
 										</td>
