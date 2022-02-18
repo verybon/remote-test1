@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css">
+<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css">
+<link rel="stylesheet" type="text/css" href="../common/contents/css/math_suhi.css">
+<link rel="stylesheet" type="text/css" href="../../../__common__/css/custom.css">
+<style type="text/css">
+	.popup_pages>li.whole h2.pop-tit {background-color:transparent !important; align-self:flex-start; padding:20px;}
+	.popup_pages .buttonContainer{right:40px; bottom:20px;}
+	.popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
+	.popup_contents .icon_o_title{vertical-align:-2px;}
+	.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
+	.vMid > div{width:100%;}
+	.zoomBtn:after,
+	.popBtn.zoom{border-color:#ff8636; background-color:#f60;}
+	.popup_pages>li.whole.on{z-index:10000;}
+	.popup_pages .icon_bogi.--title{height:36px; margin:6px 0 0 0; border-radius:10px; vertical-align:top;}
+	.popup_pages .icon_bogi.--title:after{font-size:21px; line-height:37px;}
+
+
+
+	/* 개별 */
+	.page_0 .--infoText{position:absolute; top:-104px; left: 142px; min-width:300px; background:#f0f6d4;}
+	.page_0 .--infoText .sub-text{color:#333; font-size:17px; margin:0 0 0 5px;}
+	.page_0 .--infoText .sub-page{position:relative; align-self:flex-end; margin:0 0 0 8px; padding:0 0 0 10px; color:#6dbc4b; font-size:15px;}
+	.page_0 .--infoText .sub-page:before{ content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:2px; height:18px; background-color:#6dbc4b;}
+	.page_0 .--img{position:relative; min-width:100%; height:520px;}
+	.page_0 .balloon{text-align:center;}
+	.page_0 .innerTab_1 .--img{background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_1.png) no-repeat 50% 50% / contain;}
+	.page_0 .innerTab_2 .--img{background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_2.png) no-repeat 50% 50% / contain;}
+	.page_0 .innerTab_3 .--img{background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_3.png) no-repeat 50% 50% / contain;}
+	.page_0 .innerTab_4 .--img{background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_4.png) no-repeat 50% 50% / contain;}
+	.page_0 .innerTab_1 .balloon.yellow{top:70px; left:220px;}
+	.page_0 .innerTab_1 .balloon.green{top:110px; left:557px;}
+	.page_0 .innerTab_2 .balloon.yellow{top:-10px; left:215px;}
+	.page_0 .innerTab_2 .balloon.green{top:-10px; left:510px;}
+	.page_0 .innerTab_3 .balloon.yellow{top:40px; left:120px;}
+	.page_0 .innerTab_3 .balloon.yellow:after{margin-left:50px;}
+	.page_0 .innerTab_3 .balloon.green{top:75px; left:485px;}
+	.page_0 .innerTab_4 .balloon.yellow{top:10px; left:140px;}
+	.page_0 .innerTab_4 .balloon.yellow:after{margin-left:20px;}
+	.page_0 .innerTab_4 .balloon.green{top:140px; left:490px;}
+
+	.--half{display:table;}
+	.--half > li{display:table-row;}
+	.--half > li > div{display:table-cell; padding:0 0 15px; vertical-align:middle;}
+	.--half > li > div:nth-child(1){text-align:right;}
+	.--half > li > div:nth-child(2){text-align:left;}
+	.--half > li + li{margin-top:15px;}
+	.--half .colorBox.check{display:inline-block;}
+
+	.page_1 .--img{position:relative; width:500px; height:450px;}
+	.page_1 .--img > [class^="--"]{position:absolute;}
+	.page_1 .--img .--line{width:250px; height:0; border-bottom:3px solid #000;}
+	.page_1 .--img .--line:nth-of-type(1){top:300px; left:20px;}
+	.page_1 .--img .--line:nth-of-type(2){top:301px; left:267px; transform:rotate(-50deg); transform-origin:0 0;}
+	.page_1 .--img .--dot{width:15px; height:15px; border-radius:50%; background:#000;}
+	.page_1 .--img .--dot:nth-of-type(3){top:294px; left:60px;}
+	.page_1 .--img .--dot:nth-of-type(4){top:294px; left:260px;}
+	.page_1 .--img .--dot:nth-of-type(5){top:130px; left:399px;}
+	.page_1 .--img .--text:nth-of-type(6){top:310px; left:50px;}
+	.page_1 .--img .--text:nth-of-type(7){top:310px; left:250px;}
+	.page_1 .--img .--text:nth-of-type(8){top:130px; left:420px;}
+
+	.--jikgakIcon{display:inline-block; width:40px; height:40px; background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_5.png) no-repeat 50% 50% / contain; vertical-align:-5px;}
+	.page_2 .bogiContainer{width:290px;}
+	.page_2 .bogiContainer .inner{width:100%; height:310px; background:#fff url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_6.png) no-repeat 24px 20px / 1000px auto;}
+	.page_2 .lineBox{flex:1; position:relative; overflow:hidden; height:320px; margin-left:40px;}
+	.page_2 .lineBox .--img{position:absolute; top:0; left:0; width:100%; height:100%; background:#fff url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_6.png) no-repeat -350px 20px / 1000px auto;}
+	.page_2 .lineBox .--img.x1{background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_6_1.png) no-repeat -350px 20px / 1000px auto;}
+	.page_2 .lineBox .--img.x2{background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_6_2.png) no-repeat -350px 20px / 1000px auto;}
+	.page_2 .lineBox .--img.x3{background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_6_3.png) no-repeat -350px 20px / 1000px auto;}
+	.page_2 .lineBox .--evt{position:absolute; width:170px; height:170px; cursor:pointer;}
+	.page_2 .lineBox .--evt.x1{top:68px; left:54px;}
+	.page_2 .lineBox .--evt.x2{top:68px; left:251px;}
+	.page_2 .lineBox .--evt.x3{top:68px; left:446px;}
+
+	.page_3 .--img{position:relative; width:100%; height:440px; background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_7.png) no-repeat 50% 50% / contain;}
+	.page_3 .--answerImg{position:absolute; top:0; left:0; width:100%; height:100%; background:url(./images/suhi_h_0401_02_0001/suhi_h_0401_02_0001_7_2.png) no-repeat 50% 50% / contain;}
+	.page_3 .--img .exam{position:absolute; top:20px; left:0; opacity:0;}
+	.page_3.complete .--img .exam{opacity:1;}
+	.page_3 .examViewBtn.reset:before{content:"다시하기";}
+</style>
+</head>
+
+<body>
+<div id="wrap" class="math suhi">
+<div id="bgContainer"></div>
+
+<header>
+	<h1><ins class="suhi_title"></ins>
+	<span class="subInfo">
+		<span class="sub-text">공부할 준비가 되어 있나요</span>
+		<span class="sub-page">24~25쪽</span>
+	</span>
+	</h1>
+</header>
+<main>
+	<div class="basicSlider contentsBox" data-slide-container="main">
+		<ul class="basicSlider_tabs" data-tabs="">
+			<li data-hover="">그림</li>
+			<li data-hover="">1</li>
+			<li data-hover="">2</li>
+			<li data-hover="">3</li>
+		</ul>
+		<ul class="basicSlider_slides" data-slides="">
+			<li class="page_0" data-slide-container="">
+				<div class="--infoText">
+					<span class="subInfo">
+						<span class="sub-text">단원도입</span>
+						<span class="sub-page">24~25쪽</span>
+					</span>
+				</div>
+				<div class="moveButtonContainer" data-slide-btn-container="">
+					<div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+					<ul class="basicSlider_circle_tabs" data-tabs="">
+						<li data-hover=""></li>
+						<li data-hover=""></li>
+						<li data-hover=""></li>
+						<li data-hover=""></li>
+					</ul>
+					<div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+				</div>
+				<ul class="basicSlider_slides inner" data-slides="">
+					<li class="innerTab_1">
+						<div class="--img">
+							<div class="balloon yellow ctTail bottom">부채를 드디어<br>완성했어!</div>
+							<div class="balloon green ctTail bottom">나도 완성했어!</div>
+						</div>
+					</li>
+					<li class="innerTab_2">
+						<div class="--img">
+							<div class="balloon yellow ctTail bottom">내 부채가 <br>더 많이<br>펼쳐지겠는걸.</div>
+							<div class="balloon green ctTail bottom">아니야.<br>내 부채가 더 많이<br>펼쳐질 거야.</div>
+						</div>
+					</li>
+					<li class="innerTab_3">
+						<div class="--img">
+							<div class="balloon yellow ctTail bottom">누구의 부채가 <br>더 많이 펼쳐지는지 <br>어떻게 비교하면 될까?</div>
+							<div class="balloon green ctTail bottom">부채를 서로 겹쳐서<br>비교해 보면 되지.</div>
+						</div>
+					</li>
+					<li class="innerTab_4">
+						<div class="--img">
+							<div class="balloon yellow ctTail bottom">나는 직접 겹쳐 보지 <br>않고도 누구의 부채가 <br>더 많이 펼쳐지는지<br>알 수 있어.</div>
+							<div class="balloon green ctTail bottom">어떻게 하면 되는데?</div>
+						</div>
+					</li>
+				</ul>
+			</li>
+
+			<li class="page_1" data-quiz="toggle">
+				<h2><ins class="number">1</ins><span>
+					각의 꼭짓점과 각의 변을 기호로 나타내 보세요.
+				</span></h2>
+				<section>
+					<div class="flexListContainer center">
+						<div class="--img">
+							<div class="--line"></div>
+							<div class="--line"></div>
+							<div class="--dot"></div>
+							<div class="--dot"></div>
+							<div class="--dot"></div>
+							<div class="--text">ㄹ</div>
+							<div class="--text">ㅁ</div>
+							<div class="--text">ㅂ</div>
+						</div>
+						<ul class="--half">
+							<li>
+								<div>
+									<div class="colorBox sky check">각의 꼭짓점</div>
+								</div>
+								<div>
+									<div class="toggle" data-toggle-obj="11">
+										<div class="answer" data-toggle-target="11">
+											점 ㅁ
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div class="colorBox sky check">각의 변</div>
+								</div>
+								<div>
+									<div class="toggle" data-toggle-obj="12">
+										<div class="answer" data-toggle-target="12">
+											변 ㅁㄹ, 변 ㅁㅂ
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="buttonContainer">
+						<button class="solveCheckBtn" data-popup-btn="1" data-hover=""></button>
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_2" data-quiz="toggle">
+				<h2><ins class="number star">3</ins><span style="letter-spacing:0.5px;">
+					<span class="icon_bogi"></span>와 같이 직각을 찾아 <span class="--jikgakIcon"></span>로 표시해 보세요.
+				</span></h2>
+				<section>
+					<div class="study_guide">
+						<em>도형</em>을 각각 <em>클릭</em>하세요.
+					</div>
+					<div class="flexListContainer">
+						<div class="bogi_wrap">
+							<div class="bogiContainer">
+								<div class="icon_bogi"></div>
+								<div class="inner">
+								</div>
+							</div>
+						</div>
+						<div class="lineBox green">
+							<div class="--img"></div>
+							<div class="--evt x1" data-toggle-obj="21">
+							</div>
+							<div class="answer --img x1" data-toggle-target="21">
+							</div>
+							<div class="--evt x2" data-toggle-obj="22">
+							</div>
+							<div class="answer --img x2" data-toggle-target="22">
+							</div>
+							<div class="--evt x3" data-toggle-obj="23">
+							</div>
+							<div class="answer --img x3" data-toggle-target="23">
+							</div>
+						</div>
+					</div>
+					<div class="buttonContainer">
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+				</section>
+			</li>
+
+			<li class="page_3" data-quiz="toggle">
+				<h2><ins class="number">3</ins><span>
+					직각을 완성해 보세요.
+				</span></h2>
+				<section>
+					<div class="--img">
+						<ins class="bullet exam">예</ins>
+						<div class="--answerImg answer" data-toggle-obj="31" data-toggle-target="31"></div>
+					</div>
+					<div class="buttonContainer">
+						<button class="examViewBtn" data-answer-btn=""></button>
+					</div>
+				</section>
+			</li>
+
+		</ul>
+	</div>
+</main>
+
+<!--
+	* 팝업
+ -->
+<section class="popup_container" data-popup-container="">
+	<ul class="popup_pages basicSlider_slides">
+		<li class="solve pop_page_1" data-popup-page="1">
+			<div class="popup_contents">
+				각의 꼭짓점은 점 ㅁ이고, 각의 변은 변 ㅁㄹ, 변 ㅁㅂ입니다.
+			</div>
+		</li>
+	</ul>
+</section>
+
+</div>
+<div id="loadingContainer">
+<div class="loadingIconAnimation"></div>
+</div>
+<script type="text/javascript" src="../common/libs/js/jquery.js"></script>
+<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+<script type="text/javascript" src="../common/contents/js/sprite.js"></script>
+<script type="text/javascript" src="./js/contents.js"></script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+	}, false);
+</script>
+
+</body>
+
+</html>
