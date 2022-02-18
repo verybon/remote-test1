@@ -95,7 +95,7 @@
         .sample ._box{
             overflow-x: auto;
             overflow-y: auto;
-            height: 140px;
+            height: 180px;
             padding: 10px 15px;
             border-radius: 10px;
             border: 1px solid #ddd;
@@ -257,16 +257,16 @@
         &lt;div class="moveButtonContainer" data-slide-btn-container=""&gt;
             &lt;div class="basicSlider_btn prev" data-btn-prev="" data-hover=""&gt;&lt;/div&gt;
             &lt;ul class="basicSlider_circle_tabs" data-tabs=""&gt;
-            &lt;li data-hover=""&gt;&lt;/li&gt;
-            &lt;li data-hover=""&gt;&lt;/li&gt;
+                &lt;li data-hover=""&gt;&lt;/li&gt;
+                &lt;li data-hover=""&gt;&lt;/li&gt;
             &lt;/ul&gt;
             &lt;div class="basicSlider_btn next" data-btn-next="" data-hover=""&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;ul class="basicSlider_slides inner" data-slides=""&gt;
-        &lt;li class="innerTab_1"&gt;
-        &lt;/li&gt;
-        &lt;li class="innerTab_2"&gt;
-        &lt;/li&gt;
+            &lt;li class="innerTab_1"&gt;
+            &lt;/li&gt;
+            &lt;li class="innerTab_2"&gt;
+            &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/li&gt;
     &lt;/ul&gt;
@@ -459,13 +459,35 @@ src="../common/contents/images/math/inequalIcon.png"&gt;를 알맞게 써넣으�
 <pre>
 &lt;iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"&gt;&lt;/iframe&gt;
 
-
+//fixed
 .page-iframe{position:fixed; z-index:1; top:210px; left:55px; overflow:hidden; width:1060px; height:460px; border:0; background:transparent;}
 .popup_pages .page-iframe{top:180px; left:70px; height:510px;}
 .page-iframe .popup_contents .toggle,
 .page-iframe + section .toggle{z-index:1;}
 .toggle.z2{z-index:2;}
 .popup_pages>li.whole.on{z-index:10000;}
+
+//absolute
+.page-iframe{position:absolute; z-index:1; top:30px; left:56px; overflow:hidden; width:1060px; height:505px; border:0; background:transparent;}
+.popup_pages .page-iframe{top:158px; left:70px; height:535px;}
+.page-iframe + .popup_contents .toggle,
+.page-iframe + section .toggle{z-index:1;}
+.popup_pages>li.whole.on{z-index:10000;}
+.popup_pages .buttonContainer{right:40px; bottom:20px;}
+.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
+.popup_pages .vMid{height:520px;}
+.vMid > div{width:100%;}
+
+
+const _dapChkBtn = document.querySelectorAll(".dapCheckBtn");
+_dapChkBtn.forEach(function(obj, index){
+    obj.addEventListener( "click", function(e) {
+        let _closestTg = obj.closest(".on");
+        if( _closestTg.querySelector(".page-iframe") ){
+            _closestTg.querySelector(".page-iframe").contentWindow.document.querySelector(".app--tool").classList.remove('open');
+        }
+    });
+});
 
 
 $(".page_2 iframe").contents().find(".app-angle-tool").removeClass('open');
@@ -691,7 +713,7 @@ document.querySelector(".dapCheckBtn").addEventListener("click", function(){
 
 
 <div id="PRE801">
-    <h2 class="_title">[템] 이너칼크</h2>
+    <h2 class="_title">[tmp] 이너칼크</h2>
 <div class="_box">
 <pre>
 .--innerCalc{text-align:center;}
@@ -721,19 +743,91 @@ document.querySelector(".dapCheckBtn").addEventListener("click", function(){
 </div>
 </div>
 
+<div id="PRE802">
+    <h2 class="_title">[tmp] rel/albsol</h2>
+<div class="_box">
+<pre>
+.--img{position:relative; min-width:100%; height:380px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_1.png) no-repeat 50% 50% / contain;}
+.--text{position:absolute;}
+.--text.x1{top:40px; left:150px;}
+.--text.x2{top:80px; left:250px;}
+.--text.x3{top:120px; left:350px;}
+.--text.x4{top:160px; left:450px;}
+.--text.x5{top:200px; left:550px;}
+.--text.x6{top:240px; left:650px;}
+
+&lt;div class="--innerCalc mt_40"&gt;
+    &lt;div&gt;
+        &lt;div class="--q"&gt;
+            ㉠+㉡+㉢
+        &lt;/div&gt;
+        &lt;div class="--a"&gt;
+            = &lt;div class="toggle" data-toggle-obj="11"&gt;
+                &lt;div class="answer" data-toggle-target="11"&gt;90&lt;/div&gt;
+            &lt;/div&gt;° + &lt;div class="toggle" data-toggle-obj="12"&gt;
+                &lt;div class="answer" data-toggle-target="12"&gt;60&lt;/div&gt;
+            &lt;/div&gt;° + &lt;div class="toggle" data-toggle-obj="13"&gt;
+                &lt;div class="answer" data-toggle-target="13"&gt;30&lt;/div&gt;
+            &lt;/div&gt;° = &lt;div class="toggle" data-toggle-obj="14"&gt;
+                &lt;div class="answer" data-toggle-target="14"&gt;180&lt;/div&gt;
+            &lt;/div&gt;°
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE803">
+    <h2 class="_title">[tmp] 문답 가운데</h2>
+<div class="_box">
+<pre>
+.--half{display:table;}
+.--half > li{display:table-row;}
+.--half > li > div{display:table-cell; padding:0 0 15px; vertical-align:middle;}
+.--half > li > div:nth-child(1){text-align:right;}
+.--half > li > div:nth-child(2){text-align:left;}
+.--half > li + li{margin-top:15px;}
+.--half .colorBox.check{display:inline-block;}
+
+&lt;ul class="--half"&gt;
+	&lt;li&gt;
+		&lt;div&gt;
+			&lt;div class="colorBox sky check"&gt;각의 꼭짓점&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;div class="toggle" data-toggle-obj="11"&gt;
+				&lt;div class="answer" data-toggle-target="11"&gt;
+					점 ㅁ
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE804">
+    <h2 class="_title">[tmp] 예보기</h2>
+<div class="_box">
+<pre>
+.examViewBtn.reset:before{content:"다시하기";}
+</pre>
+</div>
+</div>
+
 
 <div id="PRE999">
     <h2 class="_title">텍스트</h2>
 <div class="_box">
 <pre>
 °
-－
-×
-＝
-㉠
-㉡
-㉢
-㉣
+＋－×＝
+㉠㉡㉢㉣
+
 #e94d40
 #00a0ff
 </pre>
@@ -750,7 +844,7 @@ document.querySelector(".dapCheckBtn").addEventListener("click", function(){
 https://cdata2.tsherpa.co.kr/tsherpa/MultiMedia/Flash/2020/curri/index.html?flashxmlnum=yein820&classa=A8-C1-41-MM-MM-04-03-04-0-0-0-0&classno=MM_41_04/suh_0401_02_0004/suh_0401_02_0004_301_1.html
 
 
-
+view-source:https://cdata2.tsherpa.co.kr/tsherpa/MultiMedia/Flash/2020/curri/MM_41_04/suh_0401_02_0009/suh_0401_02_0009_401_1.html
 
 
 
