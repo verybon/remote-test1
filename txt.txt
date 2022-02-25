@@ -22,3 +22,10 @@
 
 
 
+<div class="나누기_데코"></div>
+.나누기_데코{
+    width: 20px;
+    height: 100px;
+    box-shadow: inset -4px 0px 0px;
+    border-radius: 0 100% 100% 0 / 50%;
+}
