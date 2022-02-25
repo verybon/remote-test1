@@ -22,10 +22,48 @@
 
 
 
-<div class="나누기_데코"></div>
-.나누기_데코{
+<div class="나누기_옆에_타원"></div>
+.나누기_옆에_타원{
     width: 20px;
     height: 100px;
     box-shadow: inset -4px 0px 0px;
     border-radius: 0 100% 100% 0 / 50%;
 }
+
+&lt;div class="flex-wrap"&gt;
+	&lt;div class="flex-item pink colorBox"&gt;
+		&lt;div class="math_calc_table"&gt;
+			&lt;table&gt;
+				&lt;tbody&gt;
+					&lt;tr&gt;
+						&lt;td&gt;&lt;/td&gt;
+						&lt;td&gt;1&lt;/td&gt;
+						&lt;td&gt;3&lt;sup class="sup redT"&gt;1&lt;/sup&gt;&lt;/td&gt;
+						&lt;td class="redT"&gt;2&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;+&lt;/td&gt;
+						&lt;td&gt;1&lt;/td&gt;
+						&lt;td&gt;2&lt;/td&gt;
+						&lt;td class="redT"&gt;9&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="4"&gt;
+							&lt;div class="rowLine"&gt;&lt;/div&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;&lt;/td&gt;
+						&lt;td&gt;&lt;/td&gt;
+						&lt;td&gt;&lt;/td&gt;
+						&lt;td class="redT"&gt;1&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+			&lt;div class="lineDotted line_1"&gt;&lt;/div&gt;
+			&lt;div class="lineDotted line_2"&gt;&lt;/div&gt;
+			&lt;div class="lineDotted line_3"&gt;&lt;/div&gt;
+			&lt;div class="lineDotted line_4"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
