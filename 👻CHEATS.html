@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, pre{
+            font-family: '맑은 고딕', 'malgun gothic', sans-serif;
+        }
+        body{
+            background: #888;
+        }
+        .list{
+            display: flex;
+            align-items: center;
+            justify-content: stretch;
+            flex-wrap: wrap;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            padding: 5px 20px 10px;
+            background: rgba(0,0,0,.75);
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .list > a{
+            display: inline-block;
+            margin: 3px 0 1px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            border: 1px solid #00f;
+            background: #00f;
+            font-size: .85rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -1.5px;
+            word-spacing: 1px;
+            box-shadow: inset 0 4px 8px rgba(0,0,0,.5);
+        }
+        .list > a:nth-child(even){
+            background: #000;
+        }
+        .sample{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            overflow: hidden;
+            padding: 50px 20px 500px 20px;
+            scrollbar-3dLight-Color: #eaeaea;
+            scrollbar-arrow-color: #dadada;
+            scrollbar-base-color: #eaeaea;
+            scrollbar-Face-Color: #fff;
+            scrollbar-Track-Color: #f6f6f6;
+            scrollbar-DarkShadow-Color: #eaeaea;
+            scrollbar-Highlight-Color: #eaeaea;
+            scrollbar-Shadow-Color: #eaeaea;
+        }
+        .sample ::-webkit-scrollbar{
+            width: 8px;
+            height: 4px;
+            border-radius: 9px;
+        }
+        .sample ::-webkit-scrollbar-track{
+            border-radius: 5px;
+            background-color: #ddd;
+        }
+        .sample ::-webkit-scrollbar-thumb{
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .sample ::-webkit-scrollbar-thumb:hover{
+            border: 1px solid #666;
+        }
+        .sample ::-webkit-scrollbar-button:start:decrement,
+        .sample ::-webkit-scrollbar-button:end:increment{
+            width: 10px;
+            height: 4px;
+            background: transparent;
+        }
+        .sample > div{
+            position: relative;
+            width: calc(33.3% - 30px);
+            margin: 12px 30px 20px 0;
+        }
+        .sample ._box{
+            overflow-x: auto;
+            overflow-y: auto;
+            height: 210px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            background: #eee;
+            box-shadow: 0 0 10px rgba(0,0,0,0.8), inset 5px 5px 10px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+        }
+        .sample ._title{
+            position: absolute;
+            bottom: -1px;
+            right: -1px;
+            padding: 0 3px 0 7px;
+            border-radius: 12px 0 0 0;
+            border-right: 9px solid #00f;
+            background: rgba(255,255,255,.8);
+            font-size: 1.14rem;
+            font-weight: 700;
+            color: #00f;
+            letter-spacing: -1px;
+            text-align: right;
+            -ms-user-select: none;
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            box-shadow: 0 0 10px rgba(0,0,0,.3);
+            box-sizing: border-box;
+            transform: translateX(8px);
+        }
+        pre{
+            margin: 20px 0 0;
+            font-size: 0.75em;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+        .list > a.top{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 4px;
+            right: 20px;
+            width: 10px;
+            height: 20px;
+            border: 0;
+            background: transparent;
+            line-height: 24px;
+            color: #999;
+            box-shadow: inset 0 0 10px rgba(0,0,0,.15);
+        }
+    </style>
+</head>
+<body>
+
+<div class="list">
+    <a href="#PRE091">우주선</a>
+    <a href="#PRE092">떡볶이</a>
+    <a href="#PRE001">느낌표/꾸러미</a>
+    <a href="#PRE002">바깥탭</a>
+    <a href="#PRE003">안쪽탭</a>
+    <a href="#PRE004">테이블</a>
+    <a href="#PRE005">타이틀</a>
+    <a href="#PRE006">인트로 중앙</a>
+    <a href="#PRE011">말풍선</a>
+    <a href="#PRE012">캐릭터</a>
+    <a href="#PRE013">토글</a>
+    <a href="#PRE014">아이콘</a>
+    <a href="#PRE015">쓰기/읽기</a>
+    <a href="#PRE016">Exam</a>
+    <a href="#PRE017">OX</a>
+    <a href="#PRE031">아이프레임</a>
+    <a href="#PRE032">캔버스</a>
+    <a href="#PRE033">SVG</a>
+    <a href="#PRE051">하단 쌍둥이</a>
+    <a href="#PRE052">하단 답체크</a>
+    <a href="#PRE053">팝업</a>
+    <a href="#PRE200">기본css</a>
+    <a href="#PRE201">[css]영상</a>
+    <a href="#PRE202">[css]셀프</a>
+    <a href="#PRE203">[css]화면중앙</a>
+    <a href="#PRE203">[css]수익기본</a>
+    <a href="#PRE301">[js]그려보세요</a>
+    <a href="#PRE302">[js]그려보세요2</a>
+    <a href="#PRE801">[템]이너칼크</a>
+    <a href="#PRE999">텍스트</a>
+    <a href="#" onclick="location.reload();" class="top">△</a>
+</div>
+
+
+<div class="sample">
+<div id="PRE091">
+    <h2 class="_title">우주선</h2>
+<div class="_box">
+<pre>
+&lt;div class="title title-selfi"&gt;
+    &lt;ins class="title-selfi-num"&gt;2&lt;/ins&gt;
+&lt;/div&gt;
+
+#wrap header .title-selfi{padding-left:60px;}
+#wrap header .title-selfi:before{top:4px; left:0; width:53px; height:40px; background-position:0 0; background-size:auto 100%; background-repeat:no-repeat; background-image:url(./images/act_quiz_icon.svg);}
+#wrap header .title-selfi-num{position:absolute; top:14px; left:13px; width:30px; font-weight:400; font-size:18px; font-family: YGJAL; color:#fff; text-align:center;}
+</pre>
+</div>
+</div>
+
+
+<div id="PRE092">
+    <h2 class="_title">떡볶이</h2>
+<div class="_box">
+<pre>
+&lt;h2&gt;&lt;ins class="dot"&gt;&lt;/ins&gt;&lt;ins class="icon_preCheck"&gt;2 2&lt;/ins&gt;&lt;span&gt;
+    100이 10개인 수
+&lt;/span&gt;&lt;/h2&gt;
+
+.icon_preCheck{display:flex; align-items:center; justify-content:center; top:1px; left:0; width:80px; height:48px; margin:0 6px 0 0; padding:0 0 0 4px; background:url(./images/preCheck_icon.svg) 0 center / auto 100% no-repeat; font-size:25px; color:#fff; letter-spacing:6px; box-sizing:border-box;}
+</pre>
+</div>
+</div>
+
+
+<div id="PRE001">
+    <h2 class="_title">느낌표/꾸러미</h2>
+<div class="_box">
+<pre>
+&lt;div class="study_guide"&gt;
+    &lt;em&gt;10000&lt;/em&gt;을 &lt;em&gt;클릭&lt;/em&gt;하세요.
+&lt;/div&gt;
+
+&lt;div class="supply_guide inline"&gt;꾸러미 3&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE002">
+    <h2 class="_title">바깥 탭</h2>
+<div class="_box">
+<pre>
+&lt;ul class="basicSlider_tabs" data-tabs=""&gt;
+    &lt;li data-hover=""&gt;물음 1&lt;/li&gt;
+    &lt;li data-hover=""&gt;물음 2&lt;/li&gt;
+    &lt;li data-hover=""&gt;물음 +&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;ins class="dot"&gt;&lt;/ins&gt;&lt;span&gt;
+    방수포의 수를 세어 보세요.
+&lt;/span&gt;&lt;/h2&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE003">
+    <h2 class="_title">안쪽 탭</h2>
+<div class="_box">
+<pre>
+&lt;div class="basicSlider contentsBox" data-slide-container="main"&gt;
+    &lt;ul class="basicSlider_slides" data-slides=""&gt;
+    &lt;li class="page_1" data-slide-container=""&gt;
+        &lt;div class="moveButtonContainer" data-slide-btn-container=""&gt;
+            &lt;div class="basicSlider_btn prev" data-btn-prev="" data-hover=""&gt;&lt;/div&gt;
+            &lt;ul class="basicSlider_circle_tabs" data-tabs=""&gt;
+                &lt;li data-hover=""&gt;&lt;/li&gt;
+                &lt;li data-hover=""&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="basicSlider_btn next" data-btn-next="" data-hover=""&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;ul class="basicSlider_slides inner" data-slides=""&gt;
+            &lt;li class="innerTab_1"&gt;
+            &lt;/li&gt;
+            &lt;li class="innerTab_2"&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE004">
+    <h2 class="_title">테이블</h2>
+<div class="_box">
+<pre>
+&lt;div class="tableContainer brown"&gt;
+    &lt;table&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE005">
+    <h2 class="_title">타이틀</h2>
+<div class="_box">
+<pre>
+&lt;h2&gt;&lt;ins class="dot"&gt;&lt;/ins&gt;&lt;span&gt;
+    타이틀이용
+&lt;/span&gt;&lt;/h2&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE006">
+    <h2 class="_title">중앙 인트로</h2>
+<div class="_box">
+<pre>
+introContents todayIntro
+mainContents center
+data-appear-dir="t2b"
+</pre>
+</div>
+</div>
+
+
+<div id="PRE011">
+    <h2 class="_title">말풍선</h2>
+<div class="_box">
+<pre>
+&lt;div class="balloon bottom ctTail textAlignC sky"&gt;말풍선&lt;/div&gt;
+&lt;div class="flex-wrap"&gt;
+    &lt;div class="balloon right sky ctTail"&gt;
+        &lt;span&gt;천조까지는 &lt;br&gt;16자리나 돼.&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="characterImg circle boy_1-wrap"&gt;
+        &lt;div class="charSpriteImg boy_1"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE012">
+    <h2 class="_title">캐릭터</h2>
+<div class="_box">
+<pre>
+&lt;div class="characterImg boy_1-wrap circle sky" style="left:auto; right:0;"&gt;
+    &lt;div class="charSpriteImg boy_1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="balloon sky right ctTail textAlignC" style="top:20px; right:200px; width:390px;"&gt;
+    수직선에서 눈금 한 칸은 00만이야.
+&lt;/div&gt;
+
+
+
+&lt;div class="textAlignC"&gt;
+    &lt;div id="aniBox_1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+$prite.add({
+    target: $ts.getEl('#aniBox_1'),
+    spriteId: 'sprite1',
+    spriteList: [
+        {
+            name: 'boy_1',
+            circle: 'green',
+            speech:'right',
+            top: 310,
+            left: 420,
+            width: 340,
+            height: 421,
+            thumbNail: '../common/contents/images/character/boy_1.png',
+            spriteSheet: '../common/contents/images/character/boy_1_sprite.png',
+            sound: './media/audios/suh_p_0301_01_0002_202_1.mp3',
+            sheetWidth: 102000,
+            sheetHeight: 421,
+            //endSheet: 0,
+            delay: 40,
+            textBubble: {
+                text: '어림한 값과 계산한 값을&lt;br&gt;비교해 볼까?',
+                class: 'balloon sky ctTail left',
+                top: 330,
+                left: 460,
+                width: 390,
+                textAlign: 'center',
+                wordBreak: 'keep-all'
+            },
+            callbacks: {
+                start: function () {
+                    $ts.getEl('#aniBox_1 .characterImg')[0].style.left = '-160px';
+                }, // 시작시 콜백
+                end: function () {
+                    $ts.getEl('#aniBox_1 .characterImg')[0].style.left = '0px';
+                } // 끝날시 콜백
+            }
+        }
+    ]
+});
+</pre>
+</div>
+</div>
+
+
+<div id="PRE013">
+    <h2 class="_title">토글</h2>
+<div class="_box">
+<pre>
+&lt;div class="toggle" data-toggle-obj="1"&gt;
+    &lt;div class="answer" data-toggle-target="1"&gt;
+        토글
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="toggle" data-toggle-obj="1"&gt;
+    &lt;div class="answer" data-toggle-target="1"&gt;
+        &lt;ul class="contentsList"&gt;
+            &lt;li&gt;
+                &lt;ins class="bullet exam"&gt;예&lt;/ins&gt;
+                &lt;div&gt;
+                    토글
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="buttonContainer"&gt;
+    &lt;button class="dapCheckBtn" data-answer-btn=""&gt;&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE014">
+    <h2 class="_title">아이콘</h2>
+<div class="_box">
+<pre>
+&lt;ins class="bullet circleDot"&gt;&lt;/ins&gt;
+&lt;div class="bullet number orange"&gt;1&lt;/div&gt;
+&lt;div class="icon_bogi"&gt;&lt;/div&gt;
+&lt;span class="blankBox"&gt;&lt;/span&gt;
+&lt;span class="toggleBlank"&gt;&lt;/span&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE015">
+    <h2 class="_title">쓰기/읽기</h2>
+<div class="_box">
+<pre>
+&lt;ul class="flexListContainer"&gt;
+    &lt;li&gt;
+        &lt;div class="colorBox check deepOrange"&gt;쓰기&lt;/div&gt;
+        &lt;div&gt;
+            &lt;div class="toggle" data-toggle-obj="3" style="width:158px;"&gt;
+                &lt;div class="answer" data-toggle-target="3"&gt;6&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE016">
+    <h2 class="_title">Exam</h2>
+<div class="_box">
+<pre>
+&lt;ul class="contentsList"&gt;
+    &lt;li&gt;
+        &lt;ins class="bullet exam"&gt;예&lt;/ins&gt;
+        &lt;div&gt;나들이를 가고 싶은 장소를 정합니다.&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE017">
+    <h2 class="_title">OX</h2>
+<div class="_box">
+<pre>
+data-quiz="ox" data-option="hide, answerSound"
+
+&lt;div class="grayBox n1" data-ox-obj="1"&gt;
+    &lt;div class="icon icon_x" data-ox-target="1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="grayBox n2" data-ox-obj="2" data-answer=""&gt;
+	&lt;div class="icon icon_o" data-ox-target="2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+</pre>
+</div>
+</div>
+
+
+<div id="PRE018">
+    <h2 class="_title">부등호</h2>
+<div class="_box">
+<pre>
+//팝업인 경우
+.--popTitle img[src*="equalIcon"]{height:11px; margin:-7px 0 0 0; vertical-align:middle;}
+.--popTitle img[src*="inequalIcon"]{height:30px; margin:-7px 0 0 0; vertical-align:middle;}
+
+
+수의 크기를 비교하여 &lt;span class="toggleBlank circle"&gt;&lt;/span&gt; 안에
+&lt;img src="../common/contents/images/math/inequalIcon_2.png"&gt;, &lt;img
+src="../common/contents/images/math/equalIcon.png"&gt;, &lt;img
+src="../common/contents/images/math/inequalIcon.png"&gt;를 알맞게 써넣으시오.
+
+&lt;div class="flexListContainer jcenter"&gt;
+    &lt;div style="width: 300px; text-align: right;"&gt;26735&lt;/div&gt;
+    &lt;div class="toggle circle" data-toggle-obj="41" style="margin: -4px 20px;"&gt;
+        &lt;div class="answer" data-toggle-target="41"&gt;&lt;img
+            src="../common/contents/images/math/inequalIcon_blue.png"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;div style="width: 300px;"&gt;468921&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+<div id="PRE031">
+    <h2 class="_title">아이프레임</h2>
+<div class="_box">
+<pre>
+&lt;iframe src="../../../dvd_4_1_p/lesson02/ops/lesson02/app-angle-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"&gt;&lt;/iframe&gt;
+
+&lt;iframe src="../../../dvd_4_1_h/contents_sub/lesson02/ops/2/app-gakdo-tool.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"&gt;&lt;/iframe&gt;
+
+&lt;iframe src="../../../dvd_4_1_h/contents/lesson02/ops/2/ifr-suh_h_0401_02_1112_101_1_1.html" title="" class="page-iframe" scrolling="no" allowTransparency="true"&gt;&lt;/iframe&gt;
+
+//fixed
+.page-iframe{position:fixed; z-index:1; top:210px; left:55px; overflow:hidden; width:1060px; height:460px; border:0; background:transparent;}
+.popup_pages .page-iframe{top:180px; left:70px; height:510px;}
+.page-iframe .popup_contents .toggle,
+.page-iframe + section .toggle{z-index:1;}
+.toggle.z2{z-index:2;}
+.popup_pages>li.whole.on{z-index:10000;}
+
+//absolute
+.page-iframe{position:absolute; z-index:1; top:30px; left:56px; overflow:hidden; width:1060px; height:505px; border:0; background:transparent;}
+.popup_pages .page-iframe{top:158px; left:70px; height:535px;}
+.page-iframe + .popup_contents .toggle,
+.page-iframe + section .toggle{z-index:1;}
+.popup_pages>li.whole.on{z-index:10000;}
+.popup_pages .buttonContainer{right:40px; bottom:20px;}
+.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
+.popup_pages .vMid{height:520px;}
+.vMid > div{width:100%;}
+
+
+const _dapChkBtn = document.querySelectorAll(".dapCheckBtn");
+_dapChkBtn.forEach(function(obj, index){
+    obj.addEventListener( "click", function(e) {
+        let _closestTg = obj.closest(".on");
+        if( _closestTg.querySelector(".page-iframe") ){
+            _closestTg.querySelector(".page-iframe").contentWindow.document.querySelector(".app--tool").classList.remove('open');
+        }
+    });
+});
+
+
+$(".page_2 iframe").contents().find(".app-angle-tool").removeClass('open');
+document.querySelector(".page_2 iframe").contentWindow.document.querySelector(".app-angle-tool").classList.remove('open');
+
+
+const _tabs = document.querySelectorAll(".innerIframe");
+const _examViewBtn = document.querySelectorAll(".examViewBtn")
+const _iframe = document.querySelectorAll(".page-iframe");
+_tabs.forEach(function(obj, index){
+    obj.addEventListener( "click", function(e) {
+        //console.log(_iframe)
+        _iframe[index].contentWindow.location.reload();
+    });
+});
+
+_examViewBtn.forEach(function(obj, index){
+    obj.addEventListener( "click", function(e) {
+        //console.log(_iframe)
+        _iframe[index].contentWindow.location.reload();
+    });
+});
+</pre>
+</div>
+</div>
+
+
+<div id="PRE032">
+    <h2 class="_title">캔버스</h2>
+<div class="_box">
+<pre>
+if(window.hasOwnProperty("initPage")) window.initPage();
+
+&lt;script src="./js/mm_41_2_01_05_01.js"&gt;&lt;/script&gt;
+&lt;script src="./common/js/libs/jquery-1.12.4.min.js"&gt;&lt;/script&gt;
+&lt;script src="./common/js/libs/class.js"&gt;&lt;/script&gt;
+&lt;script src="./common/js/libs/createjs-2015.11.26.min.js"&gt;&lt;/script&gt;
+&lt;script src="./animation/mm_41_2_01_05_01/animation.js"&gt;&lt;/script&gt;
+&lt;script src="./common/js/app/animation.js"&gt;&lt;/script&gt;
+
+suh_p_0401_02_0002_203_1.html
+</pre>
+</div>
+</div>
+
+
+<div id="PRE033">
+    <h2 class="_title">SVG</h2>
+<div class="_box">
+<pre>
+&lt;svg width="360" height="180"&gt;
+    &lt;polyline points="16,44 16,65 202,65 202,44" fill="transparent" stroke="#ff0000" stroke-width="2"&gt;&lt;/polyline&gt;
+    &lt;path d="M202 44 L196 54 L208 54 Z" fill="#ff0000" stroke="transparent" stroke-width="0"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg width="300" height="80"&gt;
+    &lt;polyline points="8,44 8,65 142,65 142,44" fill="transparent" stroke="#ff0000" stroke-width="2"&gt;&lt;/polyline&gt;
+    &lt;path d="M142 44 L136 54 L148 54 Z" fill="#ff0000" stroke="transparent" stroke-width="0"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+
+&lt;path d="M10,55 C35,30 80,0 120,55" fill="none" stroke="#333333" stroke-width="3" /&gt;
+
+&lt;svg width="260" height="120" class="point-line"&gt;
+    &lt;polyline points="730,32 190,32" fill="transparent" stroke="#ff6600" stroke-width="4" /&gt;
+    &lt;circle cx="190" cy="32" r="8" fill="#ff6600" stroke="#ffd89e" stroke-width="3" /&gt;
+    &lt;polyline points="730,110 250,110" fill="transparent" stroke="#ff3175" stroke-width="4" /&gt;
+    &lt;circle cx="250" cy="110" r="8" fill="#ff3175" stroke="#ffc4c9" stroke-width="3" /&gt;
+    &lt;polyline points="730,258 660,258" fill="transparent" stroke="#8532b8" stroke-width="4" /&gt;
+    &lt;circle cx="660" cy="258" r="8" fill="#8532b8" stroke="#cabee0" stroke-width="3" /&gt;
+    &lt;polyline points="730,388 500,388 500,416 180,416" fill="transparent" stroke="#07a542" stroke-width="4" /&gt;
+    &lt;circle cx="180" cy="416" r="8" fill="#07a542" stroke="#d7dea3" stroke-width="3" /&gt;
+    &lt;polyline points="730,466 690,466 690,495 660,495" fill="transparent" stroke="#006ee6" stroke-width="4" /&gt;
+    &lt;circle cx="660" cy="496" r="8" fill="#006ee6" stroke="#a8d6f6" stroke-width="3" /&gt;
+    &lt;polyline points="730,545 660,545" fill="transparent" stroke="#ff9800" stroke-width="4" /&gt;
+    &lt;circle cx="660" cy="545" r="8" fill="#ff9800" stroke="#ffe899" stroke-width="3" /&gt;
+&lt;/svg&gt;
+&lt;svg width="1000" height="480" class="point-line"&gt;
+    &lt;polyline points="130,240 200,240" fill="transparent" stroke="#d8879d" stroke-width="4" /&gt;
+    &lt;polyline points="165,65 200,65" fill="transparent" stroke="#d8879d" stroke-width="4" /&gt;
+    &lt;polyline points="165,420 200,420" fill="transparent" stroke="#d8879d" stroke-width="4" /&gt;
+    &lt;polyline points="165,63 165,422" fill="transparent" stroke="#d8879d" stroke-width="4" /&gt;
+    &lt;polyline points="200,65 900,65" fill="transparent" stroke="#ffc4c9" stroke-width="4" /&gt;
+    &lt;polyline points="200,240 900,240" fill="transparent" stroke="#ffc4c9" stroke-width="4" /&gt;
+    &lt;polyline points="200,420 900,420" fill="transparent" stroke="#ffc4c9" stroke-width="4" /&gt;
+&lt;/svg&gt;
+&lt;path d="M150 0 L75 200 L225 200 Z" /&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE051">
+    <h2 class="_title">하단 쌍둥이</h2>
+<div class="_box">
+<pre>
+&lt;div class="buttonContainer left"&gt;
+    &lt;button class="characterBtn" data-popup-btn="1" data-hover=""&gt;
+        &lt;span&gt;더 알아보기&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE052">
+    <h2 class="_title">하단 답체크</h2>
+<div class="_box">
+<pre>
+&lt;div class="buttonContainer left"&gt;
+    &lt;button class="characterBtn" data-popup-btn="1" data-hover=""&gt;
+        &lt;span&gt;더 알아보기&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="buttonContainer"&gt;
+    &lt;button class="solveCheckBtn" data-popup-btn="1" data-hover=""&gt;&lt;/button&gt;
+    &lt;button class="dapCheckBtn" data-answer-btn=""&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+.examViewBtn.reset:before{content:"다시하기";}
+</pre>
+</div>
+</div>
+
+
+<div id="PRE053">
+    <h2 class="_title">팝업</h2>
+<div class="_box">
+<pre>
+&lt;section class="popup_container" data-popup-container=""&gt;
+    &lt;ul class="popup_pages"&gt;
+    &lt;li class="solve pop_page_1" data-popup-page="1"&gt;
+        &lt;div class="popup_contents"&gt;
+            &lt;ul class="contentsList"&gt;
+            &lt;li&gt;
+                &lt;ins class="dot orange"&gt;&lt;/ins&gt;
+                &lt;div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="whole pop_page_2" data-popup-page="2"&gt;
+        &lt;h2 class="box"&gt;더 알아보기&lt;/h2&gt;
+    &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/section&gt;
+
+data-slide-container="popup"
+</pre>
+</div>
+</div>
+
+
+
+<div id="PRE200">
+    <h2 class="_title">기본css</h2>
+<div class="_box">
+<pre>
+&lt;link rel="stylesheet" type="text/css" href="../common/libs/css/master.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="../common/contents/css/math.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../default/css/custom.css"&gt;
+&lt;link rel="stylesheet" href="../../../__common__/css/custom_last.css"&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE201">
+    <h2 class="_title">[CSS] 영상</h2>
+<div class="_box">
+<pre>
+.aniContainer .video{overflow:hidden;}
+.mediaContainer.video video{position:relative; top:50% !important; left:50%; width:1232px; height:876px; transform:translate(-50%,-50%);}
+.mediaContainer.video.started video{max-width:none; background:#eedac2;}
+</pre>
+</div>
+</div>
+
+
+<div id="PRE202">
+    <h2 class="_title">[CSS] 셀프</h2>
+<div class="_box">
+<pre>
+#wrap header .title-selfi{position:relative; padding-left:85px;} #wrap header .title-selfi:before{top:-5px; left:0; width:76px; height:58px; background-position:0 0; background-size:auto 100%; background-repeat:no-repeat; background-image:url(./images/act_quiz_icon.svg);} #wrap header .title-selfi-num{position:absolute; top:12px; left:6px; width:70px; font-weight:400; font-size:24px; font-family: YGJAL; color:#fff; text-align:center;}
+</pre>
+</div>
+</div>
+
+
+<div id="PRE203">
+    <h2 class="_title">[CSS] 화면중앙</h2>
+<div class="_box">
+<pre>
+.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
+.vMid > div{width:100%;}
+</pre>
+</div>
+</div>
+
+
+<div id="PRE204">
+    <h2 class="_title">[CSS] 수익 기본</h2>
+<div class="_box">
+<pre>
+.popup_pages>li.whole h2.pop-tit {background-color:transparent !important; align-self:flex-start; padding:20px;}
+.popup_pages .buttonContainer{right:40px; bottom:20px;}
+.popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
+.popup_contents .icon_o_title{vertical-align:-2px;}
+.vMid{display:flex; align-items:center; justify-content:center; height:420px;}
+.vMid > div{width:100%;}
+.zoomBtn:after,
+.popBtn.zoom{border-color:#ff8636; background-color:#f60;}
+.page-iframe{position:fixed; z-index:1; top:160px; left:55px; overflow:hidden; width:1060px; height:510px; border:0; background:transparent;}
+.toggle.z2{z-index:2;}
+.popup_pages>li.whole.on{z-index:10000;}
+.popup_pages .icon_bogi.--title{height:36px; margin:6px 0 0 0; border-radius:10px; vertical-align:top;}
+.popup_pages .icon_bogi.--title:after{font-size:21px; line-height:37px;}
+</pre>
+</div>
+</div>
+
+
+<div id="PRE301">
+    <h2 class="_title">[js] 그려보세요 리셋</h2>
+<div class="_box">
+<pre>
+const _dapChkBtn = document.querySelectorAll(".dapCheckBtn");
+_dapChkBtn.forEach(function(obj, index){
+    obj.addEventListener( "click", function(e) {
+        let _closestTg = obj.closest(".on");
+        if( _closestTg.querySelector(".page-iframe") ){
+            _closestTg.querySelector(".page-iframe").contentWindow.document.querySelector(".app--tool").classList.remove('open');
+        }
+    });
+});
+</pre>
+</div>
+</div>
+
+
+<div id="PRE302">
+    <h2 class="_title">[js] 그려보세요 리셋</h2>
+<div class="_box">
+<pre>
+document.querySelector(".dapCheckBtn").addEventListener("click", function(){
+    document.querySelector("iframe").contentWindow.document.querySelector(".app--tool").classList.remove('open');
+});
+</pre>
+</div>
+</div>
+
+
+
+<div id="PRE801">
+    <h2 class="_title">[tmp] 이너칼크</h2>
+<div class="_box">
+<pre>
+.--innerCalc{text-align:center;}
+.--innerCalc > div{display:inline-block;}
+.--innerCalc .--q{margin-bottom:15px; text-align:left;}
+.--innerCalc .--a{text-align:center;}
+
+&lt;div class="--innerCalc mt_40"&gt;
+    &lt;div&gt;
+        &lt;div class="--q"&gt;
+            ㉠+㉡+㉢
+        &lt;/div&gt;
+        &lt;div class="--a"&gt;
+            = &lt;div class="toggle" data-toggle-obj="11"&gt;
+                &lt;div class="answer" data-toggle-target="11"&gt;90&lt;/div&gt;
+            &lt;/div&gt;° + &lt;div class="toggle" data-toggle-obj="12"&gt;
+                &lt;div class="answer" data-toggle-target="12"&gt;60&lt;/div&gt;
+            &lt;/div&gt;° + &lt;div class="toggle" data-toggle-obj="13"&gt;
+                &lt;div class="answer" data-toggle-target="13"&gt;30&lt;/div&gt;
+            &lt;/div&gt;° = &lt;div class="toggle" data-toggle-obj="14"&gt;
+                &lt;div class="answer" data-toggle-target="14"&gt;180&lt;/div&gt;
+            &lt;/div&gt;°
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+<div id="PRE802">
+    <h2 class="_title">[패턴] rel/albsol</h2>
+<div class="_box">
+<pre>
+.--img{position:relative; min-width:100%; height:380px; background:url(./images/suhi_p_0401_02_0007/suhi_p_0401_02_0007_1.png) no-repeat 50% 50% / contain;}
+.--text{position:absolute;}
+.--text.x1{top:40px; left:150px;}
+.--text.x2{top:80px; left:250px;}
+.--text.x3{top:120px; left:350px;}
+.--text.x4{top:160px; left:450px;}
+.--text.x5{top:200px; left:550px;}
+.--text.x6{top:240px; left:650px;}
+
+&lt;div class="--innerCalc mt_40"&gt;
+    &lt;div&gt;
+        &lt;div class="--q"&gt;
+            ㉠+㉡+㉢
+        &lt;/div&gt;
+        &lt;div class="--a"&gt;
+            = &lt;div class="toggle" data-toggle-obj="11"&gt;
+                &lt;div class="answer" data-toggle-target="11"&gt;90&lt;/div&gt;
+            &lt;/div&gt;° + &lt;div class="toggle" data-toggle-obj="12"&gt;
+                &lt;div class="answer" data-toggle-target="12"&gt;60&lt;/div&gt;
+            &lt;/div&gt;° + &lt;div class="toggle" data-toggle-obj="13"&gt;
+                &lt;div class="answer" data-toggle-target="13"&gt;30&lt;/div&gt;
+            &lt;/div&gt;° = &lt;div class="toggle" data-toggle-obj="14"&gt;
+                &lt;div class="answer" data-toggle-target="14"&gt;180&lt;/div&gt;
+            &lt;/div&gt;°
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE803">
+    <h2 class="_title">[패턴] 문답 가운데</h2>
+<div class="_box">
+<pre>
+.--half{display:table;}
+.--half > li{display:table-row;}
+.--half > li > div{display:table-cell; padding:0 0 15px; vertical-align:middle;}
+.--half > li > div:nth-child(1){width:45%; text-align:right;}
+.--half > li > div:nth-child(2){width:55%; text-align:left;}
+.--half .colorBox.check{display:inline-block; line-height:37px;}
+.--half > li > div > *{vertical-align:middle;}
+.--half .--whitespace{display:inline-block; min-width:54px; text-align:right;}
+
+&lt;ul class="--half"&gt;
+	&lt;li&gt;
+		&lt;div&gt;
+			&lt;div class="colorBox sky check"&gt;각의 꼭짓점&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;div class="toggle" data-toggle-obj="11"&gt;
+				&lt;div class="answer" data-toggle-target="11"&gt;
+					점 ㅁ
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+
+<div id="PRE803">
+    <h2 class="_title">[패턴] 계산식</h2>
+<div class="_box">
+<pre>
+&lt;div class="flexListContainer"&gt;
+    &lt;div class="tableContainer noBorder"&gt;
+        &lt;table&gt;&lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;19&lt;/td&gt;
+                &lt;td&gt;÷&lt;/td&gt;
+                &lt;td&gt;5&lt;/td&gt;
+                &lt;td&gt;=&lt;/td&gt;
+                &lt;td&gt;3&lt;div class="mathDot dot3"&gt;&lt;/div&gt;4&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;&lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class="icon" style="width: 51px; height: 45px; position: absolute; top: 224px; left: 500px;  background: url('./images/icon_arrow.svg') center/contain no-repeat;"&gt;&lt;/div&gt;
+    &lt;div class="math_calc_table"&gt;
+        &lt;div class="arrow_2"&gt;&lt;/div&gt;
+        &lt;div class="arrow_2_1"&gt;나머지&lt;/div&gt;
+        &lt;table&gt;&lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt; 3&lt;/span&gt;
+                    &lt;span class="arrow_1"&gt;&lt;/span&gt;
+                    &lt;div class="arrow_1_1"&gt;몫&lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;5
+                    &lt;div class="rowLine dev"&gt;&lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;9&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;5&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;&lt;div class="rowLine"&gt;&lt;/div&gt;&lt;/td&gt;
+                &lt;td&gt;4&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;&lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+<div id="PRE803">
+    <h2 class="_title">[패턴] 계산식2</h2>
+<div class="_box">
+<pre>
+.arrow_1:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #000000 transparent transparent;
+    top: -9px;
+    left: -40px;
+    border-width: 10px 20px;
+}
+.arrow_1 {
+    top: 30px;
+    left: 80px;
+    width: 70px;
+    height: 4px;
+    position: absolute;
+    display: inline-block;
+    background: #000000;
+}
+.arrow_1_1{
+    position: absolute;
+    top: 6px;
+    left: 205px;
+}
+.arrow_2:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #E94D40 transparent transparent;
+    top: -8px;
+    left: -30px;
+    border-width: 10px 20px;
+}
+.arrow_2 {
+    top: 200px;
+    left: 170px;
+    width: 80px;
+    height: 4px;
+    position: absolute;
+    display: inline-block;
+    background: #E94D40;
+    line-height: 50px;
+}
+
+.arrow_2_1 {
+    position: absolute;
+    top: 176px;
+    left: 265px;
+    height: 50px;
+    line-height: 50px;
+    width: 150px;
+    color: #E94D40;
+}
+
+&lt;div class="flexListContainer" style="height: 240px;"&gt;
+    &lt;div class="tableContainer noBorder"&gt;
+        &lt;table&gt;
+        &lt;tbody&gt;&lt;tr&gt;
+            &lt;td&gt;19&lt;/td&gt;
+            &lt;td&gt;÷&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;=&lt;/td&gt;
+            &lt;td&gt;
+                3&lt;div class="mathDot dot3"&gt;&lt;/div&gt;4
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;&lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class="math_calc_table"&gt;
+        &lt;div class="arrow_2"&gt;&lt;/div&gt;&lt;div class="arrow_2_1"&gt;
+            나머지
+        &lt;/div&gt;
+        &lt;table&gt;&lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt; 3&lt;/span&gt;
+                &lt;span class="arrow_1"&gt;&lt;/span&gt;
+                &lt;div class="arrow_1_1"&gt;
+                몫
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;5
+            &lt;div class="rowLine dev"&gt;&lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;
+            1
+            &lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+                &lt;td colspan="2"&gt;&lt;div class="rowLine"&gt;&lt;/div&gt;&lt;/td&gt;
+                &lt;td&gt;
+                4
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;&lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE803">
+    <h2 class="_title">[패턴] 나누기</h2>
+<div class="_box">
+<pre>
+&lt;div class="math_calc_table type2 col5"&gt;
+    &lt;table&gt;
+        &lt;colgroup&gt;
+            &lt;col&gt;
+            &lt;col style="width:10px"&gt;
+            &lt;col&gt;
+            &lt;col&gt;
+            &lt;col&gt;
+        &lt;/colgroup&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;div class="toggle" data-toggle-obj="1"&gt;
+                    &lt;div class="answer" data-toggle-target="1"&gt;2&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="dot-point blue"&gt;&lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;div class="toggle" data-toggle-obj="2"&gt;
+                    &lt;div class="answer" data-toggle-target="2"&gt;0&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;div class="toggle" data-toggle-obj="3"&gt;
+                    &lt;div class="answer" data-toggle-target="3"&gt;5&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;tbody&gt;
+        &lt;tr class="line-tr"&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td colspan="4"&gt;
+                &lt;div class="rowLine"&gt;&lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td class="line-td"&gt;&lt;/td&gt;
+            &lt;td&gt;6&lt;div class="dot-point"&gt;&lt;/div&gt;&lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="line-tr"&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td colspan="4"&gt;
+                &lt;div class="rowLine"&gt;&lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td colspan="2"&gt;
+                &lt;div class="toggle" data-toggle-obj="4"&gt;
+                    &lt;div class="answer" data-toggle-target="4"&gt;
+                        15
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="line-tr"&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td colspan="4"&gt;
+                &lt;div class="rowLine"&gt;&lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE803">
+    <h2 class="_title">[패턴] QnA</h2>
+<div class="_box">
+<pre>
+.--QnA{display:table; width:100%;}
+.--QnA li{display:table-row;}
+.--QnA li > div{display:table-cell; vertical-align:top;}
+.--QnA li + li .--Q,
+.--QnA li + li .--A{padding-top:15px;}
+.--QnA .--Q{min-width:94px; text-align:right;}
+.--QnA .--Q .colorBox{display:inline-block; float:right; line-height:36px !important; white-space:nowrap;}
+.--QnA .--A .answer{text-align:justify;}
+
+&lt;ul class="--QnA"&gt;
+    &lt;li&gt;
+        &lt;div class="--Q"&gt;
+            &lt;div class="colorBox check skyBlue"&gt;풀이&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="--A"&gt;
+            &lt;div class="toggle" data-toggle-obj="1201"&gt;
+                &lt;div class="answer" data-toggle-target="1201"&gt;
+                    각 ㄱㄹㄷ의 크기를 구하면 180˚-70˚=110˚입니다.&lt;br&gt;
+                    사각형의 네 각의 크기의 합은 360˚이므로&lt;br&gt;
+                    90˚+㉠+㉡+110˚=360˚&lt;br&gt;
+                    200˚+㉠+㉡=360˚&lt;br&gt;
+                    ㉠+㉡=160˚
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="--Q"&gt;
+            &lt;div class="colorBox check deepPurple"&gt;답&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="--A"&gt;
+            &lt;div class="toggle" data-toggle-obj="1202"&gt;
+                &lt;div class="answer" data-toggle-target="1202"&gt;
+                    70°
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+
+
+<div id="PRE804">
+    <h2 class="_title">[패턴] 예보기</h2>
+<div class="_box">
+<pre>
+.examViewBtn.reset:before{content:"다시하기";}
+</pre>
+</div>
+</div>
+
+
+<div id="PRE804">
+    <h2 class="_title">[패턴] --img/--text</h2>
+<div class="_box">
+<pre>
+.--inner{width:560px;}
+.--ox{min-width:100%; height:320px;}
+.--ox li{position:relative; min-width:50%; height:100%;}
+.--ox .grayBox{width:100%; height:100%; cursor:pointer;}
+.--ox .icon{position:absolute; top:50%; left:50%; width:90px; height:90px; margin:-45px 0 0 -45px;}
+.--arrow li{width:100%;}
+.--arrow .colorBox{display:inline-block;}
+
+
+.--img{position:relative;}
+.--img .--text{position:absolute;}
+.--text.x1{top:110px; left:120px}
+
+.--img .--answer{position:absolute; top:0; left:0; width:100%; height:100%;}
+</pre>
+</div>
+</div>
+
+
+
+<div id="PRE999">
+    <h2 class="_title">텍스트</h2>
+<div class="_box">
+<pre>
+°
+＋－×＝
+㉠㉡㉢㉣
+
+#e94d40
+#00a0ff
+</pre>
+</div>
+</div>
+
+
+
+
+</div><!-- //sample -->
+.popup_pages .vMid{height:490px;}
+.popup_contents .blankBox{width:40px; height:40px; margin-top:6px;}
+}
+https://cdata2.tsherpa.co.kr/tsherpa/MultiMedia/Flash/2020/curri/index.html?flashxmlnum=yein820&classa=A8-C1-41-MM-MM-04-03-04-0-0-0-0&classno=MM_41_04/suh_0401_02_0004/suh_0401_02_0004_301_1.html
+
+
+view-source:https://cdata2.tsherpa.co.kr/tsherpa/MultiMedia/Flash/2020/curri/MM_41_04/suh_0401_02_0009/suh_0401_02_0009_401_1.html
+
+
+
+<button class="videoSubPlayBtn right" data-video-link="M201801966_800K.mp4" data-hover="">활동영상 보기</button>
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector("#it_reset_btn").addEventListener("click", function(){
+        if( !this.classList.contains( "reset" ) ){
+            this.classList.add( "reset" );
+        }
+    });
+
+    var it_tab = $ts.getEl( ".basicSlider_tabs li" );
+    it_tab.forEach(function (objs, index){
+        objs.addEventListener('click', function () {
+            document.querySelector("#it_reset_btn").classList.add( "reset" );
+        });
+    });
+}, false);
+
+window.dragDropCallbacks = {
+    "drag-obj": function(DRAGDROP) {
+    if (DRAGDROP.droppedArea) {
+        if (DRAGDROP.droppedArea.element.children.length === 1) DRAGDROP.droppedArea.DISABLED = true;
+    }
+    },
+};
+
+</body>
+</html>
