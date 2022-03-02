@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css">
+	<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css">
+	<link rel="stylesheet" href="../../../__common__/css/custom_last.css">
+	<style type="text/css">
+		.lineBox{position: relative; height: 370px; margin-top: 40px; padding-top: 50px;}
+		.lineBox.deeppink,
+		.lineBox.sky{border-radius: 0; border-right: 0;}
+		.lineBox.deeppink:before,
+		.lineBox.deeppink:after,
+		.lineBox.sky:before,
+		.lineBox.sky:after{content: ""; display: block; position: absolute; width: 1px; height: 184px;}
+		.lineBox.deeppink:before,
+		.lineBox.deeppink:after{border-right:5px solid #f7c1c9;}
+		.lineBox.sky:before,
+		.lineBox.sky:after{border-right:5px solid #c1e8ec;}
+		.lineBox.deeppink:before,
+		.lineBox.sky:before{top: 0; right: 0; transform: rotate(-10deg); transform-origin: 0 0;}
+		.lineBox.deeppink:after,
+		.lineBox.sky:after{bottom: 0; right: 0; transform: rotate(10deg); transform-origin: 0 100%;}
+		.lineBox .colorBox{position: absolute; top: -40px; left: 20px;}
+		.lineBox.orange{width: 450px;}
+		.--text{position: absolute;}
+		.--text.n1{top: 154px;left: 230px;}
+		.--text.n2{top: 207px;left: 230px;}
+		.--balloon{top: 100px; left: 320px;}
+	</style>
+</head>
+
+<body>
+
+	<div id="wrap" class="math">
+		<header>
+			<div class="title">
+				110×26을 어떻게 계산하는지 알아봅시다.
+			</div>
+		</header>
+		<main>
+			<div class="basicSlider contentsBox" data-slide-container="main">
+				<ul class="basicSlider_tabs" data-tabs="">
+					<li data-hover="">물음 1</li>
+					<li data-hover="">물음 2</li>
+				</ul>
+				<ul class="basicSlider_slides" data-slides="">
+					<li class="page_1" data-slide-container="">
+						<div class="moveButtonContainer" data-slide-btn-container="">
+							<div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+							<ul class="basicSlider_circle_tabs" data-tabs="">
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+							</ul>
+							<div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+						</div>
+						<ul class="basicSlider_slides inner" data-slides="">
+							<li class="innerTab_1" data-quiz="toggle">
+								<div class="flexListContainer --box">
+									<div class="lineBox deeppink">
+										<div class="colorBox deeppink textAlignC">
+											110×2<span class="redT">6</span>
+										</div>
+										<div class="math_calc_table class3">
+											<table>
+												<tbody>
+													<tr>
+														<td></td>
+														<td>1</td>
+														<td>1</td>
+														<td>0</td>
+													</tr>
+													<tr>
+														<td>×</td>
+														<td></td>
+														<td>2</td>
+														<td><span class="redT">6</span></td>
+													</tr>
+													<tr class="line-tr">
+														<td colspan="4">
+															<div class="rowLine"></div>
+														</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td colspan="3">
+															<div class="toggle" data-toggle-obj="1">
+																<div class="answer" data-toggle-target="1">
+																	482
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="lineBox sky">
+										<div class="colorBox sky textAlignC">
+											110×<span class="blueT">2</span>6
+										</div>
+										<div class="math_calc_table class3">
+											<table>
+												<tbody>
+													<tr>
+														<td></td>
+														<td>1</td>
+														<td>1</td>
+														<td>0</td>
+													</tr>
+													<tr>
+														<td>×</td>
+														<td></td>
+														<td><span class="blueT">2</span></td>
+														<td>6</td>
+													</tr>
+													<tr class="line-tr">
+														<td colspan="4">
+															<div class="rowLine"></div>
+														</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td>6</td>
+														<td>6</td>
+														<td>0</td>
+													</tr>
+													<tr>
+														<td><span class="blueT">2</span></td>
+														<td><span class="blueT">2</span></td>
+														<td><span class="blueT">0</span></td>
+														<td><span class="blueT">0</span></td>
+													</tr>
+													<tr class="line-tr">
+														<td colspan="4">
+															<div class="rowLine"></div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="lineBox orange">
+										<div class="colorBox orange textAlignC">
+											110×<span class="blueT">2</span><span class="redT">6</span>
+										</div>
+										<div class="math_calc_table class3">
+											<table>
+												<tbody>
+													<tr>
+														<td></td>
+														<td>1</td>
+														<td>1</td>
+														<td>0</td>
+													</tr>
+													<tr>
+														<td>×</td>
+														<td></td>
+														<td><span class="blueT">2</span></td>
+														<td><span class="redT">6</span></td>
+													</tr>
+													<tr class="line-tr">
+														<td colspan="4">
+															<div class="rowLine"></div>
+														</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td colspan="3">
+															<div class="toggle" data-toggle-obj="11">
+																<div class="answer" data-toggle-target="11">
+																	660
+																</div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="4">
+															<div class="toggle" data-toggle-obj="12">
+																<div class="answer" data-toggle-target="12">
+																	2200
+																</div>
+															</div>
+														</td>
+													</tr>
+													<tr class="line-tr">
+														<td colspan="4">
+															<div class="rowLine"></div>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="4">
+															<div class="toggle" data-toggle-obj="13">
+																<div class="answer" data-toggle-target="13">
+																	2860
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="--text n1">
+											<div class="icon_arrow mr_10 left"></div>110×6
+										</div>
+										<div class="--text n2">
+											<div class="icon_arrow mr_10 left"></div>110×6
+										</div>
+									</div>
+								</div>
+								<div class="buttonContainer">
+									<button class="dapCheckBtn" data-answer-btn=""></button>
+								</div>
+							</li>
+							<li class="innerTab_2">
+								<div class="flexListContainer center start">
+									<div class="icon_arrow big mr_30"></div>
+									<div class="math_calc_table class3">
+										<table>
+											<tbody>
+												<tr>
+													<td></td>
+													<td>1</td>
+													<td>1</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>×</td>
+													<td></td>
+													<td>2</td>
+													<td>6</td>
+												</tr>
+												<tr class="line-tr">
+													<td colspan="4">
+														<div class="rowLine"></div>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+													<td>6</td>
+													<td>6</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>2</td>
+													<td>0</td>
+													<td></td>
+												</tr>
+												<tr class="line-tr">
+													<td colspan="4">
+														<div class="rowLine"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>8</td>
+													<td>6</td>
+													<td>0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="balloon left ctTail beige --balloon">
+									220이 실제로<br>나타내는 값은<br>2200이야.
+								</div>
+								<div class="textAlignC">
+									<div id="aniBox_1"></div>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<li class="page_2" data-quiz="toggle">
+						<h2><ins class="dot"></ins><span>
+							계산하는 방법을 말해 보세요.
+						</span></h2>
+						<section>
+							<div class="toggle" data-toggle-obj="21">
+								<div class="answer textAlignJ" data-toggle-target="21">
+									<ul class="contentsList">
+										<li>
+											<ins class="bullet exam">예</ins>
+											<div>
+												먼저 110×6을 계산한 다음 110×20을 계산합니다. 그런 다음 두 곱셈의 결과인 660과 2200을 더합니다.
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="buttonContainer">
+								<button class="dapCheckBtn" data-answer-btn=""></button>
+							</div>
+						</section>
+					</li>
+
+				</ul>
+			</div>
+		</main>
+
+		<section class="popup_container" data-popup-container="">
+			<ul class="popup_pages">
+				<li class="whole image pop_page_1" data-popup-page="1">
+					<div class="--img">
+						<div class="balloon ctTail bottom green x1">이 쪽 각의 크기가 <br>더 커!</div>
+						<div class="balloon ctTail right sky x2">아니야. 두 각의 <br>크기는 같아.</div>
+						<div class="balloon ctTail bottom sky x3">각의 크기는<br>두 변이 벌어진 정도를<br>의미하는데∙∙∙∙∙∙.</div>
+					</div>
+					<!-- <img src="./images/suh_h_0401_01_0005_102/suh_h_0401_01_0005_102_1_2.png" alt=""> -->
+				</li>
+
+			</ul>
+		</section>
+
+
+	</div>
+	<div id="loadingContainer">
+		<div class="loadingIconAnimation"></div>
+	</div>
+
+	<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+	<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+	<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+	<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+	<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+	<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+	<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+	<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+	<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+	<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+	<script type="text/javascript" src="../common/contents/js/sprite.js"></script>
+	<script type="text/javascript" src="./js/contents.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			$prite.add({
+				target: $ts.getEl('#aniBox_1'),
+				spriteId: 'sprite1',
+				spriteList: [
+					{
+						name: 'boy_1',
+						circle: 'green',
+						speech:'right',
+						top: 310,
+						left: 420,
+						width: 340,
+						height: 421,
+						thumbNail: '../common/contents/images/character/boy_1.png',
+						spriteSheet: '../common/contents/images/character/boy_1_sprite.png',
+						sound: './media/audios/suh_p_0301_01_0002_202_1.mp3',
+						sheetWidth: 102000,
+						sheetHeight: 421,
+						//endSheet: 0,
+						delay: 40,
+						textBubble: {
+							text: '어림한 값과 계산한 값을<br>비교해 볼까?',
+							class: 'balloon sky ctTail left',
+							top: 330,
+							left: 460,
+							width: 390,
+							textAlign: 'center',
+							wordBreak: 'keep-all'
+						},
+						callbacks: {
+							start: function () {
+								$ts.getEl('#aniBox_1 .characterImg')[0].style.left = '-160px';
+							}, // 시작시 콜백
+							end: function () {
+								$ts.getEl('#aniBox_1 .characterImg')[0].style.left = '0px';
+							} // 끝날시 콜백
+						}
+					}
+				]
+			});
+		}, false);
+
+	</script>
+
+</html>
