@@ -1,0 +1,158 @@
+/*********** reset noteSync desing ***********/
+/* hidden bar */
+.audioPlayer > .bar > * {
+	border: none;
+	padding: 0;
+}
+.audioPlayer > .bar > .controls {
+	width: 100%;
+}
+
+/* hidden controller section */
+.audioPlayer .section {
+	display: none;
+}
+
+.audioPlayer > .bar > .controls > .controlsStopButton {
+	margin-right: 6px;
+}
+
+.sheetContainer {
+	position: relative;
+	padding-top: 0;
+}
+
+/* hidden title */
+.sheetContainer > h1 {
+	display: none;
+}
+
+/* hidden sectionIcon */
+.sheetContainer .sectionIcon {
+	display: none;
+}
+
+.svgList {
+	opacity: 1;
+}
+.svgContainer:after,
+.svgContainer:before {
+	content: none;
+}
+
+/********************************************/
+/*********** set contents design ***********/
+.audioPlayer {
+	position: fixed;
+	top: auto;
+	bottom: 38px;
+	left: 0;
+	right: auto;
+	height: 48px;
+}
+
+.audioPlayer > .bar {
+	width: 100%;
+	height: 100%;
+	min-height: auto;
+	background: #FCFCFC;
+	border-radius: 0;
+	padding: 6px 22px 6px 32px;
+	box-shadow: inset -194px 0px 0 0 #E9D7BF;
+	box-sizing: border-box;
+}
+.audioPlayer > .bar > .controls > .controlsPlayButton,
+.audioPlayer > .bar > .controls > .controlsPauseButton,
+.audioPlayer > .bar > .controls > .controlsStopButton,
+.audioPlayer > .bar .muteButton {
+	width: 36px;
+	height: 36px;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	background-color: transparent;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.audioPlayer > .bar > .controls > .controlsPlayButton,
+.audioPlayer > .bar > .controls > .controlsPauseButton {
+	order: 1;
+	margin: 0 20px 0 30px;
+}
+.audioPlayer > .bar > .controls > .controlsStopButton {
+	margin-right: 20px;
+}
+.audioPlayer > .bar > .controls > .controlsPlayButton {
+	background-image: url('../common/contents/images/icon/icon_media_play.svg');
+}
+.audioPlayer > .bar > .controls > .controlsPlayButton:hover {
+	background-image: url('../common/contents/images/icon/icon_media_play_hover.svg');
+}
+.audioPlayer > .bar > .controls > .controlsPauseButton {
+	display: none;
+	background-image: url('../common/contents/images/icon/icon_media_pause.svg');
+}
+.audioPlayer > .bar > .controls > .controlsPauseButton:hover {
+	background-image: url('../common/contents/images/icon/icon_media_pause_hover.svg');
+}
+.audioPlayer > .bar > .controls > .controlsStopButton {
+	background-image: url('../common/contents/images/icon/icon_media_stop.svg');
+}
+.audioPlayer > .bar > .controls > .controlsStopButton:hover {
+	background-image: url('../common/contents/images/icon/icon_media_stop_hover.svg');
+}
+/* muteBtn*/
+.audioPlayer > .bar .muteButton {
+	background-image: url('../common/contents/images/icon/icon_media_mute.svg');
+}
+.audioPlayer > .bar .muteButton:hover {
+	background-image: url('../common/contents/images/icon/icon_media_mute_hover.svg');
+}
+.controller .muteBtn.on {
+	opacity: 0.5;
+}
+
+.audioPlayer > .bar > .controls .progress.horizon {
+	width: 83.6%;
+	margin: 0 3% 0 0;
+}
+.audioPlayer > .bar > .controls .progress.horizon > .progressBar {
+
+}
+.audioPlayer > .bar > .controls .progress.horizon > .progressBar > .track {
+	border-radius: 8px;
+	background-color: #DEDEDE;
+}
+.audioPlayer > .bar > .controls .progress.horizon > .progressBar > .track > .filled {
+	border-radius: inherit;
+	background-color: #FFC808;
+}
+.audioPlayer > .bar > .controls .progress.horizon > .progressBar > .track > .filled > .handle {
+	width: 32px;
+	height: 18px;
+	border: none;
+	box-shadow: none;
+	border-radius: 10px;
+	background-color: #FFC808;
+}
+
+.audioPlayer > .bar > .controls .controlsTimer {
+	display: none;
+}
+
+.contentsBox .countBox {
+	top: 0;
+	left: 0;
+}
+.contentsBox .svgList {
+	min-height: auto;
+}
+/*  svg */
+svg polygon.on,
+svg path.on,
+svg g.on,
+svg .on > * {
+    fill: #ff0000 !important;
+}

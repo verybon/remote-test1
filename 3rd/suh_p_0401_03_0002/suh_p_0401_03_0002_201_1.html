@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css">
+	<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css">
+
+	<style>
+		.--dib{width:750px; margin:0 auto;}
+		.--dib > .toggle{width:100%;}
+		.page_4 .lineBox{height: 235px;background: url(./images/bg.svg) no-repeat 50% -20px / 1075px auto;}
+		.page_4 .lineBox .--text{font-size: 35px;}
+		.page_4 .lineBox .--text > div{padding: 28px 0 18px;letter-spacing: -2px;}
+		.page_4 .--inner{position: relative;}
+		.page_4 .--inner .--text{position: absolute;}
+		.page_4 .--inner .--text.n1{top: 40px;left: 60px;}
+		.page_4 .--inner .--text.n2{top: 40px;left: 550px;}
+		.page_4 .--inner .--text.n3{top: 115px;left: 450px;padding: 0 20px;background: #fff;}
+		.page_4 .--line{position: absolute;}
+		.page_4 .--line.n1{top: -20px;left: 54px;width: 1px;height: 35px;border-left: 3px dotted #e94d40;}
+		.page_4 .--line.n2{top: 12px;left: 55px;width: 100px;height: 25px;border: dotted #e94d40;border-width: 3px 3px 0 0;}
+		.page_4 .--line.n3{top: 0px;left: 645px;width: 1px;height: 35px;border-left: 3px solid #00a0ff;}
+		.page_4 .--line.n4{top: 110px;left: 300px;width: 520px;height: 33px;border: solid #e94d40;border-width: 0 3px 3px;}
+		.page_4 .--arrow{position: absolute;border-top: 8px solid transparent;border-bottom: 8px solid transparent;}
+		.page_4 .--arrow.n1{top: 30px;left: 150px;border-left: 14px solid #e94d40;transform: rotate(90deg);}
+		.page_4 .--arrow.n2{top: 30px;left: 640px;border-left: 14px solid #00a0ff;transform: rotate(90deg);}
+		.page_4 .--arrow.n3{top: 105px;left: 818px;border-left: 14px solid #e94d40;transform: rotate(270deg);}
+
+	</style>
+</head>
+
+<body>
+
+<div id="wrap" class="math">
+	<header>
+		<div class="title">자동차로 20 km를 이동했을 때 발생한 탄소 발자국은 몇 g인지 알아봅시다.</div>
+	</header>
+	<main>
+		<div class="basicSlider contentsBox" data-slide-container="main">
+			<ul class="basicSlider_tabs" data-tabs="">
+				<li data-hover="">물음 1</li>
+				<li data-hover="">물음 2</li>
+				<li data-hover="">물음 3</li>
+				<li data-hover="">물음 4</li>
+			</ul>
+			<ul class="basicSlider_slides" data-slides="">
+				<li class="page_1" data-quiz="toggle">
+					<h2><ins class="dot"></ins><span>
+						발생한 탄소 발자국은 몇 g일지 어림해 보세요.
+					</span></h2>
+					<section class="full">
+						<div class="toggle" data-toggle-obj="1">
+							<div class="answer" data-toggle-target="1">
+								<ul class="contentsList">
+									<li>
+										<ins class="bullet exam">예</ins>
+										<div>
+											241을 약 200으로 생각하면 10 km를 이동했을 때 발생한 탄소 발자국은 2000 g 정도이고, 20 km를 이동했을 때 발생한 탄소 발자국은 4000 g 정도 될 것 같습니다. 241은 200보다 크므로 발생한 탄소 발자국은 4000 g보다 많습니다.
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="buttonContainer">
+							<button class="dapCheckBtn" data-answer-btn=""></button>
+						</div>
+					</section>
+				</li>
+
+				<li class="page_2" data-quiz="toggle">
+					<h2><ins class="dot"></ins><span>
+						어떻게 구할 수 있을지 이야기해 보세요.
+					</span></h2>
+					<section>
+						<div class="textAlignC">
+							<div style="display:inline-block; text-align:left;">
+								<div class="toggle" data-toggle-obj="21" style="width:100%;">
+									<div class="answer" data-toggle-target="21">
+										<ul class="contentsList">
+											<li>
+												<div class="bullet exam">예</div>
+												<div>
+													241을 20번 더합니다.
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<br>
+								<div class="toggle mt_10" data-toggle-obj="22">
+									<div class="answer" data-toggle-target="22">
+										<ul class="contentsList">
+											<li>
+												<div class="bullet exam">예</div>
+												<div>
+													241을 10배 하고 그것을 다시 2배 합니다.
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<br>
+								<div class="toggle mt_10" data-toggle-obj="23">
+									<div class="answer" data-toggle-target="23">
+										<ul class="contentsList">
+											<li>
+												<div class="bullet exam">예</div>
+												<div>
+													241을 2배 하고 그것을 다시 10배 합니다.
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="buttonContainer">
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+				</li>
+
+				<li class="page_3" data-quiz="toggle">
+					<h2><ins class="dot"></ins><span>
+						곱셈으로 나타내 보세요.
+					</span></h2>
+					<section>
+						<div class="textAlignC">
+							<div class="toggle" data-toggle-obj="31">
+								<div class="answer" data-toggle-target="31">
+									241×20
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="buttonContainer">
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+				</li>
+
+				<li class="page_4" data-quiz="toggle">
+					<h2><ins class="dot"></ins><span>
+						어떻게 계산할 수 있을지 그림으로 알아보세요.
+					</span></h2>
+					<section>
+						<div class="lineBox sky flexListContainer">
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+							<div class="--text">
+								<div>241 g</div><div>241 g</div>
+							</div>
+						</div>
+						<div class="--inner">
+							<div class="--line n1"></div>
+							<div class="--line n2"></div>
+							<div class="--line n3"></div>
+							<div class="--line n4"></div>
+							<div class="--arrow n1"></div>
+							<div class="--arrow n2"></div>
+							<div class="--arrow n3"></div>
+							<div class="--text n1">
+								241 × 2 = <div class="toggle" data-toggle-obj="41">
+									<div class="answer" data-toggle-target="41">
+										482
+									</div>
+								</div>
+							</div>
+							<div class="--text n2">
+								241 × 20 = <div class="toggle" data-toggle-obj="42">
+									<div class="answer" data-toggle-target="42">
+										4820
+									</div>
+								</div>
+							</div>
+							<div class="--text n3">
+								<div class="toggle" data-toggle-obj="43">
+									<div class="answer" data-toggle-target="43">
+										10
+									</div>
+								</div>배
+							</div>
+						</div>
+					</section>
+					<div class="buttonContainer">
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</main>
+
+</div>
+<div id="loadingContainer">
+	<div class="loadingIconAnimation"></div>
+</div>
+
+<script type="text/javascript" src="../common/libs/js/jquery.js"></script>
+<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+<script type="text/javascript" src="../common/contents/js/sprite.js"></script>
+<script type="text/javascript" src="./js/contents.js"></script>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function () {
+
+}, false);
+</script>
+
+</body>
+</html>
