@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css" />
+	<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css">
+	<link rel="stylesheet" href="../../../__common__/css/custom_last.css">
+	<style>
+		img{width:100%;}
+		.pop_page_1{top:130px; left:220px; font-size:40px;}
+		.pop_page_1 .tit{position:relative; z-index:1; width:auto; background-color:#d4f3f6; display:inline-block; padding:5px 20px 7px; border-radius:20px; font-size:40px;}
+		.pop_page_1 .basicSlider_slides > li{padding:30px; box-sizing:border-box;}
+		.pop_page_1 figure{width:90%; margin:0 auto; height:250px; display:flex; align-items:center; justify-content:center;}
+		.pop_page_1 .basicSlider_slides{width:760px; height:560px; box-sizing:border-box;}
+		.bullet.orange.number{margin-top:7px; margin-left:-40px}
+		.flex-wrap{width:100%; height:180px; box-sizing:border-box; justify-content:center;}
+		.flex-wrap .flex-item + .flex-item{margin-left:10px;}
+		.num-wrap{padding-left:40px;}
+
+
+		.tit-box{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding:10px 30px 14px; z-index:1;}
+		.lineBox{display:flex; align-items:center; position:absolute; width:320px; height:192px; padding:10px 50px 10px 30px; z-index:1;}
+		.lineBox .popBtn{position:absolute; right:10px; bottom:10px;}
+		.lineBox.n1{top: 60px;left:2%;}
+		.lineBox.n2{top:-10px; left:350px;}
+		.lineBox.n3{top: 60px;right:0px;}
+		.lineBox.n4{top: 340px;right: 0px;}
+		.lineBox.n5{bottom:0;left: 350px;}
+		.lineBox.n6{top: 340px;left:20px;}
+		.pointContainer .contentsBox {padding-top:25px;}
+		svg{position:absolute;top:50%; left:50%; transform:translate(-50%, -50%); z-index:0;}
+
+
+		.--innerWrap{position: relative; min-height: 400px;}
+
+		.--lineArrow{position:absolute;top: 180px;left: 345px;width: 380px;height: 37px;border: solid #fccd89;border-width: 0 3px 3px 0;}
+		.--lineArrow.x1{top: 115px;left: 157px;width: 342px;height: 50px;border-width: 3px 3px 0 3px;}
+		.--lineArrow.x2{top: 240px;left: 245px;width: 352px;height: 50px;border: solid #00a0ff;border-width: 0 3px 3px 3px;}
+		.--lineArrow:before{content: "";position: absolute;bottom: -5px;right: -10px;border-left: 8px solid transparent;border-right: 8px solid transparent;border-top: 14px solid #fccd89;}
+		.--lineArrow.x2:before{right: -10px;left: auto;border-top: none;border-bottom: 14px solid #00a0ff;bottom: 48px;}
+		.--lineArrow:after{content: "";position: absolute;top: 0px;width: 1px;height: 50px;border-left: 3px solid #e94d40;display: none;}
+		.--lineArrow.x2:after{top: -50px;left: 0;}
+		.--text{position: absolute;}
+		.--text.x1{top: 92px;left: 270px;padding: 0 20px;background-color: #fff;}
+		.--text.x2{top: 265px;left: 370px;padding: 0 20px;background-color: #fff;}
+		.--line{position: absolute;}
+		.--line.x1{top: 224px;left: 148px;width: 28px;border-bottom: 3px solid #fccd89;}
+		.--line.x2{top: 224px;left: 482px;width: 46px;border-bottom: 3px solid #fccd89;}
+		.--line.x3{top: 224px;left: 216px;width: 66px;border-bottom: 3px solid #00a0ff;}
+		.--line.x4{top: 222px;left: 568px;width: 66px;border-bottom: 3px solid #00a0ff;}
+
+		.--arrowText{position: absolute;}
+		.--arrowText:before{content: "";display: block;position: absolute;top: 50%;left: -45px;width: 30px; margin-top: 1px; border-bottom: 3px solid #e94d40;}
+		.--arrowText:after{content: "";position: absolute;top: calc(50% - 6px);left: -50px;border-top: 8px solid transparent;border-bottom: 8px solid transparent;border-right: 14px solid #e94d40;}
+		.--arrowText.x1{top: 173px;left: 258px;}
+		.--arrowText.x2{top: 224px;left: 258px;}
+		.--arrowText.x3{top: 198px;left: 274px;}
+		.--arrowText.x4{top: 145px;left: 264px;}
+		.--arrowText.x5{top: 198px;left: 264px;}
+		.--arrowText.x6{top: 250px;left: 264px;}
+		.--arrowText.x7{top: 305px;left: 264px;}
+
+		.page_3 .math_calc_table tr td{height: 50px;}
+		.page_4 .math_calc_table tr td{height: 50px;}
+		.page_5 .math_calc_table tr td{height: 50px;}
+		.page_6 .math_calc_table tr td{height: 50px;}
+	</style>
+</head>
+
+<body>
+	<div id="wrap" class="pointContainer">
+		<header>
+			<h1><ins class="icon"></ins>
+				생각 그물
+			</h1>
+		</header>
+		<main>
+			<div class="basicSlider contentsBox" data-slide-container="main">
+				<!-- <ul class="basicSlider_tabs" data-tabs="">
+				<li data-hover="">주장 펼치기</li>
+				<li data-hover="">반론하기</li>
+				<li data-hover="">주장 다지기</li>
+				</ul> -->
+				<ul class="basicSlider_slides" data-slides="">
+					<li class="page_1 on">
+						<div class="tit-box colorBox sky">
+							3. 곱셈과 나눗셈
+						</div>
+						<div class="lineBox sky n1">
+							<img src="./images/suh_p_0401_03_0009_301_1/suh_p_0401_03_0009_301_1-1.png" alt="">
+							<button class="popBtn btn_1 zoomBtn" data-hover="" data-popup-btn="1" data-slide="1" data-slide-page="1"></button>
+						</div>
+						<div class="lineBox sky n2">
+							<img src="./images/suh_p_0401_03_0009_301_1/suh_p_0401_03_0009_301_1-2.png" alt="">
+							<button class="popBtn btn_1 zoomBtn" data-hover="" data-popup-btn="1" data-slide="1" data-slide-page="2"></button>
+						</div>
+						<div class="lineBox sky n3">
+							<img src="./images/suh_p_0401_03_0009_301_1/suh_p_0401_03_0009_301_1-3.png" alt="">
+							<button class="popBtn btn_1 zoomBtn" data-hover="" data-popup-btn="1" data-slide="1" data-slide-page="3"></button>
+						</div>
+						<div class="lineBox sky n4">
+							<img src="./images/suh_p_0401_03_0009_301_1/suh_p_0401_03_0009_301_1-4.png" alt="">
+							<button class="popBtn btn_1 zoomBtn" data-hover="" data-popup-btn="1" data-slide="1" data-slide-page="4"></button>
+						</div>
+						<div class="lineBox sky n5">
+							<img src="./images/suh_p_0401_03_0009_301_1/suh_p_0401_03_0009_301_1-5.png" alt="">
+							<button class="popBtn btn_1 zoomBtn" data-hover="" data-popup-btn="1" data-slide="1" data-slide-page="5"></button>
+						</div>
+						<div class="lineBox sky n6">
+							<img src="./images/suh_p_0401_03_0009_301_1/suh_p_0401_03_0009_301_1-6.png" alt="">
+							<button class="popBtn btn_1 zoomBtn" data-hover="" data-popup-btn="1" data-slide="1" data-slide-page="6"></button>
+						</div>
+
+						<svg width="1000" height="500" xmlns="http://w3.org/2000/svg" version="1.1" viewbox= "0 0 300 300">
+							<line x1="20" y1="50" x2="130" y2="150" stroke="#c1e8ec" stroke-width="3" />
+							<line x1="150" y1="150" x2="160" y2="0" stroke="#c1e8ec" stroke-width="3" />
+							<line x1="170" y1="150" x2="300" y2="60" stroke="#c1e8ec" stroke-width="3" />
+							<line x1="150" y1="150" x2="300" y2="220" stroke="#c1e8ec" stroke-width="3" />
+							<line x1="150" y1="150" x2="160" y2="300" stroke="#c1e8ec" stroke-width="3" />
+							<line x1="20" y1="230" x2="150" y2="150" stroke="#c1e8ec" stroke-width="3" />
+						</svg>
+
+						<!-- <button class="dapCheckBtn" data-answer-btn=""></button> -->
+					</li>
+				</ul>
+			</div>
+		</main>
+		<section class="popup_container" data-popup-container="">
+			<ul class="popup_pages">
+				<li class="image pop_page_1" data-popup-page="1" data-drag>
+					<div class="basicSlider" data-slide-container="popup">
+						<ul class="basicSlider_slides" data-slides="">
+							<li class="page_1">
+								<div>
+									<div class="tit">
+										세 자리 수에 몇십을 곱해 볼까요
+									</div>
+								</div>
+								<div class="--innerWrap">
+									<div class="--lineArrow x1"></div>
+									<div class="--lineArrow x2"></div>
+									<div class="--text x1"><span class="redT">10</span>배</div>
+									<div class="--text x2"><span class="redT">10</span>배</div>
+									<div class="--line x1"></div>
+									<div class="--line x2"></div>
+									<div class="--line x3"></div>
+									<div class="--line x4"></div>
+									<div class="flexListContainer center jcenter" style="height:400px;">
+										<div>289×2＝578</div>
+										<ins class="icon_arrow ml_30 mr_30"></ins>
+										<div>289×2<span class="redT">0</span>＝578<span class="redT">0</span></div>
+									</div>
+								</div>
+							</li>
+							<li class="page_2">
+								<div>
+									<div class="tit ">
+										세 자리 수에 두 자리 수를 곱해 볼까요
+									</div>
+								</div>
+								<div class="--innerWrap flexListContainer center">
+									<div class="--arrowText x1">255×<span class="redT">4</span></div>
+									<div class="--arrowText x2">255×<span class="blueT">30</span></div>
+									<div class="math_calc_table class3" style="padding-right:210px;">
+										<table>
+											<tbody>
+												<tr>
+													<td></td>
+													<td>2</td>
+													<td>5</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>×</td>
+													<td></td>
+													<td class="blueT">3</td>
+													<td class="redT">4</td>
+												</tr>
+												<tr class="line-tr">
+													<td colspan="4">
+														<div class="rowLine"></div>
+													</td>
+												</tr>
+												<tr>
+													<td class="redT">1</td>
+													<td class="redT">0</td>
+													<td class="redT">2</td>
+													<td class="redT">0</td>
+												</tr>
+												<tr>
+													<td class="blueT">7</td>
+													<td class="blueT">6</td>
+													<td class="blueT">5</td>
+													<td class="blueT">0</td>
+												</tr>
+												<tr class="line-tr">
+													<td colspan="4">
+														<div class="rowLine"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>8</td>
+													<td>6</td>
+													<td>7</td>
+													<td>0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<ins class="icon_arrow"></ins>
+									<div class="math_calc_table class3">
+										<table>
+											<tbody>
+												<tr>
+													<td></td>
+													<td>2</td>
+													<td>5</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>×</td>
+													<td></td>
+													<td>3</td>
+													<td>4</td>
+												</tr>
+												<tr class="line-tr">
+													<td colspan="4">
+														<div class="rowLine"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>0</td>
+													<td>2</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>6</td>
+													<td>5</td>
+													<td></td>
+												</tr>
+												<tr class="line-tr">
+													<td colspan="4">
+														<div class="rowLine"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>8</td>
+													<td>6</td>
+													<td>7</td>
+													<td>0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</li>
+							<li class="page_3">
+								<div>
+									<div class="tit">
+										몇십으로 나누어 볼까요
+									</div>
+								</div>
+								<div class="--innerWrap flexListContainer center jcenter">
+									<div class="--arrowText x3">20×<span class="redT">9</span></div>
+									<div class="textAlignC mr_40" style="min-width: 260px;">
+										180÷20＝<span class="redT">9</span>
+									</div>
+									<div class="math_calc_table type2 col5" style="padding-right: 180px;">
+										<table>
+											<colgroup>
+												<col>
+												<col style="width:11px;">
+												<col>
+												<col>
+												<col>
+											</colgroup>
+											<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="redT">9</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>20</td>
+												<td class="line-td"></td>
+												<td>1</td>
+												<td>8</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td>1</td>
+												<td>8</td>
+												<td>0</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>0</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</li>
+							<li class="page_4">
+								<div>
+									<div class="tit">
+										몇십몇으로 나누어 볼까요
+									</div>
+								</div>
+								<div class="--innerWrap flexListContainer center jcenter">
+									<div class="--arrowText x3">27×<span class="redT">6</span></div>
+									<div class="colorBox green textAlignC mr_40" style="min-width:260px;">
+										<div>27×<span class="redT">5</span>＝135</div>
+										<div class="mt_10">27×<span class="redT">6</span>＝162</div>
+										<div class="mt_10">27×<span class="redT">7</span>＝189</div>
+									</div>
+									<div class="math_calc_table type2 col5" style="padding-right: 180px;">
+										<table>
+											<colgroup>
+												<col>
+												<col style="width:11px;">
+												<col>
+												<col>
+												<col>
+											</colgroup>
+											<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="redT">6</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>27</td>
+												<td class="line-td"></td>
+												<td>1</td>
+												<td>8</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td>1</td>
+												<td>6</td>
+												<td>2</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>2</td>
+												<td>4</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</li>
+							<li class="page_5">
+								<div>
+									<div class="tit ls3">
+										세 자리 수를 두 자리 수로 나누어 볼까요(1)
+									</div>
+								</div>
+								<div class="--innerWrap flexListContainer center jcenter">
+									<div class="--arrowText x4">28×<span class="blueT">30</span></div>
+									<div class="--arrowText x5">896－<span class="blueT">840</span></div>
+									<div class="--arrowText x6">28×<span class="redT">2</span></div>
+									<div class="--arrowText x7">56－<span class="redT">56</span></div>
+									<div class="math_calc_table type2 col5" style="padding-right: 220px;">
+										<table>
+											<colgroup>
+												<col>
+												<col style="width:11px;">
+												<col>
+												<col>
+												<col>
+											</colgroup>
+											<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="blueT">3</td>
+												<td class="redT">2</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>28</td>
+												<td class="line-td"></td>
+												<td>8</td>
+												<td>9</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td class="blueT">8</td>
+												<td class="blueT">4</td>
+												<td class="blueT">0</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>5</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="redT">5</td>
+												<td class="redT">6</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>0</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+									<ins class="icon_arrow ml_20 mr_20"></ins>
+									<div class="math_calc_table type2 col5">
+										<table>
+											<colgroup>
+												<col>
+												<col style="width:11px;">
+												<col>
+												<col>
+												<col>
+											</colgroup>
+											<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>3</td>
+												<td>2</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>28</td>
+												<td class="line-td"></td>
+												<td>8</td>
+												<td>9</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td>8</td>
+												<td>4</td>
+												<td></td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>5</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>5</td>
+												<td>6</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>0</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</li>
+							<li class="page_6">
+								<div>
+									<div class="tit ls3">
+										세 자리 수를 두 자리 수로 나누어 볼까요(2)
+									</div>
+								</div>
+								<div class="--innerWrap flexListContainer center jcenter">
+									<div class="--arrowText x4">14×<span class="blueT">20</span></div>
+									<div class="--arrowText x5">357－<span class="blueT">280</span></div>
+									<div class="--arrowText x6">14×<span class="redT">5</span></div>
+									<div class="--arrowText x7">77－<span class="redT">70</span></div>
+									<div class="math_calc_table type2 col5" style="padding-right: 220px;">
+										<table>
+											<colgroup>
+												<col>
+												<col style="width:11px;">
+												<col>
+												<col>
+												<col>
+											</colgroup>
+											<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="blueT">2</td>
+												<td class="redT">5</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>14</td>
+												<td class="line-td"></td>
+												<td>3</td>
+												<td>5</td>
+												<td>7</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td class="blueT">2</td>
+												<td class="blueT">8</td>
+												<td class="blueT">0</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>7</td>
+												<td>7</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="redT">7</td>
+												<td class="redT">0</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>7</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+									<ins class="icon_arrow ml_20 mr_20"></ins>
+									<div class="math_calc_table type2 col5">
+										<table>
+											<colgroup>
+												<col>
+												<col style="width:11px;">
+												<col>
+												<col>
+												<col>
+											</colgroup>
+											<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>2</td>
+												<td>5</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>14</td>
+												<td class="line-td"></td>
+												<td>3</td>
+												<td>5</td>
+												<td>7</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td>2</td>
+												<td>8</td>
+												<td></td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>7</td>
+												<td>7</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>7</td>
+												<td>0</td>
+											</tr>
+											<tr class="line-tr">
+												<td></td>
+												<td colspan="4">
+													<div class="rowLine"></div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>7</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="moveButtonContainer" data-slide-btn-container="">
+							<div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+							<ul class="basicSlider_circle_tabs" data-tabs="">
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+							</ul>
+							<div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<div id="loadingContainer">
+		<div class="loadingIconAnimation"></div>
+	</div>
+
+	<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+	<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+	<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+	<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+	<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+	<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+	<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+	<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+	<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+	<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+	<script type="text/javascript" src="./js/contents.js"></script>
+	<script type="text/javascript"></script>
+</body>
+
+</html>

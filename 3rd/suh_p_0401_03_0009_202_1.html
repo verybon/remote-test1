@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css">
+	<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css">
+	<link rel="stylesheet" type="text/css" href="../../../default/css/custom.css">
+	<link rel="stylesheet" href="../../../__common__/css/custom_last.css">
+	<style type="text/css">
+		.popup_pages .buttonContainer{right:40px; bottom:20px;}
+		header .title .blankBox{width:40px; height:40px; margin-top:2px;}
+		.popup_pages .blankBox{width:40px; height:40px; vertical-align:-5px;}
+
+		.--img{position:relative; width:100%; height:360px;}
+		.--text{position: absolute;}
+		.math_calc_table{margin: 0 auto;}
+		.math_calc_table tr td{height: 58px;}
+		.math_calc_table tr.answer .rowLine{background: #00a0ff;}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- 스프라이트 있을 시에 무조건 추가 -->
+		<header>
+			<div class="title active">
+				<div class="bullet number orange inline mt_5">2</div>
+				계산해 보세요.
+			</div>
+		</header>
+		<main>
+			<div class="contentsBox" data-quiz="toggle">
+				<section>
+					<div class="flexListContainer around pt_100">
+						<div class="--innerWrap">
+							<div class="math_calc_table type2 col5">
+								<table>
+									<colgroup>
+										<col>
+										<col style="width:11px;">
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td colspan="2">
+											<div class="toggle" data-toggle-obj="1">
+												<div class="answer" data-toggle-target="1">
+													10
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="line-tr">
+										<td></td>
+										<td colspan="4">
+											<div class="rowLine"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>40</td>
+										<td class="line-td"></td>
+										<td>4</td>
+										<td>2</td>
+										<td>6</td>
+									</tr>
+									<tr class="answer" data-toggle-target="1">
+										<td></td>
+										<td></td>
+										<td>4</td>
+										<td>0</td>
+										<td></td>
+									</tr>
+									<tr class="line-tr answer" data-toggle-target="1">
+										<td></td>
+										<td colspan="4">
+											<div class="rowLine"></div>
+										</td>
+									</tr>
+									<tr class="answer" data-toggle-target="1">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>2</td>
+										<td>6</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="--innerWrap">
+							<div class="math_calc_table type2 col5">
+								<table>
+									<colgroup>
+										<col>
+										<col style="width:11px;">
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="toggle" data-toggle-obj="4">
+												<div class="answer" data-toggle-target="4">
+													3
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="line-tr">
+										<td></td>
+										<td colspan="4">
+											<div class="rowLine"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>83</td>
+										<td class="line-td"></td>
+										<td>2</td>
+										<td>4</td>
+										<td>9</td>
+									</tr>
+									<tr class="answer" data-toggle-target="4">
+										<td></td>
+										<td></td>
+										<td>2</td>
+										<td>4</td>
+										<td>9</td>
+									</tr>
+									<tr class="line-tr answer" data-toggle-target="4">
+										<td></td>
+										<td colspan="4">
+											<div class="rowLine"></div>
+										</td>
+									</tr>
+									<tr class="answer" data-toggle-target="4">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>0</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="buttonContainer left">
+						<button class="characterBtn" data-popup-btn="1" data-hover="">
+							<span>한 번 더 <b>1</b></span>
+						</button>
+						<button class="characterBtn" data-popup-btn="2" data-hover="">
+							<span>한 번 더 <b>2</b></span>
+						</button>
+					</div>
+					<div class="buttonContainer">
+						<!-- <button class="solveCheckBtn" data-popup-btn="3" data-hover=""></button> -->
+						<button class="dapCheckBtn" data-answer-btn=""></button>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<section class="popup_container" data-popup-container="">
+			<ul class="popup_pages">
+				<li class="whole pop_page_1 " data-popup-page="1">
+					<h2 class="box"><span>한 번 더 <b class="yellowT">1</b></span></h2>
+					<div class="popup_contents">
+						<ul class="contentsList">
+							<li data-quiz="toggle">
+								<ins class="bullet circleDot"></ins>
+								<div>
+									<p class="mb_10">
+										계산해 보세요.
+									</p>
+									<div>
+										<div class="flexListContainer around pt_70">
+											<div class="--innerWrap">
+												<div class="math_calc_table type2 col5">
+													<table>
+														<colgroup>
+															<col>
+															<col style="width:11px;">
+															<col>
+															<col>
+															<col>
+														</colgroup>
+														<tbody>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td colspan="1">
+																<div class="toggle" data-toggle-obj="1">
+																	<div class="answer" data-toggle-target="1">
+																		7
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr class="line-tr">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr>
+															<td>80</td>
+															<td class="line-td"></td>
+															<td>5</td>
+															<td>6</td>
+															<td>1</td>
+														</tr>
+														<tr class="answer" data-toggle-target="1">
+															<td></td>
+															<td></td>
+															<td>5</td>
+															<td>6</td>
+															<td>0</td>
+														</tr>
+														<tr class="line-tr answer" data-toggle-target="1">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr class="answer" data-toggle-target="1">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>1</td>
+														</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="--innerWrap">
+												<div class="math_calc_table type2 col5">
+													<table>
+														<colgroup>
+															<col>
+															<col style="width:11px;">
+															<col>
+															<col>
+															<col>
+														</colgroup>
+														<tbody>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td colspan="2">
+																<div class="toggle" data-toggle-obj="4">
+																	<div class="answer" data-toggle-target="4">
+																		37
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr class="line-tr">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr>
+															<td>24</td>
+															<td class="line-td"></td>
+															<td>9</td>
+															<td>0</td>
+															<td>0</td>
+														</tr>
+														<tr class="answer" data-toggle-target="4">
+															<td></td>
+															<td></td>
+															<td>7</td>
+															<td>2</td>
+															<td></td>
+														</tr>
+														<tr class="line-tr answer" data-toggle-target="4">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr class="answer" data-toggle-target="4">
+															<td></td>
+															<td></td>
+															<td>1</td>
+															<td>8</td>
+															<td>0</td>
+														</tr>
+														<tr class="answer" data-toggle-target="4">
+															<td></td>
+															<td></td>
+															<td>1</td>
+															<td>6</td>
+															<td>8</td>
+														</tr>
+														<tr class="line-tr answer" data-toggle-target="4">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr class="answer" data-toggle-target="4">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>1</td>
+															<td>2</td>
+														</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="./data/(4-1-3)풀어보고확인하고한번더_1.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+								<div class="buttonContainer">
+									<button class="dapCheckBtn" data-answer-btn=""></button>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="whole pop_page_2" data-popup-page="2">
+					<h2 class="box"><span>한 번 더 <b class="yellowT">2</b></span></h2>
+					<div class="popup_contents">
+						<ul class="contentsList">
+							<li data-quiz="toggle">
+								<ins class="bullet circleDot"></ins>
+								<div>
+									<p class="mb_10">
+										계산해 보세요.
+									</p>
+									<div>
+										<div class="flexListContainer around pt_70">
+											<div class="--innerWrap">
+												<div class="math_calc_table type2 col5">
+													<table>
+														<colgroup>
+															<col>
+															<col style="width:11px;">
+															<col>
+															<col>
+															<col>
+														</colgroup>
+														<tbody>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td colspan="2">
+																<div class="toggle" data-toggle-obj="1">
+																	<div class="answer" data-toggle-target="1">
+																		11
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr class="line-tr">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr>
+															<td>50</td>
+															<td class="line-td"></td>
+															<td>5</td>
+															<td>6</td>
+															<td>1</td>
+														</tr>
+														<tr class="answer" data-toggle-target="1">
+															<td></td>
+															<td></td>
+															<td>5</td>
+															<td>0</td>
+															<td></td>
+														</tr>
+														<tr class="line-tr answer" data-toggle-target="1">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr class="answer" data-toggle-target="1">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>6</td>
+															<td>1</td>
+														</tr>
+														<tr class="answer" data-toggle-target="1">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>5</td>
+															<td>0</td>
+														</tr>
+														<tr class="line-tr answer" data-toggle-target="1">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr class="answer" data-toggle-target="1">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>1</td>
+															<td>1</td>
+														</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="--innerWrap">
+												<div class="math_calc_table type2 col5">
+													<table>
+														<colgroup>
+															<col>
+															<col style="width:11px;">
+															<col>
+															<col>
+															<col>
+														</colgroup>
+														<tbody>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td colspan="2">
+																<div class="toggle" data-toggle-obj="4">
+																	<div class="answer" data-toggle-target="4">
+																		18
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr class="line-tr">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr>
+															<td>32</td>
+															<td class="line-td"></td>
+															<td>6</td>
+															<td>0</td>
+															<td>0</td>
+														</tr>
+														<tr class="answer" data-toggle-target="4">
+															<td></td>
+															<td></td>
+															<td>3</td>
+															<td>2</td>
+															<td></td>
+														</tr>
+														<tr class="line-tr answer" data-toggle-target="4">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr class="answer" data-toggle-target="4">
+															<td></td>
+															<td></td>
+															<td>2</td>
+															<td>8</td>
+															<td>0</td>
+														</tr>
+														<tr class="answer" data-toggle-target="4">
+															<td></td>
+															<td></td>
+															<td>2</td>
+															<td>5</td>
+															<td>6</td>
+														</tr>
+														<tr class="line-tr answer" data-toggle-target="4">
+															<td></td>
+															<td colspan="4">
+																<div class="rowLine"></div>
+															</td>
+														</tr>
+														<tr class="answer" data-toggle-target="4">
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>2</td>
+															<td>4</td>
+														</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="./data/(4-1-3)풀어보고확인하고한번더_2.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+								<div class="buttonContainer">
+									<button class="dapCheckBtn" data-answer-btn=""></button>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+			</ul>
+		</section>
+	</div>
+	<div id="loadingContainer">
+		<div class="loadingIconAnimation"></div>
+	</div>
+
+
+
+	<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+	<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+	<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+	<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+	<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+	<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+	<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+	<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+	<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+	<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+	<script type="text/javascript" src="../common/contents/js/sprite.js"></script>
+	<script type="text/javascript" src="./js/contents.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+
+		}, false);
+
+	</script>
+
+</body>
+
+</html>
