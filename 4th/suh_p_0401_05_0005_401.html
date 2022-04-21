@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../common/libs/css/master.css" />
+	<!--  수학 -->
+	<link rel="stylesheet" type="text/css" href="../common/contents/css/math.css" />
+	<link rel="stylesheet" href="../../../__common__/css/custom_last.css">
+	<link rel="stylesheet" type="text/css" href="../../../default/css/custom.css">
+	<style>
+		.checkContainer h2 .blankBox{width:40px; min-width:40px;}
+
+		.addLineController{top:8px;}
+		.checkContainer .contentsBox h2 {
+			font-size: 40px !important;
+			line-height: 1.3em !important;
+			margin-bottom: 30px;
+		}
+		.checkContainer h2 .blankBox,
+		.checkContainer h2 .toggleBlank.circle,
+		.checkContainer h2 .icon_o_title{margin-top:6px}
+		h2 .icon_bogi {margin: 8px 4px 0 4px!important;}
+
+		/* 활동지 다운로드 */
+		.gate_container .downloadBtn{right:20px; left:auto;}
+
+
+		/* 개별 */
+		.--title{margin:0 0 20px; letter-spacing: -1px;}
+		.--title .colorBox.check{width: auto; margin: 0; padding: 8px 10px; border-radius:40px; font-size: 18px; vertical-align: middle;}
+		.--flex-Q{display: flex; align-items: center; align-self: flex-start; min-width: 190px; margin-right: 10px;}
+		.page_1to3 .--lineBox{display: block; width: 490px; margin: 0 auto 0; padding: 5px 0;}
+		.page_1to3 .--graph{position: absolute;top: 70px;left: 220px;width: 610px;height: 240px;margin: 10px auto 0;background: url(./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_8.png) no-repeat 50% 50% / 600px 100%;}
+		.page_1to3.page_30 .--graph{position: relative; top: auto; left: auto; background: url(./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_9.png) no-repeat 50% 50% / 600px 100%;}
+		.page_1to3 .--graph .--text{position: absolute; font-size: 35px;}
+		.page_1to3 .--graph .--text.n1{top: 2px;left: 22px;}
+		.page_1to3 .--graph .--text.n2{top: -28px;left: 76px;text-align: right;line-height: 88px;}
+		.page_1to3 .--graph .--text.n3{top: 152px;left: 97px;}
+		.page_1to3 .--graph .--text.n4{top: 172px;left: -21px;}
+		.page_1to3 .--graph .--text.n5{top: 209px;left: 58px;}
+		.page_1to3 .--graph .--text.n6{top: 192px;left: 142px;}
+		.page_1to3 .--graph .--text.n7{top: 192px;left: 237px;}
+		.page_1to3 .--graph .--text.n8{top: 192px;left: 332px;}
+		.page_1to3 .--graph .--text.n9{top: 192px;left: 411px;}
+		.page_1to3 .--graph .--text.n10{top: 190px;left: 524px; line-height: 1;}
+		.page_1to3 .--graph .--text.n11{top: 0px;left: 10px;}
+		.page_1to3 .--graph .answer{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_9.png) no-repeat 50% 50% / 600px 100%;}
+		.page_1to3 section{margin-top: -20px;}
+		.page_10 .tableContainer .toggle{display: flex; align-items: center; justify-content: center; width: 100%; min-height: 90px;}
+
+
+.--title .colorBox.check{width: auto; height:40px; margin: 7px 0 0; padding: 9px 10px 8px; border-radius:40px; font-size: 18px; vertical-align: middle;}
+
+.popBtn.look {
+	position: absolute;
+	top: 20px;
+	right: 5px;
+}
+
+/* �앹뾽 */
+.pop_page_1 .con,
+.pop_page_2 .con {
+	position: relative;
+	text-align: center;
+	margin-top: 190px;
+}
+.pop_page_1 .con .lineBox,
+.pop_page_2 .con .lineBox {
+	display: inline-block;
+	margin: 0 0 35px 0;
+	padding: 10px 30px;
+}
+.pop_page_1 .con .tableContainer table ,
+.pop_page_2 .con .tableContainer table {
+	table-layout: fixed;
+}
+
+/* page_1 */
+.page_1 .con {
+	position: relative;
+	text-align: center;
+	margin-top: 5px;
+}
+.page_1 .con .lineBox {
+	display: inline-block;
+	margin: 0 0 18px 0;
+	padding: 10px 30px;
+}
+.page_1 .con .tableContainer table {
+	table-layout: fixed;
+}
+.page_1 .textAlignC {
+	text-align: center;
+	margin-top: 18px;
+}
+
+/* page_2 */
+.page_2 .scrollOutBox.height ,
+.page_3 .scrollOutBox.height { height: 330px; }
+.page_2 .con,
+.page_3 .con {
+	position: relative;
+	text-align: center;
+	margin-top: 0px;
+}
+.page_2 .con .lineBox,
+.page_3 .con .lineBox {
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 5px 15px;
+}
+.page_2 .imgCon,
+.page_3 .imgCon {
+	margin: 0 auto;
+	position: relative;
+	width: 650px;
+	height: 350px;
+	z-index: 100;
+}
+.page_2 .imgCon .toggle{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.page_2 .img_2_1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 650px;
+	height: 350px;
+	background: url(./images/suh_0401_05_0005_401_1_2_1.png) no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.page_2 .img_2_2 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 650px;
+	height: 350px;
+	background: url(./images/suh_0401_05_0005_401_1_2_2.png) no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.page_2 .imgCon .qBox {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.page_2 .imgCon .qBoxBg {
+	padding: 0;
+}
+.page_2 .--text{position: absolute; font-size: 35px;}
+.page_2 .--text.n1{top: 30px;left: 10px;}
+.page_2 .--text.n2{top: -4px;left: 93px;text-align: right;line-height: 105px;}
+.page_2 .--text.n3{top: 220px;left: 113px;}
+.page_2 .--text.n4{top: 256px;left: -28px;}
+.page_2 .--text.n5{top: 280px;left: 75px;}
+.page_2 .--text.n6{top: 270px;left: 190px;}
+.page_2 .--text.n7{top: 270px;left: 362px;}
+.page_2 .--text.n8{top: 270px;left: 530px;}
+
+
+/* page_3 */
+.page_3 .img_3_1 {
+	position: absolute;
+	top: 1px;
+	left: 0px;
+	width: 650px;
+	height: 350px;
+	background: url(./images/suh_0401_05_0005_401_1_3_1.png) no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.page_3 .toggle {
+	position: absolute;
+	right: 40px;
+	top: 200px;
+}
+.quizBox{
+	min-width: 48px;
+	font-size: 15px;
+	margin-right: 0;
+	text-align: center;
+	border-radius: 30px;
+	padding: 8px 10px;
+	color: #fff;
+	background-color: #ad7c65;
+	display: inline-block;
+	font-family: YGJAL;
+	line-height: 1.5em;
+	vertical-align: middle;
+	margin-top: -8px;
+}
+.page_3 .--text{position: absolute; font-size: 35px;}
+.page_3 .--text.n1{top: 30px;left: 10px;}
+.page_3 .--text.n2{top: -4px;left: 93px;text-align: right;line-height: 105px;}
+.page_3 .--text.n3{top: 220px;left: 113px;}
+.page_3 .--text.n4{top: 256px;left: -28px;}
+.page_3 .--text.n5{top: 280px;left: 75px;}
+.page_3 .--text.n6{top: 270px;left: 190px;}
+.page_3 .--text.n7{top: 270px;left: 362px;}
+.page_3 .--text.n8{top: 270px;left: 530px;}
+
+/* page_4 */
+.page_4 .con,
+.page_5 .con {
+	position: relative;
+	text-align: center;
+	margin-top: 5px;
+}
+.page_4 .con .lineBox,
+.page_5 .con .lineBox {
+	display: inline-block;
+	margin: 0 0 18px 0;
+	padding: 10px 30px;
+}
+.page_4 .con .tableContainer table {
+	table-layout: fixed;
+}
+.page_4 .textAlignC {
+	text-align: center;
+	margin-top: 18px;
+}
+.page_5 .imgCon {
+	margin: 0 auto;
+	position: relative;
+	width: 670px;
+	height: 350px;
+	z-index: 100;
+}
+.page_5 .img_2_1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 670px;
+	height: 350px;
+	background: url(./images/suh_0401_05_0005_401_1_5_1_.png) no-repeat;
+	background-position: center 0;
+	background-size: contain;
+}
+.page_5 .imgCon .toggle{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.page_5 .img_2_2 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 670px;
+	height: 350px;
+	background: url(./images/suh_0401_05_0005_401_1_5_2_.png) no-repeat;
+	background-position: center 0;
+	background-size: contain;
+}
+.tableContainer table td, .tableContainer table th{font-size:40px;}
+h2 .tab{
+	display: inline-block;
+	font-size: 15px !important;
+	margin:11px 5px 0 0;
+	text-align: center;
+	border-radius: 30px;
+	padding: 8px 10px;
+	color: #ad7c65;
+	background-color: #fff;
+	font-family: YGJAL;
+	border:1px solid #ad7c65;
+	line-height:1.2;
+	height:16px;
+}
+.popBtn.textInBtn.inline{margin-top:5px;}
+
+.page_5 .--text{position: absolute; font-size: 35px;}
+.page_5 .--text.n1{top: 270px;left: 574px;}
+.page_5 .--text.n2{top: 8px;left: 20px;text-align: center;line-height: 80px;}
+.page_5 .--text.n3{top: 244px;left: 8px;}
+.page_5 .--text.n4{top: 272px;left: 82px;}
+.page_5 .--text.n5{top: 242px;left: 150px;}
+.page_5 .--text.n6{top: 242px;left: 310px;}
+.page_5 .--text.n7{top: 242px;left: 472px;}
+.page_5 .--text.n8{top: 242px;left: 624px;}
+
+	</style>
+</head>
+
+<body>
+	<div id="wrap" class="checkContainer math" data-open-gate="">
+		<div class="prev-img"><img src="../common/contents/images/quiz/alert_correct.png" alt=""><img
+				src="../common/contents/images/quiz/alert_incorrect.png" alt=""></div>
+		<div class="gate_container">
+			<div class="gate_title_container">
+				<div class="gate_title_title">확인 문제</div>
+				<div class="gate_btn" data-open-btn="" data-hover="">시작</div>
+				<a href="./data/(4-1-5)형성평가2_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+			</div>
+		</div>
+		<header>
+			<div class="checkTitle">
+				<span class="title"><span class="orange">확인</span> 문제</span>
+			</div>
+		</header>
+		<main>
+			<div class="basicSlider contentsBox" data-slide-container="main">
+				<ul class="basicSlider_tabs" data-tabs="">
+					<li data-hover="">문제 1</li>
+					<li data-hover="">문제 2</li>
+					<li data-hover="">문제 3</li>
+					<li data-hover="">문제 4</li>
+					<li data-hover="">문제 5</li>
+					<li data-hover="">문제 6</li>
+					<li data-hover="">문제 7</li>
+					<li data-hover="">문제 8</li>
+				</ul>
+				<ul class="basicSlider_slides" data-slides="">
+					<li class="page_10 page_1to3" data-slide-container="">
+						<div class="moveButtonContainer" data-slide-btn-container="">
+							<div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+							<ul class="basicSlider_circle_tabs" data-tabs="">
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+							</ul>
+							<div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+						</div>
+						<ul class="basicSlider_slides" data-slides="">
+							<li class="innerTab_1">
+								<div class="--title">
+									<div class="flexListContainer start --flex">
+										<div class="--flex-Q">
+											<span>[</span><span class="colorBox brown check">문제 1</span><span>~</span><span class="colorBox brown check">문제 3</span><span>]</span>
+										</div>
+										<div class="textAlignJ ls1_5">준기네 반 학생들이 좋아하는 운동을 조사하여 나타낸 것입니다. 조사한 것을 보고 물음에 답하시오.</div>
+									</div>
+								</div>
+								<div class="lineBox sky" style="width: 320px; margin:0 auto 10px; padding-top:3px; padding-bottom:3px; text-align:center;">좋아하는 운동</div>
+								<div class="--img">
+									<img src="./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_1.png" alt="" style="width: 100%;">
+								</div>
+								<div class="flexListContainer center jcenter">
+									<img src="./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_2.png" alt="" height="40">
+									<span class="mr_20" style="margin-left:-10px;">：배구</span>
+									<img src="./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_3.png" alt="" height="40">
+									<span class="mr_20" style="margin-left:-10px;">：농구</span>
+									<img src="./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_4.png" alt="" height="40">
+									<span class="mr_20" style="margin-left:-10px;">：야구</span>
+									<img src="./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_5.png" alt="" height="40">
+									<span class="mr_20" style="margin-left:-10px;">：테니스</span>
+									<img src="./images/suh_p_0401_05_0005_401_1/suh_p_0401_05_0005_401_1_6.png" alt="" height="40">
+									<span style="margin-left:-10px;">：배드민턴</span>
+								</div>
+
+								<a href="./data/(4-1-5)형성평가2_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+							</li>
+							<li class="innerTab_2" data-quiz="toggle">
+								<div class="--title">
+									<div class="flexListContainer start --flex">
+										<div class="--flex-Q">
+											<span>[</span><span class="colorBox brown check">문제 1</span><span>~</span><span class="colorBox brown check">문제 3</span><span>]</span>
+										</div>
+										<div class="textAlignJ ls1_5">준기네 반 학생들이 좋아하는 운동을 조사하여 나타낸 것입니다. 조사한 것을 보고 물음에 답하시오.</div>
+									</div>
+								</div>
+								<h2><ins class="dot orange"></ins><span>
+									조사한 자료를 표로 정리해 보시오.
+								</span></h2>
+								<section>
+									<div class="lineBox sky textAlignC --lineBox">
+										좋아하는 운동별 학생 수
+									</div>
+									<div class="tableContainer brown fix mt_10">
+										<table>
+											<tr>
+												<th>운동</th>
+												<th>배구</th>
+												<th>농구</th>
+												<th>야구</th>
+												<th>테니스</th>
+												<th>배드<br>민턴</th>
+												<th>합계</th>
+											</tr>
+											<tr>
+												<th>학생 수<br>(명)</th>
+												<td>
+													<div class="toggle noBg" data-toggle-obj="2">
+														<div class="answer" data-toggle-target="2">
+															4
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="toggle noBg" data-toggle-obj="3">
+														<div class="answer" data-toggle-target="3">
+															8
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="toggle noBg" data-toggle-obj="4">
+														<div class="answer" data-toggle-target="4">
+															7
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="toggle noBg" data-toggle-obj="5">
+														<div class="answer" data-toggle-target="5">
+															5
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="toggle noBg" data-toggle-obj="6">
+														<div class="answer" data-toggle-target="6">
+															3
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="toggle noBg" data-toggle-obj="7">
+														<div class="answer" data-toggle-target="7">
+															27
+														</div>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="buttonContainer">
+										<button class="dapCheckBtn" data-answer-btn=""></button>
+									</div>
+									<a href="./data/(4-1-5)형성평가2_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+								</section>
+							</li>
+						</ul>
+					</li>
+
+					<li class="page_20 page_1to3" data-slide-container="">
+						<div class="moveButtonContainer" data-slide-btn-container="">
+							<div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+							<ul class="basicSlider_circle_tabs" data-tabs="">
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+							</ul>
+							<div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+						</div>
+						<ul class="basicSlider_slides" data-slides="">
+							<li class="innerTab_1">
+								<div class="--title">
+									<div class="flexListContainer start --flex">
+										<div class="--flex-Q">
+											<span>[</span><span class="colorBox brown check">문제 1</span><span>~</span><span class="colorBox brown check">문제 3</span><span>]</span>
+										</div>
+										<div class="textAlignJ ls1_5">준기네 반 학생들이 좋아하는 운동을 조사하여 나타낸 것입니다. 조사한 것을 보고 물음에 답하시오.</div>
+									</div>
+								</div>
+								<div class="lineBox sky textAlignC --lineBox">
+									좋아하는 운동별 학생 수
+								</div>
+								<div class="tableContainer brown fix mt_10">
+									<table>
+										<tr>
+											<th>운동</th>
+											<th>배구</th>
+											<th>농구</th>
+											<th>야구</th>
+											<th>테니스</th>
+											<th>배드<br>민턴</th>
+											<th>합계</th>
+										</tr>
+										<tr>
+											<th>학생 수<br>(명)</th>
+											<td>4</td>
+											<td>8</td>
+											<td>7</td>
+											<td>5</td>
+											<td>3</td>
+											<td>27</td>
+										</tr>
+									</table>
+								</div>
+								<a href="./data/(4-1-5)형성평가2_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+							</li>
+							<li class="innerTab_2" data-quiz="toggle">
+								<div class="--title">
+									<div class="flexListContainer start --flex">
+										<div class="--flex-Q">
+											<span>[</span><span class="colorBox brown check">문제 1</span><span>~</span><span class="colorBox brown check">문제 3</span><span>]</span>
+										</div>
+										<div class="textAlignJ ls1_5">준기네 반 학생들이 좋아하는 운동을 조사하여 나타낸 것입니다. 조사한 것을 보고 물음에 답하시오.</div>
+									</div>
+								</div>
+								<h2><ins class="dot orange"></ins><span>
+									표를 보고 막대그래프로 나타내 보시오.
+								</span></h2>
+								<section>
+									<div class="lineBox sky textAlignC --lineBox">
+										좋아하는 운동별 학생 수
+									</div>
+									<div class="--graph" data-toggle-obj="2">
+										<div class="answer" data-toggle-target="2">
+											<div class="--text n1">명</div>
+											<div class="--text n2">10<br>5</div>
+											<div class="--text n3">0</div>
+											<div class="--text n4">학생 수</div>
+											<div class="--text n5">운동</div>
+											<div class="--text n6">배구</div>
+											<div class="--text n7">농구</div>
+											<div class="--text n8">야구</div>
+											<div class="--text n9">테니스</div>
+											<div class="--text n10">배드<br>민턴</div>
+										</div>
+										<div class="--text n11">(&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+									</div>
+									<div class="buttonContainer">
+										<button class="dapCheckBtn" data-answer-btn=""></button>
+									</div>
+									<a href="./data/(4-1-5)형성평가2_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+								</section>
+							</li>
+						</ul>
+					</li>
+
+					<li class="page_30 page_1to3" data-slide-container="">
+						<div class="moveButtonContainer" data-slide-btn-container="">
+							<div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+							<ul class="basicSlider_circle_tabs" data-tabs="">
+								<li data-hover=""></li>
+								<li data-hover=""></li>
+							</ul>
+							<div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+						</div>
+						<ul class="basicSlider_slides" data-slides="">
+							<li class="innerTab_1">
+								<div class="--title">
+									<div class="flexListContainer start --flex">
+										<div class="--flex-Q">
+											<span>[</span><span class="colorBox brown check">문제 1</span><span>~</span><span class="colorBox brown check">문제 3</span><span>]</span>
+										</div>
+										<div class="textAlignJ ls1_5">준기네 반 학생들이 좋아하는 운동을 조사하여 나타낸 것입니다. 조사한 것을 보고 물음에 답하시오.</div>
+									</div>
+								</div>
+								<div class="lineBox sky textAlignC --lineBox">
+									좋아하는 운동별 학생 수
+								</div>
+								<div class="--graph">
+									<div class="--text n1">명</div>
+									<div class="--text n2">10<br>5</div>
+									<div class="--text n3">0</div>
+									<div class="--text n4">학생 수</div>
+									<div class="--text n5">운동</div>
+									<div class="--text n6">배구</div>
+									<div class="--text n7">농구</div>
+									<div class="--text n8">야구</div>
+									<div class="--text n9">테니스</div>
+									<div class="--text n10">배드<br>민턴</div>
+									<div class="--text n11">(&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+								</div>
+								<a href="./data/(4-1-5)형성평가2_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+							</li>
+							<li class="innerTab_2" data-quiz="toggle">
+								<div class="--title">
+									<div class="flexListContainer start --flex">
+										<div class="--flex-Q">
+											<span>[</span><span class="colorBox brown check">문제 1</span><span>~</span><span class="colorBox brown check">문제 3</span><span>]</span>
+										</div>
+										<div class="textAlignJ ls1_5">준기네 반 학생들이 좋아하는 운동을 조사하여 나타낸 것입니다. 조사한 것을 보고 물음에 답하시오.</div>
+									</div>
+								</div>
+								<h2><ins class="dot orange"></ins><span class="ls1">
+									막대그래프로 나타낸 것을 보고, 알 수 있는 내용을 써 보시오.
+								</span></h2>
+								<section>
+									<div class="textAlignC">
+										<div style="display: inline-block;">
+											<div class="toggle" data-toggle-obj="1" style="width: 100%;">
+												<div class="answer" data-toggle-target="1">
+													<ul class="contentsList">
+														<li>
+															<ins class="bullet exam">예</ins>
+															<div>
+																가장 많은 학생이 좋아하는 운동은 농구입니다.
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<br>
+											<div class="toggle mt_10" data-toggle-obj="2">
+												<div class="answer" data-toggle-target="2">
+													<ul class="contentsList">
+														<li>
+															<ins class="bullet exam">예</ins>
+															<div>
+																가장 적은 학생이 좋아하는 운동은 배드민턴입니다.
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="buttonContainer">
+										<button class="dapCheckBtn" data-answer-btn=""></button>
+									</div>
+									<a href="./data/(4-1-5)형성평가2_05차시.hwp" target="_blank" class="downloadBtn" data-name="활동지 다운로드"></a>
+								</section>
+							</li>
+						</ul>
+					</li>
+
+					<li class="page_1" data-quiz="toggle">
+						<h2><ins class="dot orange"></ins><span>도윤이네 반 학생들이 가보고 싶은 나라를 조사하여 나타낸 표입니다. 중국에 가보고 싶은 학생은 몇 명인지 쓰시오.</span></h2>
+						<section class="con">
+							<div class="lineBox sky">가보고 싶은 나라별 학생 수</div>
+							<div class="tableContainer brown">
+								<table class="tableBorder" cellpadding="0" cellspacing="0">
+									<tr>
+										<th>나라</th>
+										<th>미국</th>
+										<th>일본</th>
+										<th>중국</th>
+										<th>합계</th>
+									</tr>
+									<tr>
+										<th class="bgSky">학생 수<br/>(명)</th>
+										<td>10</td>
+										<td>4</td>
+										<td></td>
+										<td>21</td>
+									</tr>
+								</table>
+							</div> <!-- tableContainer -->
+							<div class="textAlignC">
+								<div class="toggle" data-toggle-obj="1"><div class="answer" data-toggle-target="1">7</div></div>명
+							</div>
+							<div class="buttonContainer">
+								<button class="solveCheckBtn" data-popup-btn="40" data-hover=""></button>
+								<button class="dapCheckBtn" data-answer-btn=""></button>
+							</div>
+						</section>
+					</li>
+					<li class="page_2" data-quiz="toggle">
+						<h2 class="--title"><ins class="dot orange"></ins><div class="colorBox brown check">문제 4</div><span>의 표를 막대그래프로 나타내어 보시오. <div class="popBtn inline textInBtn orange eye" data-hover="" data-popup-btn="1" data-popup-parent="hidden">표 보기</div></span></h2>
+						<section class="con">
+							<div class="lineBox sky">가보고 싶은 나라별 학생 수</div>
+
+							<div class="imgCon">
+								<div class="img_2_1" data-toggle-obj="1"></div>
+								<div class="toggle noBg hidden">
+									<div class="answer" data-toggle-target="1"><div class="img_2_2"></div></div>
+								</div>
+								<div class="--text n1">(명)</div>
+								<div class="--text n2">10<br>5</div>
+								<div class="--text n3">0</div>
+								<div class="--text n4">학생 수</div>
+								<div class="--text n5">나라</div>
+								<div class="--text n6">미국</div>
+								<div class="--text n7">일본</div>
+								<div class="--text n8">중국</div>
+							</div> <!-- imgCon -->
+
+							<div class="buttonContainer">
+								<button class="dapCheckBtn" data-answer-btn=""></button>
+							</div>
+						</section>
+					</li>
+					<li class="page_3" data-quiz="toggle">
+						<h2><ins class="dot orange"></ins><span>가장 많은 학생들이 가보고 싶은 나라는 어디인지 쓰시오.</span></h2>
+						<section class="con">
+
+							<div class="lineBox sky">가보고 싶은 나라별 학생 수</div>
+
+							<div class="imgCon">
+								<div class="img_3_1"></div>
+								<div class="--text n1">(명)</div>
+								<div class="--text n2">10<br>5</div>
+								<div class="--text n3">0</div>
+								<div class="--text n4">학생 수</div>
+								<div class="--text n5">나라</div>
+								<div class="--text n6">미국</div>
+								<div class="--text n7">일본</div>
+								<div class="--text n8">중국</div>
+							</div> <!-- imgCon -->
+
+							<div class="toggle" data-toggle-obj="1">
+								<div class="answer" data-toggle-target="1">미국</div>
+							</div>
+
+							<div class="buttonContainer">
+								<button class="dapCheckBtn" data-answer-btn=""></button>
+							</div>
+						</section>
+					</li>
+					<li class="page_4" data-quiz="toggle">
+						<h2><ins class="dot orange"></ins><span>재민이가 5월의 날씨를 조사하여 나타낸 표입니다. 맑은 날은 며칠인지 구하시오.</span></h2>
+						<section class="con">
+							<div class="lineBox sky">날씨별 날 수</div>
+							<div class="tableContainer brown">
+								<table class="tableBorder" cellpadding="0" cellspacing="0">
+									<tr>
+										<th>날씨</th>
+										<th>맑은 날</th>
+										<th>흐린 날</th>
+										<th>비 온 날</th>
+										<th>합계</th>
+									</tr>
+									<tr>
+										<th class="bgSky">날수(일)</th>
+										<td></td>
+										<td>9</td>
+										<td>7</td>
+										<td>31</td>
+									</tr>
+								</table>
+							</div> <!-- tableContainer -->
+							<div class="textAlignC">
+								<div class="toggle" data-toggle-obj="1"><div class="answer" data-toggle-target="1">15</div></div>일
+							</div>
+							<div class="buttonContainer">
+								<button class="solveCheckBtn" data-popup-btn="70" data-hover=""></button>
+								<button class="dapCheckBtn" data-answer-btn=""></button>
+							</div>
+						</section>
+					</li>
+
+					<li class="page_5" data-quiz="toggle">
+						<h2 class="--title"><ins class="dot orange"></ins><div class="colorBox brown check">문제 7</div><span>의 표를 막대그래프로 나타내어 보시오.<div class="popBtn inline textInBtn orange eye" data-hover="" data-popup-btn="2" data-popup-parent="hidden">표 보기</div></span></h2>
+						<section class="con">
+							<div class="lineBox sky">날씨별 날수</div>
+							<div class="imgCon">
+
+								<div class="img_2_1" data-toggle-obj="1"></div>
+								<div class="toggle noBg hidden">
+									<div class="answer" data-toggle-target="1"><div class="img_2_2"></div></div>
+								</div>
+								<div class="--text n1">(일)</div>
+								<div class="--text n2">맑은 날<br>흐린 날<br>비 온 날</div>
+								<div class="--text n3">날씨</div>
+								<div class="--text n4">날수</div>
+								<div class="--text n5">0</div>
+								<div class="--text n6">5</div>
+								<div class="--text n7">10</div>
+								<div class="--text n8">15</div>
+							</div> <!-- imgCon -->
+
+							<div class="buttonContainer">
+								<button class="dapCheckBtn" data-answer-btn=""></button>
+							</div>
+						</section>
+					</li>
+
+				</ul>
+			</div>
+		</main>
+
+		<section class="popup_container" data-popup-container="">
+			<ul class="popup_pages">
+				<li class="whole pop_page_1" data-popup-page="1">
+					<div class="popup_contents con">
+						<div class="lineBox sky">가보고 싶은 나라별 학생 수</div>
+						<div class="tableContainer brown">
+							<table class="tableBorder" cellpadding="0" cellspacing="0">
+								<tr>
+									<th>나라</th>
+									<th>미국</th>
+									<th>일본</th>
+									<th>중국</th>
+									<th>합계</th>
+								</tr>
+								<tr>
+									<th class="bgSky">학생 수<br/>(명)</th>
+									<td>10</td>
+									<td>4</td>
+									<td>7</td>
+									<td>21</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class="whole pop_page_2" data-popup-page="2">
+					<div class="popup_contents con">
+						<div class="lineBox sky">날씨별 날수</div>
+						<div class="tableContainer brown">
+							<table class="tableBorder" cellpadding="0" cellspacing="0">
+								<tr>
+									<th>날씨</th>
+									<th>맑은 날</th>
+									<th>흐린 날</th>
+									<th>비 온 날</th>
+									<th>합계</th>
+								</tr>
+								<tr>
+									<th class="bgSky">날수(일)</th>
+									<td>15</td>
+									<td>9</td>
+									<td>7</td>
+									<td>31</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class="solve pop_page_40" data-popup-page="40">
+					<div class="popup_contents">
+						<ul class="contentsList">
+						<li>
+							<div>
+								(중국에 가보고 싶은 학생 수)＝21－10－4＝7(명)
+							</div>
+						</li>
+						</ul>
+					</div>
+				</li>
+				<li class="solve" data-popup-page="70">
+					<div class="popup_contents">
+						<p> (맑은 날 수)＝31－9－7＝15(일)</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+	</div>
+
+	<div id="loadingContainer">
+		<div class="loadingIconAnimation"></div>
+	</div>
+
+	<script type="text/javascript" src="../common/libs/js/ts.js"></script>
+	<script type="text/javascript" src="../common/libs/js/animate.js"></script>
+	<script type="text/javascript" src="../common/libs/js/dragdrop.js"></script>
+	<script type="text/javascript" src="../common/libs/js/slider.js"></script>
+	<script type="text/javascript" src="../common/libs/js/popup.js"></script>
+	<script type="text/javascript" src="../common/libs/js/scroll.js"></script>
+	<script type="text/javascript" src="../common/libs/js/controller.js"></script>
+	<script type="text/javascript" src="../common/libs/js/appear.js"></script>
+	<script type="text/javascript" src="../common/libs/js/jquery.js"></script>
+	<script type="text/javascript" src="../common/contents/js/quiz/quiz.js"></script>
+	<script type="text/javascript" src="../common/contents/js/pageManager.js"></script>
+	<script type="text/javascript" src="./js/contents.js"></script>
+	<script type="text/javascript">
+		// ox quiz 정답 콜백
+		window.$callBack.oxCorrect = function (obj){
+
+		}
+		// ox quiz 오답 콜백
+		window.$callBack.oxIncorrect = function (obj){
+
+		}
+		// ox quiz 정답 확인 클릭시 콜백
+		window.$callBack.viewAnswer = function (obj){
+			// if(obj.QUIZ.name=="ox1"){
+			//     $ts.getEl('.multipleChoiceList')[0].setAttribute('class', 'multipleChoiceList wrap on');
+			// }
+		};
+		// ox quiz 정답 가리기 클릭시 콜백
+		window.$callBack.hideAnswer = function (obj){
+			// if(obj.QUIZ.name=="ox1"){
+			//     $ts.getEl('.multipleChoiceList')[0].setAttribute('class', 'multipleChoiceList wrap');
+			// }
+		}
+
+		document.addEventListener("DOMContentLoaded", function (){
+			$(".controlBtn").click(function(){
+				$efSound.click();
+			})
+
+
+		}, false);
+
+	</script>
+</body>
+
+</html>
